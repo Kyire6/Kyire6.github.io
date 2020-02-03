@@ -48,9 +48,57 @@
 </ul>
 </li>
 <li>打开Hexo服务<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line"><span class="keyword">INFO</span>  <span class="keyword">Start</span> processing</span><br><span class="line"><span class="keyword">INFO</span>  Hexo <span class="keyword">is</span> running at http://localhost:<span class="number">4000</span> . Press Ctrl+C <span class="keyword">to</span> stop.</span><br></pre></td></tr></table></figure>
-这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：<br><img src="/images/blog.jpg" alt="Hexo博客首页"></li>
+这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：</li>
 </ul>
-<h2 id="将博客托管到Gitee上"><a href="#将博客托管到Gitee上" class="headerlink" title="将博客托管到Gitee上"></a>将博客托管到Gitee上</h2>]]></content>
+<p><img src="/images/blog.jpg" alt="Hexo博客首页"></p>
+<ul>
+<li><p>用Hexo写一篇博客</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">$ hexo n "我的第一篇博客"</span><br><span class="line">INFO  Created: E:<span class="symbol">\b</span>olg<span class="symbol">\s</span>ource<span class="symbol">\_</span>posts<span class="symbol">\我</span>的第一篇博客.md</span><br></pre></td></tr></table></figure>
+<p>到E:\bolg\source_posts目录下打开我的第一篇博客.md进行编辑(推荐用vscode进行编辑，vscode有预览md文件的插件)：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的第一篇博客</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-03</span> <span class="number">21</span><span class="string">:16:52</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第一章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第二章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 参考资料</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">https://ouwen.gitee.io</span></span><br></pre></td></tr></table></figure>
+<p>注意：这里的md文件是基于markdown语法进行编辑的，不了解的朋友可以百度学习一下，很简单的，几分钟就能看明白，相信你不是问题。</p>
+</li>
+<li><p>编辑完保存文件，重启Hexo服务</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo clean          # 清除所有记录 </span><br><span class="line">$ hexo generate       # 生成静态网页 简写：hexo g</span><br><span class="line">$ hexo<span class="built_in"> server </span>        # 启动服务 简写：hexo s</span><br></pre></td></tr></table></figure>
+<p>打开浏览器输入localhost:4000：</p>
+</li>
+</ul>
+<p><img src="/images/blog2.jpg" alt="我的第一篇博客"></p>
+<h2 id="将博客部署到Gitee上"><a href="#将博客部署到Gitee上" class="headerlink" title="将博客部署到Gitee上"></a>将博客部署到Gitee上</h2><p>上面访问的localhost:4000是本地服务器端口，我们的博客不可能是放在本地服务器的，我们需要把博客部署到远端去。我这里推荐的一个免费的部署的方式就是部署到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上，部署好之后就可以通过访问<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上的那个地址来访问我们的博客。</p>
+<ul>
+<li>进到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>官网，注册账号并登陆</li>
+<li>点击个人主页右上角新建个人仓库</li>
+</ul>
+<p><img src="/images/blog3.jpg" alt="新建仓库"></p>
+<ul>
+<li>创建完成后进入仓库</li>
+</ul>
+<p><img src="/images/blog4.jpg" alt="我的仓库"></p>
+<ul>
+<li>打开Hexo的配置文件<code>_config.yml</code><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/ouwen666/test.git #仓库的url</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></li>
+<li>这里先安装一个Hexo插件<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save  #通过cpnm安装git插件</span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">'******@qq.com'</span>  #设置gitee邮箱（gitee的注册邮箱）</span><br><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">'****'</span>            #设置用户名（gitee的y注册昵称）</span><br><span class="line">hexo d  #上传到gitee的远端仓库</span><br><span class="line"><span class="comment"># 在上传时，需要再次输入gitee的用户名username和密码password</span></span><br></pre></td></tr></table></figure></li>
+<li>上传成功仓库会多出一些文件</li>
+</ul>
+<p><img src="/images/blog5.jpg" alt="我的仓库"></p>
+<ul>
+<li>接着打开Gitee Page服务</li>
+</ul>
+<p><img src="/images/blog6.jpg" alt="打开服务"></p>
+<p>然后点击启动或更新即可。<strong>注意每次更改网页重新上传到仓库都要到这里来更新服务。</strong></p>
+<p><img src="/images/blog7.jpg" alt="更新服务"></p>
+<ul>
+<li>访问Gitee Page服务的网站地址</li>
+</ul>
+<p><img src="/images/blog8.jpg" alt="成功访问"></p>
+<p>从图中地址栏中的网址可以看出我们已经成功将本地的博客部署到了远端仓库，这样你的小伙伴也能在自己的电脑访问你的Gitee Page服务网站看到你的博客啦。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo博客搭建总的来说还是比较简单的，搭配Gitee码云使用起来还是比较方便的，访问速度也还行。总结下面几点：</p>
+<ol>
+<li>Hexo博客个性化定制的话，大家可以多参考Hexo官方中文文档</li>
+<li>更新完代码可以再localhost:4000预览效果再上传，上传后千万记得更新Gitee Page服务，否则刷新页面会出现没更新的情况</li>
+<li>Hexo还支持很多主题，有兴趣的小伙伴可以自行搜索更改，参照官方文档进行操作也是不难的哦</li>
+<li>小伙伴们注意将自己写的代码保存好哦！我是将代码备份到Github上保存的，将博客部署到Gitee码云进行访问</li>
+</ol>
+]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
