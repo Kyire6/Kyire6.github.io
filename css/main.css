@@ -158,7 +158,7 @@ body {
   background: #f5f7f9;
   color: #555;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
+  font-size: 0.889em;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -179,22 +179,22 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 1.5em;
-}
-h2 {
   font-size: 1.375em;
 }
-h3 {
+h2 {
   font-size: 1.25em;
 }
-h4 {
+h3 {
   font-size: 1.125em;
 }
-h5 {
+h4 {
   font-size: 1em;
 }
-h6 {
+h5 {
   font-size: 0.875em;
+}
+h6 {
+  font-size: 0.75em;
 }
 p {
   margin: 0 0 20px 0;
@@ -365,8 +365,8 @@ td {
 }
 .highlight,
 pre {
-  background: #1d1f21;
-  color: #c5c8c6;
+  background: #2d2d2d;
+  color: #ccc;
   line-height: 1.6;
   margin: 0 auto 20px;
 }
@@ -383,7 +383,7 @@ code {
   word-wrap: break-word;
 }
 .highlight *::selection {
-  background: #373b41;
+  background: #515151;
 }
 .highlight pre {
   border: 0;
@@ -401,7 +401,7 @@ code {
 }
 .highlight figcaption {
   background: #eee;
-  color: #c5c8c6;
+  color: #ccc;
   font-size: 0.875em;
   line-height: 1.2;
   padding: 0.5em;
@@ -415,11 +415,11 @@ code {
   clear: both;
 }
 .highlight figcaption a {
-  color: #c5c8c6;
+  color: #ccc;
   float: right;
 }
 .highlight figcaption a:hover {
-  border-bottom-color: #c5c8c6;
+  border-bottom-color: #ccc;
 }
 .highlight .gutter {
   -moz-user-select: none;
@@ -428,14 +428,14 @@ code {
   user-select: none;
 }
 .highlight .gutter pre {
-  background: #000;
-  color: #888f96;
+  background: #1b1b1b;
+  color: #999;
   padding-left: 10px;
   padding-right: 10px;
   text-align: right;
 }
 .highlight .code pre {
-  background: #1d1f21;
+  background: #2d2d2d;
   padding-left: 10px;
   width: 100%;
 }
@@ -451,7 +451,7 @@ pre {
 }
 pre code {
   background: none;
-  color: #c5c8c6;
+  color: #ccc;
   font-size: 0.875em;
   padding: 0;
   text-shadow: none;
@@ -463,14 +463,14 @@ pre .addition {
   background: #008000;
 }
 pre .meta {
-  color: #f0c674;
+  color: #fc6;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 pre .comment {
-  color: #969896;
+  color: #999;
 }
 pre .variable,
 pre .attribute,
@@ -485,7 +485,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c66;
+  color: #f2777a;
 }
 pre .number,
 pre .preprocessor,
@@ -495,7 +495,7 @@ pre .literal,
 pre .params,
 pre .constant,
 pre .command {
-  color: #de935f;
+  color: #f99157;
 }
 pre .ruby .class .title,
 pre .css .rules .attribute,
@@ -508,11 +508,11 @@ pre .ruby .symbol,
 pre .xml .cdata,
 pre .special,
 pre .formula {
-  color: #b5bd68;
+  color: #9c9;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #8abeb7;
+  color: #6cc;
 }
 pre .function,
 pre .python .decorator,
@@ -522,11 +522,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #81a2be;
+  color: #69c;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #b294bb;
+  color: #c9c;
 }
 .blockquote-center {
   border-left: none;
@@ -1235,7 +1235,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fbffc2;
+  background: #abac58;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1672,7 +1672,7 @@ pre .javascript .function {
   left: 0;
   margin-left: -4px;
   position: absolute;
-  top: 0.75em;
+  top: 0.65em;
   transition-property: background;
   width: 6px;
   transition-delay: 0s;
@@ -1687,7 +1687,7 @@ pre .javascript .function {
 }
 .posts-collapse .post-meta {
   display: inline;
-  font-size: 0.75em;
+  font-size: 0.65em;
   margin-right: 10px;
 }
 .posts-collapse .post-title {
@@ -1861,7 +1861,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.65em;
   margin: 3px 0 60px 0;
   text-align: center;
 }
@@ -1918,7 +1918,7 @@ pre .javascript .function {
   top: 2px;
 }
 .post-nav-item .fa {
-  font-size: 0.75em;
+  font-size: 0.65em;
 }
 .post-nav-item:first-child {
   margin-right: 15px;
@@ -2212,7 +2212,7 @@ pre .javascript .function {
   }
 }
 ul.breadcrumb {
-  font-size: 0.75em;
+  font-size: 0.65em;
   list-style: none;
   margin: 1em 0;
   padding: 0 2em;
