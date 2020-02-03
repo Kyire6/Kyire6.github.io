@@ -50,7 +50,7 @@
 <li>打开Hexo服务<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line"><span class="keyword">INFO</span>  <span class="keyword">Start</span> processing</span><br><span class="line"><span class="keyword">INFO</span>  Hexo <span class="keyword">is</span> running at http://localhost:<span class="number">4000</span> . Press Ctrl+C <span class="keyword">to</span> stop.</span><br></pre></td></tr></table></figure>
 这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：<br><img src="/images/blog.jpg" alt="Hexo博客首页"></li>
 </ul>
-]]></content>
+<h2 id="将博客托管到Gitee上"><a href="#将博客托管到Gitee上" class="headerlink" title="将博客托管到Gitee上"></a>将博客托管到Gitee上</h2>]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
