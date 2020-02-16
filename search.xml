@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>解决Android Studio虚拟机启动时waiting for target device to come online的问题</title>
+    <url>/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%97%B6waiting-for-target-device-to-come-online%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过几天就要线上教学了，应学院老师要求检查自身设备及软件情况，检查Android Studio的运行情况时，出了点问题。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>运行虚拟机时卡在开机页面，下方显示下载信息：<code>waiting for target device to come online</code></p>
+<a id="more"></a>
+
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这个问题是由虚拟机引起的，查阅相关资料，获得以下解决方案：</p>
+<ol>
+<li>先关掉正在运行的模拟器</li>
+<li>点击上方工具栏中的Tools&gt;AVD Manager,进到模拟器管理页面，点击自己的模拟器选项，选择Clod Boot Now，模拟器打开并提示一行信息，直接dismiss掉就好了</li>
+<li>重新运行你的app就ok了</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>记录这次遇到的问题，日后再遇到能有效的解决，也希望能帮到有需要的人，共同学习与进步。</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android Studio</tag>
+        <tag>错误集合</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+Gitee搭建个人博客</title>
     <url>/2020/01/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。</p>
