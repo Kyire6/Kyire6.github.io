@@ -1235,7 +1235,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #11cb86;
+  background: #9a90cd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2707,10 +2707,14 @@ div#comments.comments.v {
   text-align: left !important;
 }
 .v .vwrap .vedit .vctrl span {
+  text-align: center;
+  width: 40px;
+  height: 26px;
   background-color: #7f7f7f !important;
   color: #fff !important;
   border-radius: 3px !important;
-  padding: 3px !important;
+  padding: 0px !important;
+  padding-bottom: 3px;
 }
 .v .vwrap .vedit .vctrl {
   padding: 0px !important;
@@ -2776,10 +2780,4 @@ div#comments.comments.v {
 .v .vlist .vcard .vcontent.expand:after {
   content: "点击查看全部" !important;
   font-weight: 400 !important;
-}
-.power {
-  display: none;
-}
-.v .vwrap .vedit .vctrl {
-  display: none !important;
 }
