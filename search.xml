@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>github仓库更新</title>
+    <url>/2020/02/18/github%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
+<p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
+<p>–废话不多说，直接开始更新–</p>
+<a id="more"></a>
+
+<h2 id="更新步骤"><a href="#更新步骤" class="headerlink" title="更新步骤"></a>更新步骤</h2><ol>
+<li>第一步切换到本地仓库中需要更新的目录下</li>
+<li>鼠标右键选择<code>Git Bash Here</code>选项，打开Git Bash工具</li>
+<li>依次运行下列命令：</li>
+</ol>
+<ul>
+<li>查看仓库状态<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git status</span><br></pre></td></tr></table></figure></li>
+<li>更新所有代码<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">$ git <span class="keyword">add</span><span class="bash"> *</span></span><br></pre></td></tr></table></figure></li>
+<li>本次推送备注<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git commit -m <span class="string">""</span></span><br></pre></td></tr></table></figure></li>
+<li>将本地仓库的代码更新到github仓库的master分支<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li>刷新github仓库页面，更新完成</li>
+</ol>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>代码记得勤推送，github仓库勤更新！</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>github 教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决Android Studio虚拟机启动不了的问题</title>
     <url>/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过几天就要线上教学了，应学院老师要求检查自身设备及软件情况，检查Android Studio的运行情况时，出了点问题。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过几天就要线上教学了，应学院老师要求检查自身设备及软件情况。</p>
+<p>其中检查Android Studio的运行情况时，出了点问题。</p>
 <a id="more"></a>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>运行虚拟机时卡在开机页面，下方显示下载信息：<code>waiting for target device to come online</code></p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这个问题是由虚拟机引起的，查阅相关资料，获得以下解决方案：</p>
@@ -24,7 +56,7 @@
   </entry>
   <entry>
     <title>Hexo+Gitee搭建个人博客</title>
-    <url>/2020/01/29/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <url>/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。</p>
 <a id="more"></a>
 
