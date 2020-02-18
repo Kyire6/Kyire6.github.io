@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>github仓库更新</title>
-    <url>/2020/02/18/github%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0/</url>
+    <title>Github仓库更新</title>
+    <url>/2020/02/18/Github%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
 <p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
 <p>–废话不多说，直接开始更新–</p>
