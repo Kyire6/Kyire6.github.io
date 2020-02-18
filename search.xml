@@ -28,7 +28,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>github 教程</tag>
+        <tag>github</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -157,8 +158,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>教程</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
