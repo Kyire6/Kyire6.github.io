@@ -133,7 +133,7 @@
 <p>注：我这里图片是保存在本地的，所以图片地址哪里是本地目录，也可以用图片的在线链接地址</p>
 </blockquote>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>此篇博客总结了我写Hexo博客常用的Markdown语法，如有不妥之处请查阅MD官方文档。</p>
-<p>因为显示效果都是用Markdown语法呈现的，而我采用的next主题又是通过文章的标题来显示文章目录，所以左侧的文章可能有点混乱···</p>
+<p>因为显示效果都是用Markdown语法呈现的，而我采用的next主题又是通过文章的标题来显示文章目录，所以左侧的文章目录可能有点混乱···</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
