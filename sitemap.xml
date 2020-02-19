@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ouwen666.gitee.io/categories/index.html</loc>
+    
+    <lastmod>2020-02-19T12:35:45.909Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ouwen666.gitee.io/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2020-02-18T12:58:23.336Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://ouwen666.gitee.io/about/index.html</loc>
     
     <lastmod>2020-02-03T03:22:36.186Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ouwen666.gitee.io/categories/index.html</loc>
-    
-    <lastmod>2020-01-31T14:58:35.522Z</lastmod>
     
   </url>
   
