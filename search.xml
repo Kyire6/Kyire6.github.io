@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>解决flutter doctor检测不到插件的问题</title>
+    <url>/2020/02/25/%E8%A7%A3%E5%86%B3flutter%20doctor%E6%A3%80%E6%B5%8B%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天学习混合模式移动应用开发，老师教我们如何在Windows上配置flutter的开发环境。</p>
+<p>这里主要是针对Android Studio，将flutter搭建到Android Studio上。</p>
+<a id="more"></a>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在AS中安装了flutter和dart插件后命令行用flutter doctor检测发现以下问题：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">C</span>:\<span class="selector-tag">Users</span>\<span class="selector-tag">Admin</span>&gt;<span class="selector-tag">flutter</span> <span class="selector-tag">doctor</span></span><br><span class="line"><span class="selector-tag">Doctor</span> <span class="selector-tag">summary</span> (<span class="selector-tag">to</span> <span class="selector-tag">see</span> <span class="selector-tag">all</span> <span class="selector-tag">details</span>, <span class="selector-tag">run</span> <span class="selector-tag">flutter</span> <span class="selector-tag">doctor</span> <span class="selector-tag">-v</span>):</span><br><span class="line"><span class="selector-attr">[√]</span> <span class="selector-tag">Flutter</span> (<span class="selector-tag">Channel</span> <span class="selector-tag">stable</span>, <span class="selector-tag">v1</span><span class="selector-class">.12</span><span class="selector-class">.13</span>+<span class="selector-tag">hotfix</span><span class="selector-class">.8</span>, <span class="selector-tag">on</span> <span class="selector-tag">Microsoft</span> <span class="selector-tag">Windows</span> <span class="selector-attr">[Version 10.0.18363.657]</span>,</span><br><span class="line">    <span class="selector-tag">locale</span> <span class="selector-tag">zh-CN</span>)</span><br><span class="line"><span class="selector-attr">[√]</span> <span class="selector-tag">Android</span> <span class="selector-tag">toolchain</span> <span class="selector-tag">-</span> <span class="selector-tag">develop</span> <span class="selector-tag">for</span> <span class="selector-tag">Android</span> <span class="selector-tag">devices</span> (<span class="selector-tag">Android</span> <span class="selector-tag">SDK</span> <span class="selector-tag">version</span> 29<span class="selector-class">.0</span><span class="selector-class">.2</span>)</span><br><span class="line"><span class="selector-attr">[!]</span> <span class="selector-tag">Android</span> <span class="selector-tag">Studio</span> (<span class="selector-tag">version</span> 3<span class="selector-class">.5</span>)</span><br><span class="line">    <span class="selector-tag">X</span> <span class="selector-tag">Flutter</span> <span class="selector-tag">plugin</span> <span class="selector-tag">not</span> <span class="selector-tag">installed</span>; <span class="selector-tag">this</span> <span class="selector-tag">adds</span> <span class="selector-tag">Flutter</span> <span class="selector-tag">specific</span> <span class="selector-tag">functionality</span>.</span><br><span class="line">    <span class="selector-tag">X</span> <span class="selector-tag">Dart</span> <span class="selector-tag">plugin</span> <span class="selector-tag">not</span> <span class="selector-tag">installed</span>; <span class="selector-tag">this</span> <span class="selector-tag">adds</span> <span class="selector-tag">Dart</span> <span class="selector-tag">specific</span> <span class="selector-tag">functionality</span>.</span><br><span class="line"><span class="selector-attr">[!]</span> <span class="selector-tag">Connected</span> <span class="selector-tag">device</span></span><br><span class="line">    ! <span class="selector-tag">No</span> <span class="selector-tag">devices</span> <span class="selector-tag">available</span></span><br><span class="line"></span><br><span class="line">! <span class="selector-tag">Doctor</span> <span class="selector-tag">found</span> <span class="selector-tag">issues</span> <span class="selector-tag">in</span> 1 <span class="selector-tag">category</span>.</span><br></pre></td></tr></table></figure>
+<p>显而易见的，这个提示的是我flutter和dart插件未安装，但是我AS里显示都安装好了</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>这个问题是由自定义AS的安装路径及修改IDE的缓存目录造成的，导致flutter找不到插件下载位置，查阅百度后得到以下解决方案：<br>1.在IDE的安装目录下(注意是安装目录，不是sdk目录)的bin下面找到idea.properties配置文件，打开查看这两个路径目录：</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">idea.config.path=<span class="string">D:</span><span class="regexp">/Android/</span>.AndroidStudio/config</span><br><span class="line"></span><br><span class="line">idea.system.path=<span class="string">D:</span><span class="regexp">/Android/</span>.AndroidStudio/system</span><br></pre></td></tr></table></figure>
+<p>2.将上面查询到的路径里的文件拷贝到C:\Users\xxx.AndroidStudio3.5下(xxx代表你的计算机名)，这样flutter doctor就能找到你在AS中所安装的插件了</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>搭建flutter开发环境的过程中，坑很多，要耐心的解决每一个问题。</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android Studio</tag>
+        <tag>技巧，Flutter</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基本语法</title>
     <url>/2020/02/19/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
@@ -139,8 +161,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>技巧</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -194,8 +216,8 @@
         <category>Android</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Android Studio</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
