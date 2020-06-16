@@ -1,6 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vim编辑器</title>
+    <url>/2020/06/16/Vim%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第二天，下午学习的是Vim编辑器</p>
+<p>使用VIM编辑器来开发shell程序</p>
+<p>使用VIM编辑器来开发Java程序</p>
+<a id="more"></a>
+
+<h2 id="一、用Vim编辑器编写第一个Java文件"><a href="#一、用Vim编辑器编写第一个Java文件" class="headerlink" title="一、用Vim编辑器编写第一个Java文件"></a>一、用Vim编辑器编写第一个Java文件</h2><p>打开Vim编辑器，默认的模式是命令模式</p>
+<ul>
+<li><p>输入i，切换到输入模式</p>
+</li>
+<li><p>输入ESC,切换到命令模式</p>
+</li>
+<li><p>输入：，切换到底线命令模式</p>
+<ul>
+<li>输入w，保存文件</li>
+<li>输入q，退出编辑器</li>
+</ul>
+<p>用Vim编辑器新建一个java文件</p>
+</li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># vim hello.java</span></span><br></pre></td></tr></table></figure>
+
+<p>进入Vim编辑器后输入i切换到输入模式，编写java程序</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hello</span>&#123;</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(<span class="keyword">String</span>[] args)</span></span>&#123;</span><br><span class="line">                System.out.<span class="built_in">println</span>(<span class="string">"hello world!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编写完成后输入ESC切换到命令模式，然后输入:wq切换到底线命令模式保存并退出</p>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="symbol">:wq</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、运行第一个Java程序"><a href="#二、运行第一个Java程序" class="headerlink" title="二、运行第一个Java程序"></a>二、运行第一个Java程序</h2><p>Java源文件是不能直接执行的！！</p>
+<p>需要先将Java源文件编译成class文件才能运行！！</p>
+<p>需要jdk才能进行编译！！</p>
+<p>使用apt工具来安装jdk！！</p>
+<ol>
+<li><p>首先先更新一下apt工具</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># apt update</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用apt命令安装openjdk</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># apt install openjdk-11-jdk-headless</span></span><br></pre></td></tr></table></figure>
+
+<p>等待安装完成后，查看版本号检查是否安装完成</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">root@</span>iZ2ze4ojx7qtz1wv44gajnZ:~# java -version</span><br><span class="line">openjdk version <span class="string">"11.0.7"</span> <span class="number">2020</span><span class="number">-04</span><span class="number">-14</span></span><br><span class="line">OpenJDK Runtime Environment (build <span class="number">11.0</span><span class="number">.7</span>+<span class="number">10</span>-post-Ubuntu<span class="number">-2</span>ubuntu218<span class="number">.04</span>)</span><br><span class="line">OpenJDK <span class="number">64</span>-Bit Server VM (build <span class="number">11.0</span><span class="number">.7</span>+<span class="number">10</span>-post-Ubuntu<span class="number">-2</span>ubuntu218<span class="number">.04</span>, mixed mode, sharing)</span><br><span class="line"><span class="symbol">root@</span>iZ2ze4ojx7qtz1wv44gajnZ:~# javac -version</span><br><span class="line">javac <span class="number">11.0</span><span class="number">.7</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用javac命令将Java源文件编译成class文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">root@iZ2ze4ojx7qtz1wv44gajnZ:~#</span> <span class="string">javac</span> <span class="string">hello.java</span></span><br><span class="line"><span class="string">root@iZ2ze4ojx7qtz1wv44gajnZ:~#</span> <span class="string">ls</span> <span class="string">-l</span></span><br><span class="line"><span class="string">total</span> <span class="number">8</span></span><br><span class="line"><span class="string">-rw-r--r--</span> <span class="number">1</span> <span class="string">root</span> <span class="string">root</span> <span class="number">416</span> <span class="string">Jun</span> <span class="number">16</span> <span class="number">16</span><span class="string">:05</span> <span class="string">hello.class</span></span><br><span class="line"><span class="string">-rw-r--r--</span> <span class="number">1</span> <span class="string">root</span> <span class="string">root</span> <span class="number">104</span> <span class="string">Jun</span> <span class="number">16</span> <span class="number">15</span><span class="string">:03</span> <span class="string">hello.java</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行Java程序</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># java hello</span></span><br><span class="line">hello world!</span><br></pre></td></tr></table></figure>
+
+<p>*这里的java后的class文件是不用带后缀名的</p>
+</li>
+</ol>
+<h2 id="三、使用Vim编辑器编写shell程序"><a href="#三、使用Vim编辑器编写shell程序" class="headerlink" title="三、使用Vim编辑器编写shell程序"></a>三、使用Vim编辑器编写shell程序</h2><p>shell程序不像java需要编译才能执行！！</p>
+<p>但是需要申请执行shell脚本的权限！！</p>
+<ol>
+<li><p>使用Vim编辑器创建shell脚本</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># vim aa.sh</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写shell脚本，保存并退出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#定义数组</span></span><br><span class="line">myArray=(A B <span class="string">"C"</span> 100)</span><br><span class="line"><span class="comment">#输入数组的内容</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"元素1：<span class="variable">$&#123;myArray[0]&#125;</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"元素2：<span class="variable">$&#123;myArray[1]&#125;</span>"</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">"%s %s \n"</span> <span class="string">"元素3："</span><span class="variable">$&#123;myArray[2]&#125;</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">"%s %s \n"</span> <span class="string">"元素4："</span><span class="variable">$&#123;myArray[3]&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>申请执行shell脚本的权限</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># chomd +x ./aa.sh</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行shell脚本文件</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="symbol">root@</span>iZ2ze4ojx7qtz1wv44gajnZ:~# ./aa.sh</span><br><span class="line">元素<span class="number">1</span>：A</span><br><span class="line">元素<span class="number">2</span>：B</span><br><span class="line">元素<span class="number">3</span>：C  </span><br><span class="line">元素<span class="number">4</span>：<span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux基本命令与Shell编程</title>
+    <url>/2020/06/16/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%B8%8EShell%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实训第二天，上午学习的是Linux基本命令与shell脚本</p>
+<a id="more"></a>
+
+<h2 id="一、Linux基本命令"><a href="#一、Linux基本命令" class="headerlink" title="一、Linux基本命令"></a>一、Linux基本命令</h2><ul>
+<li><p>pwd：查看当前路径</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  pwd</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ls：查看路径下的所有文件和目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  ls [选项] 目录名称</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>显示全部的文件，包括隐藏文件（开头为 . 的文件）也一起罗列出来，这是最常用的选项之一。</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>以人们易读的方式显示文件或目录大小，如 1KB、234MB、2GB 等。</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>显示 inode 节点信息。</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>使用长格式列出文件和目录信息。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>cd：切换目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  cd  目录路径</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>~</td>
+<td>代表当前登录用户的主目录</td>
+</tr>
+<tr>
+<td>~用户名</td>
+<td>表示切换至指定用户的主目录</td>
+</tr>
+<tr>
+<td>-</td>
+<td>代表上次所在目录</td>
+</tr>
+<tr>
+<td>.</td>
+<td>代表当前目录</td>
+</tr>
+<tr>
+<td>..</td>
+<td>代表上级目录</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>clear：清除屏幕</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  clear</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mkdir：创建目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  mkdir [-mp] 目录名</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-m</td>
+<td>选项用于手动配置所创建目录的权限，而不再使用默认权限。</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>选项递归创建所有目录</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>rmdir：删除空目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  rmdir [-p] 目录名</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td>选项递归删除所有目录</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>touch：创建文件</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  touch [选项] 文件名</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>rm：删除文件或目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment"># rm[选项] 文件或目录</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cp：复制文件或者目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  cp [选项] 源文件 目标文件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mv：移动或者重命名文件或者目录</p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment"># mv [选项] 源文件 目标文件</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="二、Shell编程"><a href="#二、Shell编程" class="headerlink" title="二、Shell编程"></a>二、Shell编程</h2><p>Shell 编程跟 JavaScript、Java编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。</p>
+<p>Linux 的 Shell 种类众多，常见的有：</p>
+<ul>
+<li><p>Bourne Shell（/usr/bin/sh或/bin/sh）</p>
+</li>
+<li><p>Bourne Again Shell（/bin/bash）</p>
+</li>
+<li><p>C Shell（/usr/bin/csh）</p>
+</li>
+<li><p>K Shell（/usr/bin/ksh）</p>
+</li>
+<li><p>Shell for Root（/sbin/sh）</p>
+</li>
+</ul>
+<h3 id="基本工作"><a href="#基本工作" class="headerlink" title="基本工作"></a>基本工作</h3><p><strong>Linux有两个输出命令</strong></p>
+<figure class="highlight julia"><table><tr><td class="code"><pre><span class="line">root<span class="meta">@用户ID</span>:~<span class="comment">#  echo 数据</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">root@用户ID:~<span class="meta">#  printf <span class="meta-string">"格式"</span> 数据</span></span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo zhangsan</span></span><br><span class="line">zhangsan</span><br><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># printf "%s \n" zhangsan</span></span><br><span class="line">zhangsan</span><br></pre></td></tr></table></figure>
+
+<p><strong>首先查看当前系统的shell环境</strong></p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $SHELL</span></span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="Shell变量"><a href="#Shell变量" class="headerlink" title="Shell变量"></a>Shell变量</h3><ol>
+<li>Shell变量声明</li>
+</ol>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="attr">name</span>=<span class="string">"zhangsan"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong><em>注意</em></strong>：变量名和等号之间不能有空格，这可能和你熟悉的所有编程语言都不一样。同时，变量名的命名须遵循如下规则：</p>
+<ul>
+<li><p>命名只能使用英文字母，数字和下划线，首个字符不能以数字开头。</p>
+</li>
+<li><p>中间不能有空格，可以使用下划线（_）。</p>
+</li>
+<li><p>不能使用标点符号。</p>
+</li>
+<li><p>不能使用bash里的关键字（可用help命令查看保留关键字）。</p>
+</li>
+</ul>
+<ol start="2">
+<li>Shell变量的使用</li>
+</ol>
+<p><em>使用shell变量只需要在变量前加一个 $ 即可</em></p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># name="zhangsan"</span></span><br><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $name</span></span><br><span class="line">zhangsan</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Shell变量的删除</li>
+</ol>
+<p>使用unset关键字来删除Shell变量</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># unset name</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Shell数组"><a href="#Shell数组" class="headerlink" title="Shell数组"></a>Shell数组</h3><ol>
+<li><p>创建一个Shell数组</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">root<span class="symbol">@iZ2ze4ojx7qtz1wv44gajnZ</span>:~<span class="meta"># myArray=(A B <span class="string">"C"</span> 100)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输出数组中的数据</p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">root<span class="symbol">@iZ2ze4ojx7qtz1wv44gajnZ</span>:~<span class="meta"># echo <span class="string">"第一个元素: $&#123;myArray[0]&#125;"</span></span></span><br><span class="line">   第一个元素: A</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改数组中的元素</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># myArray[1]=BB</span></span><br><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $&#123;myArray[1]&#125;</span></span><br><span class="line">BB</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一次性输出所有的元素</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $&#123;myArray[@]&#125;</span></span><br><span class="line">A BB C <span class="number">100</span></span><br><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $&#123;myArray[*]&#125;</span></span><br><span class="line">A BB C <span class="number">100</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获得数组的长度</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $&#123;#myArray[@]&#125;</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line">root<span class="variable">@iZ2ze4ojx7qtz1wv44gajnZ</span><span class="symbol">:~</span><span class="comment"># echo $&#123;#myArray[*]&#125;</span></span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h3 id="Shell运算符"><a href="#Shell运算符" class="headerlink" title="Shell运算符"></a>Shell运算符</h3><p>Shell 和其他编程语言一样，支持多种运算符，包括：</p>
+<ul>
+<li>算数运算符</li>
+<li>关系运算符</li>
+<li>布尔运算符</li>
+<li>字符串运算符</li>
+<li>文件测试运算符</li>
+</ul>
+<p>原生bash不支持简单的数学运算，但是可以通过其他命令来实现，例如 awk 和 expr，expr 最常用。</p>
+<p>expr 是一款表达式计算工具，使用它能完成表达式的求值操作。</p>
+<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p>下表列出了常用的算术运算符，假定变量 a 为 10，变量 b 为 20：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">说明</th>
+<th align="left">举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">加法</td>
+<td align="left"><code>expr $a + $b</code> 结果为 30。</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">减法</td>
+<td align="left"><code>expr $a - $b</code> 结果为 -10。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">乘法</td>
+<td align="left"><code>expr $a \* $b</code> 结果为  200。</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">除法</td>
+<td align="left"><code>expr $b / $a</code> 结果为 2。</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">取余</td>
+<td align="left"><code>expr $b % $a</code> 结果为 0。</td>
+</tr>
+<tr>
+<td align="left">=</td>
+<td align="left">赋值</td>
+<td align="left">a=$b 将把变量 b 的值赋给 a。</td>
+</tr>
+<tr>
+<td align="left">==</td>
+<td align="left">相等。用于比较两个数字，相同则返回 true。</td>
+<td align="left">[ $a == $b ] 返回 false。</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">不相等。用于比较两个数字，不相同则返回 true。</td>
+<td align="left">[ $a != $b ] 返回 true。</td>
+</tr>
+</tbody></table>
+<p>注意：条件表达式要放在方括号之间，并且要有空格，例如: [$a==$b] 是错误的，必须写成 [ $a == $b ]</p>
+<p>(注意使用的是反引号 ` 而不是单引号 ‘)</p>
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决flutter doctor检测不到插件的问题</title>
     <url>/2020/02/25/%E8%A7%A3%E5%86%B3flutter%20doctor%E6%A3%80%E6%B5%8B%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天学习混合模式移动应用开发，老师教我们如何在Windows上配置flutter的开发环境。</p>
@@ -161,8 +513,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>技巧</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
