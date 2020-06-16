@@ -254,7 +254,7 @@
 
 <h3 id="Shell数组"><a href="#Shell数组" class="headerlink" title="Shell数组"></a>Shell数组</h3><ol>
 <li><p>创建一个Shell数组</p>
-<p><code>root@iZ2ze4ojx7qtz1wv44gajnZ:~# myArray=(A B &quot;C&quot; 100)</code></p>
+<figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">root<span class="symbol">@iZ2ze4ojx7qtz1wv44gajnZ</span>:~<span class="meta"># myArray=(A B <span class="string">"C"</span> 100)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>输出数组中的数据</p>
 <figure class="highlight autoit"><table><tr><td class="code"><pre><span class="line">root<span class="symbol">@iZ2ze4ojx7qtz1wv44gajnZ</span>:~<span class="meta"># echo <span class="string">"第一个元素: $&#123;myArray[0]&#125;"</span></span></span><br><span class="line">   第一个元素: A</span><br></pre></td></tr></table></figure>
