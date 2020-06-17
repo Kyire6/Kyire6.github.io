@@ -3,7 +3,8 @@
   <entry>
     <title>MySQL 服务器配置管理</title>
     <url>/2020/06/17/MySQL%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，上午学习了Linux上MySQL数据库服务端的安装与配置</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，上午</p>
+<p>学习了Linux上MySQL数据库服务端的安装与配置</p>
 <a id="more"></a>
 
 <h2 id="一、安装MySQL8-0"><a href="#一、安装MySQL8-0" class="headerlink" title="一、安装MySQL8.0"></a>一、安装MySQL8.0</h2><h3 id="1-使用命令下载MySQL8的软件库"><a href="#1-使用命令下载MySQL8的软件库" class="headerlink" title="1. 使用命令下载MySQL8的软件库"></a>1. 使用命令下载MySQL8的软件库</h3><p><code>wget https://dev.mysql.com/get/mysql-apt-config_0.8.15-1_all.deb</code></p>
@@ -56,15 +57,16 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
     <title>Nginx服务器的安装与配置</title>
     <url>/2020/06/17/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，下午学习了Nginx服务器的安装与配置</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，下午</p>
+<p>学习了Nginx服务器的安装与配置</p>
 <a id="more"></a>
 
 <h2 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h2><h3 id="1-Nginx简介"><a href="#1-Nginx简介" class="headerlink" title="1. Nginx简介"></a>1. Nginx简介</h3><ul>
@@ -106,8 +108,8 @@
   <entry>
     <title>Vim编辑器</title>
     <url>/2020/06/16/Vim%E7%BC%96%E8%BE%91%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第二天，下午学习的是Vim编辑器</p>
-<p>使用VIM编辑器来开发shell程序</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第二天，下午</p>
+<p>学习的是使用Vim编辑器来开发shell程序</p>
 <p>使用VIM编辑器来开发Java程序</p>
 <a id="more"></a>
 
@@ -189,7 +191,8 @@
   <entry>
     <title>Linux基本命令与Shell编程</title>
     <url>/2020/06/16/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%B8%8EShell%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实训第二天，上午学习的是Linux基本命令与shell脚本</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实训第二天，上午</p>
+<p>学习的是Linux基本命令与shell脚本</p>
 <a id="more"></a>
 
 <h2 id="一、Linux基本命令"><a href="#一、Linux基本命令" class="headerlink" title="一、Linux基本命令"></a>一、Linux基本命令</h2><ul>
@@ -639,8 +642,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>github</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -769,8 +772,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>教程</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
