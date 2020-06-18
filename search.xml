@@ -1,6 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Shell系统管理命令</title>
+    <url>/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，下午</p>
+<p>Shell系统管理常用命令的学习</p>
+<h2 id="一、用户管理"><a href="#一、用户管理" class="headerlink" title="一、用户管理"></a>一、用户管理</h2><h3 id="1-用户管理命令"><a href="#1-用户管理命令" class="headerlink" title="1.用户管理命令"></a>1.用户管理命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>adduser</td>
+<td>创建用户并创建同名用户组</td>
+<td>adduser zhangsan    [–gid 1000]</td>
+</tr>
+<tr>
+<td>deluser</td>
+<td>删除用户</td>
+<td>deluser zhangsan</td>
+</tr>
+<tr>
+<td>addgroup</td>
+<td>创建用户组</td>
+<td>addgroup test</td>
+</tr>
+<tr>
+<td>delgroup</td>
+<td>删除用户组</td>
+<td>delgroup test</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>修改当前用户密码</td>
+<td>passwd 根据提示输入当前密码和新密码</td>
+</tr>
+<tr>
+<td>chmod ugoa+-rwx</td>
+<td>修改文件权限</td>
+<td>chmod u+x aa.txt    chmod 765 aa.txt</td>
+</tr>
+<tr>
+<td>chown</td>
+<td>修改文件所有者</td>
+<td>chown root aa.txt</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td>修改文件相关的用户组</td>
+<td>chfrp root aa.txt</td>
+</tr>
+<tr>
+<td>su</td>
+<td>切换用户</td>
+<td>su root</td>
+</tr>
+<tr>
+<td>sudo</td>
+<td>以超级管理员身份执行特定操作</td>
+<td>sudo ls -l /root  需要修改/etc/sudoers</td>
+</tr>
+</tbody></table>
+<h2 id="二、进程管理"><a href="#二、进程管理" class="headerlink" title="二、进程管理"></a>二、进程管理</h2><h3 id="2-1-进程概述"><a href="#2-1-进程概述" class="headerlink" title="2.1 进程概述"></a>2.1 进程概述</h3><p>程序和进程关系</p>
+<ul>
+<li>程序安装或存储磁盘上的一组文件，静态，通常指未运行</li>
+<li>进程是运行程序的容器。启动一个程序，操作系统创建一个（或多个）进程（进程有编号 PID），加载程序的指令和数据到进程的内存区域，操作系统为该进程分配CPU时间片（多个进程交替获得CPU来运行）</li>
+<li>一个程序可以拥有多个进程，程序运行，至少启动一个进程</li>
+<li>一个进程只属于一个程序</li>
+</ul>
+<ul>
+<li>进程与线程关系<ul>
+<li>一个进程至少存在一个主线程</li>
+<li>线程是进程中独立的执行单元</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>每间教室是一个进程，有独立的空间，有一个共同的主题，但是存在多个执行单元，教师和二十个学生，21个线程</p>
+</blockquote>
+<h3 id="2-2-进程管理命令"><a href="#2-2-进程管理命令" class="headerlink" title="2.2 进程管理命令"></a>2.2 进程管理命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>实时显示系统状态</td>
+<td>top       退出 ctrl+C</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>进程快照，执行指令的瞬时状态</td>
+<td>ps  ,   ps -uroot  , ps-aux , ps  -ef</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>杀死进程</td>
+<td>kill -9 pid</td>
+</tr>
+<tr>
+<td>vmstat</td>
+<td>系统状态统计</td>
+<td></td>
+</tr>
+<tr>
+<td>mpstat</td>
+<td>处理器状态统计</td>
+<td></td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符号，连接两个命令</td>
+<td></td>
+</tr>
+<tr>
+<td>grep</td>
+<td>全局搜索匹配</td>
+<td>ls -l | grep nginx</td>
+</tr>
+<tr>
+<td>which</td>
+<td>定位一个命令或程序</td>
+<td>which nginx</td>
+</tr>
+<tr>
+<td>find</td>
+<td>查找文件或目录</td>
+<td>find . -name “nginx”</td>
+</tr>
+</tbody></table>
+<h2 id="三、服务管理"><a href="#三、服务管理" class="headerlink" title="三、服务管理"></a>三、服务管理</h2><h3 id="3-1-服务管理命令"><a href="#3-1-服务管理命令" class="headerlink" title="3.1 服务管理命令"></a>3.1 服务管理命令</h3><p>服务的配置：<code>/etc</code> 存放基本配置，<code>/etc/init.d</code> 存放守护进程（开机自动启动的服务）<br>服务管理 <code>service</code></p>
+<ul>
+<li><h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><p><code>service mysql status</code></p>
+</li>
+<li><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p><code>service mysql start</code></p>
+</li>
+<li><h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><p><code>service mysql stop</code></p>
+</li>
+<li><h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><p><code>service mysql restart</code></p>
+</li>
+<li><h4 id="重新加载配置文件"><a href="#重新加载配置文件" class="headerlink" title="重新加载配置文件"></a>重新加载配置文件</h4><p><code>service mysql reload</code></p>
+</li>
+</ul>
+<h2 id="四、网络管理"><a href="#四、网络管理" class="headerlink" title="四、网络管理"></a>四、网络管理</h2><h3 id="4-1-网络管理命令"><a href="#4-1-网络管理命令" class="headerlink" title="4.1 网络管理命令"></a>4.1 网络管理命令</h3><p>网络命令主要是和网络操作相关的一些命令</p>
+<ul>
+<li><h4 id="测试网络是否畅通"><a href="#测试网络是否畅通" class="headerlink" title="测试网络是否畅通"></a>测试网络是否畅通</h4><p><code>ping www.baidu.com</code></p>
+</li>
+<li><h4 id="查看网络配置"><a href="#查看网络配置" class="headerlink" title="查看网络配置"></a>查看网络配置</h4><p><code>ifconfig</code></p>
+</li>
+<li><h4 id="查看网络状态信息"><a href="#查看网络状态信息" class="headerlink" title="查看网络状态信息"></a>查看网络状态信息</h4><p><code>netstat -antu</code></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>部署项目到Nginx服务器</title>
+    <url>/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，上午</p>
+<p>Nginx服务器的项目加载</p>
+<a id="more"></a>
+
+<h2 id="一、将本地开发好的项目上传到服务器"><a href="#一、将本地开发好的项目上传到服务器" class="headerlink" title="一、将本地开发好的项目上传到服务器"></a>一、将本地开发好的项目上传到服务器</h2><h3 id="1-安装putty文件上传工具"><a href="#1-安装putty文件上传工具" class="headerlink" title="1. 安装putty文件上传工具"></a>1. 安装putty文件上传工具</h3><p>​            下载地址：<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">官网下载</a></p>
+<p>​            下载好安装包，双击打开进行安装，一直next即可</p>
+<h3 id="2-使用putty工具上传和下载文件"><a href="#2-使用putty工具上传和下载文件" class="headerlink" title="2. 使用putty工具上传和下载文件"></a>2. 使用putty工具上传和下载文件</h3><p>​            上传文件</p>
+<p>​            <code>pscp 本地文件路径 root@公网IP:路径</code></p>
+<p>​            输入密码后上传成功</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">C</span>:\Users\Admin&gt;pscp <span class="attribute">E</span>:\test\aa.txt root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>:/opt/www</span><br><span class="line">root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>'s <span class="attribute">password</span>:</span><br></pre></td></tr></table></figure>
+
+<p>​            上传文件夹</p>
+<p>​            <code>pscp -r 本地文件夹路径 root@公网IP:路径</code></p>
+<p>​            <img src="/images/putty.jpg" alt=""></p>
+<p>​            下载文件</p>
+<p>​            <code>pscp root@公网IP:文件路径 本地路径</code></p>
+<p>​            下载文件夹</p>
+<p>​            <code>pscp -r root@公网IP:文件夹路径 本地路径</code></p>
+<h3 id="3-检查服务器上是否有上传文件"><a href="#3-检查服务器上是否有上传文件" class="headerlink" title="3. 检查服务器上是否有上传文件"></a>3. 检查服务器上是否有上传文件</h3><p>​            检查要访问的默认文件夹是不是在nginx的配置文件中的默认根目录(/opt/www)</p>
+<p>​                <img src="/images/putty1.jpg" alt=""></p>
+<p>​            如果不在，有两种解决办法</p>
+<p>​            1.修改配置nginx的配置文件中root目录（加一个目录root /opt/www/web）</p>
+<p>​                <img src="/images/putty2.jpg" alt=""></p>
+<p>​            2.将上传的资源移动到nginx.com配置文件中的root目录中</p>
+<h3 id="4-重新加载nginx配置资源"><a href="#4-重新加载nginx配置资源" class="headerlink" title="4. 重新加载nginx配置资源"></a>4. 重新加载nginx配置资源</h3><p>​            <code>service nginx reload</code></p>
+<h3 id="5-打开浏览器访问"><a href="#5-打开浏览器访问" class="headerlink" title="5. 打开浏览器访问"></a>5. 打开浏览器访问</h3><p>​            <img src="/images/putty3.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL 服务器配置管理</title>
     <url>/2020/06/17/MySQL%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，上午</p>
@@ -92,17 +298,23 @@
 <p>​        <img src="/images/Nginx2.jpg" alt=""></p>
 <h4 id="编写Nginx首页"><a href="#编写Nginx首页" class="headerlink" title="编写Nginx首页"></a>编写Nginx首页</h4><p>​        我们配置的Nginx的访问目录是/opt/www,首页是index.html，所以在/opt/www目录下创建index.html页面，并用vim打开编写以下内容：</p>
 <p>​        <img src="/images/Nginx3.jpg" alt=""></p>
-<h3 id="5-启动Nginx"><a href="#5-启动Nginx" class="headerlink" title="5. 启动Nginx"></a>5. 启动Nginx</h3><p>​    <code>service nginx reload</code></p>
+<h3 id="5-启动Nginx"><a href="#5-启动Nginx" class="headerlink" title="5. 启动Nginx"></a>5. 启动Nginx</h3><p>​    <code>service nginx start</code></p>
 <p>​    <img src="/images/Nginx4.jpg" alt=""></p>
 <p>​    启动成功！！</p>
+<p>​    *其他的一些操作命令：</p>
+<p>​        停止服务器：<code>service nginx stop</code></p>
+<p>​        重新启动：<code>service nginx reload</code></p>
+<p>​        查看状态：<code>service nginx status</code></p>
+<p>​        查看端口：<code>netstat -apn</code></p>
+<p>​        杀死进程：<code>kill -9</code></p>
 ]]></content>
       <categories>
         <category>实训日志</category>
       </categories>
       <tags>
+        <tag>Nginx</tag>
         <tag>Linux</tag>
         <tag>技巧</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>

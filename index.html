@@ -326,6 +326,371 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.png">
+      <meta itemprop="name" content="Irving">
+      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Irving的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Shell系统管理命令</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-18 09:00:00 / 修改时间：22:24:14" itemprop="dateCreated datePublished" datetime="2020-06-18T09:00:00+08:00">2020-06-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/" itemprop="url" rel="index">
+                    <span itemprop="name">实训日志</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，下午</p>
+<p>Shell系统管理常用命令的学习</p>
+<h2 id="一、用户管理"><a href="#一、用户管理" class="headerlink" title="一、用户管理"></a>一、用户管理</h2><h3 id="1-用户管理命令"><a href="#1-用户管理命令" class="headerlink" title="1.用户管理命令"></a>1.用户管理命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>adduser</td>
+<td>创建用户并创建同名用户组</td>
+<td>adduser zhangsan    [–gid 1000]</td>
+</tr>
+<tr>
+<td>deluser</td>
+<td>删除用户</td>
+<td>deluser zhangsan</td>
+</tr>
+<tr>
+<td>addgroup</td>
+<td>创建用户组</td>
+<td>addgroup test</td>
+</tr>
+<tr>
+<td>delgroup</td>
+<td>删除用户组</td>
+<td>delgroup test</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>修改当前用户密码</td>
+<td>passwd 根据提示输入当前密码和新密码</td>
+</tr>
+<tr>
+<td>chmod ugoa+-rwx</td>
+<td>修改文件权限</td>
+<td>chmod u+x aa.txt    chmod 765 aa.txt</td>
+</tr>
+<tr>
+<td>chown</td>
+<td>修改文件所有者</td>
+<td>chown root aa.txt</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td>修改文件相关的用户组</td>
+<td>chfrp root aa.txt</td>
+</tr>
+<tr>
+<td>su</td>
+<td>切换用户</td>
+<td>su root</td>
+</tr>
+<tr>
+<td>sudo</td>
+<td>以超级管理员身份执行特定操作</td>
+<td>sudo ls -l /root  需要修改/etc/sudoers</td>
+</tr>
+</tbody></table>
+<h2 id="二、进程管理"><a href="#二、进程管理" class="headerlink" title="二、进程管理"></a>二、进程管理</h2><h3 id="2-1-进程概述"><a href="#2-1-进程概述" class="headerlink" title="2.1 进程概述"></a>2.1 进程概述</h3><p>程序和进程关系</p>
+<ul>
+<li>程序安装或存储磁盘上的一组文件，静态，通常指未运行</li>
+<li>进程是运行程序的容器。启动一个程序，操作系统创建一个（或多个）进程（进程有编号 PID），加载程序的指令和数据到进程的内存区域，操作系统为该进程分配CPU时间片（多个进程交替获得CPU来运行）</li>
+<li>一个程序可以拥有多个进程，程序运行，至少启动一个进程</li>
+<li>一个进程只属于一个程序</li>
+</ul>
+<ul>
+<li>进程与线程关系<ul>
+<li>一个进程至少存在一个主线程</li>
+<li>线程是进程中独立的执行单元</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>每间教室是一个进程，有独立的空间，有一个共同的主题，但是存在多个执行单元，教师和二十个学生，21个线程</p>
+</blockquote>
+<h3 id="2-2-进程管理命令"><a href="#2-2-进程管理命令" class="headerlink" title="2.2 进程管理命令"></a>2.2 进程管理命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>实时显示系统状态</td>
+<td>top       退出 ctrl+C</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>进程快照，执行指令的瞬时状态</td>
+<td>ps  ,   ps -uroot  , ps-aux , ps  -ef</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>杀死进程</td>
+<td>kill -9 pid</td>
+</tr>
+<tr>
+<td>vmstat</td>
+<td>系统状态统计</td>
+<td></td>
+</tr>
+<tr>
+<td>mpstat</td>
+<td>处理器状态统计</td>
+<td></td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符号，连接两个命令</td>
+<td></td>
+</tr>
+<tr>
+<td>grep</td>
+<td>全局搜索匹配</td>
+<td>ls -l | grep nginx</td>
+</tr>
+<tr>
+<td>which</td>
+<td>定位一个命令或程序</td>
+<td>which nginx</td>
+</tr>
+<tr>
+<td>find</td>
+<td>查找文件或目录</td>
+<td>find . -name “nginx”</td>
+</tr>
+</tbody></table>
+<h2 id="三、服务管理"><a href="#三、服务管理" class="headerlink" title="三、服务管理"></a>三、服务管理</h2><h3 id="3-1-服务管理命令"><a href="#3-1-服务管理命令" class="headerlink" title="3.1 服务管理命令"></a>3.1 服务管理命令</h3><p>服务的配置：<code>/etc</code> 存放基本配置，<code>/etc/init.d</code> 存放守护进程（开机自动启动的服务）<br>服务管理 <code>service</code></p>
+<ul>
+<li><h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><p><code>service mysql status</code></p>
+</li>
+<li><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p><code>service mysql start</code></p>
+</li>
+<li><h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><p><code>service mysql stop</code></p>
+</li>
+<li><h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><p><code>service mysql restart</code></p>
+</li>
+<li><h4 id="重新加载配置文件"><a href="#重新加载配置文件" class="headerlink" title="重新加载配置文件"></a>重新加载配置文件</h4><p><code>service mysql reload</code></p>
+</li>
+</ul>
+<h2 id="四、网络管理"><a href="#四、网络管理" class="headerlink" title="四、网络管理"></a>四、网络管理</h2><h3 id="4-1-网络管理命令"><a href="#4-1-网络管理命令" class="headerlink" title="4.1 网络管理命令"></a>4.1 网络管理命令</h3><p>网络命令主要是和网络操作相关的一些命令</p>
+<ul>
+<li><h4 id="测试网络是否畅通"><a href="#测试网络是否畅通" class="headerlink" title="测试网络是否畅通"></a>测试网络是否畅通</h4><p><code>ping www.baidu.com</code></p>
+</li>
+<li><h4 id="查看网络配置"><a href="#查看网络配置" class="headerlink" title="查看网络配置"></a>查看网络配置</h4><p><code>ifconfig</code></p>
+</li>
+<li><h4 id="查看网络状态信息"><a href="#查看网络状态信息" class="headerlink" title="查看网络状态信息"></a>查看网络状态信息</h4><p><code>netstat -antu</code></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.png">
+      <meta itemprop="name" content="Irving">
+      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Irving的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="post-title-link" itemprop="url">部署项目到Nginx服务器</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-18 09:00:00 / 修改时间：22:16:21" itemprop="dateCreated datePublished" datetime="2020-06-18T09:00:00+08:00">2020-06-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/" itemprop="url" rel="index">
+                    <span itemprop="name">实训日志</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>437</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，上午</p>
+<p>Nginx服务器的项目加载</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/06/17/MySQL%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -459,10 +824,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-06-17 09:51:35 / 修改时间：23:35:42" itemprop="dateCreated datePublished" datetime="2020-06-17T09:51:35+08:00">2020-06-17</time>
+              <time title="创建时间：2020-06-17 09:51:35" itemprop="dateCreated datePublished" datetime="2020-06-17T09:51:35+08:00">2020-06-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-18 12:54:49" itemprop="dateModified" datetime="2020-06-18T12:54:49+08:00">2020-06-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -495,7 +866,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>633</span>
+              <span>744</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1119,125 +1490,12 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决Android Studio虚拟机启动不了的问题</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-16 13:22:50" itemprop="dateCreated datePublished" datetime="2020-02-16T13:22:50+08:00">2020-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 20:10:16" itemprop="dateModified" datetime="2020-02-18T20:10:16+08:00">2020-02-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Android/" itemprop="url" rel="index">
-                    <span itemprop="name">Android</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>311</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过几天就要线上教学了，应学院老师要求检查自身设备及软件情况。</p>
-<p>其中检查Android Studio的运行情况时，出了点问题。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1306,7 +1564,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1389,13 +1647,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">10k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
 
         
