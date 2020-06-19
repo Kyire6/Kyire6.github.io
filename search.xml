@@ -169,10 +169,10 @@
       </tags>
   </entry>
   <entry>
-    <title>MongoDB</title>
-    <url>/2020/06/18/MongoDB/</url>
+    <title>MongoDB数据库</title>
+    <url>/2020/06/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
-<p>MongoDB的学习</p>
+<p>MongoDB数据库的学习</p>
 <a id="more"></a>
 
 <h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><p><img src="/images/mongo.jpg" alt=""></p>
