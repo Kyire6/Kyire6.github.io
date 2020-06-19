@@ -175,7 +175,7 @@
 <p>Nginx服务器的项目部署</p>
 <a id="more"></a>
 
-<h2 id="一、将本地开发好的项目上传到服务器"><a href="#一、将本地开发好的项目上传到服务器" class="headerlink" title="一、将本地开发好的项目上传到服务器"></a>一、将本地开发好的项目上传到服务器</h2><h3 id="1-安装putty文件上传工具"><a href="#1-安装putty文件上传工具" class="headerlink" title="1. 安装putty文件上传工具"></a>1. 安装putty文件上传工具</h3><p>​            下载地址：<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">官网下载</a></p>
+<h2 id="一、将客户端上传到服务器"><a href="#一、将客户端上传到服务器" class="headerlink" title="一、将客户端上传到服务器"></a>一、将客户端上传到服务器</h2><h3 id="1-安装putty文件上传工具"><a href="#1-安装putty文件上传工具" class="headerlink" title="1. 安装putty文件上传工具"></a>1. 安装putty文件上传工具</h3><p>​            下载地址：<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener">官网下载</a></p>
 <p>​            下载好安装包，双击打开进行安装，一直next即可</p>
 <h3 id="2-使用putty工具上传和下载文件"><a href="#2-使用putty工具上传和下载文件" class="headerlink" title="2. 使用putty工具上传和下载文件"></a>2. 使用putty工具上传和下载文件</h3><p>​            上传文件</p>
 <p>​            <code>pscp 本地文件路径 root@公网IP:路径</code></p>
@@ -196,7 +196,22 @@
 <p>​                <img src="/images/putty2.jpg" alt=""></p>
 <p>​            2.将上传的资源移动到nginx.com配置文件中的root目录中</p>
 <h3 id="4-重新加载nginx配置资源"><a href="#4-重新加载nginx配置资源" class="headerlink" title="4. 重新加载nginx配置资源"></a>4. 重新加载nginx配置资源</h3><p>​            <code>service nginx reload</code></p>
-<h3 id="5-打开浏览器访问"><a href="#5-打开浏览器访问" class="headerlink" title="5. 打开浏览器访问"></a>5. 打开浏览器访问</h3><p>​            <img src="/images/putty3.jpg" alt=""></p>
+<h3 id="5-打开浏览器访问"><a href="#5-打开浏览器访问" class="headerlink" title="5. 打开浏览器访问"></a>5. 打开浏览器访问</h3><p>可以看到现在还查询不到疫情数据，因为服务端还没配置好</p>
+<p>下一步就是配置服务端，使之能成功查询到疫情数据</p>
+<p>​            <img src="/images/putty3.jpg" alt=""></p>
+<h2 id="二、将服务端上传到服务器"><a href="#二、将服务端上传到服务器" class="headerlink" title="二、将服务端上传到服务器"></a>二、将服务端上传到服务器</h2><h3 id="1-上传服务端文件"><a href="#1-上传服务端文件" class="headerlink" title="1. 上传服务端文件"></a>1. 上传服务端文件</h3><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">C</span>:\Users\Admin&gt;pscp -r <span class="attribute">E</span>:\学习文档\test\server root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>:/opt/www</span><br><span class="line">root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>'s <span class="attribute">password</span>:</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改客户端访问数据地址为服务器的IP地址"><a href="#2-修改客户端访问数据地址为服务器的IP地址" class="headerlink" title="2. 修改客户端访问数据地址为服务器的IP地址"></a>2. 修改客户端访问数据地址为服务器的IP地址</h3><p><img src="/images/putty4.jpg" alt=""></p>
+<h3 id="3-安装NodeJS"><a href="#3-安装NodeJS" class="headerlink" title="3. 安装NodeJS"></a>3. 安装NodeJS</h3><p><code>apt install nodejs</code></p>
+<p>输入node检查是否安装成功：</p>
+<p><img src="/images/putty5.jpg" alt=""></p>
+<h3 id="4-启动服务端"><a href="#4-启动服务端" class="headerlink" title="4. 启动服务端"></a>4. 启动服务端</h3><p>进到服务端的上传文件夹，用nodejs启动服务端</p>
+<p><code>node index</code></p>
+<p><img src="/images/putty6.jpg" alt=""></p>
+<h3 id="5-在阿里云实例安全组配置新规则"><a href="#5-在阿里云实例安全组配置新规则" class="headerlink" title="5. 在阿里云实例安全组配置新规则"></a>5. 在阿里云实例安全组配置新规则</h3><p>手动添加8090端口的访问规则</p>
+<p><img src="/images/putty7.jpg" alt=""></p>
+<h3 id="6-浏览器中访问"><a href="#6-浏览器中访问" class="headerlink" title="6. 浏览器中访问"></a>6. 浏览器中访问</h3><p>可以看到成功查询到了疫情数据</p>
+<p><img src="/images/putty8.jpg" alt=""></p>
 ]]></content>
       <categories>
         <category>实训日志</category>
