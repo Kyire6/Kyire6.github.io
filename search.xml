@@ -169,6 +169,27 @@
       </tags>
   </entry>
   <entry>
+    <title>MongoDB</title>
+    <url>/2020/06/18/MongoDB/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
+<p>MongoDB的学习</p>
+<a id="more"></a>
+
+<h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><h2 id="二、MongoDB的安装"><a href="#二、MongoDB的安装" class="headerlink" title="二、MongoDB的安装"></a>二、MongoDB的安装</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p><code>apt install mongodb</code></p>
+<p>安装完成可以用<code>mongo -version</code>来查看版本检查是否安装成功</p>
+<p><img src="/images/mongo.jpg" alt=""></p>
+<h3 id="2-2-MongoDB基本管理"><a href="#2-2-MongoDB基本管理" class="headerlink" title="2.2 MongoDB基本管理"></a>2.2 MongoDB基本管理</h3><h3 id="2-3-卸载"><a href="#2-3-卸载" class="headerlink" title="2.3 卸载"></a>2.3 卸载</h3><p><code>apt --purge remove mongodb mongodb-clients mongodb-server</code></p>
+<h2 id="三、MongoDB基本配置"><a href="#三、MongoDB基本配置" class="headerlink" title="三、MongoDB基本配置"></a>三、MongoDB基本配置</h2>]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+        <tag>MongDB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部署项目到Nginx服务器</title>
     <url>/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，上午</p>
@@ -201,11 +222,13 @@
 <p>​            <img src="/images/putty3.jpg" alt=""></p>
 <h2 id="二、将服务端上传到服务器"><a href="#二、将服务端上传到服务器" class="headerlink" title="二、将服务端上传到服务器"></a>二、将服务端上传到服务器</h2><h3 id="1-上传服务端文件"><a href="#1-上传服务端文件" class="headerlink" title="1. 上传服务端文件"></a>1. 上传服务端文件</h3><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">C</span>:\Users\Admin&gt;pscp -r <span class="attribute">E</span>:\学习文档\test\server root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>:/opt/www</span><br><span class="line">root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>'s <span class="attribute">password</span>:</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-修改客户端访问数据地址为服务器的IP地址"><a href="#2-修改客户端访问数据地址为服务器的IP地址" class="headerlink" title="2. 修改客户端访问数据地址为服务器的IP地址"></a>2. 修改客户端访问数据地址为服务器的IP地址</h3><p><img src="/images/putty4.jpg" alt=""></p>
+<h3 id="2-修改客户端访问数据地址为服务器的IP地址"><a href="#2-修改客户端访问数据地址为服务器的IP地址" class="headerlink" title="2. 修改客户端访问数据地址为服务器的IP地址"></a>2. 修改客户端访问数据地址为服务器的IP地址</h3><p>/opt/www/web/index.html</p>
+<p><img src="/images/putty4.jpg" alt=""></p>
 <h3 id="3-安装NodeJS"><a href="#3-安装NodeJS" class="headerlink" title="3. 安装NodeJS"></a>3. 安装NodeJS</h3><p><code>apt install nodejs</code></p>
 <p>输入node检查是否安装成功：</p>
 <p><img src="/images/putty5.jpg" alt=""></p>
 <h3 id="4-启动服务端"><a href="#4-启动服务端" class="headerlink" title="4. 启动服务端"></a>4. 启动服务端</h3><p>进到服务端的上传文件夹，用nodejs启动服务端</p>
+<p>/opt/www/server/index.js</p>
 <p><code>node index</code></p>
 <p><img src="/images/putty6.jpg" alt=""></p>
 <h3 id="5-在阿里云实例安全组配置新规则"><a href="#5-在阿里云实例安全组配置新规则" class="headerlink" title="5. 在阿里云实例安全组配置新规则"></a>5. 在阿里云实例安全组配置新规则</h3><p>手动添加8090端口的访问规则</p>
