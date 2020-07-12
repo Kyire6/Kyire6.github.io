@@ -1,6 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>集训项目-梦田票网</title>
+    <url>/2020/07/10/%E9%9B%86%E8%AE%AD%E9%A1%B9%E7%9B%AE-%E6%A2%A6%E7%94%B0%E7%A5%A8%E7%BD%91/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>暑假牛耳集训项目学习—-梦田票网(mtpiao.com)</p>
+<a id="more"></a>
+
+<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><h4 id="1-分析功能点"><a href="#1-分析功能点" class="headerlink" title="1.分析功能点"></a>1.分析功能点</h4><p>（1）用户表(tb_user)</p>
+<p>登录、注册、修改密码、基本信息</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>varchar(20)</td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>realname</td>
+<td>varchar(20)</td>
+<td>真实姓名</td>
+</tr>
+<tr>
+<td>username</td>
+<td>varchar(20)</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>varchar(20)</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>sex</td>
+<td>char(2)</td>
+<td>性别</td>
+</tr>
+<tr>
+<td>birthday</td>
+<td>date</td>
+<td>出生日期</td>
+</tr>
+<tr>
+<td>cardid</td>
+<td>varchar(20)</td>
+<td>身份证号</td>
+</tr>
+</tbody></table>
+<p>（2）地址表(tb_address)</p>
+<p>关联用户表</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>nickname</td>
+<td>varchar(20)</td>
+<td>收货人姓名</td>
+</tr>
+<tr>
+<td>telephone</td>
+<td>varchar(20)</td>
+<td>收货人联系方式</td>
+</tr>
+<tr>
+<td>address</td>
+<td>varchar(20)</td>
+<td>收货地址</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>int</td>
+<td>外键，关联用户表中的 id</td>
+</tr>
+</tbody></table>
+<p>（3）商品表(tb_goods)</p>
+<p>类别、是否为热门推荐</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>gname</td>
+<td>varchar(100)</td>
+<td>商品名称</td>
+</tr>
+<tr>
+<td>imgsrc</td>
+<td>varchar(100)</td>
+<td>商品图片地址</td>
+</tr>
+<tr>
+<td>price</td>
+<td>float</td>
+<td>价格</td>
+</tr>
+<tr>
+<td>num</td>
+<td>int</td>
+<td>数量</td>
+</tr>
+<tr>
+<td>salestate</td>
+<td>int</td>
+<td>售票状态  0：未售出  1：已售出</td>
+</tr>
+<tr>
+<td>showtime</td>
+<td>date</td>
+<td>演出时间</td>
+</tr>
+<tr>
+<td>showaddress</td>
+<td>varchar(100)</td>
+<td>演出地址</td>
+</tr>
+<tr>
+<td>gtype</td>
+<td>varchar(20)</td>
+<td>商品类别：演唱会、话剧歌剧、音乐会、体育赛事、儿童亲子···</td>
+</tr>
+<tr>
+<td>hot</td>
+<td>int</td>
+<td>是否热门推荐  0：不推荐  1：推荐</td>
+</tr>
+</tbody></table>
+<p>（4）购物车表</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>gid</td>
+<td>int</td>
+<td>外键，商品id</td>
+</tr>
+<tr>
+<td>price</td>
+<td>float</td>
+<td>购买单价</td>
+</tr>
+<tr>
+<td>num</td>
+<td>int</td>
+<td>购买数量</td>
+</tr>
+<tr>
+<td>salestate</td>
+<td>int</td>
+<td>售票状态  0：未售出  1：已售出</td>
+</tr>
+</tbody></table>
+<p>（5）公告表(tb_inform)</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>id</td>
+<td>int</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>title</td>
+<td>varchar(20)</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>time</td>
+<td>date</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td>content</td>
+<td>text</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>imgsrc</td>
+<td>varchar(100)</td>
+<td>图片地址</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>int</td>
+<td>标识符  0：公告  1：娱乐资讯</td>
+</tr>
+</tbody></table>
+<p>（6）订单表</p>
+<h3 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h3><p>持久层框架，用Java代码来操作数据库的一个框架</p>
+<h4 id="操作数据库中的数据"><a href="#操作数据库中的数据" class="headerlink" title="操作数据库中的数据"></a>操作数据库中的数据</h4><h5 id="一、插入数据"><a href="#一、插入数据" class="headerlink" title="一、插入数据"></a>一、插入数据</h5><p>1、在UserMapper.java文件中增加一个方法声明</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 保存方法</span><br><span class="line"> * @param user</span><br><span class="line"> */</span><br><span class="line">public void insert(<span class="keyword">User</span> <span class="title">user</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2、在UserMapper.xml中增加一个插入配置</p>
+<figure class="highlight dust"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 注意：id必须与UserMapper.java中的方法名一致 --&gt;</span></span></span><br><span class="line"><span class="xml"> 	<span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insert"</span> <span class="attr">parameterType</span>=<span class="string">"com.newer.bean.User"</span>&gt;</span></span></span><br><span class="line"><span class="xml"> 		insert into tb_user(username,pwd,age,address)</span></span><br><span class="line"><span class="xml"> 		values(#</span><span class="template-variable">&#123;username&#125;</span><span class="xml">,#</span><span class="template-variable">&#123;pwd&#125;</span><span class="xml">,#</span><span class="template-variable">&#123;age&#125;</span><span class="xml">,#</span><span class="template-variable">&#123;address&#125;</span><span class="xml">)</span></span><br><span class="line"><span class="xml"> 	<span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>3、编写测试类执行插入操作</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Reader reader = <span class="module-access"><span class="module"><span class="identifier">Resources</span>.</span></span>get<span class="constructor">ResourceAsReader(<span class="string">"mybatis-config.xml"</span>)</span>;</span><br><span class="line">    <span class="comment">// 创建SqlSessionFactoryBuilder对象</span></span><br><span class="line">    SqlSessionFactoryBuilder builder = <span class="keyword">new</span> <span class="constructor">SqlSessionFactoryBuilder()</span>;</span><br><span class="line">    <span class="comment">// 通过builder对象创建SqlSessionFactory</span></span><br><span class="line">    SqlSessionFactory sessionFactory = builder.build(reader);</span><br><span class="line">    SqlSession session = sessionFactory.<span class="keyword">open</span><span class="constructor">Session()</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 准备User对象</span></span><br><span class="line">    User user = <span class="keyword">new</span> <span class="constructor">User()</span>;</span><br><span class="line">    user.set<span class="constructor">Username(<span class="string">"admin"</span>)</span>;</span><br><span class="line">    user.set<span class="constructor">Pwd(<span class="string">"123456"</span>)</span>;</span><br><span class="line">    user.set<span class="constructor">Age(18)</span>;</span><br><span class="line">    user.set<span class="constructor">Address(<span class="string">"湖南长沙"</span>)</span>;</span><br><span class="line">    <span class="comment">// 插入</span></span><br><span class="line">    <span class="keyword">if</span> (session.insert(<span class="string">"insert"</span>, user) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"插入成功"</span>);</span><br><span class="line">    <span class="comment">// 提交</span></span><br><span class="line">    session.commit<span class="literal">()</span>;</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">	e.print<span class="constructor">StackTrace()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="二、删除数据"><a href="#二、删除数据" class="headerlink" title="二、删除数据"></a>二、删除数据</h5><p>1、在UserMapper.java文件中增加一个方法声明</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 删除方法</span></span><br><span class="line"><span class="comment"> * @param id</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delect</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>2、在UserMapper.xml中增加一个删除配置</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&lt;delete <span class="built_in">id</span>=<span class="string">"delete"</span> parameterType=<span class="string">"int"</span>&gt;</span><br><span class="line"> 	delete <span class="keyword">from</span> tb_user <span class="keyword">where</span> <span class="built_in">id</span>=<span class="comment">#&#123;id&#125;</span></span><br><span class="line">&lt;/delete&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、编写测试类执行删除操作</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">session</span>.<span class="keyword">delete</span>("delete", d) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">	<span class="keyword">System</span>.<span class="keyword">out</span>.println("删除成功 ");</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="三、更新数据"><a href="#三、更新数据" class="headerlink" title="三、更新数据"></a>三、更新数据</h5><p>1、在UserMapper.java文件中增加一个方法声明</p>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 更新</span><br><span class="line"> * @param user</span><br><span class="line"> * @return</span><br><span class="line"> */</span><br><span class="line">public int update(<span class="keyword">User</span> <span class="title">user</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2、在UserMapper.xml中增加一个更新配置</p>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">&lt;update <span class="built_in">id</span>=<span class="string">"update"</span> parameterType=<span class="string">"com.newer.bean.User"</span>&gt;</span><br><span class="line">    update tb_user </span><br><span class="line">    <span class="keyword">set</span> username=<span class="comment">#&#123;username&#125; </span></span><br><span class="line">    <span class="keyword">where</span> <span class="built_in">id</span>=<span class="comment">#&#123;id&#125;</span></span><br><span class="line">&lt;/update&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、编写测试类执行删除操作</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">User</span> u1 = <span class="built_in">new</span> <span class="keyword">User</span>();</span><br><span class="line">    u1.setId(<span class="number">1</span>);</span><br><span class="line">    u1.setUsername("zhangsan");</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">session</span>.getMapper(UserMapper.<span class="keyword">class</span>).<span class="keyword">update</span>(u1)&gt;<span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">System</span>.<span class="keyword">out</span>.println("更新成功");</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="四、查询数据"><a href="#四、查询数据" class="headerlink" title="四、查询数据"></a>四、查询数据</h5><p>1、在UserMapper.java文件中增加一个方法声明</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 查询所有</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">List</span>&lt;User&gt; selectAll();</span><br></pre></td></tr></table></figure>
+
+<p>2、在UserMapper.xml中增加一个查询配置</p>
+<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">&lt;<span class="keyword">select</span> id=<span class="string">"selectAll"</span> resultType=<span class="string">"com.newer.bean.User"</span>&gt;</span><br><span class="line"> 	<span class="keyword">select</span> * <span class="keyword">from</span> tb_user</span><br><span class="line">&lt;/<span class="keyword">select</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、编写测试类执行删除操作</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">List&lt;<span class="keyword">User</span>&gt; userList = <span class="keyword">session</span>.getMapper(UserMapper.<span class="keyword">class</span>).selectAll();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">User</span> user2 : userList) &#123;</span><br><span class="line">    <span class="keyword">System</span>.<span class="keyword">out</span>.println(user2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h4><p>如果用mybatis来查询多张表，就必须要用到resultMap，resultMap元素是 MyBatis 中最重要最强大的元素。</p>
+<p>这里我们来查询用户表(tb_user)和地址表(tb_address)中的数据，做到查询一个用户，同时把他的地址信息查询出来。</p>
+<p>1、在UserMapper.java中添加一个查询方法</p>
+<figure class="highlight aspectj"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 通过id去查询用户并查询其地址信息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> id</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="function">User <span class="title">selectById</span><span class="params">(<span class="keyword">int</span> id)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>2、在UserMapper.xml中配置好resultMap</p>
+<figure class="highlight dust"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--配置一个结果映射 --&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">"com.newer.bean.User"</span> <span class="attr">id</span>=<span class="string">"myUser"</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">property</span>=<span class="string">"username"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"pwd"</span> <span class="attr">property</span>=<span class="string">"pwd"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"age"</span> <span class="attr">property</span>=<span class="string">"age"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"address"</span> <span class="attr">property</span>=<span class="string">"address"</span> /&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">		<span class="comment">&lt;!--需要返回地址列表信息</span></span></span><br><span class="line"><span class="xml">		 property属性是对应User类中的addressList </span></span><br><span class="line"><span class="xml">		 ofTyep属性的是List中保存元素的类型 --&gt;</span></span><br><span class="line"><span class="xml">		 </span></span><br><span class="line"><span class="xml">		<span class="comment">&lt;!--column:数据库中的字段名</span></span></span><br><span class="line"><span class="xml">		 	property:实体类中的  属性名 </span></span><br><span class="line"><span class="xml">		 	两者不一定一致 --&gt;</span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">collection</span> <span class="attr">property</span>=<span class="string">"addressList"</span></span></span></span><br><span class="line"><span class="xml">			ofType="com.newer.bean.Address"&gt;</span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"aid"</span> <span class="attr">property</span>=<span class="string">"id"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"nickname"</span> <span class="attr">property</span>=<span class="string">"nickname"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"telephone"</span> <span class="attr">property</span>=<span class="string">"telephone"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"addr"</span> <span class="attr">property</span>=<span class="string">"address"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"uid"</span> <span class="attr">property</span>=<span class="string">"uid"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">collection</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span></span><br><span class="line"><span class="xml">	</span></span><br><span class="line"><span class="xml">	<span class="comment">&lt;!-- 注意:这里的resultMap的值需要和上面定义的resultMap的id对应 --&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectById"</span> <span class="attr">parameterType</span>=<span class="string">"int"</span> <span class="attr">resultMap</span>=<span class="string">"myUser"</span>&gt;</span></span></span><br><span class="line"><span class="xml">	<span class="comment">&lt;!-- 注意:这里的sql语句中采用了取别名的方法来避免两张表同名出现的问题 --&gt;</span></span></span><br><span class="line"><span class="xml">		select</span></span><br><span class="line"><span class="xml">		u.*,a.id aid,nickname,telephone,a.address addr,uid</span></span><br><span class="line"><span class="xml">		from tb_user u,tb_address a</span></span><br><span class="line"><span class="xml">		where u.id=#</span><span class="template-variable">&#123;id&#125;</span></span><br><span class="line"><span class="xml">		and</span></span><br><span class="line"><span class="xml">		u.id=a.uid</span></span><br><span class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>3、编写测试类执行查询方法</p>
+<figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 查询</span></span><br><span class="line">User u = <span class="keyword">new</span> <span class="constructor">User()</span>;</span><br><span class="line">u = session.get<span class="constructor">Mapper(UserMapper.<span class="params">class</span>)</span>.select<span class="constructor">ById(<span class="params">st</span>)</span>;</span><br><span class="line">List&lt;Address&gt; addressList = u.get<span class="constructor">AddressList()</span>;</span><br><span class="line"><span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(<span class="string">"用户基本信息："</span>+u.get<span class="constructor">Username()</span>+<span class="string">","</span>+u.get<span class="constructor">Age()</span>+<span class="string">","</span>+u.get<span class="constructor">Address()</span>);</span><br><span class="line">for (Address address : addressList) &#123;</span><br><span class="line">	<span class="module-access"><span class="module"><span class="identifier">System</span>.</span></span>out.println(address);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>实训项目</category>
+      </categories>
+      <tags>
+        <tag>sts</tag>
+        <tag>mysql</tag>
+        <tag>mybatis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis数据库</title>
     <url>/2020/06/19/Redis%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
