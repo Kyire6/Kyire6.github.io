@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day7</title>
+    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day7/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第七天，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握JavaOOP概念</li>
+<li>掌握类的使用</li>
+<li>掌握对象的使用</li>
+<li>掌握对象成员操作</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaOOP"><a href="#1、JavaOOP" class="headerlink" title="1、JavaOOP"></a>1、JavaOOP</h3><p>作用：在java语言开发中实现软件开发流程设计的一种设计思想</p>
+<p>JavaOOP：Object Oriented Programming(面向对象编程)</p>
+<p>核心宗旨：一切皆对象</p>
+<h3 id="2、类-class"><a href="#2、类-class" class="headerlink" title="2、类(class)"></a>2、类(class)</h3><p>属于Java程序在运行的时候一种加载必备的内容，该成员主要实现了程序中每个事物的产生</p>
+<p>简单来说：类就是一个工厂，用于生产所有的东西</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、对象-Object"><a href="#3、对象-Object" class="headerlink" title="3、对象(Object)"></a>3、对象(Object)</h3><p>属于Java的核心部分，因为对象的存在才使程序具备了各种不同的产物，从而实现不同的过程内容</p>
+<p>简单来说：程序中可以使用的东西</p>
+<p>创建对象的语法：对象的创建由类决定</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">类名 对象名(实例名)=<span class="keyword">new</span> <span class="type"></span>类名();</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、类和对象的关系"><a href="#4、类和对象的关系" class="headerlink" title="4、类和对象的关系"></a>4、类和对象的关系</h3><p>对象所具备的就是类所拥有的，反而言之类所具备的对象不一定拥有</p>
+<h3 id="5、类-对象-的成员"><a href="#5、类-对象-的成员" class="headerlink" title="5、类(对象)的成员"></a>5、类(对象)的成员</h3><p>​    成员部分：</p>
+<ul>
+<li><p>属性 – 对象所具备的描述</p>
+<p>语法：<code>数据类型 属性名;</code></p>
+<p>使用方式：</p>
+<p>​    类中所拥有的属性在使用的时候必须和对象有关</p>
+<p>​    赋值属性：对象名.属性=值</p>
+<p>​    获取属性：对象名.属性</p>
+<p>因为属性可以存储数据，所以就将对象提升为一种新的数据容器。存放在对象中的数据可以没有个数限制、类型限制</p>
+</li>
+<li><p>方法 – 对象所具备的行为能力</p>
+<p>属于Java程序的灵魂，让程序具备了活力，从而提高了程序的功能操作，所有的程序员在完成Java程序开发的时候做的就是方法的实现</p>
+<p>类型：</p>
+<ul>
+<li><p>自定义方法</p>
+<p>种类：</p>
+<ol>
+<li><p>无返回、无参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名()&#123;</span><br><span class="line">	当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无返回、有参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数列表：包含一系列的形式参数</p>
+<p>数据类型 参数名,数据类型 参数名…</p>
+</li>
+<li><p>有返回、无参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名()&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有返回、有参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>构造方法</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day6</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day6/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第六天，Java语言基础</p>
