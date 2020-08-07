@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day5</title>
+    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day5/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第五天，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解数组</li>
+<li>掌握数组的原理实现</li>
+<li>掌握数组的不同种类</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、数组"><a href="#1、数组" class="headerlink" title="1、数组"></a>1、数组</h3><p>是程序中一种数据的容器，该容器内可以存放指定长度的相同类型数据</p>
+<h3 id="2、定义数组"><a href="#2、定义数组" class="headerlink" title="2、定义数组"></a>2、定义数组</h3><p>语法：</p>
+<p>​        数据类型[] 数组名称 = new 数据类型[长度];</p>
+<p>​        数据类型[] 数组名称 = new 数据类型[]{值1,值2…};</p>
+<p>​        数据类型[] 数组名称 = {值1,值2…};</p>
+<h3 id="3、使用数组"><a href="#3、使用数组" class="headerlink" title="3、使用数组"></a>3、使用数组</h3><ul>
+<li><p>获取数组的长度</p>
+<p>​            <code>数组名.length</code></p>
+</li>
+<li><p>获取数组的每个数据</p>
+<p>​    通过数组中提供的下标获取每个位置上的数据</p>
+<p>​            <code>数组名[下标]</code></p>
+<p>​    数组下标从0开始，表示第一个位置</p>
+</li>
+<li><p>数组添加数据</p>
+<p>​    通过数组下标进行指定位置数据添加</p>
+<p>​            <code>数组名[下标] = 值;</code></p>
+</li>
+</ul>
+<h3 id="4、数组的种类"><a href="#4、数组的种类" class="headerlink" title="4、数组的种类"></a>4、数组的种类</h3><ul>
+<li><p>一维数组</p>
+<p>​    一个数组中只能存放一组相同类型的单个数据</p>
+</li>
+<li><p>二维数组</p>
+<p>​    一个数组中能存放多个相同类型的数组</p>
+<p>​    语法：</p>
+<p>​            <code>数据类型[][] 数组名=new 数据类型[长度1][长度2]</code></p>
+<p>​            长度1：二维数组中存放的数组个数</p>
+<p>​            长度2：每个数组中存放的数据个数</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java语言Day4</title>
+    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day4/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第四天，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li><p>掌握多元运算符</p>
+</li>
+<li><p>掌握条件(流程)控制语句</p>
+</li>
+<li><p>掌握循环语句</p>
+</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、多元运算符"><a href="#1、多元运算符" class="headerlink" title="1、多元运算符"></a>1、多元运算符</h3><p>​    作用：通过表达式获取的结果来得到对应的值</p>
+<p>​    语法：</p>
+<p>​            <code>表达式? 真的结果内容:假的结果内容</code></p>
+<h3 id="2、流程控制语句"><a href="#2、流程控制语句" class="headerlink" title="2、流程控制语句"></a>2、流程控制语句</h3><p>​    作用：在Java代码执行中，用于控制代码的执行流程，从表达式结果实现不同的代码运行。</p>
+<h3 id="3、流程语句分类"><a href="#3、流程语句分类" class="headerlink" title="3、流程语句分类"></a>3、流程语句分类</h3><ul>
+<li><p>if控制语句</p>
+<ul>
+<li><p>普通条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式)&#123;</span><br><span class="line">	表达式成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多层条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>)&#123;</span><br><span class="line">	表达式<span class="number">1</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>)&#123;</span><br><span class="line">	表达式<span class="number">2</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	以上所有表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(外层表达式)&#123;</span><br><span class="line">	<span class="keyword">if</span>(内层表达式)&#123;</span><br><span class="line">		内层表达式成立执行的代码部分</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		内层表达式不成立执行的代码部分</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	外层表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>switch语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(数据值)&#123;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:默认执行的地方;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h3 id="4、循环"><a href="#4、循环" class="headerlink" title="4、循环"></a>4、循环</h3><ul>
+<li><p>作用：在程序中用于重复执行具有相同指令的操作行为，在执行过程中根据循环条件决定循环的执行。</p>
+</li>
+<li><p>循环的控制成员</p>
+<ul>
+<li>循环的计数变量  <code>int i=0;</code></li>
+<li>循环条件  <code>i&lt;?</code></li>
+<li>循环计数  <code>i++</code></li>
+</ul>
+</li>
+<li><p>种类：</p>
+<ul>
+<li><p><strong>while循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(循环条件)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>do..while循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;<span class="keyword">while</span>(循环条件);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>while和do..while的区别</strong></p>
+<p>while循环必须根据循环条件决定是否进入循环体中执行代码</p>
+<p>do..while循环先执行一次循环体中的代码，然后再根据循环条件确定是否继续进行循环</p>
+</li>
+<li><p><strong>for循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(循环计数变量;循环条件;循环计数)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day3</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day3/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第三天，Java语言基础</p>
