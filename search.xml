@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day3</title>
+    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day3/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第三天，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解运算符</li>
+<li>掌握算术运算符</li>
+<li>掌握赋值运算符</li>
+<li>掌握比较运算符</li>
+<li>掌握逻辑运算符</li>
+<li>掌握多远运算符</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、运算符"><a href="#1、运算符" class="headerlink" title="1、运算符"></a>1、运算符</h3><p>在程序中会存在一系列的逻辑运算符操作，该操作需要使用运算符实现。</p>
+<h3 id="2、算术运算符"><a href="#2、算术运算符" class="headerlink" title="2、算术运算符"></a>2、算术运算符</h3><p>种类：</p>
+<ul>
+<li><p>一元运算符</p>
+<p>++(自增)  –(自减)</p>
+<p>当运算符在变量之后表示先获取变量数据，然后在进行自增</p>
+<p>当运算符在变量之前表示先进行自增，然后在进行变量数据获取</p>
+</li>
+<li><p>二元运算符</p>
+<p>+(加)  -(减)  *(乘)  /(除)  %(取模)</p>
+</li>
+</ul>
+<h3 id="3、赋值运算符"><a href="#3、赋值运算符" class="headerlink" title="3、赋值运算符"></a>3、赋值运算符</h3><p><code>+=  -=  *=  /=  %=  =</code></p>
+<p>例如： </p>
+<p>​        <code>a+=1  ==  a=a+1;</code></p>
+<h3 id="4、比较运算符"><a href="#4、比较运算符" class="headerlink" title="4、比较运算符"></a>4、比较运算符</h3><p><code>&gt;(大于) &lt;(小于) &gt;=(大于等于) &lt;=(小于等于) ==(等于) !=(不等于)</code></p>
+<p>比较运算符执行操作后获取到的是一个比较的结果(true/false)</p>
+<p>在字符串类型上进行内容比较的时候不能直接使用<code>==</code>，因为比较的是箭头执行的位置是否相同，而需要通过字符串提供的<code>equals()</code>来进行内容比较</p>
+<p>语法：</p>
+<p>​        字符串.equals(字符串);</p>
+<h3 id="5、逻辑运算符"><a href="#5、逻辑运算符" class="headerlink" title="5、逻辑运算符"></a>5、逻辑运算符</h3><p>种类：</p>
+<ul>
+<li><p>与(逻辑与、短路与)</p>
+<ul>
+<li><p>逻辑与  &amp;</p>
+</li>
+<li><p>短路与  &amp;&amp;</p>
+<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为假，那么整个运算符结果就为假</p>
+</li>
+</ul>
+</li>
+<li><p>或(逻辑或、短路或)</p>
+<ul>
+<li><p>逻辑或  |</p>
+</li>
+<li><p>短路或  ||</p>
+<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为真，那么整个运算符结果就位真</p>
+</li>
+</ul>
+</li>
+<li><p>非</p>
+<p>将获取到的结果(boolean)进行去反</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day2</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day2/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第二天，Java语言基础</p>
