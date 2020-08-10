@@ -4,6 +4,8 @@
     <title>Java语言Day10</title>
     <url>/2020/08/10/Java%E8%AF%AD%E8%A8%80Day10/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十天，Java语言基础</p>
+<a id="more"></a>
+
 <h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
 <li>掌握static和final关键字</li>
 <li>掌握抽象</li>
@@ -12,7 +14,7 @@
 <p>​    <strong>修饰类型：</strong></p>
 <pre><code>1. 属性
    2. 方法
-   3. 块</code></pre><h3 id="2、final-最终"><a href="#2、final-最终" class="headerlink" title="2、final(最终)"></a>2、final(最终)</h3><p>​    <strong>修饰类型：</strong></p>
+      3. 块</code></pre><h3 id="2、final-最终"><a href="#2、final-最终" class="headerlink" title="2、final(最终)"></a>2、final(最终)</h3><p>​    <strong>修饰类型：</strong></p>
 <ol>
 <li>属性</li>
 <li>方法</li>
@@ -60,6 +62,8 @@
     <title>Java语言Day9</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day9/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第九天，Java语言基础</p>
+<a id="more"></a>
+
 <h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
 <li>掌握访问修饰符</li>
 <li>掌握方法重写</li>
@@ -109,6 +113,8 @@
     <title>Java语言Day8</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day8/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第八天，Java语言基础</p>
+<a id="more"></a>
+
 <h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
 <li>掌握构造方法的使用</li>
 <li>掌握方法重载实现</li>
