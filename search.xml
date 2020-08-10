@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day10</title>
+    <url>/2020/08/10/Java%E8%AF%AD%E8%A8%80Day10/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十天，Java语言基础</p>
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握static和final关键字</li>
+<li>掌握抽象</li>
+</ol>
+<h3 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h3><h3 id="1、static-静态"><a href="#1、static-静态" class="headerlink" title="1、static(静态)"></a>1、static(静态)</h3><p>​    <strong>定义：</strong>静态的修饰实现了内存中数据的共享操作，静态可以修饰属性和方法，如果属性被修饰为静态后，值将实现跨区域的访问，如果方法被修饰为静态后，表示该方法可以不依赖对象来直接访问。</p>
+<p>​    <strong>修饰类型：</strong></p>
+<pre><code>1. 属性
+   2. 方法
+   3. 块</code></pre><h3 id="2、final-最终"><a href="#2、final-最终" class="headerlink" title="2、final(最终)"></a>2、final(最终)</h3><p>​    <strong>修饰类型：</strong></p>
+<ol>
+<li>属性</li>
+<li>方法</li>
+<li>类</li>
+</ol>
+<p>​    <strong>作用：</strong></p>
+<ol>
+<li><p>如果属性修饰为final表示该属性值不能变，该属性就变成常量</p>
+<p>语法：</p>
+<p>​    <code>public static final 常量类型 常量名(大写)=值;</code></p>
+</li>
+<li><p>如果方法修饰为final表示该方法不能被重写</p>
+</li>
+<li><p>如果类修饰为final表示该类无法被继承</p>
+</li>
+</ol>
+<h3 id="3、抽象"><a href="#3、抽象" class="headerlink" title="3、抽象"></a>3、抽象</h3><p>​    <strong>定义：</strong>抽象属于行为的一种定义，其目的性就是完成某些功能在定义的时候因为无法提供具体的执行过程，从而将执行的权利交给子类去完成的现象，并且所有具备该特征方法的类就称之为<strong>抽象类</strong>，其子类就称之为<strong>实现类</strong></p>
+<p>​    <strong>类型：</strong></p>
+<ol>
+<li><p>方法抽象</p>
+<p>在父类中如果一个方法无法提供具体的方法体可以将方法定义为抽象方法</p>
+<p><strong>语法：</strong></p>
+<p><code>public abstract void 方法名();</code></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>类抽象</p>
+<p>因为一个类中存在了抽象方法，所以该类也必须修饰为抽象类</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">	抽象部分</span><br><span class="line">	非抽象部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：</strong>如果一个类被修饰为抽象类后，该类是无法被实例化的</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day9</title>
     <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day9/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第九天，Java语言基础</p>
@@ -1503,9 +1559,9 @@
         <category>实训日志</category>
       </categories>
       <tags>
+        <tag>MySQL</tag>
         <tag>Linux</tag>
         <tag>技巧</tag>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -2094,8 +2150,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>github</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -2224,8 +2280,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>教程</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
