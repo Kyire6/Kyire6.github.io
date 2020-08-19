@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day11</title>
+    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day11/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十一，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握接口思想</li>
+<li>掌握异常使用</li>
+<li>掌握扫雷游戏的实现</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、接口"><a href="#1、接口" class="headerlink" title="1、接口"></a>1、接口</h3><p>​    <strong>关键字：</strong>interface、implements</p>
+<p>​    <strong>定义：</strong>接口是Java中一种非类(class)的组件，体现了Java项目中的各种定义功能，使程序在执行的过程中只能完成特定的定义功能。理解接口的方法和抽象有点类似，知识抽象是类接口不是类，并且抽象类中可以包含抽象方法和非抽象方法以及属性，但接口全部都是抽象方法和静态常量。接口弥补了抽象类的不足，可以在继承上做到多继承和多实现</p>
+<h3 id="2、接口"><a href="#2、接口" class="headerlink" title="2、接口"></a>2、接口</h3><p>​    <strong>接口语法：</strong>    </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">	抽象方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>实现类语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">implements</span> 接口名</span>&#123;</span><br><span class="line">    抽象方法实现</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、类与接口的区别"><a href="#3、类与接口的区别" class="headerlink" title="3、类与接口的区别"></a>3、类与接口的区别</h3><ol>
+<li>类只能单继承，接口可以多继承</li>
+<li>实现类可以多实现</li>
+</ol>
+<h3 id="4、异常"><a href="#4、异常" class="headerlink" title="4、异常"></a>4、异常</h3><p>​    在计算机中包含错误和异常两种现象</p>
+<p>​    <strong>错误：</strong>Error         –&gt;来自于计算机的反馈</p>
+<p>​    <strong>异常：</strong>Exception –&gt;来自于程序的反馈</p>
+<h3 id="5、异常的结构"><a href="#5、异常的结构" class="headerlink" title="5、异常的结构"></a>5、异常的结构</h3><p>​    Exception – 异常根类</p>
+<p>​            |– RuntimeException(运行时异常)</p>
+<h3 id="6、异常处理"><a href="#6、异常处理" class="headerlink" title="6、异常处理"></a>6、异常处理</h3><p>​    <strong>方式：</strong></p>
+<ol>
+<li><p>try…catch处理</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	被监控的代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	产生指定异常后处理的地方</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>throws处理</p>
+<p>在代码中如果存在异常，将该异常处理方式抛出给调用者去处理。</p>
+<p>抛出异常只能在方法上执行。</p>
+<p><strong>throws</strong> –&gt;抛出异常</p>
+<p><strong>throw</strong>  –&gt;产生异常  <code>throw new 异常类型();</code></p>
+<p><strong>注：</strong>在使用throw的时候因为需要人为方式产生一个异常，所以通常情况下都会采用自定义异常来进行创建。</p>
+<p><strong>自定义异常定义语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 自定义异常类名 <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<ol start="3">
+<li><p>finally块</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">	监控代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	异常处理</span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">	不管是否存在异常都会执行的部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="7、扫雷实现"><a href="#7、扫雷实现" class="headerlink" title="7、扫雷实现"></a>7、扫雷实现</h3><ol>
+<li><p>分析</p>
+<p>扫雷游戏的对象：格子对象（内容、状态）</p>
+<p>雷区使用二维数组存放所有格子</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day10</title>
     <url>/2020/08/10/Java%E8%AF%AD%E8%A8%80Day10/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十天，Java语言基础</p>
@@ -1565,9 +1636,9 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
