@@ -1,6 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java语言Day13</title>
+    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day13/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十三天，Java语言基础</p>
+<a id="more"></a>
+
+<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解java.util包</li>
+<li>掌握Date类</li>
+<li>掌握集合框架</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、java-util"><a href="#1、java-util" class="headerlink" title="1、java.util"></a>1、java.util</h3><p>​    属于Java语言中的工具包，提供了一系列的管理工具，类似于Scanner、Random、Date、集合等。在使用该包中的中工具的时候必须导包。</p>
+<h3 id="2、Date类-时间类"><a href="#2、Date类-时间类" class="headerlink" title="2、Date类(时间类)"></a>2、Date类(时间类)</h3><p>​    <strong>作用：</strong>用于在程序中获取和操作时间的一种工具类，同时也是一种数据类型。</p>
+<p>​    <strong>注意：</strong>1900：计算机时间的起始年份–int             1970：计算机毫秒数起始年份–long</p>
+<p>​    <strong>方法：</strong></p>
+<ol>
+<li>getDay()  –获取当前是周几</li>
+</ol>
+<h3 id="3、集合框架"><a href="#3、集合框架" class="headerlink" title="3、集合框架"></a>3、集合框架</h3><p>​    <strong>定义：</strong>util包下最重要的API组合，也是java中最大的一种数据存储容器</p>
+<p>​    <strong>体系机构：</strong></p>
+<ol>
+<li><p><strong>Collection父接口</strong></p>
+<p><strong>子接口：</strong>a、List接口  </p>
+<p>​                    <strong>实现类：</strong>ArrayList、LinkedList、Vector</p>
+<p>​               b、Set接口</p>
+<p>​                    <strong>实现类：</strong>HashSet、TreeSet</p>
+</li>
+<li><p><strong>Map接口</strong></p>
+<p><strong>实现类：</strong>HashMap</p>
+</li>
+</ol>
+<h3 id="4、List集合"><a href="#4、List集合" class="headerlink" title="4、List集合"></a>4、List集合</h3><p>​    <strong>实现原理：</strong>采用动态数组的形式进行数据存储，存放在该集合中数据是一种有序、可重复的数据。</p>
+<p>​    <strong>实现类：</strong></p>
+<ul>
+<li><p><strong>ArrayList</strong></p>
+<p>该实现类在集合操作中适合于查询和修改操作</p>
+<p>初始大小为10</p>
+<ul>
+<li><strong>方法</strong><ul>
+<li>add(Object o)  –添加数据</li>
+<li>size()  –获取List大小(数据个数)</li>
+<li>get(int index)  –通过索引获取List中数据</li>
+<li>remove(int index)  –通过索引删除数据</li>
+<li>remove(Object o)  –通过数据删除</li>
+<li>removeAll(Collection c)  –通过集合删除所有数据</li>
+<li>set(int index,Object e)  –通过指定索引更改数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>LinkedList</strong></p>
+<p>该集合属于一种双向链表结构的集合，每个元素都是以一个Node对象进行存储，Node中包含3个内容，一个是数据、一个是上个节点的对象、一个是下个节点的对象。</p>
+<p>适合于集合中进行添加和删除操作</p>
+</li>
+<li><p><strong>Vector</strong></p>
+<p>该集合使用于线程操作中，可以解决线程同步问题</p>
+</li>
+<li><p><strong>引用转型实现</strong></p>
+<p>List list=new ArrayList() / new LinkedList() / new Verctor();</p>
+</li>
+</ul>
+<h3 id="5、Set集合"><a href="#5、Set集合" class="headerlink" title="5、Set集合"></a>5、Set集合</h3><ul>
+<li><p><strong>定义：</strong>采用散列的方式进行数据存储，特征在于数据是无序的、不可重复，同时在数据存入到集合中是时使用迭代器进行数据的迭代。</p>
+</li>
+<li><p><strong>实现类：</strong>HashSet</p>
+</li>
+<li><p>iterator()  –获取当前Set集合的迭代器</p>
+</li>
+<li><p><strong>迭代器：</strong>Iterator</p>
+<ul>
+<li><p>hasNext()  –判断迭代器中是否有内容</p>
+</li>
+<li><p>next()  –获取元素</p>
+</li>
+<li><p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Set set=<span class="keyword">new</span> HashSet();</span><br><span class="line">Iterator it=set.iterator();</span><br><span class="line">   <span class="comment">//通过判断迭代器中是否有内容来控制迭代</span></span><br><span class="line">   <span class="keyword">while</span>(it.hasNext()) &#123;</span><br><span class="line">       <span class="comment">//如果条件成立表示当前层存在数据</span></span><br><span class="line">       System.out.println(it.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6、Map集合"><a href="#6、Map集合" class="headerlink" title="6、Map集合"></a>6、Map集合</h3><ul>
+<li><p><strong>定义：</strong>集成了Collection集合的特征，将数据以散列形式进行存储，同时也实现了数据的定为获取，在存储数据的时候需要提供两组数据内容为一个数据进行标识，该两组数据会由一个对象提供(Entry)，Entry中数据标识以key形式存在，值以value形式存在，数据结构方法就是一个键值对的方式。</p>
+</li>
+<li><p><strong>注意：</strong>key必须是唯一的，而value可以重复的</p>
+</li>
+<li><p><strong>实现类：</strong>HashMap</p>
+<ul>
+<li>put(Object key,Object value);  –添加数据</li>
+<li>get(Object key);  –查询数据</li>
+<li>keySet();  –获取所有的key值，返回值为Set集合</li>
+<li>values();  –获取所有的value值，返回值为Collection集合</li>
+<li>entrySet();  –返回的是Set&lt;Map.Entry&lt;K,V&gt;&gt;，表示一个映射项</li>
+</ul>
+</li>
+<li><p><strong>遍历map集合</strong></p>
+<ul>
+<li><p>使用keySet()获取到的key值，拿到相应的value</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(Object o:map.keySet()) &#123;</span><br><span class="line">	System.out.println(<span class="string">"key:"</span>+o+<span class="string">"--value:"</span>+map.get(o));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用entrySet()获取到集合中的键值对，分别取出相应的数据</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(Map.Entry&lt;String , String&gt; mp:map.entrySet()) &#123;</span><br><span class="line">	System.out.println(<span class="string">"key="</span>+mp.getKey()+<span class="string">"  , value="</span>+mp.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java语言Day12</title>
     <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day12/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十二，Java语言基础</p>
