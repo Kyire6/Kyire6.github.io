@@ -1361,7 +1361,7 @@
 <pre><code>1. 增加数据
 
    2. 删除数据
-      3. 更新数据
+            3. 更新数据
          4. 查询数据</code></pre></li>
 </ul>
 <h1 id="Day13"><a href="#Day13" class="headerlink" title="Day13"></a>Day13</h1><h2 id="一、目标-12"><a href="#一、目标-12" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
@@ -2103,8 +2103,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -2272,8 +2272,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -2359,8 +2359,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
         <tag>MongDB</tag>
       </tags>
   </entry>
@@ -2415,8 +2415,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
@@ -2477,8 +2477,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
         <tag>MySQL</tag>
       </tags>
   </entry>
@@ -2526,8 +2526,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
@@ -2610,8 +2610,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -2871,8 +2871,8 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Linux</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -3143,8 +3143,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
         <tag>技巧</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
