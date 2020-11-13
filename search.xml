@@ -1,106 +1,717 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java语言Day16</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day16/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十六天，Java语言基础</p>
+    <title>前端知识笔记</title>
+    <url>/2020/11/13/6f706555.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下前端知识这半个月的学习过程，一起进步！</p>
+<p>主要是H5+CSS3+ES6的学习，还学习了bootstrap、jQuery等框架。</p>
 <a id="more"></a>
 
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握矩阵操作</li>
-<li>掌握动态图实现</li>
-<li>掌握声音播放</li>
+<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解HTML开发工具使用</li>
+<li>了解HTML5</li>
+<li>掌握HTML5结构</li>
+<li>掌握HTML5的常用标签</li>
+<li>作业</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、矩阵"><a href="#1、矩阵" class="headerlink" title="1、矩阵"></a>1、矩阵</h3><p><strong>定义：</strong>javaGUI中的一种范围控制组件，可以在界面中指定组件的大小，同时可以控制组件与组件之间的交互行为。</p>
-<h3 id="2、动态图"><a href="#2、动态图" class="headerlink" title="2、动态图"></a>2、动态图</h3><p>java不支持GIF类型图片，GIF只在浏览器中才能动态显示。那么可以使用一个整图进行切割的形式获取图片中不同的部分。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day15</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day15/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十五天，Java语言基础</p>
-<a id="more"></a>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、开发工具"><a href="#1、开发工具" class="headerlink" title="1、开发工具"></a>1、开发工具</h3><p>前端开发工具：记事本、DW、VSCode、HBuilder</p>
+<h3 id="2、HTML5"><a href="#2、HTML5" class="headerlink" title="2、HTML5"></a>2、HTML5</h3><p><strong>HTML：</strong>HTML是一种超文本标记语言，也是网页的基础语言，该语言实现网页的设计和组成</p>
+<p><strong>HTML5：</strong>是HTML的第五代全新版本，推出了很多全新的标签和样式，并且能很好地实现移动设备和PC设备的兼容</p>
+<h3 id="3、HTML5结构"><a href="#3、HTML5结构" class="headerlink" title="3、HTML5结构"></a>3、HTML5结构</h3><ul>
+<li><code>&lt;!DOCTYPE html&gt;</code>   –  文档说明头(HTML5专属)</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>   –  声明文档的结构</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code>  –  网页的头信息(外部文件加载…)</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>  –  正文信息(浏览器打开后看到的网页信息)</li>
+</ul>
+<p><strong>定义方式：</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解线程</li>
-<li>掌握线程库</li>
-<li>掌握多线程</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、线程"><a href="#1、线程" class="headerlink" title="1、线程"></a>1、线程</h3><ul>
-<li><strong>进程：</strong>在系统中运行的应用程序</li>
-<li><strong>线程：</strong>在应用程序中运行的功能。Java程序中如果存在多个功能需要同时执行的时候，每个功能就需要定义为线程。</li>
-</ul>
-<h3 id="2、线程库"><a href="#2、线程库" class="headerlink" title="2、线程库"></a>2、线程库</h3><ul>
-<li><strong>API：</strong>java.lang包中</li>
-<li><strong>类型：</strong><ul>
-<li>Thread  –类</li>
-<li>Runnable  –接口</li>
-</ul>
+<h3 id="4、HTML常用标签"><a href="#4、HTML常用标签" class="headerlink" title="4、HTML常用标签"></a>4、HTML常用标签</h3><ol>
+<li><p>换行标签<code>&lt;br/&gt;</code></p>
 </li>
-</ul>
-<h3 id="3、Thread类"><a href="#3、Thread类" class="headerlink" title="3、Thread类"></a>3、Thread类</h3><ul>
-<li>线程类，该类提供了一系列的线程操作方法，同时线程在创建后通过start方法启动线程，而功能需要添加在一个被重写的run方法中 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day14</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day14/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十四天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解JavaGUI编程</li>
-<li>了解JavaGUI编程库</li>
-<li>掌握JFrame使用</li>
-<li>掌握JPanel使用</li>
-<li>掌握事件监听操作</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaGUI"><a href="#1、JavaGUI" class="headerlink" title="1、JavaGUI"></a>1、JavaGUI</h3><p>​    <strong>定义：</strong>java图形用户界面编程</p>
-<p>​    <strong>完成目标：</strong>通过javaGUI编程实现游戏的开发，在游戏开发中最难的就是游戏引擎的设计。</p>
-<h3 id="2、JavaGUI编程库"><a href="#2、JavaGUI编程库" class="headerlink" title="2、JavaGUI编程库"></a>2、JavaGUI编程库</h3><p>​    <strong>组成：</strong>java.awt和javax.swing</p>
-<h3 id="3、JFramel类-窗体类"><a href="#3、JFramel类-窗体类" class="headerlink" title="3、JFramel类(窗体类)"></a>3、JFramel类(窗体类)</h3><ul>
-<li><p><strong>作用：</strong>为界面提供窗体的设置，并且通过窗体进行界面内容的添加</p>
+<li><p>标题标签</p>
+<p><code>&lt;h1&gt;&lt;/h1&gt;...&lt;h6&gt;&lt;/h6&gt;</code></p>
 </li>
-<li><p><strong>使用方式：</strong></p>
+<li><p>分割标签<code>&lt;hr/&gt;</code></p>
+</li>
+<li><p>段落标签<code>&lt;p&gt;&lt;/p&gt;</code></p>
+</li>
+<li><p>图片标签<code>&lt;img src=&quot;图片的路径&quot;/&gt;</code>  – scr属性：设置图片的路径</p>
+</li>
+<li><p>超链接标签<code>&lt;a href=&quot;跳转的路径&quot;&gt;&lt;/a&gt;</code></p>
+<p>跳转路径：1、具体的网页路径   2、#–当前页面</p>
+</li>
+<li><p>表格标签</p>
+<p><strong>基本格式：</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span> --&gt;行</span><br><span class="line">    	<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>  --&gt;列</span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>表格属性：</strong></p>
+<ol>
+<li>border：边框</li>
+<li>align：水平对齐</li>
+</ol>
+<h3 id="5、作业"><a href="#5、作业" class="headerlink" title="5、作业"></a>5、作业</h3><p>通过已学的标签实现个人简历的网页设计</p>
+</li>
+</ol>
+<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1><h2 id="一、目标-1"><a href="#一、目标-1" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握布局标签</p>
+<p>2、掌握CSS使用</p>
+<h2 id="二、知识点-1"><a href="#二、知识点-1" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、布局标签"><a href="#1、布局标签" class="headerlink" title="1、布局标签"></a>1、布局标签</h3><ul>
+<li><p>列表标签</p>
 <ul>
-<li>基于对象形式使用</li>
-<li>基于继承形式使用</li>
+<li><p>无序列表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有序列表</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>项<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>div标签</p>
+<p><strong>特征：</strong>在网页中div标签属于无效果标签，但该标签默认下会独占一行，也称之为层标签。通常在网页中div会和span标签组合在一起使用</p>
+<p><strong>作业：</strong>用于进行页面布局和图片存储，而span标签主要用于文字存储</p>
+</li>
+<li><p>HTML5中的布局标签</p>
+<ul>
+<li><code>&lt;header&gt;&lt;/header&gt;</code>   –  头标签</li>
+<li><code>&lt;main&gt;&lt;/main&gt;</code>   –  主体标签</li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code>    –  尾部标签</li>
 </ul>
 </li>
 </ul>
-<h3 id="4、JPanel类-面板类"><a href="#4、JPanel类-面板类" class="headerlink" title="4、JPanel类(面板类)"></a>4、JPanel类(面板类)</h3><ul>
-<li><strong>作用：</strong>用于在窗体上完成内容组件的添加，游戏中所有场景都是在面板上完成</li>
-<li><strong>使用：</strong>和窗体的使用类似，但必须添加到窗体才能显示内容</li>
+<h3 id="2、CSS3"><a href="#2、CSS3" class="headerlink" title="2、CSS3"></a>2、CSS3</h3><p>​    <strong>样式表</strong></p>
+<p>​    <strong>作用：</strong>在网页中通过标签实现界面美化的操作</p>
+<p>​    </p>
+<h3 id="3、CSS加载方式"><a href="#3、CSS加载方式" class="headerlink" title="3、CSS加载方式"></a>3、CSS加载方式</h3><ul>
+<li><p>内嵌式加载方法</p>
+<p>该加载方式属于在标签内部完成的操作，通过style属性进行样式添加</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">标签名</span> <span class="attr">style</span>=<span class="string">"样式名称:样式值;"</span>&gt;</span><span class="tag">&lt;/<span class="name">标签名</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内部式加载方式</p>
+<p>通过<code>&lt;style&gt;&lt;/style&gt;</code>标签结合选择器完成样式的加载</p>
+</li>
+<li><p>外部式加载方式</p>
+</li>
 </ul>
-<h3 id="5、游戏引擎"><a href="#5、游戏引擎" class="headerlink" title="5、游戏引擎"></a>5、游戏引擎</h3><ol>
-<li>完成本地磁盘文件加载</li>
+<h3 id="4、CSS选择器"><a href="#4、CSS选择器" class="headerlink" title="4、CSS选择器"></a>4、CSS选择器</h3><p>选择器分为以下3种：</p>
+<ol>
+<li><p>html选择器(元素选择器)</p>
+<p><strong>实现：</strong>通过标签名称作为样式的加载方式，完成样式的获取</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight dust"><table><tr><td class="code"><pre><span class="line"><span class="xml">标签名称</span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">	样式表</span></span><br><span class="line"><span class="template-variable">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>id选择器</p>
+<p><strong>实现：</strong>通过标签提供的id属性进行样式设置</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta">#id名称&#123;</span></span><br><span class="line">	样式表</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>class选择器</p>
+<p><strong>实现：</strong>通过标签提供的class属性进行样式设置</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line"><span class="class">.<span class="keyword">class</span>名称</span>&#123;</span><br><span class="line">	样式表</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
 </ol>
-<h3 id="6、事件"><a href="#6、事件" class="headerlink" title="6、事件"></a>6、事件</h3><ul>
-<li><strong>关键字：</strong>event</li>
-<li><strong>实现：</strong>事件监听器</li>
-<li><strong>类型：</strong><ul>
-<li>键盘事件  –&gt;键盘监听器</li>
-<li>鼠标事件  –&gt;鼠标监听器</li>
-<li>焦点事件</li>
-<li>窗体事件</li>
+<h3 id="5、样式加载优先级"><a href="#5、样式加载优先级" class="headerlink" title="5、样式加载优先级"></a>5、样式加载优先级</h3><p>​    在同一个标签中存在多种不同的选择器的时候，加载优先级为：</p>
+<p>​    *<em>id选择器 &gt;class选择器 &gt;html选择器  *</em></p>
+<p>​    如果存在不同的加载方式的时候采取就近原则</p>
+<h1 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h1><h2 id="一、目标-2"><a href="#一、目标-2" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握盒子模型</p>
+<p>2、掌握伪类操作</p>
+<h2 id="二、知识点-2"><a href="#二、知识点-2" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、盒子模型"><a href="#1、盒子模型" class="headerlink" title="1、盒子模型"></a>1、盒子模型</h3><p>​        <strong>核心：</strong>边框(border)、内容(content)、外边距(margin)、内边距(padding)</p>
+<p>​        <strong>作用：</strong>用于为元素提供布局操作，通过盒子模型约束元素与元素之间的布局操作</p>
+<h3 id="2、浮动"><a href="#2、浮动" class="headerlink" title="2、浮动"></a>2、浮动</h3><p>​    <strong>关键字：</strong>float</p>
+<p>​    <strong>作用：</strong>实现当前元素左右能出现元素</p>
+<h3 id="3、伪类"><a href="#3、伪类" class="headerlink" title="3、伪类"></a>3、伪类</h3><p>​    <strong>作用：</strong>在链接操作中提供鼠标控制行为</p>
+<p>​    <strong>语法：</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">a:</span>事件&#123;</span><br><span class="line">	样式表</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h1><h2 id="一、目标-3"><a href="#一、目标-3" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握定位操作</p>
+<p>2、了解bootstrap</p>
+<h2 id="二、知识点-3"><a href="#二、知识点-3" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、定位"><a href="#1、定位" class="headerlink" title="1、定位"></a>1、定位</h3><p>​    <strong>关键字：</strong>position</p>
+<p>​    <strong>定位方式：</strong></p>
+<ol>
+<li><p>绝对定位(absolute)</p>
+<p>将元素通过绝对位置进行定位，一旦元素进行了决定设置后，原有的初始位置将被后续的元素替代，独立于网页中。</p>
+</li>
+<li><p>相对定位(relative)</p>
+<p>元素进行相对定位设置后，元素原始位置不会进行改变，只是在原始位置发生偏移效果。</p>
+</li>
+<li><p>固定定位(fixed)</p>
+<p>元素进行定位设置后，位置以浏览器界面作为位置设置。</p>
+</li>
+</ol>
+<h1 id="Day5"><a href="#Day5" class="headerlink" title="Day5"></a>Day5</h1><h2 id="一、目标-4"><a href="#一、目标-4" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、了解bootstrap框架</p>
+<p>2、掌握bootstrap框架的配置方式</p>
+<p>3、掌握bootstrap布局设置</p>
+<h2 id="二、知识点-4"><a href="#二、知识点-4" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、bootstrap"><a href="#1、bootstrap" class="headerlink" title="1、bootstrap"></a>1、bootstrap</h3><p>​    一门前端中用于实现响应式网页构建一种快速搭建语言，该语言属于一门前端框架技术，在页面中主要用于完成界面美化和布局操作行为。由推特公司所推出。</p>
+<p>响应式是html5诞生以后主流的一种网页设计模式，该模式主要实现了pc和移动设备的兼容操作，可以做到在pc上显示的网页内容和在移动设备上也具备相同的内容。</p>
+<p><strong>参考资料：</strong></p>
+<ol>
+<li>官网</li>
+<li>素材</li>
+</ol>
+<p><strong>版本：</strong></p>
+<p>bootstrap  —3.0  –4.0(主要学习)</p>
+<h3 id="2、boostrap框架的配置方式"><a href="#2、boostrap框架的配置方式" class="headerlink" title="2、boostrap框架的配置方式"></a>2、boostrap框架的配置方式</h3><p><strong>配置方式：</strong></p>
+<ol>
+<li><p>引入外部的bootstrap库（本地化引入、网络方式引入(vscode默认方式)）</p>
+<p><strong>本地化引入：</strong> <code>&lt;head&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.css&quot;&gt;&lt;/head&gt;</code></p>
+<p><strong>网络方式引入：</strong>在网页中输入b4-$自动生成bootstrap网页框架</p>
+</li>
+<li><p>页面的配置</p>
+<p>在所有的bootstrap网页设计中必须先布局再添加组件内容。</p>
+</li>
+</ol>
+<h3 id="3、bootstrap布局设置"><a href="#3、bootstrap布局设置" class="headerlink" title="3、bootstrap布局设置"></a>3、bootstrap布局设置</h3><p><strong>关键字：</strong><code>container</code></p>
+<p><strong>作用：</strong>设置网页中显示的区域，默认为居中显示</p>
+<h3 id="4、栅格系统"><a href="#4、栅格系统" class="headerlink" title="4、栅格系统"></a>4、栅格系统</h3><p><strong>作用：</strong>为网页中进行等比划分的布局设置，确保响应式操作的有效性。</p>
+<p><strong>组成：</strong>行(row)、列(colum)</p>
+<p><strong>设备信息：</strong></p>
+<ul>
+<li>特小：.col                –手机屏幕</li>
+<li>小号：.col-sm-*      –手机屏幕、平板</li>
+<li>中号：.col-md-*     –平板</li>
+<li>大号：.col-lg-*        –pc设备</li>
+<li>特大号：.col-xl-*    –pc设备、LED</li>
 </ul>
+<h3 id="4、表格组件"><a href="#4、表格组件" class="headerlink" title="4、表格组件"></a>4、表格组件</h3><p><strong>作用：</strong>通过样式设置获取到不同效果的表格</p>
+<p><strong>种类：</strong>普通表格、条纹表格、鼠标效果表格、响应式表格等</p>
+<h1 id="Day6"><a href="#Day6" class="headerlink" title="Day6"></a>Day6</h1><h2 id="一、目标-5"><a href="#一、目标-5" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握按钮组件的操作</p>
+<p>2、掌握表单组件的操作</p>
+<p>3、掌握导航栏组件的操作</p>
+<h2 id="二、知识点-5"><a href="#二、知识点-5" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、按钮组件"><a href="#1、按钮组件" class="headerlink" title="1、按钮组件"></a>1、按钮组件</h3><p>​    在bootstrap中提供了多种固定式的按钮效果，该效果通过不同的状态值实现效果的输出。</p>
+<p>普通按钮效果：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>基本按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span>&gt;</span>主要按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-secondary"</span>&gt;</span>次要按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-success"</span>&gt;</span>成功<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-info"</span>&gt;</span>信息<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-warning"</span>&gt;</span>警告<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-danger"</span>&gt;</span>危险<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-dark"</span>&gt;</span>黑色<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-light"</span>&gt;</span>浅色<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-link"</span>&gt;</span>链接<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、表单组件"><a href="#2、表单组件" class="headerlink" title="2、表单组件"></a>2、表单组件</h3><p>​    表单组件在使用的时候需要考虑布局的问题，响应式页面布局会约束表单中组件的显示方式。</p>
+<h3 id="3、导航栏-navbar"><a href="#3、导航栏-navbar" class="headerlink" title="3、导航栏(navbar)"></a>3、导航栏(navbar)</h3><p>​    涵盖了按钮及表单操作组件，同时还提供了下拉菜单效果</p>
+<h1 id="Day7"><a href="#Day7" class="headerlink" title="Day7"></a>Day7</h1><h2 id="一、目标-6"><a href="#一、目标-6" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握提示框操作</p>
+<p>2、掌握卡片操作</p>
+<p>3、掌握轮播图操作</p>
+<p>4、掌握折叠框操作</p>
+<h2 id="二、知识点-6"><a href="#二、知识点-6" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、提示框-alert"><a href="#1、提示框-alert" class="headerlink" title="1、提示框(alert)"></a>1、提示框(alert)</h3><p>​    alert    –&gt;  除了提示以外还包含js操作行为。</p>
+<h3 id="2、卡片-card"><a href="#2、卡片-card" class="headerlink" title="2、卡片(card)"></a>2、卡片(card)</h3><p>​    card    –&gt;  用于展示商品等</p>
+<h3 id="3、轮播图"><a href="#3、轮播图" class="headerlink" title="3、轮播图"></a>3、轮播图</h3><h3 id="4、折叠框"><a href="#4、折叠框" class="headerlink" title="4、折叠框"></a>4、折叠框</h3><h1 id="Day8"><a href="#Day8" class="headerlink" title="Day8"></a>Day8</h1><h2 id="一、目标-7"><a href="#一、目标-7" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握模态框使用</p>
+<p>2、掌握气泡框使用</p>
+<p>3、掌握选项卡使用</p>
+<h2 id="二、知识点-7"><a href="#二、知识点-7" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、模态框-modal"><a href="#1、模态框-modal" class="headerlink" title="1、模态框(modal)"></a>1、模态框(modal)</h3><p>​    本身是一种信息提示的提示框，只是在有些特定场景下对提示框中进行组件添加，是模态框具备了内部网页的操作功能。</p>
+<h3 id="2、气泡框-popvoer"><a href="#2、气泡框-popvoer" class="headerlink" title="2、气泡框(popvoer)"></a>2、气泡框(popvoer)</h3><p>​    在组件周围弹出一个气泡框对组件进行描述信息提供</p>
+<h3 id="3、选项卡"><a href="#3、选项卡" class="headerlink" title="3、选项卡"></a>3、选项卡</h3><p>​    类似于导航栏，实现内容的切换</p>
+<h1 id="Day9"><a href="#Day9" class="headerlink" title="Day9"></a>Day9</h1><h2 id="一、目标-8"><a href="#一、目标-8" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、了解JavaScript</p>
+<p>2、掌握JavaScript核心组件</p>
+<p>3、掌握JavaScript编程实现</p>
+<p>4、掌握JavaScript和ES之间的关联</p>
+<p>5、掌握ES中的数据类型</p>
+<p>6、掌握ES中变量定义</p>
+<p>7、掌握ES中运算符</p>
+<h2 id="二、知识点-8"><a href="#二、知识点-8" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaScript"><a href="#1、JavaScript" class="headerlink" title="1、JavaScript"></a>1、JavaScript</h3><p>​    在前期学习过HTML、CSS、bootstrap这些都是属于网页设计类型的技术，如果需要在网页中完成编程操作就需要使用到JavaScript技术，该技术属于一种网页编程饿脚本语言，网页属于一种小型应用程序的集合，通过不同的APP来实现网页中的交互功能。</p>
+<h3 id="2、JavaScript核心组件"><a href="#2、JavaScript核心组件" class="headerlink" title="2、JavaScript核心组件"></a>2、JavaScript核心组件</h3><p>​    包含以下3中核心组件</p>
+<ul>
+<li><p><strong>ECMAScript</strong></p>
+<p>包含语言基础部分，比如<strong>数据类型、变量、条件、循环、数组</strong>等相关的基础部分。</p>
+</li>
+<li><p><strong>DOM(Document Object Model)</strong></p>
+<p>文档对象模型，该部分主要实现网页中课操作区域程序的实现。</p>
+</li>
+<li><p><strong>BOM(Brower Object Model)</strong></p>
+<p>浏览器对象模型，该部分主要控制浏览器的操作行为。</p>
 </li>
 </ul>
+<h3 id="3、ECMAScript-ES"><a href="#3、ECMAScript-ES" class="headerlink" title="3、ECMAScript(ES)"></a>3、ECMAScript(ES)</h3><p>​    ES5：2015年之前的版本</p>
+<p>​    ES6：目前前端中最主流的脚本技术，同时也是一种原生态的编程语言，在后期通过ES6诞生除了很多前端框架(vue、vuex、vuecli、ElmenetUI、typescript)</p>
+<p>​    ES7：该版本不稳定</p>
+<h3 id="4、ES使用"><a href="#4、ES使用" class="headerlink" title="4、ES使用"></a>4、ES使用</h3><p>​    脚本加载方式：</p>
+<ul>
+<li><p>内部式加载</p>
+<p>脚本可以写在网页的任意位置，但必须通过<code>&lt;script&gt;&lt;/script&gt;</code>标签包含。</p>
+</li>
+<li><p>外部式加载</p>
+<p>通过外部的js文件保存脚本，通过<code>&lt;script&gt;&lt;/script&gt;</code>标签包含，只是在标签中通过scr属性指定脚本文件路径。</p>
+</li>
+</ul>
+<h3 id="5、ES中输出脚本指令"><a href="#5、ES中输出脚本指令" class="headerlink" title="5、ES中输出脚本指令"></a>5、ES中输出脚本指令</h3><p>​    包含以下两种：</p>
+<p>​    console.log();    –&gt;在浏览器的控制台中显示信息</p>
+<p>​    document.write()  –&gt;  在网页中显示信息</p>
+<h3 id="6、ES基础语法"><a href="#6、ES基础语法" class="headerlink" title="6、ES基础语法"></a>6、ES基础语法</h3><p>​    ES属于一门弱类型语言，和java不同，java是一门强类型语言，同时java也是严格区分大小写的，而ES对大小写不敏感。</p>
+<p>​    <strong>ES数据类型</strong></p>
+<ol>
+<li><p>number类型</p>
+<p>所有的数字类型，包含整数和浮点数</p>
+</li>
+<li><p>string类型</p>
+<p>ES中字符/字符串类型，因为脚本语言中不区分单双引号</p>
+</li>
+<li><p>boolean类型</p>
+<p>布尔类型，存放的是true/false</p>
+</li>
+<li><p>null类型</p>
+<p>称之为：空类型，表示当前的脚本中数据属于一种空数据</p>
+</li>
+<li><p>underfined类型</p>
+<p>未定义类型，该类型主要为脚本中变量或对象进行未定义设置</p>
+</li>
+<li><p>symbol类型</p>
+<p>受保护类型，一旦数据被定义为symbol类型表示无法被外界访问，同时也体现出当前数据是唯一的</p>
+<p><strong>以上类型只会在函数、对象中定义，不能独立存在</strong></p>
+</li>
+</ol>
+<p><strong>ES通用类型</strong></p>
+<ol>
+<li><p>var类型</p>
+<p>任意类型，该类型属于默认类型，可以跨区域访问。</p>
+</li>
+<li><p>let类型</p>
+<p>任意类型，该类型在var基础上实现区域保护。</p>
+</li>
+<li><p>const类型</p>
+<p>常量，表示内容不能改变</p>
+</li>
+</ol>
+<p><strong>ES引用类型</strong></p>
+<ol>
+<li>object：对象类型</li>
+<li>function：函数类型</li>
+</ol>
+<h3 id="7、ES运算符"><a href="#7、ES运算符" class="headerlink" title="7、ES运算符"></a>7、ES运算符</h3><p>​    包含以下4种：</p>
+<ol>
+<li><p>算术运算符</p>
+<p><code>+  -  *  /  %</code>  –&gt;二元运算符</p>
+<p><code>++ --</code>   –&gt;一元运算符</p>
+</li>
+<li><p>赋值运算符</p>
+<p><code>+= -= *= /= %= =</code> </p>
+</li>
+<li><p>比较运算符</p>
+<p><code>&gt; &lt; &gt;= &lt;= != == ===(全等于，值和类型都相同) !==(全不等于)</code></p>
+</li>
+<li><p>逻辑运算符</p>
+<p><code>与(&amp;、&amp;&amp;)、或(|、||)、非(!)</code></p>
+</li>
+</ol>
+<h1 id="Day10"><a href="#Day10" class="headerlink" title="Day10"></a>Day10</h1><h2 id="一、目标-9"><a href="#一、目标-9" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握条件语句操作</p>
+<p>2、掌握循环语句操作</p>
+<p>3、掌握数组操作</p>
+<p>4、掌握函数使用</p>
+<h2 id="二、知识点-9"><a href="#二、知识点-9" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、条件语句"><a href="#1、条件语句" class="headerlink" title="1、条件语句"></a>1、条件语句</h3><p>​    <strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件表达式)&#123;</span><br><span class="line">	条件成立执行的脚本部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	条件不成立执行的脚本部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、循环语句"><a href="#2、循环语句" class="headerlink" title="2、循环语句"></a>2、循环语句</h3><p>​    包含以下3种循环方式：</p>
+<ul>
+<li><p>普通for循环</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(参数<span class="number">1</span>;参数<span class="number">2</span>;参数<span class="number">3</span>)&#123;</span><br><span class="line">	循环执行的脚本部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数1：循环计数器变量   <code>var i=0;</code></p>
+<p>参数2：循环次数   <code>i&lt;5;</code></p>
+<p>参数3：计数器计数操作   <code>i++;</code>    </p>
+</li>
+<li><p>for..in循环  –遍历得到的是索引</p>
+</li>
+<li><p>for..of循环  –遍历得到的是值 </p>
+</li>
+</ul>
+<h3 id="3、数组"><a href="#3、数组" class="headerlink" title="3、数组"></a>3、数组</h3><p>​    ES中数组是用于存储多个数据的一种容器。</p>
+<p>​    <strong>关键字：</strong><code>Array</code></p>
+<p>​    <strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//定义数组，但未初始化</span></span><br><span class="line"><span class="keyword">var</span> 数组名=<span class="keyword">new</span> <span class="built_in">Array</span>(); </span><br><span class="line"><span class="comment">//定义数组，并实现初始化赋值</span></span><br><span class="line"><span class="keyword">var</span> 数组名=[值<span class="number">1</span>,值<span class="number">2.</span>..];  </span><br><span class="line"><span class="keyword">var</span> 数组名=<span class="keyword">new</span> <span class="built_in">Array</span>(值<span class="number">1</span>,值<span class="number">2.</span>..);</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>使用数组：</strong></p>
+<p>​        在数组操作每个数据的时候通过数组下标进行指定位置数据操作。</p>
+<p>​        <strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">数组名[下标]=值; <span class="comment">//赋值</span></span><br><span class="line">数组名[下标];  <span class="comment">//取值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、函数"><a href="#4、函数" class="headerlink" title="4、函数"></a>4、函数</h3><p>​    属于ES中最重要的一种脚本包含指令，该指令可以代表功能，也可以表示对象及类行为。</p>
+<p>​    函数在定义的时候通过function关键字表示函数声明，通过函数名可以直接在脚本中完成调用，从而得到脚本执行的结果。</p>
+<p>​    <strong>定义语法：</strong></p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">参数列表</span>)</span>&#123;</span><br><span class="line">	脚本</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>种类：</strong></p>
+<ul>
+<li>无返回、无参数</li>
+<li>无返回、有参数</li>
+<li>有返回、无参数</li>
+<li>有返回、有参数</li>
+</ul>
+<h3 id="5、this关键字"><a href="#5、this关键字" class="headerlink" title="5、this关键字"></a>5、this关键字</h3><p>​    作用：在函数中为自身进行成员定义，同时也可以表示函数或外部元素。</p>
+<h3 id="6、函数成员定义操作"><a href="#6、函数成员定义操作" class="headerlink" title="6、函数成员定义操作"></a>6、函数成员定义操作</h3><p>​    在一个函数中可以包含变量定义，也可以存在脚本指令，更多的情况下会通过函数定义成员，实现函数内部控制行为。</p>
+<p>实现方式：</p>
+<p>​    在函数中通过this关键字修饰内部成员。</p>
+<p>函数成员定义操作又称之为：函数对象定义操作</p>
+<p>可以通过函数方式进行对象创建行为。</p>
+<h3 id="7、函数成员类型"><a href="#7、函数成员类型" class="headerlink" title="7、函数成员类型"></a>7、函数成员类型</h3><p>​    包含以下两种成员类型：</p>
+<ul>
+<li><p>属性</p>
+<p>在函数内通过this.变量名定义属性</p>
+</li>
+<li><p>方法</p>
+<p>在函数内通过this.方法名=function(){}方式定义方法</p>
+</li>
+</ul>
+<h1 id="Day11"><a href="#Day11" class="headerlink" title="Day11"></a>Day11</h1><h2 id="一、目标-10"><a href="#一、目标-10" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、掌握对象定义方式</p>
+<p>2、掌握原型链操作</p>
+<p>3、掌握闭包操作</p>
+<h2 id="二、知识点-10"><a href="#二、知识点-10" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、对象"><a href="#1、对象" class="headerlink" title="1、对象"></a>1、对象</h3><p>​    ES也是一门OOP类型的语言，所以封装、继承、多态的思想也是ES所具备的。</p>
+<p>​    ES中创建对象的方法有两种：一种是构造函数方式、一种是对象方式创建对象。</p>
+<p>​    创建方式：</p>
+<ul>
+<li><p>构造函数方式创建对象</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params">参数列表</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.属性;</span><br><span class="line">	<span class="keyword">this</span>.方法;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>声明式方式创建对象</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> 对象名=&#123;</span><br><span class="line">	属性名:属性值,</span><br><span class="line">	方法名:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		方法体;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2、原型链"><a href="#2、原型链" class="headerlink" title="2、原型链"></a>2、原型链</h3><p>​    原型链表示对象的所属者是属于谁，通过原型链的指定将对象进行更改操作，导致对象发生变化。</p>
+<p>​    <strong>包含以下两种情况：</strong></p>
+<ul>
+<li><p>构造函数的原型操作</p>
+<p>可以在已定义的构造函数上进行新的成员添加，达到所有对象可以具备新成员。</p>
+<p><strong>关键字：</strong>prototype</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight elm"><table><tr><td class="code"><pre><span class="line">构造函数名.proto<span class="keyword">type</span>.成员=值;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象中的原型操作</p>
+<p>建立在对象创建过程通过原型属性进行对象的原型改变</p>
+<p><strong>属性：</strong></p>
+<p><code>__proto__:原型</code></p>
+</li>
+</ul>
+<h3 id="3、闭包"><a href="#3、闭包" class="headerlink" title="3、闭包"></a>3、闭包</h3><p>​    闭包在ES中主要体现在函数内，通过函数中返回函数的形式实现区域访问，定义在函数内的变量如果需要外部能访问到，可以通过闭包的形式将函数内的变量通过一个带有函数的返回值进行获取。</p>
+<h1 id="Day12"><a href="#Day12" class="headerlink" title="Day12"></a>Day12</h1><h2 id="一、目标-11"><a href="#一、目标-11" class="headerlink" title="一、目标"></a>一、目标</h2><p>1、了解DOM编程</p>
+<p>2、掌握核心对象document</p>
+<h2 id="二、知识点-11"><a href="#二、知识点-11" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、DOM"><a href="#1、DOM" class="headerlink" title="1、DOM"></a>1、DOM</h3><p>​    Document Object Modal  –文档对象模型</p>
+<p>​    作用：</p>
+<p>​        利用ES核心语法实现网页中动态效果的生产，同时也可以完成网页中的编程操作。</p>
+<h3 id="2、document对象"><a href="#2、document对象" class="headerlink" title="2、document对象"></a>2、document对象</h3><p>​    属于JS中文档对象，其主要目的就是利用js脚本完成网页主体内容的控制包含元素操作：</p>
+<p>​    方法：</p>
+<ol>
+<li><p>获取元素对象方法对象</p>
+<p>包含一下3种方式：</p>
+<ul>
+<li><p>通过指定的id属性获取单个元素</p>
+<p><code>document.getElementById(id);</code></p>
+</li>
+<li><p>通过制定的name属性获取多个相同属性元素对象</p>
+<p><code>document.getElementsByName(name);</code></p>
+</li>
+<li><p>通过指定的标签名获取多个相同标签元素对象</p>
+<p><code>document.getElementsByTagName(name);</code></p>
+</li>
+</ul>
+</li>
+<li><p>元素内容替换</p>
+<p>innerHTML：通过该属性对元素内容进行替换，并且支持html元素内容识别</p>
+<p>innerText：通过该属性对元素的内容进行替换，只能以纯文本显示</p>
+</li>
+<li><p>CSS控制</p>
+<p>包含以下几种方式：</p>
+<ul>
+<li><p>通过对象的style属性进行指定样式设置</p>
+<p><code>对象名.style.样式=样式值;</code></p>
+</li>
+<li><p>通过对象的class属性进行指定样式表设置</p>
+<p><code>对象名.className=样式表;</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="Day13"><a href="#Day13" class="headerlink" title="Day13"></a>Day13</h1><h2 id="一、目标-12"><a href="#一、目标-12" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>通过掌握DOM编程案例(二级联动菜单案例)</li>
+<li>掌握BOM操作</li>
+</ol>
+<h2 id="二、知识点-12"><a href="#二、知识点-12" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、二级联动菜单案例"><a href="#1、二级联动菜单案例" class="headerlink" title="1、二级联动菜单案例"></a>1、二级联动菜单案例</h3><p>​    通过一个下拉菜单在选择其中一个项后，在另外一个下拉菜单中显示出于第一个下拉项相关的数据项。</p>
+<h3 id="2、ES中动态组件操作"><a href="#2、ES中动态组件操作" class="headerlink" title="2、ES中动态组件操作"></a>2、ES中动态组件操作</h3><p>​    document提供的组件操作方法：</p>
+<ul>
+<li>creatElement(组件名称);  –返回组件对象</li>
+<li>组件对象.setAttribute(属性名,属性值);</li>
+<li>组件对象.appendChild(子组件)</li>
+</ul>
+<h3 id="3、BOM模型"><a href="#3、BOM模型" class="headerlink" title="3、BOM模型"></a>3、BOM模型</h3><p>​    BOM – 浏览器对象模型</p>
+<p>​    主要对浏览器对象进行控制，也是所有对象中对顶级的对象  –  window。</p>
+<p>​    <strong>属性：</strong></p>
+<p>​        <code>window.location=&#39;url&#39;</code></p>
+<h1 id="Day14"><a href="#Day14" class="headerlink" title="Day14"></a>Day14</h1><h2 id="一、目标-13"><a href="#一、目标-13" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握BOM操作对象</li>
+<li>掌握JSON操作</li>
+</ol>
+<h2 id="二、知识点-13"><a href="#二、知识点-13" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、BOM操作对象"><a href="#1、BOM操作对象" class="headerlink" title="1、BOM操作对象"></a>1、BOM操作对象</h3><p>​    <strong>核心对象：</strong>window</p>
+<ul>
+<li><p><strong>location：</strong>页面跳转，实现数据传递</p>
+</li>
+<li><p><strong>navigator：</strong>浏览器信息对象</p>
+</li>
+<li><p><strong>screen：</strong>屏幕对象</p>
+</li>
+<li><p><strong>open();</strong>   新建窗口</p>
+<p><strong>作用域：</strong>变量在定义的时候可以定义为局部变量，也可以定义为全局变量，同时也可以定义为窗体变量。</p>
+<p>window.变量名=变量值  &gt;   全局变量</p>
+</li>
+</ul>
+<h3 id="2、JSON"><a href="#2、JSON" class="headerlink" title="2、JSON"></a>2、JSON</h3><p>​    <strong>关键字：</strong>javascript object notation</p>
+<p>​    json属于互联网中的一种数据传输格式，该格式在网页中通过脚本可以直接进行对象解析，如果出现在服务器端的时候属于一种字符串数据，但该字符串数据可以再服务器端通过json相关API进行解析。json也就成为了互联网中最常用的一种信息传递方式。因为传输效率最快，并且获取数据方式最简单。</p>
+<p>​    <strong>格式：</strong></p>
+<ol>
+<li><code>{&#39;key&#39;:&#39;value&#39;}</code></li>
+<li><code>{&#39;key&#39;:[value]}</code></li>
+<li><code>{&#39;key&#39;:{&#39;key&#39;:[value]}</code>}`</li>
+</ol>
+<h1 id="Day15"><a href="#Day15" class="headerlink" title="Day15"></a>Day15</h1><h2 id="一、目标-14"><a href="#一、目标-14" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解jQuery</li>
+<li>掌握jQuery配置操作</li>
+<li>掌握jQuery选择器</li>
+<li>掌握jQuery事件处理</li>
+</ol>
+<h2 id="二、知识点-14"><a href="#二、知识点-14" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、jQuery"><a href="#1、jQuery" class="headerlink" title="1、jQuery"></a>1、jQuery</h3><p>​    在JavaScript中ES属于基础语法技术，在页面中通过ES实现脚本的编辑，完成网页中的小型程序的开发，但使用ES的时候，因为其语言是基于JavaScript原生方式实现，所以我们程序过程会过于复杂。在网页中为了优化实现过程，推出了一种基于原生JavaScript的框架语言更好的完成脚本的实现，这就是jQuery。</p>
+<p>​    jQuery属于一种js库，包含了很多脚本的实现功能，从而提供了很多功能接口，并且在使用中采取链表的方式进行脚本控制。</p>
+<p>​    最新版本：3.5.1版本     最常用版本：2.x.x版本</p>
+<p>​    官网：<a href="http://www.jquery.com" target="_blank" rel="noopener">www.jquery.com</a></p>
+<h3 id="2、jQuery配置"><a href="#2、jQuery配置" class="headerlink" title="2、jQuery配置"></a>2、jQuery配置</h3><p>​    因为jQuery属于第三方的脚本库，在网页中需要引入脚本库才能使用。</p>
+<p>​    <strong>脚本库：</strong></p>
+<ul>
+<li>jquery-2.x.x.js   —完整版jquery库(纯前端)</li>
+<li>jquery-2.x.x.min.js    —压缩版jquery库(学习)</li>
+</ul>
+<p>在<code>&lt;head&gt;</code>中引用外部的js库：<code>&lt;script src=&#39;jquery库路径&#39;&gt;&lt;/script&gt;</code></p>
+<p>在vscode中添加jquery插件，方便脚本编辑</p>
+<h3 id="3、jQuery加载"><a href="#3、jQuery加载" class="headerlink" title="3、jQuery加载"></a>3、jQuery加载</h3><p>​    jQuery脚本加载操作：</p>
+<ol>
+<li><p>完整加载方式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	jQuery脚本</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>简化加载方式</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	jQuery脚本</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>$：表示jQuery脚本，类似于ES中的document.getElementxx</p>
+<h3 id="4、jQuery选择器"><a href="#4、jQuery选择器" class="headerlink" title="4、jQuery选择器"></a>4、jQuery选择器</h3><p>​    在jQuery中提供了20几种选择器方式，快速定位方式获取组件对象。</p>
+<p>​    <strong>选择器类型：</strong></p>
+<ul>
+<li><p>html选择器</p>
+<p><code>$(&quot;html标签名&quot;)</code></p>
+</li>
+<li><p>id选择器</p>
+<p><code>$(&quot;#id名&quot;)</code></p>
+</li>
+<li><p>class选择器</p>
+<p><code>$(&quot;.class名&quot;)</code></p>
+</li>
+</ul>
+<h3 id="5、jQuery事件处理"><a href="#5、jQuery事件处理" class="headerlink" title="5、jQuery事件处理"></a>5、jQuery事件处理</h3><p>​    基于一种方法的绑定行为，通过在jQuery脚本中为指定的组件进行事件绑定。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">$(选择器).事件名称(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	事件脚本</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Day16"><a href="#Day16" class="headerlink" title="Day16"></a>Day16</h1><h2 id="一、目标-15"><a href="#一、目标-15" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解ajax处理</li>
+<li>掌握jQuery中ajax处理方式</li>
+<li>掌握jQuery中ajax与json数据传输</li>
+</ol>
+<h2 id="二、知识点-15"><a href="#二、知识点-15" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、ajax"><a href="#1、ajax" class="headerlink" title="1、ajax"></a>1、ajax</h3><p>​    属于一门前端中网页异步处理请求数据的一种技术，通过异步的行为实现网页中局部刷新的效果。</p>
+<p>​    来源于ES中底层执行过程实现，在目前前端开发中主要是使用jQuery的ajax交互。</p>
+<h3 id="2、jQuery的ajax处理"><a href="#2、jQuery的ajax处理" class="headerlink" title="2、jQuery的ajax处理"></a>2、jQuery的ajax处理</h3><p>​    包含3中异步处理方式：</p>
+<ul>
+<li><p><code>$.ajax()</code> –&gt;最接近原始ajax方式</p>
+<p><strong>语法结构：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url:<span class="string">""</span>,            --&gt;请求路径，一般都是访问json数据</span><br><span class="line">    datatype:<span class="string">""</span>,       --&gt;请求数据类型（常用json）</span><br><span class="line">    data:<span class="string">""</span>,           --&gt;参数</span><br><span class="line">    success:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;--&gt;回调函数,服务器响应状态为<span class="number">200</span>的时候自动触发调用的函数</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>$.get()</code> </p>
+<p><strong>语法结构：</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$.<span class="keyword">get</span>(参数<span class="number">1</span>,参数<span class="number">2</span>);</span><br><span class="line"><span class="comment">//参数1:url</span></span><br><span class="line"><span class="comment">//参数2:回调函数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>$.post()</code> </p>
+<p><strong>语法结构：</strong></p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$.post(参数<span class="number">1</span>,参数<span class="number">2</span>);</span><br><span class="line"><span class="comment">//参数1:url</span></span><br><span class="line"><span class="comment">//参数2:回调函数</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>HTML/CSS</tag>
+        <tag>bootstrap</tag>
+        <tag>JavaScript/jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java位运算</title>
+    <url>/2020/11/13/f789481e.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>日常开发中位运算不是很常用，但是巧妙的使用位运算可以大量减少运行开销，优化算法。</p>
+<a id="more"></a>
+
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>Java支持的位运算有7种，具体如下：</p>
+<ul>
+<li><strong>&amp;：按位与。</strong></li>
+<li><strong>|：按位或。</strong></li>
+<li><strong>~：按位非。</strong></li>
+<li><strong>^：按位异或。</strong></li>
+<li><strong>&lt;&lt;：左位移运算符。</strong></li>
+<li><strong>&gt;&gt;：右位移运算符。</strong></li>
+<li><strong>&lt;&lt;&lt;：无符号右移运算符。</strong></li>
+</ul>
+<h3 id="1、按位与-amp"><a href="#1、按位与-amp" class="headerlink" title="1、按位与(&amp;)"></a>1、按位与(&amp;)</h3><p>按位与的运算规则</p>
+<table>
+<thead>
+<tr>
+<th>操作数1</th>
+<th><strong>0</strong></th>
+<th><strong>0</strong></th>
+<th><strong>1</strong></th>
+<th><strong>1</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>操作数2</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>按位与</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody></table>
+<p><strong>规则总结：</strong>只有两个操作数对应位同为1时，结果为1，其余全为0（或者是只要有一个操作数为0，结果就为0）</p>
+<p><strong>举例：</strong></p>
+<p><img src="F:%5Cblog%5Csource%5Cimages%5Cimage-20200826103039345.png" alt="image-20200826103039345"></p>
+<h3 id="2、按位或"><a href="#2、按位或" class="headerlink" title="2、按位或(|)"></a>2、按位或(|)</h3><p>按位或的运算规则</p>
+<table>
+<thead>
+<tr>
+<th>操作数1</th>
+<th><strong>0</strong></th>
+<th><strong>0</strong></th>
+<th><strong>1</strong></th>
+<th><strong>1</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>操作数2</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>按位或</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody></table>
+<p><strong>规则总结：</strong>只有两个操作数对应位同为0时，结果为0，其余全为1（或者是只要有一个操作数为1，结果就为1）</p>
+<h3 id="3、按位非"><a href="#3、按位非" class="headerlink" title="3、按位非(~)"></a>3、按位非(~)</h3><p>按位非的运算规则</p>
+<table>
+<thead>
+<tr>
+<th>操作数</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>按位或</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p><strong>规则总结：</strong>取反操作，在求负数的源码中使用过</p>
+<h3 id="4、按位异或"><a href="#4、按位异或" class="headerlink" title="4、按位异或(^)"></a>4、按位异或(^)</h3><p>按位异或的运算规则</p>
+<table>
+<thead>
+<tr>
+<th>操作数1</th>
+<th><strong>0</strong></th>
+<th><strong>0</strong></th>
+<th><strong>1</strong></th>
+<th><strong>1</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>操作数2</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>按位异或</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p><strong>规则总结：</strong>只有两个操作数不相同时，结果为1，其余全为0（或者是只要两个操作数相同就为0）</p>
+<h3 id="5、左位移-lt-lt"><a href="#5、左位移-lt-lt" class="headerlink" title="5、左位移(&lt;&lt;)"></a>5、左位移(&lt;&lt;)</h3><p><strong>运算规则：</strong>算术左移，溢出截断，符号位不变，低位补0。如：2&lt;&lt;2结果为8。</p>
+<p><img src="F:%5Cblog%5Csource%5Cimages%5Cimage-20200826111130432.png" alt="image-20200826111130432"></p>
+<h3 id="6、右位移-gt-gt"><a href="#6、右位移-gt-gt" class="headerlink" title="6、右位移(&gt;&gt;)"></a>6、右位移(&gt;&gt;)</h3><p><strong>运算规则：</strong>算术右移，溢出截断，符号位不变，用符号位补高位。如：-6&gt;&gt;2结果为-2。</p>
+<p><img src="F:%5Cblog%5Csource%5Cimages%5Cimage-20200826111547841.png" alt="image-20200826111547841"></p>
+<h3 id="7、无符号右移-gt-gt-gt"><a href="#7、无符号右移-gt-gt-gt" class="headerlink" title="7、无符号右移(&gt;&gt;&gt;)"></a>7、无符号右移(&gt;&gt;&gt;)</h3><p><strong>运算规则：</strong>低位溢出，高位补0</p>
+<p><img src="F:%5Cblog%5Csource%5Cimages%5Cimage-20200826112655116.png" alt="image-20200826112655116"></p>
+<h2 id="常见使用"><a href="#常见使用" class="headerlink" title="常见使用"></a>常见使用</h2><p>因位运算在日常开发中并不是很常用的，这里举两个例子加强理解</p>
+<h3 id="1、判断一个数n的奇偶性"><a href="#1、判断一个数n的奇偶性" class="headerlink" title="1、判断一个数n的奇偶性"></a>1、判断一个数n的奇偶性</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">n&amp;<span class="number">1</span> == <span class="number">1</span>?<span class="string">"奇数"</span>:<span class="string">"偶数"</span></span><br></pre></td></tr></table></figure>
+
+<p>为什么与1能判断奇偶？所谓的二进制就是满2进1，那么好了，偶数的最低位肯定是0（恰好满2，对不对？），同理，奇数的最低位肯定是1。int类型的1，前31位都是0，无论是1&amp;0还是0&amp;0结果都是0，那么有区别的就是1的最低位上的1了，若n的二进制最低位是1（奇数）与上1，结果为1，反则结果为0。</p>
+<h3 id="2、取绝对值"><a href="#2、取绝对值" class="headerlink" title="2、取绝对值"></a>2、取绝对值</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">(a^(a&gt;&gt;<span class="number">31</span>))-(a&gt;&gt;<span class="number">31</span>)</span><br></pre></td></tr></table></figure>
+
+<p>先整理一下使用位运算取绝对值的思路：若a为正数，则不变，需要用异或0保持的特点；若a为负数，则其补码为源码翻转每一位后+1，先求其源码，补码-1后再翻转每一位，此时需要使用异或1具有翻转的特点。</p>
+<p>任何正数右移31后只剩符号位0，最终结果为0，任何负数右移31后也只剩符号位1，溢出的31位截断，空出的31位补符号位1，最终结果为-1.右移31操作可以取得任何整数的符号位。</p>
+<p>那么综合上面的步骤，可得到公式。a&gt;&gt;31取得a的符号，若a为正数，a&gt;&gt;31等于0，a^0=a，不变；若a为负数,a&gt;&gt;31等于-1 ，a^-1翻转每一位。</p>
+<h3 id="3、不用临时变量交换两个数"><a href="#3、不用临时变量交换两个数" class="headerlink" title="3、不用临时变量交换两个数"></a>3、不用临时变量交换两个数</h3><p>连续三次使用异或，并没有临时变量就完成了两个数字交换，怎么实现的呢？</p>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">int</span> a = <span class="number">3</span>,b = <span class="number">4</span>;</span><br><span class="line">a = a^b;</span><br><span class="line">b = b^a; <span class="comment">//b=b^(a^b)--&gt;b=a</span></span><br><span class="line">a = a^b; <span class="comment">//a=(a^b)^(b^(a^b))--&gt;a=b</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的计算主要遵循了一个计算公式：b^(a^b)=a。</p>
+<p>我们可以对以上公式做如下的推导：</p>
+<p>任何数异或本身结果为0.且有定理a^b=b^a。异或是一个无顺序的运算符，则b^a^b=b^b^a，结果为0^a。</p>
+<p>再次列出异或的计算表:</p>
+<table>
+<thead>
+<tr>
+<th>操作数1</th>
+<th><strong>0</strong></th>
+<th><strong>0</strong></th>
+<th><strong>1</strong></th>
+<th><strong>1</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>操作数2</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>按位异或</strong></td>
+<td><strong>0</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>可以发现，异或0具有保持的特点，而异或1具有翻转的特点。使用这些特点可以进行取数的操作。</p>
+<p>那么0^a，使用异或0具有保持的特点，最终结果就是a。</p>
+<p>其实java中的异或运算法则完全遵守数学中的计算法则：</p>
+<p>①  a ^ a =0</p>
+<p>②  a ^ b =b ^ a</p>
+<p>③  a ^b ^ c = a ^ (b ^ c) = (a ^ b) ^ c;</p>
+<p>④  d = a ^b ^ c 可以推出 a = d ^ b ^ c.</p>
+<p>⑤  a ^ b ^a = b.</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -111,17 +722,654 @@
       </tags>
   </entry>
   <entry>
-    <title>Java语言Day13</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day13/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十三天，Java语言基础</p>
+    <title>Java基础笔记</title>
+    <url>/2020/08/07/6f706555.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下Java语言基础这半个月的学习过程，一起进步！</p>
+<p>主要是Java基础部分，重点是面向对象的知识。</p>
 <a id="more"></a>
 
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li><p>了解Java语言</p>
+</li>
+<li><p>熟悉Java开发环境</p>
+</li>
+<li><p>编写Java应用程序</p>
+</li>
+</ol>
+<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、了解Java语言"><a href="#1、了解Java语言" class="headerlink" title="1、了解Java语言"></a>1、了解Java语言</h3><ul>
+<li>Java是一门软件开发语言，该语言涉及了互联网行业和移动互联网行业。</li>
+<li>Java创始公司是sun，而当前有oracle托管。</li>
+<li>1991年，sun公司需要完成一个项目，该项目的名称为绿色计划（电视机顶盒），当时sun公司要求詹姆斯高斯林带领团队完成此项目，该团队使用OAK语言完成当前的项目。</li>
+<li>1994年项目完成，同时在当年sun要求开发团队将OAK语言更名为自主语言。</li>
+<li>当初的更名为：爪哇语言 –&gt; Java语言</li>
+<li>版本：javaME(微型开发)、JavaSE(应用开发)、JavaEE(企业级开发)</li>
+</ul>
+<h3 id="2、熟悉Java开发环境"><a href="#2、熟悉Java开发环境" class="headerlink" title="2、熟悉Java开发环境"></a>2、熟悉Java开发环境</h3><ul>
+<li><p>开发环境：Windows、Linux、Mac</p>
+</li>
+<li><p>编辑环境：jdk(支撑java运行环境) –1.8.xxu</p>
+<p>​        现阶段使用：记事本开发</p>
+</li>
+</ul>
+<h3 id="3、编写Java应用程序"><a href="#3、编写Java应用程序" class="headerlink" title="3、编写Java应用程序"></a>3、编写Java应用程序</h3><p>jvm虚拟机：核心是classloader类加载器和垃圾回收器</p>
+<p>编写第一个Java应用程序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello World!!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>控制台输出<code>Hello World!!</code></p>
+<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1><h2 id="一、目标-1"><a href="#一、目标-1" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解数据</li>
+<li>掌握数据类型</li>
+<li>掌握变量操作</li>
+</ol>
+<h2 id="二、知识点-1"><a href="#二、知识点-1" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、数据"><a href="#1、数据" class="headerlink" title="1、数据"></a>1、数据</h3><p>数据属于计算机中一种信息的体现，所有的应用程序都会有数据而组成，不同的数据将得到不同的程序运行结果。</p>
+<h3 id="2、数据类型"><a href="#2、数据类型" class="headerlink" title="2、数据类型"></a>2、数据类型</h3><p>种类：</p>
+<ul>
+<li><p><strong>基本数据类型（8大基本数据类型）</strong></p>
+<ul>
+<li><p><strong>整数类型</strong></p>
+<p>关键字：int</p>
+<p>范围：-2(31) – 2(31)-1</p>
+<p>大小：32位 –&gt; 4字节</p>
+</li>
+<li><p><strong>长整数类型</strong></p>
+<p>关键字：long</p>
+<p>范围：-2(63) – 2(63)-1</p>
+<p>大小：64位 –&gt; 8字节</p>
+<p>规则：当数据长度超过int范围时必须添加<code>l</code>单位</p>
+<p>​    例如：</p>
+<p>​            1111112311224444l</p>
+</li>
+<li><p><strong>短整数类型</strong></p>
+<p>关键字：short</p>
+<p>过时类型</p>
+</li>
+<li><p><strong>双精度浮点类型</strong></p>
+<p>关键字：double</p>
+<p>大小：64位 –&gt; 8字节</p>
+<p>规则：在Java中所有的小数默认为双精度浮点类型，除非数据带有<code>f</code>单位</p>
+</li>
+<li><p><strong>单精度浮点类型</strong></p>
+<p>关键字：float</p>
+<p>大小：32位 –&gt; 4字节</p>
+<p>规则：在小数后拥有一位的时候通过<code>f</code>单位标识为单精度类型</p>
+</li>
+<li><p><strong>字符类型</strong></p>
+<p>关键字：char</p>
+<p>大小：32位 –&gt; 4字节</p>
+<p>规则：在数据中如果需要将某个数据变成字符数据，只需要在数据上添加单引号，只能表示单个字符</p>
+<p>​    例如：</p>
+<p>​            ‘1’  ‘a’  ‘骆’(占用8字节)</p>
+</li>
+<li><p><strong>布尔类型</strong></p>
+<p>关键字：boolean</p>
+<p>大小：8位 –&gt; 1字节</p>
+<p>结果：true/false</p>
+</li>
+<li><p><strong>字节类型</strong></p>
+<p>关键字：byte</p>
+<p>规则：用于在计算机中表示数据的大小，同时也可以对程序所产生的字节数据进行表示</p>
+</li>
+</ul>
+</li>
+<li><p>引用数据类型</p>
+<ul>
+<li><p>字符串类型</p>
+<p>关键字：String</p>
+<p>规则：如果说需要将多个单个的字符表示为一种数据的时候，可以使用双引号改变为字符串类型</p>
+<p>​    例如：</p>
+<p>​        “骆俊杰”</p>
+</li>
+<li><p>注意：在Java中所有单词首字母为大写的都是引用类型</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3、变量"><a href="#3、变量" class="headerlink" title="3、变量"></a>3、变量</h3><ul>
+<li>作用：用于java中对指定类型的数据进行存储，存储在容器中的数据必须是单一数据，同时一种容器可以存放不同的相同类型数据</li>
+<li>语法：数据类型 变量名 = 值;</li>
+</ul>
+<h3 id="4、控制台输入指令"><a href="#4、控制台输入指令" class="headerlink" title="4、控制台输入指令"></a>4、控制台输入指令</h3><p>语法：</p>
+<ol>
+<li><p>import java.util.Scanner;  –导入控制台输入工具路径</p>
+</li>
+<li><p>Scanner s = new Scanner(System.in);  –创建控制台输入工具</p>
+</li>
+<li><p>s.next();  –获取字符串输入数据</p>
+<p>s.nextInt();  –获取整数输入数据</p>
+</li>
+</ol>
+<h1 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h1><h2 id="一、目标-2"><a href="#一、目标-2" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解运算符</li>
+<li>掌握算术运算符</li>
+<li>掌握赋值运算符</li>
+<li>掌握比较运算符</li>
+<li>掌握逻辑运算符</li>
+<li>掌握多远运算符</li>
+</ol>
+<h2 id="二、知识点-2"><a href="#二、知识点-2" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、运算符"><a href="#1、运算符" class="headerlink" title="1、运算符"></a>1、运算符</h3><p>在程序中会存在一系列的逻辑运算符操作，该操作需要使用运算符实现。</p>
+<h3 id="2、算术运算符"><a href="#2、算术运算符" class="headerlink" title="2、算术运算符"></a>2、算术运算符</h3><p>种类：</p>
+<ul>
+<li><p>一元运算符</p>
+<p>++(自增)  –(自减)</p>
+<p>当运算符在变量之后表示先获取变量数据，然后在进行自增</p>
+<p>当运算符在变量之前表示先进行自增，然后在进行变量数据获取</p>
+</li>
+<li><p>二元运算符</p>
+<p>+(加)  -(减)  *(乘)  /(除)  %(取模)</p>
+</li>
+</ul>
+<h3 id="3、赋值运算符"><a href="#3、赋值运算符" class="headerlink" title="3、赋值运算符"></a>3、赋值运算符</h3><p><code>+=  -=  *=  /=  %=  =</code></p>
+<p>例如： </p>
+<p>​        <code>a+=1  ==  a=a+1;</code></p>
+<h3 id="4、比较运算符"><a href="#4、比较运算符" class="headerlink" title="4、比较运算符"></a>4、比较运算符</h3><p><code>&gt;(大于) &lt;(小于) &gt;=(大于等于) &lt;=(小于等于) ==(等于) !=(不等于)</code></p>
+<p>比较运算符执行操作后获取到的是一个比较的结果(true/false)</p>
+<p>在字符串类型上进行内容比较的时候不能直接使用<code>==</code>，因为比较的是箭头执行的位置是否相同，而需要通过字符串提供的<code>equals()</code>来进行内容比较</p>
+<p>语法：</p>
+<p>​        字符串.equals(字符串);</p>
+<h3 id="5、逻辑运算符"><a href="#5、逻辑运算符" class="headerlink" title="5、逻辑运算符"></a>5、逻辑运算符</h3><p>种类：</p>
+<ul>
+<li><p>与(逻辑与、短路与)</p>
+<ul>
+<li><p>逻辑与  &amp;</p>
+</li>
+<li><p>短路与  &amp;&amp;</p>
+<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为假，那么整个运算符结果就为假</p>
+</li>
+</ul>
+</li>
+<li><p>或(逻辑或、短路或)</p>
+<ul>
+<li><p>逻辑或  |</p>
+</li>
+<li><p>短路或  ||</p>
+<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为真，那么整个运算符结果就位真</p>
+</li>
+</ul>
+</li>
+<li><p>非</p>
+<p>将获取到的结果(boolean)进行去反</p>
+</li>
+</ul>
+<h1 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h1><h2 id="一、目标-3"><a href="#一、目标-3" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li><p>掌握多元运算符</p>
+</li>
+<li><p>掌握条件(流程)控制语句</p>
+</li>
+<li><p>掌握循环语句</p>
+</li>
+</ol>
+<h2 id="二、知识点-3"><a href="#二、知识点-3" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、多元运算符"><a href="#1、多元运算符" class="headerlink" title="1、多元运算符"></a>1、多元运算符</h3><p>​    作用：通过表达式获取的结果来得到对应的值</p>
+<p>​    语法：</p>
+<p>​            <code>表达式? 真的结果内容:假的结果内容</code></p>
+<h3 id="2、流程控制语句"><a href="#2、流程控制语句" class="headerlink" title="2、流程控制语句"></a>2、流程控制语句</h3><p>​    作用：在Java代码执行中，用于控制代码的执行流程，从表达式结果实现不同的代码运行。</p>
+<h3 id="3、流程语句分类"><a href="#3、流程语句分类" class="headerlink" title="3、流程语句分类"></a>3、流程语句分类</h3><ul>
+<li><p>if控制语句</p>
+<ul>
+<li><p>普通条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式)&#123;</span><br><span class="line">	表达式成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多层条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>)&#123;</span><br><span class="line">	表达式<span class="number">1</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>)&#123;</span><br><span class="line">	表达式<span class="number">2</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	以上所有表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套条件语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(外层表达式)&#123;</span><br><span class="line">	<span class="keyword">if</span>(内层表达式)&#123;</span><br><span class="line">		内层表达式成立执行的代码部分</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		内层表达式不成立执行的代码部分</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	外层表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>switch语句</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(数据值)&#123;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:默认执行的地方;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h3 id="4、循环"><a href="#4、循环" class="headerlink" title="4、循环"></a>4、循环</h3><ul>
+<li><p>作用：在程序中用于重复执行具有相同指令的操作行为，在执行过程中根据循环条件决定循环的执行。</p>
+</li>
+<li><p>循环的控制成员</p>
+<ul>
+<li>循环的计数变量  <code>int i=0;</code></li>
+<li>循环条件  <code>i&lt;?</code></li>
+<li>循环计数  <code>i++</code></li>
+</ul>
+</li>
+<li><p>种类：</p>
+<ul>
+<li><p><strong>while循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(循环条件)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>do..while循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;<span class="keyword">while</span>(循环条件);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>while和do..while的区别</strong></p>
+<p>while循环必须根据循环条件决定是否进入循环体中执行代码</p>
+<p>do..while循环先执行一次循环体中的代码，然后再根据循环条件确定是否继续进行循环</p>
+</li>
+<li><p><strong>for循环</strong></p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(循环计数变量;循环条件;循环计数)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day5"><a href="#Day5" class="headerlink" title="Day5"></a>Day5</h1><h2 id="一、目标-4"><a href="#一、目标-4" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解数组</li>
+<li>掌握数组的原理实现</li>
+<li>掌握数组的不同种类</li>
+</ol>
+<h2 id="二、知识点-4"><a href="#二、知识点-4" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、数组"><a href="#1、数组" class="headerlink" title="1、数组"></a>1、数组</h3><p>是程序中一种数据的容器，该容器内可以存放指定长度的相同类型数据</p>
+<h3 id="2、定义数组"><a href="#2、定义数组" class="headerlink" title="2、定义数组"></a>2、定义数组</h3><p>语法：</p>
+<p>​        数据类型[] 数组名称 = new 数据类型[长度];</p>
+<p>​        数据类型[] 数组名称 = new 数据类型[]{值1,值2…};</p>
+<p>​        数据类型[] 数组名称 = {值1,值2…};</p>
+<h3 id="3、使用数组"><a href="#3、使用数组" class="headerlink" title="3、使用数组"></a>3、使用数组</h3><ul>
+<li><p>获取数组的长度</p>
+<p>​            <code>数组名.length</code></p>
+</li>
+<li><p>获取数组的每个数据</p>
+<p>​    通过数组中提供的下标获取每个位置上的数据</p>
+<p>​            <code>数组名[下标]</code></p>
+<p>​    数组下标从0开始，表示第一个位置</p>
+</li>
+<li><p>数组添加数据</p>
+<p>​    通过数组下标进行指定位置数据添加</p>
+<p>​            <code>数组名[下标] = 值;</code></p>
+</li>
+</ul>
+<h3 id="4、数组的种类"><a href="#4、数组的种类" class="headerlink" title="4、数组的种类"></a>4、数组的种类</h3><ul>
+<li><p>一维数组</p>
+<p>​    一个数组中只能存放一组相同类型的单个数据</p>
+</li>
+<li><p>二维数组</p>
+<p>​    一个数组中能存放多个相同类型的数组</p>
+<p>​    语法：</p>
+<p>​            <code>数据类型[][] 数组名=new 数据类型[长度1][长度2]</code></p>
+<p>​            长度1：二维数组中存放的数组个数</p>
+<p>​            长度2：每个数组中存放的数据个数</p>
+</li>
+</ul>
+<h1 id="Day6"><a href="#Day6" class="headerlink" title="Day6"></a>Day6</h1><h2 id="一、目标-5"><a href="#一、目标-5" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>冒泡排序</li>
+</ol>
+<h2 id="二、知识点-5"><a href="#二、知识点-5" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、冒泡排序"><a href="#1、冒泡排序" class="headerlink" title="1、冒泡排序"></a>1、冒泡排序</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] sum1=&#123;<span class="number">3</span>,<span class="number">12</span>,<span class="number">112</span>,<span class="number">9</span>,<span class="number">14</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">15</span>,<span class="number">7</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> num;</span><br><span class="line">		<span class="comment">//2.冒泡排序法</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;sum1.length;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;sum1.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(sum1[j]&gt;sum1[j+<span class="number">1</span>])&#123;</span><br><span class="line">					num=sum1[j];</span><br><span class="line">					sum1[j]=sum1[j+<span class="number">1</span>];</span><br><span class="line">					sum1[j+<span class="number">1</span>]=num;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Day7"><a href="#Day7" class="headerlink" title="Day7"></a>Day7</h1><h2 id="一、目标-6"><a href="#一、目标-6" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握JavaOOP概念</li>
+<li>掌握类的使用</li>
+<li>掌握对象的使用</li>
+<li>掌握对象成员操作</li>
+</ol>
+<h2 id="二、知识点-6"><a href="#二、知识点-6" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaOOP"><a href="#1、JavaOOP" class="headerlink" title="1、JavaOOP"></a>1、JavaOOP</h3><p>作用：在java语言开发中实现软件开发流程设计的一种设计思想</p>
+<p>JavaOOP：Object Oriented Programming(面向对象编程)</p>
+<p>核心宗旨：一切皆对象</p>
+<h3 id="2、类-class"><a href="#2、类-class" class="headerlink" title="2、类(class)"></a>2、类(class)</h3><p>属于Java程序在运行的时候一种加载必备的内容，该成员主要实现了程序中每个事物的产生</p>
+<p>简单来说：类就是一个工厂，用于生产所有的东西</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、对象-Object"><a href="#3、对象-Object" class="headerlink" title="3、对象(Object)"></a>3、对象(Object)</h3><p>属于Java的核心部分，因为对象的存在才使程序具备了各种不同的产物，从而实现不同的过程内容</p>
+<p>简单来说：程序中可以使用的东西</p>
+<p>创建对象的语法：对象的创建由类决定</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">类名 对象名(实例名)=<span class="keyword">new</span> <span class="type"></span>类名();</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、类和对象的关系"><a href="#4、类和对象的关系" class="headerlink" title="4、类和对象的关系"></a>4、类和对象的关系</h3><p>对象所具备的就是类所拥有的，反而言之类所具备的对象不一定拥有</p>
+<h3 id="5、类-对象-的成员"><a href="#5、类-对象-的成员" class="headerlink" title="5、类(对象)的成员"></a>5、类(对象)的成员</h3><p>​    成员部分：</p>
+<ul>
+<li><p>属性 – 对象所具备的描述</p>
+<p>语法：<code>数据类型 属性名;</code></p>
+<p>使用方式：</p>
+<p>​    类中所拥有的属性在使用的时候必须和对象有关</p>
+<p>​    赋值属性：对象名.属性=值</p>
+<p>​    获取属性：对象名.属性</p>
+<p>因为属性可以存储数据，所以就将对象提升为一种新的数据容器。存放在对象中的数据可以没有个数限制、类型限制</p>
+</li>
+<li><p>方法 – 对象所具备的行为能力</p>
+<p>属于Java程序的灵魂，让程序具备了活力，从而提高了程序的功能操作，所有的程序员在完成Java程序开发的时候做的就是方法的实现</p>
+<p>类型：</p>
+<ul>
+<li><p>自定义方法</p>
+<p>种类：</p>
+<ol>
+<li><p>无返回、无参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名()&#123;</span><br><span class="line">	当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>无返回、有参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数列表：包含一系列的形式参数</p>
+<p>数据类型 参数名,数据类型 参数名…</p>
+</li>
+<li><p>有返回、无参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名()&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有返回、有参数类型</p>
+<p>语法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>构造方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day8"><a href="#Day8" class="headerlink" title="Day8"></a>Day8</h1><h2 id="一、目标-7"><a href="#一、目标-7" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握构造方法的使用</li>
+<li>掌握方法重载实现</li>
+<li>掌握package的运用</li>
+<li>掌握继承的使用</li>
+</ol>
+<h2 id="二、知识点-7"><a href="#二、知识点-7" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、构造方法"><a href="#1、构造方法" class="headerlink" title="1、构造方法"></a>1、构造方法</h3><p><strong>定义：</strong></p>
+<p>​    构造方法属于方法的一种实现方式，该方法不同于自定义方法，主要是为类创建对象所提供的一种自动执行的方法。通常应用于对象属性赋值操作</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 类名(参数列表)&#123;</span><br><span class="line">    执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    在每个类中会存在一个隐式空参数列表的构造方法</p>
+<h3 id="2、封装"><a href="#2、封装" class="headerlink" title="2、封装"></a>2、封装</h3><p>在Java中属于入门的思想行为，为了将一个类中的结构实现完整性，从而提供了属性和方法的包含，在方法中可以包含多种执行指令，属性可以包含多个不同数据，这些现象都是封装操作</p>
+<h3 id="3、方法实现"><a href="#3、方法实现" class="headerlink" title="3、方法实现"></a>3、方法实现</h3><p><strong>方式：</strong></p>
+<ul>
+<li>方法重载</li>
+<li>方法重写</li>
+</ul>
+<h3 id="4、方法重载"><a href="#4、方法重载" class="headerlink" title="4、方法重载"></a>4、方法重载</h3><p><strong>作用：</strong></p>
+<p>​    在类中为指定的方法提供多种不同执行过程的选择，从而得到不同的结果</p>
+<p><strong>实现方式：</strong></p>
+<ul>
+<li>方法名称必须相同</li>
+<li>参数列表 不同（个数不同、类型不同）</li>
+</ul>
+<h3 id="5、package"><a href="#5、package" class="headerlink" title="5、package"></a>5、package</h3><p>​    <strong>中文：</strong>包</p>
+<p>​    <strong>作用：</strong>在工程中用于对源代码文件进行归类的一种实现方式。在后续Java项目中不同的包所存放的源代码文件作用也会有特定的规定</p>
+<p>​    <strong>标准：</strong></p>
+<ol>
+<li><p>商业化项目标准</p>
+<p><code>com.xxx.核心包(bean、dao、service、controller、util、conf、core)</code></p>
+</li>
+<li><p>核心技术标准</p>
+<p><code>org.xxx.核心包</code></p>
+</li>
+</ol>
+<h3 id="6、继承"><a href="#6、继承" class="headerlink" title="6、继承"></a>6、继承</h3><p>​    <strong>关键字：</strong><code>extends、父类、超类、基类、子类、派生类</code></p>
+<p>​    <strong>作用：</strong>用于为Java的类提供关系的建立，从而为类中的方法提供扩展的行为</p>
+<p>​    <strong>实现方式：</strong>在子类中完成对父类的继承</p>
+<p>​    <strong>实现要求：</strong></p>
+<ol>
+<li><p>具备单向性规则</p>
+<p>只能由一方继承另外一方，子类可以访问父类的成员，但父类不能访问子类的成员</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>具备传递性依赖</p>
+<p>父类及子类之间及孙子类之间可以实现成员互通</p>
+</li>
+<li><p>具备单一性规则</p>
+<p>一个子类只能拥有一个父亲，但一个父类可以包含多个子类</p>
+</li>
+</ol>
+<h3 id="7、继承的关键字"><a href="#7、继承的关键字" class="headerlink" title="7、继承的关键字"></a>7、继承的关键字</h3><ul>
+<li><p>super</p>
+<p><strong>作用：</strong>在子类中访问父类的非私有成员和构造方法</p>
+<p><strong>访问方式：</strong></p>
+<ul>
+<li>构造方法访问 – super();</li>
+<li>成员访问 –super.成员;</li>
+</ul>
+</li>
+<li><p>this</p>
+<p><strong>作用：</strong>在子类中访问父类的非私有成员和自身的</p>
+</li>
+</ul>
+<h1 id="Day9"><a href="#Day9" class="headerlink" title="Day9"></a>Day9</h1><h2 id="一、目标-8"><a href="#一、目标-8" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握访问修饰符</li>
+<li>掌握方法重写</li>
+<li>掌握引用转型</li>
+<li>掌握多态</li>
+</ol>
+<h3 id="二、知识点-8"><a href="#二、知识点-8" class="headerlink" title="二、知识点"></a>二、知识点</h3><h3 id="1、访问修饰符"><a href="#1、访问修饰符" class="headerlink" title="1、访问修饰符"></a>1、访问修饰符</h3><p>​    <strong>作用：</strong>用于在类中为成员进行修饰，实现成员访问作用域的控制</p>
+<p>​    <strong>种类：</strong></p>
+<ul>
+<li>公共修饰符      <code>public</code>        –&gt;整个程序中都能被访问</li>
+<li>私有修饰符      <code>private</code>      –&gt;只能本类访问</li>
+<li>受保护修饰符  <code>protected</code>  –&gt;在同包中可以访问，不同包中只能是关系的类才能访问</li>
+<li>缺省修饰符                            –&gt;在同包中可以访问，不同包不能访问</li>
+</ul>
+<h3 id="2、方法重写-方法覆盖"><a href="#2、方法重写-方法覆盖" class="headerlink" title="2、方法重写(方法覆盖)"></a>2、方法重写(方法覆盖)</h3><p>​    <strong>使用规则：</strong></p>
+<ol>
+<li><p>必须具备继承关系</p>
+</li>
+<li><p>方法结构必须完全相同(在子类中编写一个父类方法完全一样的方法)</p>
+<ol start="3">
+<li>在一个子类中如果重写了父类方法，在调用的时候当前方法的所属者就变成子类的方法，而没有覆盖则是父类的方法，该结果只能在运行后才能得到</li>
+</ol>
+</li>
+</ol>
+<h3 id="3、引用转型"><a href="#3、引用转型" class="headerlink" title="3、引用转型"></a>3、引用转型</h3><p>​    实现了对象中原有的引用改变</p>
+<p>​    <strong>例如：</strong></p>
+<p>​        原始方式：父类 对象名=new 父类();</p>
+<p>​        引用转型：父类 对象名=new 子类(); –向上转型</p>
+<p>​        强制转型：子类 对象名=(子类)父类对象;  –向下转型(强制转换)</p>
+<h3 id="4、多态"><a href="#4、多态" class="headerlink" title="4、多态"></a>4、多态</h3><p>​    <strong>特征：</strong>在对象使用中用于完成相同的方法执行不同的结果而产生的一种现象，该现象是在原有的功能上再次进行扩展的行为</p>
+<p>​    <strong>分类：</strong></p>
+<ol>
+<li><p>静态多态(在程序没有执行之前，通过选择执行的方法来调用功能)</p>
+<p>方法重载</p>
+</li>
+<li><p>动态多态(运行时多态)</p>
+<p>方法重写、引用转型</p>
+</li>
+</ol>
+<h1 id="Day10"><a href="#Day10" class="headerlink" title="Day10"></a>Day10</h1><h2 id="一、目标-9"><a href="#一、目标-9" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握static和final关键字</li>
+<li>掌握抽象</li>
+</ol>
+<h3 id="二、知识点-9"><a href="#二、知识点-9" class="headerlink" title="二、知识点"></a>二、知识点</h3><h3 id="1、static-静态"><a href="#1、static-静态" class="headerlink" title="1、static(静态)"></a>1、static(静态)</h3><p>​    <strong>定义：</strong>静态的修饰实现了内存中数据的共享操作，静态可以修饰属性和方法，如果属性被修饰为静态后，值将实现跨区域的访问，如果方法被修饰为静态后，表示该方法可以不依赖对象来直接访问。</p>
+<p>​    <strong>修饰类型：</strong></p>
+<pre><code>1. 属性
+
+      2. 方法
+                   3. 块</code></pre><h3 id="2、final-最终"><a href="#2、final-最终" class="headerlink" title="2、final(最终)"></a>2、final(最终)</h3><p>​    <strong>修饰类型：</strong></p>
+<ol>
+<li>属性</li>
+<li>方法</li>
+<li>类</li>
+</ol>
+<p>​    <strong>作用：</strong></p>
+<ol>
+<li><p>如果属性修饰为final表示该属性值不能变，该属性就变成常量</p>
+<p>语法：</p>
+<p>​    <code>public static final 常量类型 常量名(大写)=值;</code></p>
+</li>
+<li><p>如果方法修饰为final表示该方法不能被重写</p>
+</li>
+<li><p>如果类修饰为final表示该类无法被继承</p>
+</li>
+</ol>
+<h3 id="3、抽象"><a href="#3、抽象" class="headerlink" title="3、抽象"></a>3、抽象</h3><p>​    <strong>定义：</strong>抽象属于行为的一种定义，其目的性就是完成某些功能在定义的时候因为无法提供具体的执行过程，从而将执行的权利交给子类去完成的现象，并且所有具备该特征方法的类就称之为<strong>抽象类</strong>，其子类就称之为<strong>实现类</strong></p>
+<p>​    <strong>类型：</strong></p>
+<ol>
+<li><p>方法抽象</p>
+<p>在父类中如果一个方法无法提供具体的方法体可以将方法定义为抽象方法</p>
+<p><strong>语法：</strong></p>
+<p><code>public abstract void 方法名();</code></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>类抽象</p>
+<p>因为一个类中存在了抽象方法，所以该类也必须修饰为抽象类</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">	抽象部分</span><br><span class="line">	非抽象部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：</strong>如果一个类被修饰为抽象类后，该类是无法被实例化的</p>
+</li>
+</ol>
+<h1 id="Day11"><a href="#Day11" class="headerlink" title="Day11"></a>Day11</h1><h2 id="一、目标-10"><a href="#一、目标-10" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握接口思想</li>
+<li>掌握异常使用</li>
+<li>掌握扫雷游戏的实现</li>
+</ol>
+<h2 id="二、知识点-10"><a href="#二、知识点-10" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、接口"><a href="#1、接口" class="headerlink" title="1、接口"></a>1、接口</h3><p>​    <strong>关键字：</strong>interface、implements</p>
+<p>​    <strong>定义：</strong>接口是Java中一种非类(class)的组件，体现了Java项目中的各种定义功能，使程序在执行的过程中只能完成特定的定义功能。理解接口的方法和抽象有点类似，知识抽象是类接口不是类，并且抽象类中可以包含抽象方法和非抽象方法以及属性，但接口全部都是抽象方法和静态常量。接口弥补了抽象类的不足，可以在继承上做到多继承和多实现</p>
+<h3 id="2、接口"><a href="#2、接口" class="headerlink" title="2、接口"></a>2、接口</h3><p>​    <strong>接口语法：</strong>    </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">	抽象方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>实现类语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">implements</span> 接口名</span>&#123;</span><br><span class="line">    抽象方法实现</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、类与接口的区别"><a href="#3、类与接口的区别" class="headerlink" title="3、类与接口的区别"></a>3、类与接口的区别</h3><ol>
+<li>类只能单继承，接口可以多继承</li>
+<li>实现类可以多实现</li>
+</ol>
+<h3 id="4、异常"><a href="#4、异常" class="headerlink" title="4、异常"></a>4、异常</h3><p>​    在计算机中包含错误和异常两种现象</p>
+<p>​    <strong>错误：</strong>Error         –&gt;来自于计算机的反馈</p>
+<p>​    <strong>异常：</strong>Exception –&gt;来自于程序的反馈</p>
+<h3 id="5、异常的结构"><a href="#5、异常的结构" class="headerlink" title="5、异常的结构"></a>5、异常的结构</h3><p>​    Exception – 异常根类</p>
+<p>​            |– RuntimeException(运行时异常)</p>
+<h3 id="6、异常处理"><a href="#6、异常处理" class="headerlink" title="6、异常处理"></a>6、异常处理</h3><p>​    <strong>方式：</strong></p>
+<ol>
+<li><p>try…catch处理</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	被监控的代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	产生指定异常后处理的地方</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>throws处理</p>
+<p>在代码中如果存在异常，将该异常处理方式抛出给调用者去处理。</p>
+<p>抛出异常只能在方法上执行。</p>
+<p><strong>throws</strong> –&gt;抛出异常</p>
+<p><strong>throw</strong>  –&gt;产生异常  <code>throw new 异常类型();</code></p>
+<p><strong>注：</strong>在使用throw的时候因为需要人为方式产生一个异常，所以通常情况下都会采用自定义异常来进行创建。</p>
+<p><strong>自定义异常定义语法：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 自定义异常类名 <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<ol start="3">
+<li><p>finally块</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">	监控代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	异常处理</span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">	不管是否存在异常都会执行的部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="7、扫雷实现"><a href="#7、扫雷实现" class="headerlink" title="7、扫雷实现"></a>7、扫雷实现</h3><ol>
+<li><p>分析</p>
+<p>扫雷游戏的对象：格子对象（内容、状态）</p>
+<p>雷区使用二维数组存放所有格子</p>
+</li>
+</ol>
+<h1 id="Day12"><a href="#Day12" class="headerlink" title="Day12"></a>Day12</h1><h2 id="一、目标-11"><a href="#一、目标-11" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解javaAPI</li>
+<li>掌握java.lang包工具实用</li>
+</ol>
+<h2 id="二、知识点-11"><a href="#二、知识点-11" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、API"><a href="#1、API" class="headerlink" title="1、API"></a>1、API</h3><p>​    <strong>定义：</strong>属于jdk中的核心部分之一，API–应用程序接口工具</p>
+<p>​    API中包含了类和接口，通过创建的对象完成java程序中执行的过程</p>
+<p>​    例如：Scanner、Random…</p>
+<h3 id="2、API体系"><a href="#2、API体系" class="headerlink" title="2、API体系"></a>2、API体系</h3><p>掌握内容：</p>
+<ul>
+<li>java.lang包  –包装类、String类、StringBuffer类</li>
+<li>java.util包    –集合、Date类</li>
+<li>java.awt/javax.swing   –GUI编程</li>
+</ul>
+<h3 id="3、java-lang包"><a href="#3、java-lang包" class="headerlink" title="3、java.lang包"></a>3、java.lang包</h3><p>lang == Language(语言)</p>
+<p>内容：Java语言相关的工具</p>
+<h3 id="4、API"><a href="#4、API" class="headerlink" title="4、API"></a>4、API</h3><ul>
+<li><p>包装类</p>
+<p>将java中的基本数据类型通过包装后转变为引用类型</p>
+<p>基本数据类型</p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>包装类类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+</tbody></table>
+<p>主要掌握的方法：</p>
+<p>​    valueOf();  –将字符串转换成包装类型</p>
+<p>​    parseXXX();   –将字符串转换成基本类型</p>
+</li>
+<li><p>String类</p>
+<p>用于在Java中对字符串数据进行存储，但存储的方式采用副本行为进行存储。</p>
+<p>存储在String中的字符串数据不能进行修改。</p>
+<p><strong>方法：</strong></p>
+<ol>
+<li>indexOf(字符串)  –查看字符串所在的索引</li>
+<li>lastIndexOf(字符串)  –查看字符串最后出现的索引</li>
+<li>charAt(索引)  –通过索引找字符</li>
+<li>endWith(字符串)  –查看是否以指定字符串结尾</li>
+<li>toLowerCase()  –将字符串转换为小写</li>
+<li>toUpperCase()  –将字符串转换为大写</li>
+<li>toCharArray()  –将字符串转换为字符数组</li>
+<li>getBytes()  –将字符串转换为字节数组</li>
+<li>isEmpty()  –判断字符串是不是为空</li>
+<li>replace(老字符,新字符)  –通过指定字符进行替换</li>
+<li>substring(beginIndex,endIndex)  –对指定的字符串是不是为空</li>
+<li>split(字符串)  –通过匹配符截取字符串内容</li>
+</ol>
+</li>
+<li><p>StringBuffer类</p>
+<p>是一种String的缓冲类，实现方式采用缓冲区将需要改变的字符串内容进行存储，完成字符串数据的改变。</p>
+<p><strong>方法：</strong></p>
+<pre><code>1. 增加数据
+
+   2. 删除数据
+      3. 更新数据
+         4. 查询数据</code></pre></li>
+</ul>
+<h1 id="Day13"><a href="#Day13" class="headerlink" title="Day13"></a>Day13</h1><h2 id="一、目标-12"><a href="#一、目标-12" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
 <li>了解java.util包</li>
 <li>掌握Date类</li>
 <li>掌握集合框架</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、java-util"><a href="#1、java-util" class="headerlink" title="1、java.util"></a>1、java.util</h3><p>​    属于Java语言中的工具包，提供了一系列的管理工具，类似于Scanner、Random、Date、集合等。在使用该包中的中工具的时候必须导包。</p>
+<h2 id="二、知识点-12"><a href="#二、知识点-12" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、java-util"><a href="#1、java-util" class="headerlink" title="1、java.util"></a>1、java.util</h3><p>​    属于Java语言中的工具包，提供了一系列的管理工具，类似于Scanner、Random、Date、集合等。在使用该包中的中工具的时候必须导包。</p>
 <h3 id="2、Date类-时间类"><a href="#2、Date类-时间类" class="headerlink" title="2、Date类(时间类)"></a>2、Date类(时间类)</h3><p>​    <strong>作用：</strong>用于在程序中获取和操作时间的一种工具类，同时也是一种数据类型。</p>
 <p>​    <strong>注意：</strong>1900：计算机时间的起始年份–int             1970：计算机毫秒数起始年份–long</p>
 <p>​    <strong>方法：</strong></p>
@@ -217,819 +1465,77 @@
 <li><p>使用entrySet()获取到集合中的键值对，分别取出相应的数据</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(Map.Entry&lt;String , String&gt; mp:map.entrySet()) &#123;</span><br><span class="line">	System.out.println(<span class="string">"key="</span>+mp.getKey()+<span class="string">"  , value="</span>+mp.getValue());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day12</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day12/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十二，Java语言基础</p>
-<a id="more"></a>
 
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解javaAPI</li>
-<li>掌握java.lang包工具实用</li>
+
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day14"><a href="#Day14" class="headerlink" title="Day14"></a>Day14</h1><h2 id="一、目标-13"><a href="#一、目标-13" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解JavaGUI编程</li>
+<li>了解JavaGUI编程库</li>
+<li>掌握JFrame使用</li>
+<li>掌握JPanel使用</li>
+<li>掌握事件监听操作</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、API"><a href="#1、API" class="headerlink" title="1、API"></a>1、API</h3><p>​    <strong>定义：</strong>属于jdk中的核心部分之一，API–应用程序接口工具</p>
-<p>​    API中包含了类和接口，通过创建的对象完成java程序中执行的过程</p>
-<p>​    例如：Scanner、Random…</p>
-<h3 id="2、API体系"><a href="#2、API体系" class="headerlink" title="2、API体系"></a>2、API体系</h3><p>掌握内容：</p>
+<h2 id="二、知识点-13"><a href="#二、知识点-13" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaGUI"><a href="#1、JavaGUI" class="headerlink" title="1、JavaGUI"></a>1、JavaGUI</h3><p>​    <strong>定义：</strong>java图形用户界面编程</p>
+<p>​    <strong>完成目标：</strong>通过javaGUI编程实现游戏的开发，在游戏开发中最难的就是游戏引擎的设计。</p>
+<h3 id="2、JavaGUI编程库"><a href="#2、JavaGUI编程库" class="headerlink" title="2、JavaGUI编程库"></a>2、JavaGUI编程库</h3><p>​    <strong>组成：</strong>java.awt和javax.swing</p>
+<h3 id="3、JFramel类-窗体类"><a href="#3、JFramel类-窗体类" class="headerlink" title="3、JFramel类(窗体类)"></a>3、JFramel类(窗体类)</h3><ul>
+<li><p><strong>作用：</strong>为界面提供窗体的设置，并且通过窗体进行界面内容的添加</p>
+</li>
+<li><p><strong>使用方式：</strong></p>
 <ul>
-<li>java.lang包  –包装类、String类、StringBuffer类</li>
-<li>java.util包    –集合、Date类</li>
-<li>java.awt/javax.swing   –GUI编程</li>
-</ul>
-<h3 id="3、java-lang包"><a href="#3、java-lang包" class="headerlink" title="3、java.lang包"></a>3、java.lang包</h3><p>lang == Language(语言)</p>
-<p>内容：Java语言相关的工具</p>
-<h3 id="4、API"><a href="#4、API" class="headerlink" title="4、API"></a>4、API</h3><ul>
-<li><p>包装类</p>
-<p>将java中的基本数据类型通过包装后转变为引用类型</p>
-<p>基本数据类型</p>
-<table>
-<thead>
-<tr>
-<th>基本类型</th>
-<th>包装类类型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>int</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>long</td>
-<td>Long</td>
-</tr>
-<tr>
-<td>short</td>
-<td>Short</td>
-</tr>
-<tr>
-<td>double</td>
-<td>Double</td>
-</tr>
-<tr>
-<td>float</td>
-<td>Float</td>
-</tr>
-<tr>
-<td>char</td>
-<td>Character</td>
-</tr>
-<tr>
-<td>boolean</td>
-<td>Boolean</td>
-</tr>
-<tr>
-<td>byte</td>
-<td>Byte</td>
-</tr>
-</tbody></table>
-<p>主要掌握的方法：</p>
-<p>​    valueOf();  –将字符串转换成包装类型</p>
-<p>​    parseXXX();   –将字符串转换成基本类型</p>
-</li>
-<li><p>String类</p>
-<p>用于在Java中对字符串数据进行存储，但存储的方式采用副本行为进行存储。</p>
-<p>存储在String中的字符串数据不能进行修改。</p>
-<p><strong>方法：</strong></p>
-<ol>
-<li>indexOf(字符串)  –查看字符串所在的索引</li>
-<li>lastIndexOf(字符串)  –查看字符串最后出现的索引</li>
-<li>charAt(索引)  –通过索引找字符</li>
-<li>endWith(字符串)  –查看是否以指定字符串结尾</li>
-<li>toLowerCase()  –将字符串转换为小写</li>
-<li>toUpperCase()  –将字符串转换为大写</li>
-<li>toCharArray()  –将字符串转换为字符数组</li>
-<li>getBytes()  –将字符串转换为字节数组</li>
-<li>isEmpty()  –判断字符串是不是为空</li>
-<li>replace(老字符,新字符)  –通过指定字符进行替换</li>
-<li>substring(beginIndex,endIndex)  –对指定的字符串是不是为空</li>
-<li>split(字符串)  –通过匹配符截取字符串内容</li>
-</ol>
-</li>
-<li><p>StringBuffer类</p>
-<p>是一种String的缓冲类，实现方式采用缓冲区将需要改变的字符串内容进行存储，完成字符串数据的改变。</p>
-<p><strong>方法：</strong></p>
-<pre><code>1. 增加数据
- 2. 删除数据
- 3. 更新数据
- 4. 查询数据</code></pre></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day11</title>
-    <url>/2020/08/19/Java%E8%AF%AD%E8%A8%80Day11/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十一，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握接口思想</li>
-<li>掌握异常使用</li>
-<li>掌握扫雷游戏的实现</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、接口"><a href="#1、接口" class="headerlink" title="1、接口"></a>1、接口</h3><p>​    <strong>关键字：</strong>interface、implements</p>
-<p>​    <strong>定义：</strong>接口是Java中一种非类(class)的组件，体现了Java项目中的各种定义功能，使程序在执行的过程中只能完成特定的定义功能。理解接口的方法和抽象有点类似，知识抽象是类接口不是类，并且抽象类中可以包含抽象方法和非抽象方法以及属性，但接口全部都是抽象方法和静态常量。接口弥补了抽象类的不足，可以在继承上做到多继承和多实现</p>
-<h3 id="2、接口"><a href="#2、接口" class="headerlink" title="2、接口"></a>2、接口</h3><p>​    <strong>接口语法：</strong>    </p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">	抽象方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​    <strong>实现类语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名 <span class="keyword">implements</span> 接口名</span>&#123;</span><br><span class="line">    抽象方法实现</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、类与接口的区别"><a href="#3、类与接口的区别" class="headerlink" title="3、类与接口的区别"></a>3、类与接口的区别</h3><ol>
-<li>类只能单继承，接口可以多继承</li>
-<li>实现类可以多实现</li>
-</ol>
-<h3 id="4、异常"><a href="#4、异常" class="headerlink" title="4、异常"></a>4、异常</h3><p>​    在计算机中包含错误和异常两种现象</p>
-<p>​    <strong>错误：</strong>Error         –&gt;来自于计算机的反馈</p>
-<p>​    <strong>异常：</strong>Exception –&gt;来自于程序的反馈</p>
-<h3 id="5、异常的结构"><a href="#5、异常的结构" class="headerlink" title="5、异常的结构"></a>5、异常的结构</h3><p>​    Exception – 异常根类</p>
-<p>​            |– RuntimeException(运行时异常)</p>
-<h3 id="6、异常处理"><a href="#6、异常处理" class="headerlink" title="6、异常处理"></a>6、异常处理</h3><p>​    <strong>方式：</strong></p>
-<ol>
-<li><p>try…catch处理</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">	被监控的代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	产生指定异常后处理的地方</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="2">
-<li><p>throws处理</p>
-<p>在代码中如果存在异常，将该异常处理方式抛出给调用者去处理。</p>
-<p>抛出异常只能在方法上执行。</p>
-<p><strong>throws</strong> –&gt;抛出异常</p>
-<p><strong>throw</strong>  –&gt;产生异常  <code>throw new 异常类型();</code></p>
-<p><strong>注：</strong>在使用throw的时候因为需要人为方式产生一个异常，所以通常情况下都会采用自定义异常来进行创建。</p>
-<p><strong>自定义异常定义语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 自定义异常类名 <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<ol start="3">
-<li><p>finally块</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;	</span><br><span class="line">	监控代码</span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类型参数)&#123;</span><br><span class="line">	异常处理</span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">	不管是否存在异常都会执行的部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="7、扫雷实现"><a href="#7、扫雷实现" class="headerlink" title="7、扫雷实现"></a>7、扫雷实现</h3><ol>
-<li><p>分析</p>
-<p>扫雷游戏的对象：格子对象（内容、状态）</p>
-<p>雷区使用二维数组存放所有格子</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day10</title>
-    <url>/2020/08/10/Java%E8%AF%AD%E8%A8%80Day10/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第十天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握static和final关键字</li>
-<li>掌握抽象</li>
-</ol>
-<h3 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h3><h3 id="1、static-静态"><a href="#1、static-静态" class="headerlink" title="1、static(静态)"></a>1、static(静态)</h3><p>​    <strong>定义：</strong>静态的修饰实现了内存中数据的共享操作，静态可以修饰属性和方法，如果属性被修饰为静态后，值将实现跨区域的访问，如果方法被修饰为静态后，表示该方法可以不依赖对象来直接访问。</p>
-<p>​    <strong>修饰类型：</strong></p>
-<pre><code>1. 属性
-   2. 方法
-      3. 块</code></pre><h3 id="2、final-最终"><a href="#2、final-最终" class="headerlink" title="2、final(最终)"></a>2、final(最终)</h3><p>​    <strong>修饰类型：</strong></p>
-<ol>
-<li>属性</li>
-<li>方法</li>
-<li>类</li>
-</ol>
-<p>​    <strong>作用：</strong></p>
-<ol>
-<li><p>如果属性修饰为final表示该属性值不能变，该属性就变成常量</p>
-<p>语法：</p>
-<p>​    <code>public static final 常量类型 常量名(大写)=值;</code></p>
-</li>
-<li><p>如果方法修饰为final表示该方法不能被重写</p>
-</li>
-<li><p>如果类修饰为final表示该类无法被继承</p>
-</li>
-</ol>
-<h3 id="3、抽象"><a href="#3、抽象" class="headerlink" title="3、抽象"></a>3、抽象</h3><p>​    <strong>定义：</strong>抽象属于行为的一种定义，其目的性就是完成某些功能在定义的时候因为无法提供具体的执行过程，从而将执行的权利交给子类去完成的现象，并且所有具备该特征方法的类就称之为<strong>抽象类</strong>，其子类就称之为<strong>实现类</strong></p>
-<p>​    <strong>类型：</strong></p>
-<ol>
-<li><p>方法抽象</p>
-<p>在父类中如果一个方法无法提供具体的方法体可以将方法定义为抽象方法</p>
-<p><strong>语法：</strong></p>
-<p><code>public abstract void 方法名();</code></p>
-</li>
-</ol>
-<ol start="2">
-<li><p>类抽象</p>
-<p>因为一个类中存在了抽象方法，所以该类也必须修饰为抽象类</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">	抽象部分</span><br><span class="line">	非抽象部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>注：</strong>如果一个类被修饰为抽象类后，该类是无法被实例化的</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day9</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day9/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第九天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握访问修饰符</li>
-<li>掌握方法重写</li>
-<li>掌握引用转型</li>
-<li>掌握多态</li>
-</ol>
-<h3 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h3><h3 id="1、访问修饰符"><a href="#1、访问修饰符" class="headerlink" title="1、访问修饰符"></a>1、访问修饰符</h3><p>​    <strong>作用：</strong>用于在类中为成员进行修饰，实现成员访问作用域的控制</p>
-<p>​    <strong>种类：</strong></p>
-<ul>
-<li>公共修饰符      <code>public</code>        –&gt;整个程序中都能被访问</li>
-<li>私有修饰符      <code>private</code>      –&gt;只能本类访问</li>
-<li>受保护修饰符  <code>protected</code>  –&gt;在同包中可以访问，不同包中只能是关系的类才能访问</li>
-<li>缺省修饰符                            –&gt;在同包中可以访问，不同包不能访问</li>
-</ul>
-<h3 id="2、方法重写-方法覆盖"><a href="#2、方法重写-方法覆盖" class="headerlink" title="2、方法重写(方法覆盖)"></a>2、方法重写(方法覆盖)</h3><p>​    <strong>使用规则：</strong></p>
-<ol>
-<li><p>必须具备继承关系</p>
-</li>
-<li><p>方法结构必须完全相同(在子类中编写一个父类方法完全一样的方法)</p>
-<pre><code>3. 在一个子类中如果重写了父类方法，在调用的时候当前方法的所属者就变成子类的方法，而没有覆盖则是父类的方法，该结果只能在运行后才能得到</code></pre></li>
-</ol>
-<h3 id="3、引用转型"><a href="#3、引用转型" class="headerlink" title="3、引用转型"></a>3、引用转型</h3><p>​    实现了对象中原有的引用改变</p>
-<p>​    <strong>例如：</strong></p>
-<p>​        原始方式：父类 对象名=new 父类();</p>
-<p>​        引用转型：父类 对象名=new 子类(); –向上转型</p>
-<p>​        强制转型：子类 对象名=(子类)父类对象;  –向下转型(强制转换)</p>
-<h3 id="4、多态"><a href="#4、多态" class="headerlink" title="4、多态"></a>4、多态</h3><p>​    <strong>特征：</strong>在对象使用中用于完成相同的方法执行不同的结果而产生的一种现象，该现象是在原有的功能上再次进行扩展的行为</p>
-<p>​    <strong>分类：</strong></p>
-<ol>
-<li><p>静态多态(在程序没有执行之前，通过选择执行的方法来调用功能)</p>
-<p>方法重载</p>
-</li>
-<li><p>动态多态(运行时多态)</p>
-<p>方法重写、引用转型</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day8</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day8/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第八天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握构造方法的使用</li>
-<li>掌握方法重载实现</li>
-<li>掌握package的运用</li>
-<li>掌握继承的使用</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、构造方法"><a href="#1、构造方法" class="headerlink" title="1、构造方法"></a>1、构造方法</h3><p><strong>定义：</strong></p>
-<p>​    构造方法属于方法的一种实现方式，该方法不同于自定义方法，主要是为类创建对象所提供的一种自动执行的方法。通常应用于对象属性赋值操作</p>
-<p><strong>语法：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 类名(参数列表)&#123;</span><br><span class="line">    执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​    在每个类中会存在一个隐式空参数列表的构造方法</p>
-<h3 id="2、封装"><a href="#2、封装" class="headerlink" title="2、封装"></a>2、封装</h3><p>在Java中属于入门的思想行为，为了将一个类中的结构实现完整性，从而提供了属性和方法的包含，在方法中可以包含多种执行指令，属性可以包含多个不同数据，这些现象都是封装操作</p>
-<h3 id="3、方法实现"><a href="#3、方法实现" class="headerlink" title="3、方法实现"></a>3、方法实现</h3><p><strong>方式：</strong></p>
-<ul>
-<li>方法重载</li>
-<li>方法重写</li>
-</ul>
-<h3 id="4、方法重载"><a href="#4、方法重载" class="headerlink" title="4、方法重载"></a>4、方法重载</h3><p><strong>作用：</strong></p>
-<p>​    在类中为指定的方法提供多种不同执行过程的选择，从而得到不同的结果</p>
-<p><strong>实现方式：</strong></p>
-<ul>
-<li>方法名称必须相同</li>
-<li>参数列表 不同（个数不同、类型不同）</li>
-</ul>
-<h3 id="5、package"><a href="#5、package" class="headerlink" title="5、package"></a>5、package</h3><p>​    <strong>中文：</strong>包</p>
-<p>​    <strong>作用：</strong>在工程中用于对源代码文件进行归类的一种实现方式。在后续Java项目中不同的包所存放的源代码文件作用也会有特定的规定</p>
-<p>​    <strong>标准：</strong></p>
-<ol>
-<li><p>商业化项目标准</p>
-<p><code>com.xxx.核心包(bean、dao、service、controller、util、conf、core)</code></p>
-</li>
-<li><p>核心技术标准</p>
-<p><code>org.xxx.核心包</code></p>
-</li>
-</ol>
-<h3 id="6、继承"><a href="#6、继承" class="headerlink" title="6、继承"></a>6、继承</h3><p>​    <strong>关键字：</strong><code>extends、父类、超类、基类、子类、派生类</code></p>
-<p>​    <strong>作用：</strong>用于为Java的类提供关系的建立，从而为类中的方法提供扩展的行为</p>
-<p>​    <strong>实现方式：</strong>在子类中完成对父类的继承</p>
-<p>​    <strong>实现要求：</strong></p>
-<ol>
-<li><p>具备单向性规则</p>
-<p>只能由一方继承另外一方，子类可以访问父类的成员，但父类不能访问子类的成员</p>
-</li>
-</ol>
-<ol start="2">
-<li><p>具备传递性依赖</p>
-<p>父类及子类之间及孙子类之间可以实现成员互通</p>
-</li>
-<li><p>具备单一性规则</p>
-<p>一个子类只能拥有一个父亲，但一个父类可以包含多个子类</p>
-</li>
-</ol>
-<h3 id="7、继承的关键字"><a href="#7、继承的关键字" class="headerlink" title="7、继承的关键字"></a>7、继承的关键字</h3><ul>
-<li><p>super</p>
-<p><strong>作用：</strong>在子类中访问父类的非私有成员和构造方法</p>
-<p><strong>访问方式：</strong></p>
-<ul>
-<li>构造方法访问 – super();</li>
-<li>成员访问 –super.成员;</li>
-</ul>
-</li>
-<li><p>this</p>
-<p><strong>作用：</strong>在子类中访问父类的非私有成员和自身的成员，但无法访问父类的构造方法</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day7</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day7/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第七天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>掌握JavaOOP概念</li>
-<li>掌握类的使用</li>
-<li>掌握对象的使用</li>
-<li>掌握对象成员操作</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、JavaOOP"><a href="#1、JavaOOP" class="headerlink" title="1、JavaOOP"></a>1、JavaOOP</h3><p>作用：在java语言开发中实现软件开发流程设计的一种设计思想</p>
-<p>JavaOOP：Object Oriented Programming(面向对象编程)</p>
-<p>核心宗旨：一切皆对象</p>
-<h3 id="2、类-class"><a href="#2、类-class" class="headerlink" title="2、类(class)"></a>2、类(class)</h3><p>属于Java程序在运行的时候一种加载必备的内容，该成员主要实现了程序中每个事物的产生</p>
-<p>简单来说：类就是一个工厂，用于生产所有的东西</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、对象-Object"><a href="#3、对象-Object" class="headerlink" title="3、对象(Object)"></a>3、对象(Object)</h3><p>属于Java的核心部分，因为对象的存在才使程序具备了各种不同的产物，从而实现不同的过程内容</p>
-<p>简单来说：程序中可以使用的东西</p>
-<p>创建对象的语法：对象的创建由类决定</p>
-<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">类名 对象名(实例名)=<span class="keyword">new</span> <span class="type"></span>类名();</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、类和对象的关系"><a href="#4、类和对象的关系" class="headerlink" title="4、类和对象的关系"></a>4、类和对象的关系</h3><p>对象所具备的就是类所拥有的，反而言之类所具备的对象不一定拥有</p>
-<h3 id="5、类-对象-的成员"><a href="#5、类-对象-的成员" class="headerlink" title="5、类(对象)的成员"></a>5、类(对象)的成员</h3><p>​    成员部分：</p>
-<ul>
-<li><p>属性 – 对象所具备的描述</p>
-<p>语法：<code>数据类型 属性名;</code></p>
-<p>使用方式：</p>
-<p>​    类中所拥有的属性在使用的时候必须和对象有关</p>
-<p>​    赋值属性：对象名.属性=值</p>
-<p>​    获取属性：对象名.属性</p>
-<p>因为属性可以存储数据，所以就将对象提升为一种新的数据容器。存放在对象中的数据可以没有个数限制、类型限制</p>
-</li>
-<li><p>方法 – 对象所具备的行为能力</p>
-<p>属于Java程序的灵魂，让程序具备了活力，从而提高了程序的功能操作，所有的程序员在完成Java程序开发的时候做的就是方法的实现</p>
-<p>类型：</p>
-<ul>
-<li><p>自定义方法</p>
-<p>种类：</p>
-<ol>
-<li><p>无返回、无参数类型</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名()&#123;</span><br><span class="line">	当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>无返回、有参数类型</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>参数列表：包含一系列的形式参数</p>
-<p>数据类型 参数名,数据类型 参数名…</p>
-</li>
-<li><p>有返回、无参数类型</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名()&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有返回、有参数类型</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> 返回值类型 方法名(参数列表)&#123;</span><br><span class="line">    当前方法需要执行的指令</span><br><span class="line">    <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>构造方法</p>
-</li>
+<li>基于对象形式使用</li>
+<li>基于继承形式使用</li>
 </ul>
 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day6</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day6/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第六天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>冒泡排序</li>
+<h3 id="4、JPanel类-面板类"><a href="#4、JPanel类-面板类" class="headerlink" title="4、JPanel类(面板类)"></a>4、JPanel类(面板类)</h3><ul>
+<li><strong>作用：</strong>用于在窗体上完成内容组件的添加，游戏中所有场景都是在面板上完成</li>
+<li><strong>使用：</strong>和窗体的使用类似，但必须添加到窗体才能显示内容</li>
+</ul>
+<h3 id="5、游戏引擎"><a href="#5、游戏引擎" class="headerlink" title="5、游戏引擎"></a>5、游戏引擎</h3><ol>
+<li>完成本地磁盘文件加载</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、冒泡排序"><a href="#1、冒泡排序" class="headerlink" title="1、冒泡排序"></a>1、冒泡排序</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] sum1=&#123;<span class="number">3</span>,<span class="number">12</span>,<span class="number">112</span>,<span class="number">9</span>,<span class="number">14</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">15</span>,<span class="number">7</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> num;</span><br><span class="line">		<span class="comment">//2.冒泡排序法</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;sum1.length;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;sum1.length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(sum1[j]&gt;sum1[j+<span class="number">1</span>])&#123;</span><br><span class="line">					num=sum1[j];</span><br><span class="line">					sum1[j]=sum1[j+<span class="number">1</span>];</span><br><span class="line">					sum1[j+<span class="number">1</span>]=num;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day5</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day5/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第五天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解数组</li>
-<li>掌握数组的原理实现</li>
-<li>掌握数组的不同种类</li>
+<h3 id="6、事件"><a href="#6、事件" class="headerlink" title="6、事件"></a>6、事件</h3><ul>
+<li><strong>关键字：</strong>event</li>
+<li><strong>实现：</strong>事件监听器</li>
+<li><strong>类型：</strong><ul>
+<li>键盘事件  –&gt;键盘监听器</li>
+<li>鼠标事件  –&gt;鼠标监听器</li>
+<li>焦点事件</li>
+<li>窗体事件</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day15"><a href="#Day15" class="headerlink" title="Day15"></a>Day15</h1><h2 id="一、目标-14"><a href="#一、目标-14" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>了解线程</li>
+<li>掌握线程库</li>
+<li>掌握多线程</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、数组"><a href="#1、数组" class="headerlink" title="1、数组"></a>1、数组</h3><p>是程序中一种数据的容器，该容器内可以存放指定长度的相同类型数据</p>
-<h3 id="2、定义数组"><a href="#2、定义数组" class="headerlink" title="2、定义数组"></a>2、定义数组</h3><p>语法：</p>
-<p>​        数据类型[] 数组名称 = new 数据类型[长度];</p>
-<p>​        数据类型[] 数组名称 = new 数据类型[]{值1,值2…};</p>
-<p>​        数据类型[] 数组名称 = {值1,值2…};</p>
-<h3 id="3、使用数组"><a href="#3、使用数组" class="headerlink" title="3、使用数组"></a>3、使用数组</h3><ul>
-<li><p>获取数组的长度</p>
-<p>​            <code>数组名.length</code></p>
-</li>
-<li><p>获取数组的每个数据</p>
-<p>​    通过数组中提供的下标获取每个位置上的数据</p>
-<p>​            <code>数组名[下标]</code></p>
-<p>​    数组下标从0开始，表示第一个位置</p>
-</li>
-<li><p>数组添加数据</p>
-<p>​    通过数组下标进行指定位置数据添加</p>
-<p>​            <code>数组名[下标] = 值;</code></p>
+<h2 id="二、知识点-14"><a href="#二、知识点-14" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、线程"><a href="#1、线程" class="headerlink" title="1、线程"></a>1、线程</h3><ul>
+<li><strong>进程：</strong>在系统中运行的应用程序</li>
+<li><strong>线程：</strong>在应用程序中运行的功能。Java程序中如果存在多个功能需要同时执行的时候，每个功能就需要定义为线程。</li>
+</ul>
+<h3 id="2、线程库"><a href="#2、线程库" class="headerlink" title="2、线程库"></a>2、线程库</h3><ul>
+<li><strong>API：</strong>java.lang包中</li>
+<li><strong>类型：</strong><ul>
+<li>Thread  –类</li>
+<li>Runnable  –接口</li>
+</ul>
 </li>
 </ul>
-<h3 id="4、数组的种类"><a href="#4、数组的种类" class="headerlink" title="4、数组的种类"></a>4、数组的种类</h3><ul>
-<li><p>一维数组</p>
-<p>​    一个数组中只能存放一组相同类型的单个数据</p>
-</li>
-<li><p>二维数组</p>
-<p>​    一个数组中能存放多个相同类型的数组</p>
-<p>​    语法：</p>
-<p>​            <code>数据类型[][] 数组名=new 数据类型[长度1][长度2]</code></p>
-<p>​            长度1：二维数组中存放的数组个数</p>
-<p>​            长度2：每个数组中存放的数据个数</p>
-</li>
+<h3 id="3、Thread类"><a href="#3、Thread类" class="headerlink" title="3、Thread类"></a>3、Thread类</h3><ul>
+<li>线程类，该类提供了一系列的线程操作方法，同时线程在创建后通过start方法启动线程，而功能需要添加在一个被重写的run方法中 </li>
 </ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day4</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day4/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第四天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li><p>掌握多元运算符</p>
-</li>
-<li><p>掌握条件(流程)控制语句</p>
-</li>
-<li><p>掌握循环语句</p>
-</li>
+<h1 id="Day16"><a href="#Day16" class="headerlink" title="Day16"></a>Day16</h1><h2 id="一、目标-15"><a href="#一、目标-15" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
+<li>掌握矩阵操作</li>
+<li>掌握动态图实现</li>
+<li>掌握声音播放</li>
 </ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、多元运算符"><a href="#1、多元运算符" class="headerlink" title="1、多元运算符"></a>1、多元运算符</h3><p>​    作用：通过表达式获取的结果来得到对应的值</p>
-<p>​    语法：</p>
-<p>​            <code>表达式? 真的结果内容:假的结果内容</code></p>
-<h3 id="2、流程控制语句"><a href="#2、流程控制语句" class="headerlink" title="2、流程控制语句"></a>2、流程控制语句</h3><p>​    作用：在Java代码执行中，用于控制代码的执行流程，从表达式结果实现不同的代码运行。</p>
-<h3 id="3、流程语句分类"><a href="#3、流程语句分类" class="headerlink" title="3、流程语句分类"></a>3、流程语句分类</h3><ul>
-<li><p>if控制语句</p>
-<ul>
-<li><p>普通条件语句</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式)&#123;</span><br><span class="line">	表达式成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多层条件语句</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>)&#123;</span><br><span class="line">	表达式<span class="number">1</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>)&#123;</span><br><span class="line">	表达式<span class="number">2</span>成立执行的代码部分</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	以上所有表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>嵌套条件语句</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(外层表达式)&#123;</span><br><span class="line">	<span class="keyword">if</span>(内层表达式)&#123;</span><br><span class="line">		内层表达式成立执行的代码部分</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		内层表达式不成立执行的代码部分</span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	外层表达式不成立执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>switch语句</p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(数据值)&#123;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> 判断内容:判断成立执行的部分;</span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">default</span>:默认执行的地方;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<h3 id="4、循环"><a href="#4、循环" class="headerlink" title="4、循环"></a>4、循环</h3><ul>
-<li><p>作用：在程序中用于重复执行具有相同指令的操作行为，在执行过程中根据循环条件决定循环的执行。</p>
-</li>
-<li><p>循环的控制成员</p>
-<ul>
-<li>循环的计数变量  <code>int i=0;</code></li>
-<li>循环条件  <code>i&lt;?</code></li>
-<li>循环计数  <code>i++</code></li>
-</ul>
-</li>
-<li><p>种类：</p>
-<ul>
-<li><p><strong>while循环</strong></p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(循环条件)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>do..while循环</strong></p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;<span class="keyword">while</span>(循环条件);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>while和do..while的区别</strong></p>
-<p>while循环必须根据循环条件决定是否进入循环体中执行代码</p>
-<p>do..while循环先执行一次循环体中的代码，然后再根据循环条件确定是否继续进行循环</p>
-</li>
-<li><p><strong>for循环</strong></p>
-<p>语法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(循环计数变量;循环条件;循环计数)&#123;</span><br><span class="line">	循环执行的代码部分</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day3</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day3/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第三天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解运算符</li>
-<li>掌握算术运算符</li>
-<li>掌握赋值运算符</li>
-<li>掌握比较运算符</li>
-<li>掌握逻辑运算符</li>
-<li>掌握多远运算符</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、运算符"><a href="#1、运算符" class="headerlink" title="1、运算符"></a>1、运算符</h3><p>在程序中会存在一系列的逻辑运算符操作，该操作需要使用运算符实现。</p>
-<h3 id="2、算术运算符"><a href="#2、算术运算符" class="headerlink" title="2、算术运算符"></a>2、算术运算符</h3><p>种类：</p>
-<ul>
-<li><p>一元运算符</p>
-<p>++(自增)  –(自减)</p>
-<p>当运算符在变量之后表示先获取变量数据，然后在进行自增</p>
-<p>当运算符在变量之前表示先进行自增，然后在进行变量数据获取</p>
-</li>
-<li><p>二元运算符</p>
-<p>+(加)  -(减)  *(乘)  /(除)  %(取模)</p>
-</li>
-</ul>
-<h3 id="3、赋值运算符"><a href="#3、赋值运算符" class="headerlink" title="3、赋值运算符"></a>3、赋值运算符</h3><p><code>+=  -=  *=  /=  %=  =</code></p>
-<p>例如： </p>
-<p>​        <code>a+=1  ==  a=a+1;</code></p>
-<h3 id="4、比较运算符"><a href="#4、比较运算符" class="headerlink" title="4、比较运算符"></a>4、比较运算符</h3><p><code>&gt;(大于) &lt;(小于) &gt;=(大于等于) &lt;=(小于等于) ==(等于) !=(不等于)</code></p>
-<p>比较运算符执行操作后获取到的是一个比较的结果(true/false)</p>
-<p>在字符串类型上进行内容比较的时候不能直接使用<code>==</code>，因为比较的是箭头执行的位置是否相同，而需要通过字符串提供的<code>equals()</code>来进行内容比较</p>
-<p>语法：</p>
-<p>​        字符串.equals(字符串);</p>
-<h3 id="5、逻辑运算符"><a href="#5、逻辑运算符" class="headerlink" title="5、逻辑运算符"></a>5、逻辑运算符</h3><p>种类：</p>
-<ul>
-<li><p>与(逻辑与、短路与)</p>
-<ul>
-<li><p>逻辑与  &amp;</p>
-</li>
-<li><p>短路与  &amp;&amp;</p>
-<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为假，那么整个运算符结果就为假</p>
-</li>
-</ul>
-</li>
-<li><p>或(逻辑或、短路或)</p>
-<ul>
-<li><p>逻辑或  |</p>
-</li>
-<li><p>短路或  ||</p>
-<p>共同点：将运算符前后的表达式进行比较，只要有一方的结果为真，那么整个运算符结果就位真</p>
-</li>
-</ul>
-</li>
-<li><p>非</p>
-<p>将获取到的结果(boolean)进行去反</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day2</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day2/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第二天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li>了解数据</li>
-<li>掌握数据类型</li>
-<li>掌握变量操作</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、数据"><a href="#1、数据" class="headerlink" title="1、数据"></a>1、数据</h3><p>数据属于计算机中一种信息的体现，所有的应用程序都会有数据而组成，不同的数据将得到不同的程序运行结果。</p>
-<h3 id="2、数据类型"><a href="#2、数据类型" class="headerlink" title="2、数据类型"></a>2、数据类型</h3><p>种类：</p>
-<ul>
-<li><p><strong>基本数据类型（8大基本数据类型）</strong></p>
-<ul>
-<li><p><strong>整数类型</strong></p>
-<p>关键字：int</p>
-<p>范围：-2(31) – 2(31)-1</p>
-<p>大小：32位 –&gt; 4字节</p>
-</li>
-<li><p><strong>长整数类型</strong></p>
-<p>关键字：long</p>
-<p>范围：-2(63) – 2(63)-1</p>
-<p>大小：64位 –&gt; 8字节</p>
-<p>规则：当数据长度超过int范围时必须添加<code>l</code>单位</p>
-<p>​    例如：</p>
-<p>​            1111112311224444l</p>
-</li>
-<li><p><strong>短整数类型</strong></p>
-<p>关键字：short</p>
-<p>过时类型</p>
-</li>
-<li><p><strong>双精度浮点类型</strong></p>
-<p>关键字：double</p>
-<p>大小：64位 –&gt; 8字节</p>
-<p>规则：在Java中所有的小数默认为双精度浮点类型，除非数据带有<code>f</code>单位</p>
-</li>
-<li><p><strong>单精度浮点类型</strong></p>
-<p>关键字：float</p>
-<p>大小：32位 –&gt; 4字节</p>
-<p>规则：在小数后拥有一位的时候通过<code>f</code>单位标识为单精度类型</p>
-</li>
-<li><p><strong>字符类型</strong></p>
-<p>关键字：char</p>
-<p>大小：32位 –&gt; 4字节</p>
-<p>规则：在数据中如果需要将某个数据变成字符数据，只需要在数据上添加单引号，只能表示单个字符</p>
-<p>​    例如：</p>
-<p>​            ‘1’  ‘a’  ‘骆’(占用8字节)</p>
-</li>
-<li><p><strong>布尔类型</strong></p>
-<p>关键字：boolean</p>
-<p>大小：8位 –&gt; 1字节</p>
-<p>结果：true/false</p>
-</li>
-<li><p><strong>字节类型</strong></p>
-<p>关键字：byte</p>
-<p>规则：用于在计算机中表示数据的大小，同时也可以对程序所产生的字节数据进行表示</p>
-</li>
-</ul>
-</li>
-<li><p>引用数据类型</p>
-<ul>
-<li><p>字符串类型</p>
-<p>关键字：String</p>
-<p>规则：如果说需要将多个单个的字符表示为一种数据的时候，可以使用双引号改变为字符串类型</p>
-<p>​    例如：</p>
-<p>​        “骆俊杰”</p>
-</li>
-<li><p>注意：在Java中所有单词首字母为大写的都是引用类型</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3、变量"><a href="#3、变量" class="headerlink" title="3、变量"></a>3、变量</h3><ul>
-<li>作用：用于java中对指定类型的数据进行存储，存储在容器中的数据必须是单一数据，同时一种容器可以存放不同的相同类型数据</li>
-<li>语法：数据类型 变量名 = 值;</li>
-</ul>
-<h3 id="4、控制台输入指令"><a href="#4、控制台输入指令" class="headerlink" title="4、控制台输入指令"></a>4、控制台输入指令</h3><p>语法：</p>
-<ol>
-<li><p>import java.util.Scanner;  –导入控制台输入工具路径</p>
-</li>
-<li><p>Scanner s = new Scanner(System.in);  –创建控制台输入工具</p>
-</li>
-<li><p>s.next();  –获取字符串输入数据</p>
-<p>s.nextInt();  –获取整数输入数据</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java语言Day1</title>
-    <url>/2020/08/07/Java%E8%AF%AD%E8%A8%80Day1/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>牛耳培训第一天，Java语言基础</p>
-<a id="more"></a>
-
-<h2 id="一、目标"><a href="#一、目标" class="headerlink" title="一、目标"></a>一、目标</h2><ol>
-<li><p>了解Java语言</p>
-</li>
-<li><p>熟悉Java开发环境</p>
-</li>
-<li><p>编写Java应用程序</p>
-</li>
-</ol>
-<h2 id="二、知识点"><a href="#二、知识点" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、了解Java语言"><a href="#1、了解Java语言" class="headerlink" title="1、了解Java语言"></a>1、了解Java语言</h3><ul>
-<li>Java是一门软件开发语言，该语言涉及了互联网行业和移动互联网行业。</li>
-<li>Java创始公司是sun，而当前有oracle托管。</li>
-<li>1991年，sun公司需要完成一个项目，该项目的名称为绿色计划（电视机顶盒），当时sun公司要求詹姆斯高斯林带领团队完成此项目，该团队使用OAK语言完成当前的项目。</li>
-<li>1994年项目完成，同时在当年sun要求开发团队将OAK语言更名为自主语言。</li>
-<li>当初的更名为：爪哇语言 –&gt; Java语言</li>
-<li>版本：javaME(微型开发)、JavaSE(应用开发)、JavaEE(企业级开发)</li>
-</ul>
-<h3 id="2、熟悉Java开发环境"><a href="#2、熟悉Java开发环境" class="headerlink" title="2、熟悉Java开发环境"></a>2、熟悉Java开发环境</h3><ul>
-<li><p>开发环境：Windows、Linux、Mac</p>
-</li>
-<li><p>编辑环境：jdk(支撑java运行环境) –1.8.xxu</p>
-<p>​        现阶段使用：记事本开发</p>
-</li>
-</ul>
-<h3 id="3、编写Java应用程序"><a href="#3、编写Java应用程序" class="headerlink" title="3、编写Java应用程序"></a>3、编写Java应用程序</h3><p>jvm虚拟机：核心是classloader类加载器和垃圾回收器</p>
-<p>编写第一个Java应用程序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello World!!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>控制台输出<code>Hello World!!</code></p>
+<h2 id="二、知识点-15"><a href="#二、知识点-15" class="headerlink" title="二、知识点"></a>二、知识点</h2><h3 id="1、矩阵"><a href="#1、矩阵" class="headerlink" title="1、矩阵"></a>1、矩阵</h3><p><strong>定义：</strong>javaGUI中的一种范围控制组件，可以在界面中指定组件的大小，同时可以控制组件与组件之间的交互行为。</p>
+<h3 id="2、动态图"><a href="#2、动态图" class="headerlink" title="2、动态图"></a>2、动态图</h3><p>java不支持GIF类型图片，GIF只在浏览器中才能动态显示。那么可以使用一个整图进行切割的形式获取图片中不同的部分。</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -1041,7 +1547,7 @@
   </entry>
   <entry>
     <title>梦田票网-购物车实现</title>
-    <url>/2020/07/20/%E6%A2%A6%E7%94%B0%E7%A5%A8%E7%BD%91-%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/</url>
+    <url>/2020/07/20/12f0c952.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>梦田票网(mtpiao.com)—-购物车实现</p>
 <p>购物车分为几种方法：1、数据库方式  2、session方式  3、cookie方式</p>
 <p>这里我采用的是session方式实现的</p>
@@ -1078,7 +1584,7 @@
   </entry>
   <entry>
     <title>梦田票网-添加地址</title>
-    <url>/2020/07/10/%E6%A2%A6%E7%94%B0%E7%A5%A8%E7%BD%91-%E5%9C%B0%E5%9D%80%E7%AE%A1%E7%90%86/</url>
+    <url>/2020/07/10/17624929.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>梦田票网(mtpiao.com)—-地址管理</p>
 <p>添加地址、查询地址、删除地址、修改地址</p>
 <a id="more"></a>
@@ -1186,7 +1692,7 @@
   </entry>
   <entry>
     <title>集训项目-梦田票网</title>
-    <url>/2020/07/10/%E9%9B%86%E8%AE%AD%E9%A1%B9%E7%9B%AE-%E6%A2%A6%E7%94%B0%E7%A5%A8%E7%BD%91/</url>
+    <url>/2020/07/10/4f0dd035.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>暑假牛耳集训项目学习—-梦田票网(mtpiao.com)</p>
 <a id="more"></a>
 
@@ -1498,7 +2004,7 @@
   </entry>
   <entry>
     <title>Redis数据库</title>
-    <url>/2020/06/19/Redis%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <url>/2020/06/19/eb52a7b2.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
 <p>Redis数据库的学习</p>
 <a id="more"></a>
@@ -1597,14 +2103,14 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
     <title>Shell系统管理命令</title>
-    <url>/2020/06/18/Shell%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4/</url>
+    <url>/2020/06/18/5065baa0.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，下午</p>
 <p>Shell系统管理常用命令的学习</p>
 <a id="more"></a>
@@ -1766,13 +2272,13 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
     <title>MongoDB数据库</title>
-    <url>/2020/06/18/MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <url>/2020/06/18/bd0448f7.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
 <p>MongoDB数据库的学习</p>
 <a id="more"></a>
@@ -1853,14 +2359,14 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
         <tag>MongDB</tag>
       </tags>
   </entry>
   <entry>
     <title>部署项目到Nginx服务器</title>
-    <url>/2020/06/18/%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE%E5%88%B0Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <url>/2020/06/18/5351ac83.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第四天，上午</p>
 <p>Nginx服务器的项目部署</p>
 <a id="more"></a>
@@ -1909,14 +2415,14 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
     <title>MySQL 服务器配置管理</title>
-    <url>/2020/06/17/MySQL%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/</url>
+    <url>/2020/06/17/268fc8fd.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，上午</p>
 <p>学习了Linux上MySQL数据库服务端的安装与配置</p>
 <a id="more"></a>
@@ -1971,14 +2477,14 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
         <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
     <title>Nginx服务器的安装与配置</title>
-    <url>/2020/06/17/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</url>
+    <url>/2020/06/17/d94918b2.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，下午</p>
 <p>学习了Nginx服务器的安装与配置</p>
 <a id="more"></a>
@@ -2020,14 +2526,14 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
     <title>Vim编辑器</title>
-    <url>/2020/06/16/Vim%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <url>/2020/06/16/73bed3ab.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第二天，下午</p>
 <p>学习的是使用Vim编辑器来开发shell程序</p>
 <p>使用VIM编辑器来开发Java程序</p>
@@ -2104,13 +2610,13 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
     <title>Linux基本命令与Shell编程</title>
-    <url>/2020/06/16/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%B8%8EShell%E7%BC%96%E7%A8%8B/</url>
+    <url>/2020/06/16/8d1d62a8.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实训第二天，上午</p>
 <p>学习的是Linux基本命令与shell脚本</p>
 <a id="more"></a>
@@ -2365,13 +2871,13 @@
         <category>实训日志</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>技巧</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
     <title>解决flutter doctor检测不到插件的问题</title>
-    <url>/2020/02/25/%E8%A7%A3%E5%86%B3flutter%20doctor%E6%A3%80%E6%B5%8B%E4%B8%8D%E5%88%B0%E6%8F%92%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <url>/2020/02/25/a147dce.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天学习混合模式移动应用开发，老师教我们如何在Windows上配置flutter的开发环境。</p>
 <p>这里主要是针对Android Studio，将flutter搭建到Android Studio上。</p>
 <a id="more"></a>
@@ -2392,8 +2898,115 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo+Gitee搭建个人博客</title>
+    <url>/2020/01/29/8fe2b6a8.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。</p>
+<a id="more"></a>
+
+<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
+<li>Windows系统电脑(Mac用户可以参考上面的视频)</li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+</ul>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>因为我们要用到<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>中的<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git Bash</a>，类似于Windows的cmd命令行，不过要好用许多(我开始是用cmd按视频的步骤来的，运行命令容易报错)。</p>
+<ul>
+<li><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></li>
+<li>安装步骤：双击下载好的exe文件，一路点击next就好了</li>
+<li>安装完成之后打开Git Bash，输入<code>git version</code>查看版本：(我这里安装的版本是2.23.0)<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ git version </span><br><span class="line">git version <span class="number">2.23</span><span class="number">.0</span>.windows<span class="number">.1</span></span><br></pre></td></tr></table></figure></li>
+<li>能看到版本号就说明你安装成功了，之后的命令都是在这里运行的</li>
+</ul>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是基于<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>制作的静态博客，我们要用到Node.js里面的<a href="https://www.npmjs.cn/" target="_blank" rel="noopener">npm</a>(node package manager)包管理器来安装插件，如果你想玩Hexo博客，那么这个Node.js是必装的。</p>
+<ul>
+<li><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a>(选择自己电脑版本相对应的包来下载)</li>
+<li>安装步骤：双击下载好的msi文件，也是一路下一步就好了</li>
+<li>安装完成后打开Git Bash，输入<code>node -v</code>和<code>npm -v</code>查看node和npm的版本：<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v12<span class="number">.14</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">$ npm -v</span><br><span class="line"><span class="number">6.13</span><span class="number">.4</span></span><br></pre></td></tr></table></figure></li>
+<li>到这里前置步骤就已经算完成了，接下来我们就来安装Hexo博客</li>
+</ul>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>，我们需要借助<a href="https://www.npmjs.cn/" target="_blank" rel="noopener">npm</a>这个工具来安装，但是我们国内下载镜像源的速度很慢，所以我们可以先利用npm工具来安装一个<a href="https://npm.taobao.org/" target="_blank" rel="noopener">cnpm</a>工具(国内的淘宝npm镜像源)，这样一来速度会快很多。</p>
+<ul>
+<li>安装cnpm：(安装完之后照样可以用<code>cnpm -v</code>来查看版本号验证是否成功)<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org</span><br></pre></td></tr></table></figure></li>
+<li>用cnpm安装Hexo<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">$ cnpm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure></li>
+<li>接着用<code>Hexo -v</code>来验证是否安装成功<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">hexo</span> <span class="string">-v</span></span><br><span class="line"><span class="attr">hexo-cli:</span> <span class="number">3.1</span><span class="number">.0</span></span><br><span class="line"><span class="attr">os:</span> <span class="string">Windows_NT</span> <span class="number">10.0</span><span class="number">.17134</span> <span class="string">win32</span> <span class="string">x64</span></span><br><span class="line"><span class="attr">node:</span> <span class="number">12.14</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+如果出现以上信息，那么恭喜安装成功了</li>
+<li>到这里Hexo博客已经算是安装完成了，步骤还是非常简单的，重点是耐心~</li>
+</ul>
+<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><p>在你的电脑上建一个文件夹，命名没有要求，我这里创建的是blog，文件夹路径也无所谓，最好装在出了系统盘的固态硬盘中，路径要自己找得到。</p>
+<ul>
+<li>在创建的文件夹目录下右键选择<code>Git Bash Here</code>，也就是在此处打开Git Bash终端</li>
+<li>输入Hexo初始化命令<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init</span><br></pre></td></tr></table></figure>
+这个命令执行需要一定的时间，请耐心等待</li>
+<li>初始化完成之后可以查看指定文件夹目录下有：<ul>
+<li>node_modules: 依赖包</li>
+<li>public：存放生成的页面</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题</li>
+<li>_config.yml: 博客的配置文件</li>
+</ul>
+</li>
+<li>打开Hexo服务<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line"><span class="keyword">INFO</span>  <span class="keyword">Start</span> processing</span><br><span class="line"><span class="keyword">INFO</span>  Hexo <span class="keyword">is</span> running at http://localhost:<span class="number">4000</span> . Press Ctrl+C <span class="keyword">to</span> stop.</span><br></pre></td></tr></table></figure>
+这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：</li>
+</ul>
+<p><img src="/images/blog.jpg" alt="Hexo博客首页"></p>
+<ul>
+<li><p>用Hexo写一篇博客</p>
+<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">$ hexo n "我的第一篇博客"</span><br><span class="line">INFO  Created: E:<span class="symbol">\b</span>olg<span class="symbol">\s</span>ource<span class="symbol">\_</span>posts<span class="symbol">\我</span>的第一篇博客.md</span><br></pre></td></tr></table></figure>
+<p>到E:\bolg\source_posts目录下打开我的第一篇博客.md进行编辑(推荐用vscode进行编辑，vscode有预览md文件的插件)：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的第一篇博客</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-03</span> <span class="number">21</span><span class="string">:16:52</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第一章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第二章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 参考资料</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">https://ouwen.gitee.io</span></span><br></pre></td></tr></table></figure>
+<p>注意：这里的md文件是基于<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin" target="_blank" rel="noopener">markdown</a>语法进行编辑的，不了解的朋友可以百度学习一下，很简单的，几分钟就能看明白，相信你不是问题。</p>
+</li>
+<li><p>编辑完保存文件，重启Hexo服务</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo clean          # 清除所有记录 </span><br><span class="line">$ hexo generate       # 生成静态网页 简写：hexo g</span><br><span class="line">$ hexo<span class="built_in"> server </span>        # 启动服务 简写：hexo s</span><br></pre></td></tr></table></figure>
+<p>打开浏览器输入localhost:4000：</p>
+</li>
+</ul>
+<p><img src="/images/blog2.jpg" alt="我的第一篇博客"></p>
+<h2 id="将博客部署到Gitee上"><a href="#将博客部署到Gitee上" class="headerlink" title="将博客部署到Gitee上"></a>将博客部署到Gitee上</h2><p>上面访问的localhost:4000是本地服务器端口，我们的博客不可能是放在本地服务器的，我们需要把博客部署到远端去。我这里推荐的一个免费的部署的方式就是部署到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上，部署好之后就可以通过访问<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上的那个地址来访问我们的博客。</p>
+<ul>
+<li>进到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>官网，注册账号并登陆</li>
+<li>点击个人主页右上角新建个人仓库</li>
+</ul>
+<p><img src="/images/blog3.jpg" alt="新建仓库"></p>
+<ul>
+<li>创建完成后进入仓库</li>
+</ul>
+<p><img src="/images/blog4.jpg" alt="我的仓库"></p>
+<ul>
+<li>打开Hexo的配置文件<code>_config.yml</code><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/ouwen666/test.git #仓库的url</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></li>
+<li>这里先安装一个Hexo插件<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save  #通过cpnm安装git插件</span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">'******@qq.com'</span>  #设置gitee邮箱（gitee的注册邮箱）</span><br><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">'****'</span>            #设置用户名（gitee的y注册昵称）</span><br><span class="line">hexo d  #上传到gitee的远端仓库</span><br><span class="line"><span class="comment"># 在上传时，需要再次输入gitee的用户名username和密码password</span></span><br></pre></td></tr></table></figure></li>
+<li>上传成功仓库会多出一些文件</li>
+</ul>
+<p><img src="/images/blog5.jpg" alt="我的仓库"></p>
+<ul>
+<li>接着打开Gitee Page服务</li>
+</ul>
+<p><img src="/images/blog6.jpg" alt="打开服务"></p>
+<p>然后点击启动或更新即可。<strong>注意每次更改网页重新上传到仓库都要到这里来更新服务。</strong></p>
+<p><img src="/images/blog7.jpg" alt="更新服务"></p>
+<ul>
+<li>访问Gitee Page服务的网站地址</li>
+</ul>
+<p><img src="/images/blog8.jpg" alt="成功访问"></p>
+<p>从图中地址栏中的网址可以看出我们已经成功将本地的博客部署到了远端仓库，这样你的小伙伴也能在自己的电脑访问你的Gitee Page服务网站看到你的博客啦。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo博客搭建总的来说还是比较简单的，搭配Gitee码云使用起来还是比较方便的，访问速度也还行。总结下面几点：</p>
+<ol>
+<li>Hexo博客个性化定制的话，大家可以多参考Hexo官方中文文档</li>
+<li>更新完代码可以访问localhost:4000预览效果再上传，上传后千万记得更新Gitee Page服务，否则刷新页面会出现没更新的情况</li>
+<li>Hexo还支持很多主题，有兴趣的小伙伴可以自行搜索更改，参照官方文档进行操作也是不难的哦</li>
+<li>小伙伴们注意将自己写的代码保存好哦！我是将代码备份到Github上保存的，将博客部署到Gitee码云进行访问</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基本语法</title>
-    <url>/2020/02/19/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <url>/2020/02/19/5d36ff15.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
 <p>Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。</p>
 <p>本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：</p>
@@ -2530,13 +3143,13 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
         <tag>Markdown</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
     <title>Github代码仓库更新</title>
-    <url>/2020/02/18/Github%E4%BB%A3%E7%A0%81%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0/</url>
+    <url>/2020/02/18/d1b54efa.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
 <p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
 <p>–废话不多说，直接开始更新–</p>
@@ -2568,7 +3181,7 @@
   </entry>
   <entry>
     <title>解决Android Studio虚拟机启动不了的问题</title>
-    <url>/2020/02/16/%E8%A7%A3%E5%86%B3Android-Studio%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%AF%E5%8A%A8%E4%B8%8D%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <url>/2020/02/16/bc509111.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>过几天就要线上教学了，应学院老师要求检查自身设备及软件情况。</p>
 <p>其中检查Android Studio的运行情况时，出了点问题。</p>
 <a id="more"></a>
@@ -2587,113 +3200,6 @@
       <tags>
         <tag>技巧</tag>
         <tag>Android Studio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo+Gitee搭建个人博客</title>
-    <url>/2020/01/29/Hexo+Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。</p>
-<a id="more"></a>
-
-<h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><ul>
-<li>Windows系统电脑(Mac用户可以参考上面的视频)</li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>因为我们要用到<a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>中的<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git Bash</a>，类似于Windows的cmd命令行，不过要好用许多(我开始是用cmd按视频的步骤来的，运行命令容易报错)。</p>
-<ul>
-<li><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></li>
-<li>安装步骤：双击下载好的exe文件，一路点击next就好了</li>
-<li>安装完成之后打开Git Bash，输入<code>git version</code>查看版本：(我这里安装的版本是2.23.0)<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ git version </span><br><span class="line">git version <span class="number">2.23</span><span class="number">.0</span>.windows<span class="number">.1</span></span><br></pre></td></tr></table></figure></li>
-<li>能看到版本号就说明你安装成功了，之后的命令都是在这里运行的</li>
-</ul>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是基于<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>制作的静态博客，我们要用到Node.js里面的<a href="https://www.npmjs.cn/" target="_blank" rel="noopener">npm</a>(node package manager)包管理器来安装插件，如果你想玩Hexo博客，那么这个Node.js是必装的。</p>
-<ul>
-<li><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载地址</a>(选择自己电脑版本相对应的包来下载)</li>
-<li>安装步骤：双击下载好的msi文件，也是一路下一步就好了</li>
-<li>安装完成后打开Git Bash，输入<code>node -v</code>和<code>npm -v</code>查看node和npm的版本：<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v12<span class="number">.14</span><span class="number">.1</span></span><br><span class="line"></span><br><span class="line">$ npm -v</span><br><span class="line"><span class="number">6.13</span><span class="number">.4</span></span><br></pre></td></tr></table></figure></li>
-<li>到这里前置步骤就已经算完成了，接下来我们就来安装Hexo博客</li>
-</ul>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>，我们需要借助<a href="https://www.npmjs.cn/" target="_blank" rel="noopener">npm</a>这个工具来安装，但是我们国内下载镜像源的速度很慢，所以我们可以先利用npm工具来安装一个<a href="https://npm.taobao.org/" target="_blank" rel="noopener">cnpm</a>工具(国内的淘宝npm镜像源)，这样一来速度会快很多。</p>
-<ul>
-<li>安装cnpm：(安装完之后照样可以用<code>cnpm -v</code>来查看版本号验证是否成功)<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org</span><br></pre></td></tr></table></figure></li>
-<li>用cnpm安装Hexo<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">$ cnpm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure></li>
-<li>接着用<code>Hexo -v</code>来验证是否安装成功<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">$</span> <span class="string">hexo</span> <span class="string">-v</span></span><br><span class="line"><span class="attr">hexo-cli:</span> <span class="number">3.1</span><span class="number">.0</span></span><br><span class="line"><span class="attr">os:</span> <span class="string">Windows_NT</span> <span class="number">10.0</span><span class="number">.17134</span> <span class="string">win32</span> <span class="string">x64</span></span><br><span class="line"><span class="attr">node:</span> <span class="number">12.14</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
-如果出现以上信息，那么恭喜安装成功了</li>
-<li>到这里Hexo博客已经算是安装完成了，步骤还是非常简单的，重点是耐心~</li>
-</ul>
-<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><p>在你的电脑上建一个文件夹，命名没有要求，我这里创建的是blog，文件夹路径也无所谓，最好装在出了系统盘的固态硬盘中，路径要自己找得到。</p>
-<ul>
-<li>在创建的文件夹目录下右键选择<code>Git Bash Here</code>，也就是在此处打开Git Bash终端</li>
-<li>输入Hexo初始化命令<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init</span><br></pre></td></tr></table></figure>
-这个命令执行需要一定的时间，请耐心等待</li>
-<li>初始化完成之后可以查看指定文件夹目录下有：<ul>
-<li>node_modules: 依赖包</li>
-<li>public：存放生成的页面</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放你的文章</li>
-<li>themes：主题</li>
-<li>_config.yml: 博客的配置文件</li>
-</ul>
-</li>
-<li>打开Hexo服务<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line"><span class="keyword">INFO</span>  <span class="keyword">Start</span> processing</span><br><span class="line"><span class="keyword">INFO</span>  Hexo <span class="keyword">is</span> running at http://localhost:<span class="number">4000</span> . Press Ctrl+C <span class="keyword">to</span> stop.</span><br></pre></td></tr></table></figure>
-这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：</li>
-</ul>
-<p><img src="/images/blog.jpg" alt="Hexo博客首页"></p>
-<ul>
-<li><p>用Hexo写一篇博客</p>
-<figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">$ hexo n "我的第一篇博客"</span><br><span class="line">INFO  Created: E:<span class="symbol">\b</span>olg<span class="symbol">\s</span>ource<span class="symbol">\_</span>posts<span class="symbol">\我</span>的第一篇博客.md</span><br></pre></td></tr></table></figure>
-<p>到E:\bolg\source_posts目录下打开我的第一篇博客.md进行编辑(推荐用vscode进行编辑，vscode有预览md文件的插件)：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的第一篇博客</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-02</span><span class="number">-03</span> <span class="number">21</span><span class="string">:16:52</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第一章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 第二章</span></span><br><span class="line"></span><br><span class="line"><span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 参考资料</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">https://ouwen.gitee.io</span></span><br></pre></td></tr></table></figure>
-<p>注意：这里的md文件是基于<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin" target="_blank" rel="noopener">markdown</a>语法进行编辑的，不了解的朋友可以百度学习一下，很简单的，几分钟就能看明白，相信你不是问题。</p>
-</li>
-<li><p>编辑完保存文件，重启Hexo服务</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ hexo clean          # 清除所有记录 </span><br><span class="line">$ hexo generate       # 生成静态网页 简写：hexo g</span><br><span class="line">$ hexo<span class="built_in"> server </span>        # 启动服务 简写：hexo s</span><br></pre></td></tr></table></figure>
-<p>打开浏览器输入localhost:4000：</p>
-</li>
-</ul>
-<p><img src="/images/blog2.jpg" alt="我的第一篇博客"></p>
-<h2 id="将博客部署到Gitee上"><a href="#将博客部署到Gitee上" class="headerlink" title="将博客部署到Gitee上"></a>将博客部署到Gitee上</h2><p>上面访问的localhost:4000是本地服务器端口，我们的博客不可能是放在本地服务器的，我们需要把博客部署到远端去。我这里推荐的一个免费的部署的方式就是部署到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上，部署好之后就可以通过访问<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>上的那个地址来访问我们的博客。</p>
-<ul>
-<li>进到<a href="https://gitee.com/" target="_blank" rel="noopener">Gitee</a>官网，注册账号并登陆</li>
-<li>点击个人主页右上角新建个人仓库</li>
-</ul>
-<p><img src="/images/blog3.jpg" alt="新建仓库"></p>
-<ul>
-<li>创建完成后进入仓库</li>
-</ul>
-<p><img src="/images/blog4.jpg" alt="我的仓库"></p>
-<ul>
-<li>打开Hexo的配置文件<code>_config.yml</code><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/ouwen666/test.git #仓库的url</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></li>
-<li>这里先安装一个Hexo插件<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save  #通过cpnm安装git插件</span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">'******@qq.com'</span>  #设置gitee邮箱（gitee的注册邮箱）</span><br><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">'****'</span>            #设置用户名（gitee的y注册昵称）</span><br><span class="line">hexo d  #上传到gitee的远端仓库</span><br><span class="line"><span class="comment"># 在上传时，需要再次输入gitee的用户名username和密码password</span></span><br></pre></td></tr></table></figure></li>
-<li>上传成功仓库会多出一些文件</li>
-</ul>
-<p><img src="/images/blog5.jpg" alt="我的仓库"></p>
-<ul>
-<li>接着打开Gitee Page服务</li>
-</ul>
-<p><img src="/images/blog6.jpg" alt="打开服务"></p>
-<p>然后点击启动或更新即可。<strong>注意每次更改网页重新上传到仓库都要到这里来更新服务。</strong></p>
-<p><img src="/images/blog7.jpg" alt="更新服务"></p>
-<ul>
-<li>访问Gitee Page服务的网站地址</li>
-</ul>
-<p><img src="/images/blog8.jpg" alt="成功访问"></p>
-<p>从图中地址栏中的网址可以看出我们已经成功将本地的博客部署到了远端仓库，这样你的小伙伴也能在自己的电脑访问你的Gitee Page服务网站看到你的博客啦。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo博客搭建总的来说还是比较简单的，搭配Gitee码云使用起来还是比较方便的，访问速度也还行。总结下面几点：</p>
-<ol>
-<li>Hexo博客个性化定制的话，大家可以多参考Hexo官方中文文档</li>
-<li>更新完代码可以访问localhost:4000预览效果再上传，上传后千万记得更新Gitee Page服务，否则刷新页面会出现没更新的情况</li>
-<li>Hexo还支持很多主题，有兴趣的小伙伴可以自行搜索更改，参照官方文档进行操作也是不难的哦</li>
-<li>小伙伴们注意将自己写的代码保存好哦！我是将代码备份到Github上保存的，将博客部署到Gitee码云进行访问</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>教程</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
