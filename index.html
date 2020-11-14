@@ -1,1682 +1,503 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/favicon-32x32-next.png" color="#222">
-
-
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('http://ouwen666.gitee.io').hostname,
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
-
-
-  <meta name="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Irving的个人博客 - 记录美好生活</title><meta name="keywords" content="博客,日志"><meta name="author" content="Irving"><meta name="copyright" content="Irving"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Irving的个人博客">
 <meta property="og:url" content="http://ouwen666.gitee.io/index.html">
 <meta property="og:site_name" content="Irving的个人博客">
 <meta property="og:description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ouwen666.gitee.io/img/header.png">
 <meta property="article:author" content="Irving">
-<meta property="article:tag" content="博客">
-<meta property="article:tag" content="日志">
+<meta property="article:tag" content="博客,日志">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ouwen666.gitee.io/img/header.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://ouwen666.gitee.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
 
-<link rel="canonical" href="http://ouwen666.gitee.io/">
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
 
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false
-  };
-</script>
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
 
-  <title>Irving的个人博客</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2020-11-14 11:43:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Irving的个人博客</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">记录美好生活</p>
-  </div>
-
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-
-</nav>
-  <div class="site-search">
-    <div class="popup search-popup">
-    <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
-  </div>
-</div>
-    </header>
-
-    
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content">
-            
-
-  <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/01/29/8fe2b6a8.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-	  <i class="fa fa-thumb-tack"></i>
-	  <font color=222222>置顶</font>
-	  <span class="post-meta-divider">|</span>
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/29/8fe2b6a8.html" class="post-title-link" itemprop="url">Hexo+Gitee搭建个人博客</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-29 17:26:47" itemprop="dateCreated datePublished" datetime="2020-01-29T17:26:47+08:00">2020-01-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-14 09:13:06" itemprop="dateModified" datetime="2020-11-14T09:13:06+08:00">2020-11-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/01/29/8fe2b6a8.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/29/8fe2b6a8.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/29/8fe2b6a8.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/02/19/5d36ff15.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-	  <i class="fa fa-thumb-tack"></i>
-	  <font color=222222>置顶</font>
-	  <span class="post-meta-divider">|</span>
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/19/5d36ff15.html" class="post-title-link" itemprop="url">Markdown基本语法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-19 21:27:58" itemprop="dateCreated datePublished" datetime="2020-02-19T21:27:58+08:00">2020-02-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-14 09:20:57" itemprop="dateModified" datetime="2020-11-14T09:20:57+08:00">2020-11-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/02/19/5d36ff15.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/19/5d36ff15.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。</p>
-<p>本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/19/5d36ff15.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/02/18/d1b54efa.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-	  <i class="fa fa-thumb-tack"></i>
-	  <font color=222222>置顶</font>
-	  <span class="post-meta-divider">|</span>
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/d1b54efa.html" class="post-title-link" itemprop="url">Github代码仓库更新</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-18 16:30:26" itemprop="dateCreated datePublished" datetime="2020-02-18T16:30:26+08:00">2020-02-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-13 10:41:14" itemprop="dateModified" datetime="2020-11-13T10:41:14+08:00">2020-11-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/02/18/d1b54efa.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/18/d1b54efa.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>301</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
-<p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
-<p>–废话不多说，直接开始更新–</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/18/d1b54efa.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/11/13/6f706555.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/13/6f706555.html" class="post-title-link" itemprop="url">前端知识笔记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-11-13 11:02:53 / 修改时间：11:40:20" itemprop="dateCreated datePublished" datetime="2020-11-13T11:02:53+08:00">2020-11-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/11/13/6f706555.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/13/6f706555.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>7.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下前端知识这半个月的学习过程，一起进步！</p>
-<p>主要是H5+CSS3+ES6的学习，还学习了bootstrap、jQuery等框架。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/13/6f706555.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/11/13/f789481e.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/13/f789481e.html" class="post-title-link" itemprop="url">Java位运算</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-11-13 10:45:03" itemprop="dateCreated datePublished" datetime="2020-11-13T10:45:03+08:00">2020-11-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-14 09:32:13" itemprop="dateModified" datetime="2020-11-14T09:32:13+08:00">2020-11-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/11/13/f789481e.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/13/f789481e.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>日常开发中位运算不是很常用，但是巧妙的使用位运算可以大量减少运行开销，优化算法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/13/f789481e.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/08/07/6f706555.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/07/6f706555.html" class="post-title-link" itemprop="url">Java基础笔记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-07 18:45:47" itemprop="dateCreated datePublished" datetime="2020-08-07T18:45:47+08:00">2020-08-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-13 11:40:35" itemprop="dateModified" datetime="2020-11-13T11:40:35+08:00">2020-11-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/08/07/6f706555.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/07/6f706555.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>8.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>记录一下Java语言基础这半个月的学习过程，一起进步！</p>
-<p>主要是Java基础部分，重点是面向对象的知识。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/07/6f706555.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/07/20/12f0c952.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/20/12f0c952.html" class="post-title-link" itemprop="url">梦田票网-购物车实现</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-20 19:22:50" itemprop="dateCreated datePublished" datetime="2020-07-20T19:22:50+08:00">2020-07-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-13 10:41:14" itemprop="dateModified" datetime="2020-11-13T10:41:14+08:00">2020-11-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">实训项目</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/07/20/12f0c952.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/20/12f0c952.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>304</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>梦田票网(mtpiao.com)—-购物车实现</p>
-<p>购物车分为几种方法：1、数据库方式  2、session方式  3、cookie方式</p>
-<p>这里我采用的是session方式实现的</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/20/12f0c952.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/07/10/17624929.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/10/17624929.html" class="post-title-link" itemprop="url">梦田票网-添加地址</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-10 19:22:50" itemprop="dateCreated datePublished" datetime="2020-07-10T19:22:50+08:00">2020-07-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-13 10:41:14" itemprop="dateModified" datetime="2020-11-13T10:41:14+08:00">2020-11-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">实训项目</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/07/10/17624929.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/10/17624929.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>梦田票网(mtpiao.com)—-地址管理</p>
-<p>添加地址、查询地址、删除地址、修改地址</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/10/17624929.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/07/10/4f0dd035.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/10/4f0dd035.html" class="post-title-link" itemprop="url">集训项目-梦田票网</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-10 19:22:50" itemprop="dateCreated datePublished" datetime="2020-07-10T19:22:50+08:00">2020-07-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-13 10:41:14" itemprop="dateModified" datetime="2020-11-13T10:41:14+08:00">2020-11-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">实训项目</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/07/10/4f0dd035.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/10/4f0dd035.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>暑假牛耳集训项目学习—-梦田票网(mtpiao.com)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/10/4f0dd035.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://ouwen666.gitee.io/2020/06/19/eb52a7b2.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.png">
-      <meta itemprop="name" content="Irving">
-      <meta itemprop="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Irving的个人博客">
-    </span>
-
-	
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/19/eb52a7b2.html" class="post-title-link" itemprop="url">Redis数据库</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-19 15:51:35" itemprop="dateCreated datePublished" datetime="2020-06-19T15:51:35+08:00">2020-06-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-14 09:29:37" itemprop="dateModified" datetime="2020-11-14T09:29:37+08:00">2020-11-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/" itemprop="url" rel="index">
-                    <span itemprop="name">实训日志</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">评论数：</span>
-    
-    <a title="valine" href="/2020/06/19/eb52a7b2.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/19/eb52a7b2.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第五天，上午</p>
-<p>Redis数据库的学习</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/19/eb52a7b2.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-  </div>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let activeClass = CONFIG.comments.activeClass;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
     }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
       }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/header.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://w.wallhaven.cc/full/vg/wallhaven-vg7lv3.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Irving的个人博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Irving的个人博客</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/01/29/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/DeltaJunction_ZH-CN9901755694_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo+Gitee搭建个人博客"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/29/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">Hexo+Gitee搭建个人博客</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-01-29T09:26:47.232Z" title="发表于 2020-01-29 17:26:47">2020-01-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span></div><div class="content">前言寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬CodeSheep的手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo,看了之后着手搭建了属于自己的博客。视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。
+
+
+环境要求
+Windows系统电脑(Mac用户可以参考上面的视频)
+Git
+Node.js
+
+安装Git因为我们要用到Git中的Git Bash，类似于Windows的cmd命令行，不过要好用许多(我开始是用cmd按视频的步骤来的，运行命令容易报错)。
+
+下载地址
+安装步骤：双击下载好的exe文件，一路点击next就好了
+安装完成之后打开Git Bash，输入git version查看版本：(我这里安装的版本是2.23.0)12$ git version git version 2.23.0.windows.1 
+能看到版本号就说明你安装成功了，之后的命令都是在这里运行的
+
+安装Node.jsHexo是基于Node.js制作的静态博客，我们要用到Node.js ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/SpainSurfer_EN-AU11271138486_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown基本语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">Markdown基本语法</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-19T13:27:58.000Z" title="发表于 2020-02-19 21:27:58">2020-02-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span></div><div class="content">前言Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
+Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。
+本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：
+
+
+一、标题使用 # 号可表示 1-6 级标题，一级标题对应一个#号，二级标题对应两个#号，以此类推。
+123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题
+显示效果如下：
+一级标题二级标题三级标题四级标题五级标题六级标题
+二、字体Markdown 可以使用以下几种字体：
+1234*斜体文本***粗体文本*****粗斜体文本***~~这是加删除线的文字~~
+显示效果如下：斜体文本粗体文本**粗斜体文本**这是加删除线的文字
+
+三、下划线下划线可以通过 HTML 的&lt;u&gt;标签来实现：
+1&lt;u&gt;带下划线文本&lt;/u ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/LenticularVideo_ZH-CN2275732856_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github代码仓库更新"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">Github代码仓库更新</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-18T08:30:26.000Z" title="发表于 2020-02-18 16:30:26">2020-02-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span></div><div class="content">前言最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。
+仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。
+–废话不多说，直接开始更新–
+
+
+更新步骤
+第一步切换到本地仓库中需要更新的目录下
+鼠标右键选择Git Bash Here选项，打开Git Bash工具
+依次运行下列命令：
+
+
+查看仓库状态1$ git status
+更新所有代码1$ git add *
+本次推送备注1$ git commit -m &quot;&quot;
+将本地仓库的代码更新到github仓库的master分支1$ git push origin master
+
+
+刷新github仓库页面，更新完成
+
+小结代码记得勤推送，github仓库勤更新！
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/13/6f706555.html" title="前端知识笔记">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/HallwylfjelletSunset_ZH-CN9300910376_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端知识笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/13/6f706555.html" title="前端知识笔记">前端知识笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-13T03:02:53.244Z" title="发表于 2020-11-13 11:02:53">2020-11-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">前言记录一下前端知识这半个月的学习过程，一起进步！
+主要是H5+CSS3+ES6的学习，还学习了bootstrap、jQuery等框架。
+
+
+Day1一、目标
+了解HTML开发工具使用
+了解HTML5
+掌握HTML5结构
+掌握HTML5的常用标签
+作业
+
+二、知识点1、开发工具前端开发工具：记事本、DW、VSCode、HBuilder
+2、HTML5HTML：HTML是一种超文本标记语言，也是网页的基础语言，该语言实现网页的设计和组成
+HTML5：是HTML的第五代全新版本，推出了很多全新的标签和样式，并且能很好地实现移动设备和PC设备的兼容
+3、HTML5结构
+&lt;!DOCTYPE html&gt;   –  文档说明头(HTML5专属)
+&lt;html&gt;&lt;/html&gt;   –  声明文档的结构
+&lt;head&gt;&lt;/head&gt;   –  网页的头信息(外部文件加载…)
+&lt;body&gt;&lt;/body&gt;  –  正文信息(浏览器打开后看到的网页信息)
+
+定义方式：
+12345&lt;!DOCTYPE html&gt;&lt; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/13/f789481e.html" title="Java位运算">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/FreshSalt_ZH-CN12818759319_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java位运算"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/13/f789481e.html" title="Java位运算">Java位运算</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-13T02:45:03.089Z" title="发表于 2020-11-13 10:45:03">2020-11-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">前言日常开发中位运算不是很常用，但是巧妙的使用位运算可以大量减少运行开销，优化算法。
+
+
+位运算符Java支持的位运算有7种，具体如下：
+
+&amp;：按位与。
+|：按位或。
+~：按位非。
+^：按位异或。
+&lt;&lt;：左位移运算符。
+&gt;&gt;：右位移运算符。
+&lt;&lt;&lt;：无符号右移运算符。
+
+1、按位与(&amp;)按位与的运算规则
+
+
+
+操作数1
+0
+0
+1
+1
+
+
+
+操作数2
+0
+1
+0
+1
+
+
+按位与
+0
+0
+0
+1
+
+
+规则总结：只有两个操作数对应位同为1时，结果为1，其余全为0（或者是只要有一个操作数为0，结果就为0）
+举例：
+
+2、按位或(|)按位或的运算规则
+
+
+
+操作数1
+0
+0
+1
+1
+
+
+
+操作数2
+0
+1
+0
+1
+
+
+按位或
+0
+1
+1
+1
+
+
+规则总结：只有两个操作数对应位同为0时，结果为0，其余全为1（或者是只要有一个操作数为1，结果就为1）
+3、按位非(~)按位非的运算规则
+
+
+
+操作数
+0
+1
+
+
+
+按位或
+1
+0
+
+
+规则总结：取反操作，在求负数的源码中使用过
+4、按位异或(^)按位异或的运算规则
+
+
+
+操作数1
+0
+0
+1
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/07/6f706555.html" title="Java基础笔记">     <img class="post_bg" src="https://gitee.com/ouwen666/my-image/raw/master/img/QingMingHuangShan_ZH-CN12993895964_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/07/6f706555.html" title="Java基础笔记">Java基础笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-07T10:45:47.222Z" title="发表于 2020-08-07 18:45:47">2020-08-07</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span></div><div class="content">前言记录一下Java语言基础这半个月的学习过程，一起进步！
+主要是Java基础部分，重点是面向对象的知识。
+
+
+Day1一、目标
+了解Java语言
+
+熟悉Java开发环境
+
+编写Java应用程序
+
+
+二、知识点1、了解Java语言
+Java是一门软件开发语言，该语言涉及了互联网行业和移动互联网行业。
+Java创始公司是sun，而当前有oracle托管。
+1991年，sun公司需要完成一个项目，该项目的名称为绿色计划（电视机顶盒），当时sun公司要求詹姆斯高斯林带领团队完成此项目，该团队使用OAK语言完成当前的项目。
+1994年项目完成，同时在当年sun要求开发团队将OAK语言更名为自主语言。
+当初的更名为：爪哇语言 –&gt; Java语言
+版本：javaME(微型开发)、JavaSE(应用开发)、JavaEE(企业级开发)
+
+2、熟悉Java开发环境
+开发环境：Windows、Linux、Mac
+
+编辑环境：jdk(支撑java运行环境) –1.8.xxu
+​        现阶段使用：记事本开发
+
+
+3、编写Java应用程序jvm虚拟机：核心是classloader类加载器和垃圾回 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦田票网-购物车实现"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">梦田票网-购物车实现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-20T11:22:50.000Z" title="发表于 2020-07-20 19:22:50">2020-07-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span></div><div class="content">前言梦田票网(mtpiao.com)—-购物车实现
+购物车分为几种方法：1、数据库方式  2、session方式  3、cookie方式
+这里我采用的是session方式实现的
+
+
+具体操作步骤如下：
+1、创建CartItem实体类CartItem表示购物车中的商品条目，每一种商品代表一个CartItem对象
+方便计算单种商品的合计价格
+12345678910111213141516171819202122232425262728293031package com.newer.bean;/** * 购物车单个商品条目 * @author Admin * */public class CartItem &#123;	private Goods goods;//商品信息	private int quantity;//商品数量	private double price;//单个商品合计价格		public Goods getGoods() &#123;		return goods;	&#125;	public void setGoods(Goods goods) &#123;		this.g ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/10/17624929.html" title="梦田票网-添加地址">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦田票网-添加地址"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/10/17624929.html" title="梦田票网-添加地址">梦田票网-添加地址</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span></div><div class="content">前言梦田票网(mtpiao.com)—-地址管理
+添加地址、查询地址、删除地址、修改地址
+
+
+具体操作步骤如下：
+添加地址1、在数据库中建表(tb_address)12345678create table tb_address(	id int primary key auto_increment,#主键 自动增长 nickname varchar(20),#收货人姓名telephone varchar(20),#联系方式 address varchar(100), #收货地址   uid int  references tb_user(id) #外键);
+
+2、在com.newer.bean包下新建Address.java文件123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384package com.newer.bean;p ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/10/4f0dd035.html" title="集训项目-梦田票网">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="集训项目-梦田票网"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/10/4f0dd035.html" title="集训项目-梦田票网">集训项目-梦田票网</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span></div><div class="content">前言暑假牛耳集训项目学习—-梦田票网(mtpiao.com)
+
+
+数据库设计1.分析功能点（1）用户表(tb_user)
+登录、注册、修改密码、基本信息
+
+
+
+字段名
+数据类型
+说明
+
+
+
+id
+int
+主键
+
+
+nickname
+varchar(20)
+昵称
+
+
+realname
+varchar(20)
+真实姓名
+
+
+username
+varchar(20)
+用户名
+
+
+pwd
+varchar(20)
+密码
+
+
+sex
+char(2)
+性别
+
+
+birthday
+date
+出生日期
+
+
+cardid
+varchar(20)
+身份证号
+
+
+（2）地址表(tb_address)
+关联用户表
+
+
+
+字段名
+数据类型
+说明
+
+
+
+id
+int
+主键
+
+
+nickname
+varchar(20)
+收货人姓名
+
+
+telephone
+varchar(20)
+收货人联系方式
+
+
+address
+varchar(20)
+收货地址
+
+
+uid
+int
+外键，关联用户表中的 id
+
+
+（3）商品表(tb_goods)
+类别、是否为热门推荐
+
+
+
+字段名
+数据类型
+说明
+
+
+
+id
+int
+主键
+
+
+gn ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/19/eb52a7b2.html" title="Redis数据库">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis数据库"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/19/eb52a7b2.html" title="Redis数据库">Redis数据库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-19T07:51:35.000Z" title="发表于 2020-06-19 15:51:35">2020-06-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/">实训日志</a></span></div><div class="content">前言实训第五天，上午
+Redis数据库的学习
+
+
+一、Redis简介
+
+REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。
+Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库
+
+二、Redis安装安装Redis在ubuntu上，使用 apt工具可以非常方便的安装和卸载 redis数据库
+apt install redis-server
+
+查看安装位置用于检查是否安装成功
+whereis redis
+
+卸载Redisapt --purge autoremove redis-server
+
+三、连接Redis本地连接redis-cli
+12root@iZ2ze4ojx7qtz1wv44gajnZ:~# redis-cli127.0.0.1:6379&gt; 
+
+远程连接redis-cli -h IP地址 -p 6379
+四、Redis基本配置Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.con ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/header.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Irving</div><div class="author-info__description">一个编程小白的博客，这里会长期分享学习干货、良心软件等</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/6f706555.html" title="前端知识笔记"><img src="https://gitee.com/ouwen666/my-image/raw/master/img/HallwylfjelletSunset_ZH-CN9300910376_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端知识笔记"/></a><div class="content"><a class="title" href="/2020/11/13/6f706555.html" title="前端知识笔记">前端知识笔记</a><time datetime="2020-11-13T03:02:53.244Z" title="发表于 2020-11-13 11:02:53">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/f789481e.html" title="Java位运算"><img src="https://gitee.com/ouwen666/my-image/raw/master/img/FreshSalt_ZH-CN12818759319_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java位运算"/></a><div class="content"><a class="title" href="/2020/11/13/f789481e.html" title="Java位运算">Java位运算</a><time datetime="2020-11-13T02:45:03.089Z" title="发表于 2020-11-13 10:45:03">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/08/07/6f706555.html" title="Java基础笔记"><img src="https://gitee.com/ouwen666/my-image/raw/master/img/QingMingHuangShan_ZH-CN12993895964_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java基础笔记"/></a><div class="content"><a class="title" href="/2020/08/07/6f706555.html" title="Java基础笔记">Java基础笔记</a><time datetime="2020-08-07T10:45:47.222Z" title="发表于 2020-08-07 18:45:47">2020-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦田票网-购物车实现"/></a><div class="content"><a class="title" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">梦田票网-购物车实现</a><time datetime="2020-07-20T11:22:50.000Z" title="发表于 2020-07-20 19:22:50">2020-07-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/10/17624929.html" title="梦田票网-添加地址"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="梦田票网-添加地址"/></a><div class="content"><a class="title" href="/2020/07/10/17624929.html" title="梦田票网-添加地址">梦田票网-添加地址</a><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/"><span class="card-category-list-name">实训日志</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">实训项目</span><span class="card-category-list-count">3</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Android-Studio/" style="font-size: 1.2em; color: #999da3">Android Studio</a> <a href="/tags/HTML-CSS/" style="font-size: 1.1em; color: #999">HTML/CSS</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Java/" style="font-size: 1.2em; color: #999da3">Java</a> <a href="/tags/JavaScript-jQuery/" style="font-size: 1.1em; color: #999">JavaScript/jQuery</a> <a href="/tags/Linux/" style="font-size: 1.4em; color: #99a5b6">Linux</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/MongDB/" style="font-size: 1.1em; color: #999">MongDB</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Nginx/" style="font-size: 1.2em; color: #999da3">Nginx</a> <a href="/tags/Redis/" style="font-size: 1.1em; color: #999">Redis</a> <a href="/tags/bootstrap/" style="font-size: 1.1em; color: #999">bootstrap</a> <a href="/tags/github/" style="font-size: 1.1em; color: #999">github</a> <a href="/tags/mybatis/" style="font-size: 1.3em; color: #99a1ac">mybatis</a> <a href="/tags/mysql/" style="font-size: 1.3em; color: #99a1ac">mysql</a> <a href="/tags/sts/" style="font-size: 1.3em; color: #99a1ac">sts</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: #99a9bf">技巧</a> <a href="/tags/%E6%8A%80%E5%B7%A7%EF%BC%8CFlutter/" style="font-size: 1.1em; color: #999">技巧，Flutter</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.2em; color: #999da3">教程</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">笔记</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">30.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-11-14T03:43:05.301Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Irving</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
   }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a href="/">
-    <img class="site-author-image" itemprop="image" alt="Irving"
-      src="/images/header.png">
-  </a>
-  <p class="site-author-name" itemprop="name">Irving</p>
-  <div class="site-description" itemprop="description">一个编程小白的博客，这里会长期分享学习干货、良心软件等</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories">
-          
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags">
-          
-        <span class="site-state-item-count">20</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/ouwen66" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ouwen66" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:2362766003@qq.com" title="E-Mail → mailto:2362766003@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/images/qq.jpg" title="QQ → &#x2F;images&#x2F;qq.jpg"><i class="fa fa-fw fa-qq"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/images/wechat.jpg" title="WeiXin → &#x2F;images&#x2F;wechat.jpg"><i class="fa fa-fw fa-weixin"></i></a>
-      </span>
-  </div>
-  <div class="cc-license motion-element" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title">
-      <i class="fa fa-fw fa-link"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.sobaidupan.com/" title="https:&#x2F;&#x2F;www.sobaidupan.com&#x2F;" rel="noopener" target="_blank">网盘搜索</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://www.zdfans.com/" title="http:&#x2F;&#x2F;www.zdfans.com&#x2F;" rel="noopener" target="_blank">软件分享</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">IRVING</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-      <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">34k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">31 分钟</span>
-</div>
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        总访客量：<span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        总访问数：<span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='0,0,0' opacity='0.8' zIndex='-1' count='185' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el: '#valine-comments',
-      verify: false,
-      notify: false,
-      appId: 'EbQGoBUK6JYajIqOPsL7rS9f-gzGzoHsz',
-      appKey: '4vNyyPCgwRIckObjYhJfTWQL',
-      placeholder: "填上邮箱可以收到我的回复邮件哦！",
-      avatar: 'identicon',
-      meta: guest,
-      pageSize: '10' || 10,
-      visitor: false,
-      lang: 'zh-cn' || 'zh-cn',
-      path: location.pathname,
-      recordIP: false,
-      serverURLs: ''
-    });
-  }, window.Valine);
-});
-</script>
-
-
-  
-   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
-   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-   <script type="text/javascript" src="/js/fireworks.js"></script>
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
-</html>
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body></html>
