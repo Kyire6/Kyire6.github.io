@@ -50,7 +50,7 @@
 <li>打开Hexo服务<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line"><span class="keyword">INFO</span>  <span class="keyword">Start</span> processing</span><br><span class="line"><span class="keyword">INFO</span>  Hexo <span class="keyword">is</span> running at http://localhost:<span class="number">4000</span> . Press Ctrl+C <span class="keyword">to</span> stop.</span><br></pre></td></tr></table></figure>
 这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。<br>大概是这样：</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog.jpg"></p>
 <ul>
 <li><p>用Hexo写一篇博客</p>
 <figure class="highlight taggerscript"><table><tr><td class="code"><pre><span class="line">$ hexo n &quot;我的第一篇博客&quot;</span><br><span class="line">INFO  Created: E:<span class="symbol">\b</span>olg<span class="symbol">\s</span>ource<span class="symbol">\_</span>posts<span class="symbol">\我</span>的第一篇博客.md</span><br></pre></td></tr></table></figure>
@@ -63,33 +63,33 @@
 <p>打开浏览器输入localhost:4000：</p>
 </li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog2.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog2.jpg"></p>
 <h2 id="将博客部署到Gitee上"><a href="#将博客部署到Gitee上" class="headerlink" title="将博客部署到Gitee上"></a>将博客部署到Gitee上</h2><p>上面访问的localhost:4000是本地服务器端口，我们的博客不可能是放在本地服务器的，我们需要把博客部署到远端去。我这里推荐的一个免费的部署的方式就是部署到<a href="https://gitee.com/">Gitee</a>上，部署好之后就可以通过访问<a href="https://gitee.com/">Gitee</a>上的那个地址来访问我们的博客。</p>
 <ul>
 <li>进到<a href="https://gitee.com/">Gitee</a>官网，注册账号并登陆</li>
 <li>点击个人主页右上角新建个人仓库</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog3.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog3.jpg"></p>
 <ul>
 <li>创建完成后进入仓库</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog4.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog4.jpg"></p>
 <ul>
 <li>打开Hexo的配置文件<code>_config.yml</code><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//gitee.com/ouwen666/test.git #仓库的url</span></span><br><span class="line">  <span class="attribute">branch</span>: master </span><br></pre></td></tr></table></figure></li>
 <li>这里先安装一个Hexo插件<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save  #通过cpnm安装git插件</span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">&#x27;******@qq.com&#x27;</span>  #设置gitee邮箱（gitee的注册邮箱）</span><br><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">&#x27;****&#x27;</span>            #设置用户名（gitee的y注册昵称）</span><br><span class="line">hexo d  #上传到gitee的远端仓库</span><br><span class="line"><span class="comment"># 在上传时，需要再次输入gitee的用户名username和密码password</span></span><br></pre></td></tr></table></figure></li>
 <li>上传成功仓库会多出一些文件</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog5.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog5.jpg"></p>
 <ul>
 <li>接着打开Gitee Page服务</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog6.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog6.jpg"></p>
 <p>然后点击启动或更新即可。<strong>注意每次更改网页重新上传到仓库都要到这里来更新服务。</strong></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog7.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog7.jpg"></p>
 <ul>
 <li>访问Gitee Page服务的网站地址</li>
 </ul>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/blog8.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/blog8.jpg"></p>
 <p>从图中地址栏中的网址可以看出我们已经成功将本地的博客部署到了远端仓库，这样你的小伙伴也能在自己的电脑访问你的Gitee Page服务网站看到你的博客啦。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Hexo博客搭建总的来说还是比较简单的，搭配Gitee码云使用起来还是比较方便的，访问速度也还行。总结下面几点：</p>
 <ol>
@@ -235,7 +235,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片alt</span>](<span class="link">图片地址 &#x27;&#x27;图片title&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
 <p>例如：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Markdown</span>](<span class="link">/images/md.jpg</span>)</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：<br><img src="https://gitee.com/ouwen666/my-image/raw/master/img/md.jpg"></p>
+<p>显示效果如下：<br><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/md.jpg"></p>
 <blockquote>
 <p>注：我这里图片是保存在本地的，所以图片地址哪里是本地目录，也可以用图片的在线链接地址</p>
 </blockquote>
@@ -868,7 +868,7 @@
 </tbody></table>
 <p><strong>规则总结：</strong>只有两个操作数对应位同为1时，结果为1，其余全为0（或者是只要有一个操作数为0，结果就为0）</p>
 <p><strong>举例：</strong></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/yu.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/yu.png"></p>
 <h3 id="2、按位或"><a href="#2、按位或" class="headerlink" title="2、按位或(|)"></a>2、按位或(|)</h3><p>按位或的运算规则</p>
 <table>
 <thead>
@@ -940,11 +940,11 @@
 </tbody></table>
 <p><strong>规则总结：</strong>只有两个操作数不相同时，结果为1，其余全为0（或者是只要两个操作数相同就为0）</p>
 <h3 id="5、左位移-lt-lt"><a href="#5、左位移-lt-lt" class="headerlink" title="5、左位移(&lt;&lt;)"></a>5、左位移(&lt;&lt;)</h3><p><strong>运算规则：</strong>算术左移，溢出截断，符号位不变，低位补0。如：2&lt;&lt;2结果为8。</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/zuoweiyi.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/zuoweiyi.png"></p>
 <h3 id="6、右位移-gt-gt"><a href="#6、右位移-gt-gt" class="headerlink" title="6、右位移(&gt;&gt;)"></a>6、右位移(&gt;&gt;)</h3><p><strong>运算规则：</strong>算术右移，溢出截断，符号位不变，用符号位补高位。如：-6&gt;&gt;2结果为-2。</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/youweiyi.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/youweiyi.png"></p>
 <h3 id="7、无符号右移-gt-gt-gt"><a href="#7、无符号右移-gt-gt-gt" class="headerlink" title="7、无符号右移(&gt;&gt;&gt;)"></a>7、无符号右移(&gt;&gt;&gt;)</h3><p><strong>运算规则：</strong>低位溢出，高位补0</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/wufuhao.png"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/wufuhao.png"></p>
 <h2 id="常见使用"><a href="#常见使用" class="headerlink" title="常见使用"></a>常见使用</h2><p>因位运算在日常开发中并不是很常用的，这里举两个例子加强理解</p>
 <h3 id="1、判断一个数n的奇偶性"><a href="#1、判断一个数n的奇偶性" class="headerlink" title="1、判断一个数n的奇偶性"></a>1、判断一个数n的奇偶性</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">n&amp;<span class="number">1</span> == <span class="number">1</span>?<span class="string">&quot;奇数&quot;</span>:<span class="string">&quot;偶数&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -2286,19 +2286,19 @@
 <p>Redis数据库的学习</p>
 <a id="more"></a>
 
-<h2 id="一、Redis简介"><a href="#一、Redis简介" class="headerlink" title="一、Redis简介"></a>一、Redis简介</h2><p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/redis.jpg"></p>
+<h2 id="一、Redis简介"><a href="#一、Redis简介" class="headerlink" title="一、Redis简介"></a>一、Redis简介</h2><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/redis.jpg"></p>
 <ul>
 <li>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</li>
 <li>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库</li>
 </ul>
 <h2 id="二、Redis安装"><a href="#二、Redis安装" class="headerlink" title="二、Redis安装"></a>二、Redis安装</h2><h3 id="安装Redis"><a href="#安装Redis" class="headerlink" title="安装Redis"></a>安装Redis</h3><p>在ubuntu上，使用 apt工具可以非常方便的安装和卸载 redis数据库</p>
 <p><code>apt install redis-server</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/redis1.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/redis1.jpg"></p>
 <h3 id="查看安装位置"><a href="#查看安装位置" class="headerlink" title="查看安装位置"></a>查看安装位置</h3><p>用于检查是否安装成功</p>
 <p><code>whereis redis</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/redis2.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/redis2.jpg"></p>
 <h3 id="卸载Redis"><a href="#卸载Redis" class="headerlink" title="卸载Redis"></a>卸载Redis</h3><p><code>apt --purge autoremove redis-server</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/redis3.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/redis3.jpg"></p>
 <h2 id="三、连接Redis"><a href="#三、连接Redis" class="headerlink" title="三、连接Redis"></a>三、连接Redis</h2><h3 id="本地连接"><a href="#本地连接" class="headerlink" title="本地连接"></a>本地连接</h3><p><code>redis-cli</code></p>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">root</span>@iZ<span class="number">2</span>ze<span class="number">4</span>ojx<span class="number">7</span>qtz<span class="number">1</span>wv<span class="number">44</span>gajnZ:~# redis-cli</span><br><span class="line"><span class="attribute">127</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">1</span>:<span class="number">6379</span>&gt; </span><br></pre></td></tr></table></figure>
 
@@ -2563,7 +2563,7 @@
 <p>MongoDB数据库的学习</p>
 <a id="more"></a>
 
-<h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo.jpg"></p>
+<h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo.jpg"></p>
 <ul>
 <li>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。</li>
 <li>在高负载的情况下，添加更多的节点，可以保证服务器性能。</li>
@@ -2573,7 +2573,7 @@
 </ul>
 <h2 id="二、MongoDB的安装"><a href="#二、MongoDB的安装" class="headerlink" title="二、MongoDB的安装"></a>二、MongoDB的安装</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p><code>apt install mongodb</code></p>
 <p>安装完成可以用<code>mongo -version</code>来查看版本检查是否安装成功</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo1.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo1.jpg"></p>
 <h3 id="2-2-MongoDB基本管理"><a href="#2-2-MongoDB基本管理" class="headerlink" title="2.2 MongoDB基本管理"></a>2.2 MongoDB基本管理</h3><p>通过以下命令，可以对 mongoDB 数据库进行一些基本的操作：</p>
 <ul>
 <li>查看服务状态<br>service mongodb status</li>
@@ -2591,7 +2591,7 @@
 </ul>
 <h2 id="四、MongoDB基本操作"><a href="#四、MongoDB基本操作" class="headerlink" title="四、MongoDB基本操作"></a>四、MongoDB基本操作</h2><p>启动MongoDB服务后可以进行MongoDB的基本操作</p>
 <h3 id="4-1-连接数据库"><a href="#4-1-连接数据库" class="headerlink" title="4.1 连接数据库"></a>4.1 连接数据库</h3><p>使用<code>mongo</code>命令连接数据库：</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo2.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/mongo2.jpg"></p>
 <h3 id="4-2-查看已有的数据库"><a href="#4-2-查看已有的数据库" class="headerlink" title="4.2 查看已有的数据库"></a>4.2 查看已有的数据库</h3><p>使用<code>show dbs</code>命令进行查看：</p>
 <figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&gt; show dbs</span><br><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line">local   0.000GB</span><br><span class="line">&gt; </span><br></pre></td></tr></table></figure>
 
@@ -2660,35 +2660,35 @@
 
 <p>​            上传文件夹</p>
 <p>​            <code>pscp -r 本地文件夹路径 root@公网IP:路径</code></p>
-<p>​            <img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty.jpg"></p>
+<p>​            <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty.jpg"></p>
 <p>​            下载文件</p>
 <p>​            <code>pscp root@公网IP:文件路径 本地路径</code></p>
 <p>​            下载文件夹</p>
 <p>​            <code>pscp -r root@公网IP:文件夹路径 本地路径</code></p>
-<h3 id="3-检查服务器上是否有上传文件"><a href="#3-检查服务器上是否有上传文件" class="headerlink" title="3. 检查服务器上是否有上传文件"></a>3. 检查服务器上是否有上传文件</h3><p>​            检查要访问的默认文件夹是不是在nginx的配置文件中的默认根目录(/opt/www)                <img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty1.jpg"></p>
+<h3 id="3-检查服务器上是否有上传文件"><a href="#3-检查服务器上是否有上传文件" class="headerlink" title="3. 检查服务器上是否有上传文件"></a>3. 检查服务器上是否有上传文件</h3><p>​            检查要访问的默认文件夹是不是在nginx的配置文件中的默认根目录(/opt/www)                <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty1.jpg"></p>
 <p>​            如果不在，有两种解决办法</p>
 <p>​            1.修改配置nginx的配置文件中root目录（加一个目录root /opt/www/web）</p>
-<p>​                <img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty2.jpg"></p>
+<p>​                <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty2.jpg"></p>
 <p>​            2.将上传的资源移动到nginx.com配置文件中的root目录中</p>
 <h3 id="4-重新加载nginx配置资源"><a href="#4-重新加载nginx配置资源" class="headerlink" title="4. 重新加载nginx配置资源"></a>4. 重新加载nginx配置资源</h3><p>​            <code>service nginx reload</code></p>
 <h3 id="5-打开浏览器访问"><a href="#5-打开浏览器访问" class="headerlink" title="5. 打开浏览器访问"></a>5. 打开浏览器访问</h3><p>可以看到现在还查询不到疫情数据，因为服务端还没配置好</p>
 <p>下一步就是配置服务端，使之能成功查询到疫情数据</p>
-<p>​            <img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty3.jpg"></p>
+<p>​            <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty3.jpg"></p>
 <h2 id="二、将服务端上传到服务器"><a href="#二、将服务端上传到服务器" class="headerlink" title="二、将服务端上传到服务器"></a>二、将服务端上传到服务器</h2><h3 id="1-上传服务端文件"><a href="#1-上传服务端文件" class="headerlink" title="1. 上传服务端文件"></a>1. 上传服务端文件</h3><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">C</span>:\Users\Admin&gt;pscp -r <span class="attribute">E</span>:\学习文档\test\server root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>:/opt/www</span><br><span class="line">root<span class="variable">@112</span>.<span class="number">126.76</span>.<span class="number">74</span>&#x27;s <span class="attribute">password</span>:</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-修改客户端访问数据地址为服务器的IP地址"><a href="#2-修改客户端访问数据地址为服务器的IP地址" class="headerlink" title="2. 修改客户端访问数据地址为服务器的IP地址"></a>2. 修改客户端访问数据地址为服务器的IP地址</h3><p>/opt/www/web/index.html</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty4.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty4.jpg"></p>
 <h3 id="3-安装NodeJS"><a href="#3-安装NodeJS" class="headerlink" title="3. 安装NodeJS"></a>3. 安装NodeJS</h3><p><code>apt install nodejs</code></p>
 <p>输入node检查是否安装成功：</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty5.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty5.jpg"></p>
 <h3 id="4-启动服务端"><a href="#4-启动服务端" class="headerlink" title="4. 启动服务端"></a>4. 启动服务端</h3><p>进到服务端的上传文件夹，用nodejs启动服务端</p>
 <p>/opt/www/server/index.js</p>
 <p><code>node index</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty6.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty6.jpg"></p>
 <h3 id="5-在阿里云实例安全组配置新规则"><a href="#5-在阿里云实例安全组配置新规则" class="headerlink" title="5. 在阿里云实例安全组配置新规则"></a>5. 在阿里云实例安全组配置新规则</h3><p>手动添加8090端口的访问规则</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty7.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty7.jpg"></p>
 <h3 id="6-浏览器中访问"><a href="#6-浏览器中访问" class="headerlink" title="6. 浏览器中访问"></a>6. 浏览器中访问</h3><p>可以看到成功查询到了疫情数据</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/putty8.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/putty8.jpg"></p>
 ]]></content>
       <categories>
         <category>实训日志</category>
@@ -2717,7 +2717,7 @@
 
 <p>*注意：输入密码时，是没有任何提示的；出现mysql&gt;时连接成功</p>
 <h3 id="2-远程连接MySQL-在个人电脑上连接MySQL"><a href="#2-远程连接MySQL-在个人电脑上连接MySQL" class="headerlink" title="2.远程连接MySQL(在个人电脑上连接MySQL)"></a>2.远程连接MySQL(在个人电脑上连接MySQL)</h3><h4 id="2-1-首先在个人电脑上安装MySQL的客户端"><a href="#2-1-首先在个人电脑上安装MySQL的客户端" class="headerlink" title="2.1 首先在个人电脑上安装MySQL的客户端"></a>2.1 首先在个人电脑上安装MySQL的客户端</h4><p>​    *我设备上是Navicat客户端，这里就以Navicat客户端为例，演示进行如何远程连接</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat.jpg"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat.jpg"></p>
 <h4 id="2-2-mysql默认是不允许进行远程连接的，需修改成允许远程连接"><a href="#2-2-mysql默认是不允许进行远程连接的，需修改成允许远程连接" class="headerlink" title="2.2  mysql默认是不允许进行远程连接的，需修改成允许远程连接"></a>2.2  mysql默认是不允许进行远程连接的，需修改成允许远程连接</h4><p>​        现在服务端进入mysql，进行以下修改:</p>
 <p>​        连接数据库</p>
 <p>​        <code>mysql -uroot -p</code></p>
@@ -2726,19 +2726,19 @@
 <p>​        修改user表中的root用户的host数据</p>
 <p>​        <code> update user set host = &#39;%&#39; where user = &#39;root&#39;;</code></p>
 <h4 id="2-3-阿里云的服务器的安全规则中是不允许任何远程访问的，需在阿里云中作以下修改："><a href="#2-3-阿里云的服务器的安全规则中是不允许任何远程访问的，需在阿里云中作以下修改：" class="headerlink" title="2.3 阿里云的服务器的安全规则中是不允许任何远程访问的，需在阿里云中作以下修改："></a>2.3 阿里云的服务器的安全规则中是不允许任何远程访问的，需在阿里云中作以下修改：</h4><p>​        实例详情&gt;&gt;本实例安全组&gt;&gt;规则配置</p>
-<p>​        !<img src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun1.jpg"></p>
+<p>​        !<img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun1.jpg"></p>
 <p>​        &gt;&gt;快速添加</p>
-<p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun2.jpg"></p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun2.jpg"></p>
 <p>​        &gt;&gt;MySQL(3306)</p>
-<p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun3.jpg"></p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun3.jpg"></p>
 <h4 id="2-4-重启MySQL服务"><a href="#2-4-重启MySQL服务" class="headerlink" title="2.4 重启MySQL服务"></a>2.4 重启MySQL服务</h4><p>​        <code>service mysql restart</code></p>
 <p>​        *停止服务：service mysql stop  |  启动服务：service mysql start</p>
 <h4 id="2-5-在个人电脑上进行连接"><a href="#2-5-在个人电脑上进行连接" class="headerlink" title="2.5 在个人电脑上进行连接"></a>2.5 在个人电脑上进行连接</h4><p>(在个人电脑上可以用图形化客户端连接，也可以用命令行来连接)</p>
-<h5 id="打开Navicat客户端，进行连接"><a href="#打开Navicat客户端，进行连接" class="headerlink" title="打开Navicat客户端，进行连接"></a>打开Navicat客户端，进行连接</h5><p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat1.jpg"></p>
-<h5 id="常规配置"><a href="#常规配置" class="headerlink" title="常规配置"></a>常规配置</h5><p>​    <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat2.jpg"></p>
-<h5 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h5><p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat3.jpg"></p>
-<h5 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h5><p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat4.jpg"></p>
-<h5 id="连接成功"><a href="#连接成功" class="headerlink" title="连接成功"></a>连接成功</h5><p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat5.jpg"></p>
+<h5 id="打开Navicat客户端，进行连接"><a href="#打开Navicat客户端，进行连接" class="headerlink" title="打开Navicat客户端，进行连接"></a>打开Navicat客户端，进行连接</h5><p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat1.jpg"></p>
+<h5 id="常规配置"><a href="#常规配置" class="headerlink" title="常规配置"></a>常规配置</h5><p>​    <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat2.jpg"></p>
+<h5 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h5><p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat3.jpg"></p>
+<h5 id="测试连接"><a href="#测试连接" class="headerlink" title="测试连接"></a>测试连接</h5><p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat4.jpg"></p>
+<h5 id="连接成功"><a href="#连接成功" class="headerlink" title="连接成功"></a>连接成功</h5><p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Navicat5.jpg"></p>
 <h5 id="在命令行中进行连接"><a href="#在命令行中进行连接" class="headerlink" title="在命令行中进行连接"></a>在命令行中进行连接</h5><p>​        在cmd中输入以下命令回车，然后输入服务器上mysql的密码即可连接成功</p>
 <p>​        <code>mysql -h 主机名 -uroot -p</code></p>
 <h2 id="三、MySQL表数据的操作"><a href="#三、MySQL表数据的操作" class="headerlink" title="三、MySQL表数据的操作"></a>三、MySQL表数据的操作</h2><h3 id="SQL语句总共有四种："><a href="#SQL语句总共有四种：" class="headerlink" title="SQL语句总共有四种："></a>SQL语句总共有四种：</h3><ul>
@@ -2783,16 +2783,16 @@
 <li>/usr/share/nginx：存放静态文件</li>
 <li>/var/log/nginx：存放日志文件</li>
 </ul>
-<h3 id="4-Nginx配置管理"><a href="#4-Nginx配置管理" class="headerlink" title="4. Nginx配置管理"></a>4. Nginx配置管理</h3><h4 id="阿里云实例中添加访问规则"><a href="#阿里云实例中添加访问规则" class="headerlink" title="阿里云实例中添加访问规则"></a>阿里云实例中添加访问规则</h4><p>​      <img src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun4.jpg"></p>
+<h3 id="4-Nginx配置管理"><a href="#4-Nginx配置管理" class="headerlink" title="4. Nginx配置管理"></a>4. Nginx配置管理</h3><h4 id="阿里云实例中添加访问规则"><a href="#阿里云实例中添加访问规则" class="headerlink" title="阿里云实例中添加访问规则"></a>阿里云实例中添加访问规则</h4><p>​      <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun4.jpg"></p>
 <h4 id="编写Nginx配置文件"><a href="#编写Nginx配置文件" class="headerlink" title="编写Nginx配置文件"></a>编写Nginx配置文件</h4><p>​        进入Nginx服务器的配置文件夹/etc/nginx，有一个conf.d，切到/etc/nginx/conf.d文件夹下</p>
 <p>发现没有任何文件</p>
-<p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx1.jpg"></p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx1.jpg"></p>
 <p>​        使用Vim编辑器创建一个配置文件，文件名为nginx.conf，并编写配置信息</p>
-<p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx2.jpg"></p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx2.jpg"></p>
 <h4 id="编写Nginx首页"><a href="#编写Nginx首页" class="headerlink" title="编写Nginx首页"></a>编写Nginx首页</h4><p>​        我们配置的Nginx的访问目录是/opt/www,首页是index.html，所以在/opt/www目录下创建index.html页面，并用vim打开编写以下内容：</p>
-<p>​        <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx3.jpg"></p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx3.jpg"></p>
 <h3 id="5-启动Nginx"><a href="#5-启动Nginx" class="headerlink" title="5. 启动Nginx"></a>5. 启动Nginx</h3><p>​    <code>service nginx start</code></p>
-<p>​    <img src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx4.jpg"></p>
+<p>​    <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx4.jpg"></p>
 <p>​    启动成功！！</p>
 <p>​    *其他的一些操作命令：</p>
 <p>​        停止服务器：<code>service nginx stop</code></p>
