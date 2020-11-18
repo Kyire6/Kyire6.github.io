@@ -1860,7 +1860,7 @@
       </tags>
   </entry>
   <entry>
-    <title>梦田票网-添加地址</title>
+    <title>梦田票网-地址管理</title>
     <url>/2020/07/10/17624929.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>梦田票网(mtpiao.com)—-地址管理</p>
 <p>添加地址、查询地址、删除地址、修改地址</p>
@@ -2700,55 +2700,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx服务器安装与配置</title>
-    <url>/2020/06/17/d94918b2.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，下午</p>
-<p>学习了Nginx服务器的安装与配置</p>
-<a id="more"></a>
-
-<h2 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h2><h3 id="1-Nginx简介"><a href="#1-Nginx简介" class="headerlink" title="1. Nginx简介"></a>1. Nginx简介</h3><ul>
-<li>Nginx (engine x) 是由伊戈尔·赛索耶夫开发的，第一个公开版本0.1.0发布于2004年10月4日；</li>
-<li>Nginx是一款轻量级的Web 服务器/反向代理服务器；</li>
-<li>Nginx是一款电子邮件（IMAP/POP3）代理服务器；</li>
-<li>中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</li>
-</ul>
-<h3 id="2-Nginx安装与卸载"><a href="#2-Nginx安装与卸载" class="headerlink" title="2. Nginx安装与卸载"></a>2. Nginx安装与卸载</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>​    <code>apt install nginx</code></p>
-<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>​    <code>apt remove nginx</code></p>
-<h3 id="3-Nginx的相关安装目录"><a href="#3-Nginx的相关安装目录" class="headerlink" title="3. Nginx的相关安装目录"></a>3. Nginx的相关安装目录</h3><p>Nginx安装好之后，相关文件会存放到一下的文件夹中：</p>
-<ul>
-<li>/usr/sbin/nginx：主程序</li>
-<li>/etc/nginx：存放配置文件</li>
-<li>/usr/share/nginx：存放静态文件</li>
-<li>/var/log/nginx：存放日志文件</li>
-</ul>
-<h3 id="4-Nginx配置管理"><a href="#4-Nginx配置管理" class="headerlink" title="4. Nginx配置管理"></a>4. Nginx配置管理</h3><h4 id="阿里云实例中添加访问规则"><a href="#阿里云实例中添加访问规则" class="headerlink" title="阿里云实例中添加访问规则"></a>阿里云实例中添加访问规则</h4><p>​      <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun4.jpg"></p>
-<h4 id="编写Nginx配置文件"><a href="#编写Nginx配置文件" class="headerlink" title="编写Nginx配置文件"></a>编写Nginx配置文件</h4><p>​        进入Nginx服务器的配置文件夹/etc/nginx，有一个conf.d，切到/etc/nginx/conf.d文件夹下</p>
-<p>发现没有任何文件</p>
-<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx1.jpg"></p>
-<p>​        使用Vim编辑器创建一个配置文件，文件名为nginx.conf，并编写配置信息</p>
-<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx2.jpg"></p>
-<h4 id="编写Nginx首页"><a href="#编写Nginx首页" class="headerlink" title="编写Nginx首页"></a>编写Nginx首页</h4><p>​        我们配置的Nginx的访问目录是/opt/www,首页是index.html，所以在/opt/www目录下创建index.html页面，并用vim打开编写以下内容：</p>
-<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx3.jpg"></p>
-<h3 id="5-启动Nginx"><a href="#5-启动Nginx" class="headerlink" title="5. 启动Nginx"></a>5. 启动Nginx</h3><p>​    <code>service nginx start</code></p>
-<p>​    <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx4.jpg"></p>
-<p>​    启动成功！！</p>
-<p>​    *其他的一些操作命令：</p>
-<p>​        停止服务器：<code>service nginx stop</code></p>
-<p>​        重新启动：<code>service nginx reload</code></p>
-<p>​        查看状态：<code>service nginx status</code></p>
-<p>​        查看端口：<code>netstat -apn</code></p>
-<p>​        杀死进程：<code>kill -9</code></p>
-]]></content>
-      <categories>
-        <category>实训日志</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>技巧</tag>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL服务器配置管理</title>
     <url>/2020/06/17/268fc8fd.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，上午</p>
@@ -2808,6 +2759,55 @@
         <tag>Linux</tag>
         <tag>技巧</tag>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx服务器安装与配置</title>
+    <url>/2020/06/17/d94918b2.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>实训第三天，下午</p>
+<p>学习了Nginx服务器的安装与配置</p>
+<a id="more"></a>
+
+<h2 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h2><h3 id="1-Nginx简介"><a href="#1-Nginx简介" class="headerlink" title="1. Nginx简介"></a>1. Nginx简介</h3><ul>
+<li>Nginx (engine x) 是由伊戈尔·赛索耶夫开发的，第一个公开版本0.1.0发布于2004年10月4日；</li>
+<li>Nginx是一款轻量级的Web 服务器/反向代理服务器；</li>
+<li>Nginx是一款电子邮件（IMAP/POP3）代理服务器；</li>
+<li>中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。</li>
+</ul>
+<h3 id="2-Nginx安装与卸载"><a href="#2-Nginx安装与卸载" class="headerlink" title="2. Nginx安装与卸载"></a>2. Nginx安装与卸载</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>​    <code>apt install nginx</code></p>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>​    <code>apt remove nginx</code></p>
+<h3 id="3-Nginx的相关安装目录"><a href="#3-Nginx的相关安装目录" class="headerlink" title="3. Nginx的相关安装目录"></a>3. Nginx的相关安装目录</h3><p>Nginx安装好之后，相关文件会存放到一下的文件夹中：</p>
+<ul>
+<li>/usr/sbin/nginx：主程序</li>
+<li>/etc/nginx：存放配置文件</li>
+<li>/usr/share/nginx：存放静态文件</li>
+<li>/var/log/nginx：存放日志文件</li>
+</ul>
+<h3 id="4-Nginx配置管理"><a href="#4-Nginx配置管理" class="headerlink" title="4. Nginx配置管理"></a>4. Nginx配置管理</h3><h4 id="阿里云实例中添加访问规则"><a href="#阿里云实例中添加访问规则" class="headerlink" title="阿里云实例中添加访问规则"></a>阿里云实例中添加访问规则</h4><p>​      <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/aliyun4.jpg"></p>
+<h4 id="编写Nginx配置文件"><a href="#编写Nginx配置文件" class="headerlink" title="编写Nginx配置文件"></a>编写Nginx配置文件</h4><p>​        进入Nginx服务器的配置文件夹/etc/nginx，有一个conf.d，切到/etc/nginx/conf.d文件夹下</p>
+<p>发现没有任何文件</p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx1.jpg"></p>
+<p>​        使用Vim编辑器创建一个配置文件，文件名为nginx.conf，并编写配置信息</p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx2.jpg"></p>
+<h4 id="编写Nginx首页"><a href="#编写Nginx首页" class="headerlink" title="编写Nginx首页"></a>编写Nginx首页</h4><p>​        我们配置的Nginx的访问目录是/opt/www,首页是index.html，所以在/opt/www目录下创建index.html页面，并用vim打开编写以下内容：</p>
+<p>​        <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx3.jpg"></p>
+<h3 id="5-启动Nginx"><a href="#5-启动Nginx" class="headerlink" title="5. 启动Nginx"></a>5. 启动Nginx</h3><p>​    <code>service nginx start</code></p>
+<p>​    <img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/Nginx4.jpg"></p>
+<p>​    启动成功！！</p>
+<p>​    *其他的一些操作命令：</p>
+<p>​        停止服务器：<code>service nginx stop</code></p>
+<p>​        重新启动：<code>service nginx reload</code></p>
+<p>​        查看状态：<code>service nginx status</code></p>
+<p>​        查看端口：<code>netstat -apn</code></p>
+<p>​        杀死进程：<code>kill -9</code></p>
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>技巧</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
