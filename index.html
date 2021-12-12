@@ -1,28 +1,21 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Irving的个人博客 - 记录美好生活</title><meta name="keywords" content="博客,日志"><meta name="author" content="Irving"><meta name="copyright" content="Irving"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IRVING的个人博客 - 记录美好生活</title><meta name="keywords" content="博客,日志"><meta name="author" content="IRVING"><meta name="copyright" content="IRVING"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一枚程序猿，记录平时工作学习中点点滴滴">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Irving的个人博客">
+<meta property="og:title" content="IRVING的个人博客">
 <meta property="og:url" content="http://ouwen666.gitee.io/index.html">
-<meta property="og:site_name" content="Irving的个人博客">
-<meta property="og:description" content="一个编程小白的博客，这里会长期分享学习干货、良心软件等">
+<meta property="og:site_name" content="IRVING的个人博客">
+<meta property="og:description" content="一枚程序猿，记录平时工作学习中点点滴滴">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ouwen666.gitee.io/images/header.jpeg">
-<meta property="article:author" content="Irving">
+<meta property="article:author" content="IRVING">
 <meta property="article:tag" content="博客,日志">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://ouwen666.gitee.io/images/header.jpeg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://ouwen666.gitee.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?84ccf8694fea073405489a67720decfc";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script>var GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://ouwen666.gitee.io/images/header.jpeg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="http://ouwen666.gitee.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  localSearch: undefined,
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -41,50 +34,29 @@
     month: '个月前'
   },
   copyright: undefined,
-  ClickShowText: undefined,
   lightbox: 'fancybox',
   Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  justifiedGallery: {
-    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
   },
   isPhotoFigcaption: false,
   islazyload: true,
   isanchor: false
-};
-
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
-
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
-
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
-
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'IRVING的个人博客',
   isPost: false,
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2020-11-29 16:52:30'
+  postUpdate: '2021-12-12 21:26:15'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -97,59 +69,88 @@ var saveToLocal = {
   #post-meta time {
     display: inline !important
   }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
         const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
         }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/images/header.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://gitee.com/ouwen666/my-image/raw/master/img/index.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Irving的个人博客</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site-title">Irving的个人博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ouwen666" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:mzxy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/01/29/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118184042.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Hexo+Gitee搭建个人博客"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/01/29/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">Hexo+Gitee搭建个人博客</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-01-29T09:26:47.232Z" title="发表于 2020-01-29 17:26:47">2020-01-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span></div><div class="content">前言寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬CodeSheep的手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo,看了之后着手搭建了属于自己的博客。视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/header.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://gitee.com/ouwen666/my-image/raw/master/img/index.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">IRVING的个人博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">IRVING的个人博客</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ouwen666" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:mzxy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/02/06/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212181408.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Hexo+Gitee搭建个人博客"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/06/8fe2b6a8.html" title="Hexo+Gitee搭建个人博客">Hexo+Gitee搭建个人博客</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-06T08:55:52.135Z" title="发表于 2021-02-06 16:55:52">2021-02-06</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/02/06/8fe2b6a8.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/02/06/8fe2b6a8.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言寒假封城，只能呆在家里鼓捣电脑，有一天看到了b站大佬CodeSheep的手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo,看了之后着手搭建了属于自己的博客。视频里博客是搭建在Github上的，但其终究是国外的网站，访问速度得不到保障。推荐使用Gitee，Gitee类似于国内的Github，访问速度没问题。
 
 
 环境要求
@@ -164,7 +165,7 @@ Node.js
 安装完成之后打开Git Bash，输入git version查看版本：(我这里安装的版本是2.23.0)12$ git version git version 2.23.0.windows.1 
 能看到版本号就说明你安装成功了，之后的命令都是在这里运行的
 
-安装Node.jsHexo是基于Node.js制作的静态博客，我们要用到Node.js ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118184942.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Markdown基本语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">Markdown基本语法</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-19T13:27:58.000Z" title="发表于 2020-02-19 21:27:58">2020-02-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Markdown/">Markdown</a></span></div><div class="content">前言Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
+安装Node.jsHexo是基于Node.js制作的静态博客，我们要用到Node.js ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212181243.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Markdown基本语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/19/5d36ff15.html" title="Markdown基本语法">Markdown基本语法</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-19T13:27:58.000Z" title="发表于 2020-02-19 21:27:58">2020-02-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2020/02/19/5d36ff15.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2020/02/19/5d36ff15.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。
 Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。
 本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：
 
@@ -175,10 +176,10 @@ Markdown 能被使用来撰写电子书、博客等，当前许多网站都广�
 一级标题二级标题三级标题四级标题五级标题六级标题
 二、字体Markdown 可以使用以下几种字体：
 1234*斜体文本***粗体文本*****粗斜体文本***~~这是加删除线的文字~~
-显示效果如下：斜体文本粗体文本**粗斜体文本**这是加删除线的文字
+显示效果如下：斜体文本粗体文本粗斜体文本这是加删除线的文字
 
 三、下划线下划线可以通过 HTML 的&lt;u&gt;标签来实现：
-1&lt;u&gt;带下划线文本&lt;/u ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185219.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Github代码仓库更新"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">Github代码仓库更新</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack article-meta__icon sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-18T08:30:26.000Z" title="发表于 2020-02-18 16:30:26">2020-02-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/github/">github</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">前言最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。
+1&lt;u&gt;带下划线文本&lt;/u&gt; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212181603.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Github代码仓库更新"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/02/18/d1b54efa.html" title="Github代码仓库更新">Github代码仓库更新</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-02-18T08:30:26.000Z" title="发表于 2020-02-18 16:30:26">2020-02-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Git/">Git</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2020/02/18/d1b54efa.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2020/02/18/d1b54efa.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。
 仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。
 –废话不多说，直接开始更新–
 
@@ -198,360 +199,173 @@ Markdown 能被使用来撰写电子书、博客等，当前许多网站都广�
 刷新github仓库页面，更新完成
 
 小结代码记得勤推送，github仓库勤更新！
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/11/13/6f706555.html" title="前端知识笔记">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118190925.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="前端知识笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/13/6f706555.html" title="前端知识笔记">前端知识笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-13T03:02:53.244Z" title="发表于 2020-11-13 11:02:53">2020-11-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/HTML-CSS/">HTML/CSS</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/bootstrap/">bootstrap</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript-jQuery/">JavaScript/jQuery</a></span></div><div class="content">前言记录一下前端知识这半个月的学习过程，一起进步！
-主要是H5+CSS3+ES6的学习，还学习了bootstrap、jQuery等框架。
-
-
-Day1一、目标
-了解HTML开发工具使用
-了解HTML5
-掌握HTML5结构
-掌握HTML5的常用标签
-作业
-
-二、知识点1、开发工具前端开发工具：记事本、DW、VSCode、HBuilder
-2、HTML5HTML：HTML是一种超文本标记语言，也是网页的基础语言，该语言实现网页的设计和组成
-HTML5：是HTML的第五代全新版本，推出了很多全新的标签和样式，并且能很好地实现移动设备和PC设备的兼容
-3、HTML5结构
-&lt;!DOCTYPE html&gt;   –  文档说明头(HTML5专属)
-&lt;html&gt;&lt;/html&gt;   –  声明文档的结构
-&lt;head&gt;&lt;/head&gt;   –  网页的头信息(外部文件加载…)
-&lt;body&gt;&lt;/body&gt;  –  正文信息(浏览器打开后看到的网页信息)
-
-定义方式：
-12345&lt;!DOCTYPE html&gt;&lt; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/11/13/f789481e.html" title="Java位运算">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185412.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java位运算"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/11/13/f789481e.html" title="Java位运算">Java位运算</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-13T02:45:03.089Z" title="发表于 2020-11-13 10:45:03">2020-11-13</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content">前言日常开发中位运算不是很常用，但是巧妙的使用位运算可以大量减少运行开销，优化算法。
-
-
-位运算符Java支持的位运算有7种，具体如下：
-
-&amp;：按位与。
-|：按位或。
-~：按位非。
-^：按位异或。
-&lt;&lt;：左位移运算符。
-&gt;&gt;：右位移运算符。
-&lt;&lt;&lt;：无符号右移运算符。
-
-1、按位与(&amp;)按位与的运算规则
-
-
-
-操作数1
-0
-0
-1
-1
-
-
-
-操作数2
-0
-1
-0
-1
-
-
-按位与
-0
-0
-0
-1
-
-
-规则总结：只有两个操作数对应位同为1时，结果为1，其余全为0（或者是只要有一个操作数为0，结果就为0）
-举例：
-
-2、按位或(|)按位或的运算规则
-
-
-
-操作数1
-0
-0
-1
-1
-
-
-
-操作数2
-0
-1
-0
-1
-
-
-按位或
-0
-1
-1
-1
-
-
-规则总结：只有两个操作数对应位同为0时，结果为0，其余全为1（或者是只要有一个操作数为1，结果就为1）
-3、按位非(~)按位非的运算规则
-
-
-
-操作数
-0
-1
-
-
-
-按位或
-1
-0
-
-
-规则总结：取反操作，在求负数的源码中使用过
-4、按位异或(^)按位异或的运算规则
-
-
-
-操作数1
-0
-0
-1
- ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/08/07/6f706555.html" title="Java基础笔记">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185456.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java基础笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/08/07/6f706555.html" title="Java基础笔记">Java基础笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-07T10:45:47.222Z" title="发表于 2020-08-07 18:45:47">2020-08-07</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Java/">Java</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content">前言记录一下Java语言基础这半个月的学习过程，一起进步！
-主要是Java基础部分，重点是面向对象的知识。
-
-
-Day1一、目标
-了解Java语言
-
-熟悉Java开发环境
-
-编写Java应用程序
-
-
-二、知识点1、了解Java语言
-Java是一门软件开发语言，该语言涉及了互联网行业和移动互联网行业。
-Java创始公司是sun，而当前有oracle托管。
-1991年，sun公司需要完成一个项目，该项目的名称为绿色计划（电视机顶盒），当时sun公司要求詹姆斯高斯林带领团队完成此项目，该团队使用OAK语言完成当前的项目。
-1994年项目完成，同时在当年sun要求开发团队将OAK语言更名为自主语言。
-当初的更名为：爪哇语言 –&gt; Java语言
-版本：javaME(微型开发)、JavaSE(应用开发)、JavaEE(企业级开发)
-
-2、熟悉Java开发环境
-开发环境：Windows、Linux、Mac
-
-编辑环境：jdk(支撑java运行环境) –1.8.xxu
-​        现阶段使用：记事本开发
-
-
-3、编写Java应用程序jvm虚拟机：核心是classloader类加载器和垃圾回 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185600.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="梦田票网-购物车实现"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">梦田票网-购物车实现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-20T11:22:50.000Z" title="发表于 2020-07-20 19:22:50">2020-07-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/sts/">sts</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mysql/">mysql</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mybatis/">mybatis</a></span></div><div class="content">前言梦田票网(mtpiao.com)—-购物车实现
-购物车分为几种方法：1、数据库方式  2、session方式  3、cookie方式
-这里我采用的是session方式实现的
-
-
-具体操作步骤如下：
-1、创建CartItem实体类CartItem表示购物车中的商品条目，每一种商品代表一个CartItem对象
-方便计算单种商品的合计价格
-12345678910111213141516171819202122232425262728293031package com.newer.bean;/** * 购物车单个商品条目 * @author Admin * */public class CartItem &#123;	private Goods goods;//商品信息	private int quantity;//商品数量	private double price;//单个商品合计价格		public Goods getGoods() &#123;		return goods;	&#125;	public void setGoods(Goods goods) &#123;		this.g ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/10/17624929.html" title="梦田票网-地址管理">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185646.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="梦田票网-地址管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/10/17624929.html" title="梦田票网-地址管理">梦田票网-地址管理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/sts/">sts</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mysql/">mysql</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mybatis/">mybatis</a></span></div><div class="content">前言梦田票网(mtpiao.com)—-地址管理
-添加地址、查询地址、删除地址、修改地址
-
-
-具体操作步骤如下：
-添加地址1、在数据库中建表(tb_address)12345678create table tb_address(	id int primary key auto_increment,#主键 自动增长 nickname varchar(20),#收货人姓名telephone varchar(20),#联系方式 address varchar(100), #收货地址   uid int  references tb_user(id) #外键);
-
-2、在com.newer.bean包下新建Address.java文件123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384package com.newer.bean;p ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/10/4f0dd035.html" title="集训项目-梦田票网">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185805.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="集训项目-梦田票网"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/10/4f0dd035.html" title="集训项目-梦田票网">集训项目-梦田票网</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/">实训项目</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/sts/">sts</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mysql/">mysql</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/mybatis/">mybatis</a></span></div><div class="content">前言暑假牛耳集训项目学习—-梦田票网(mtpiao.com)
-
-
-数据库设计1.分析功能点（1）用户表(tb_user)
-登录、注册、修改密码、基本信息
-
-
-
-字段名
-数据类型
-说明
-
-
-
-id
-int
-主键
-
-
-nickname
-varchar(20)
-昵称
-
-
-realname
-varchar(20)
-真实姓名
-
-
-username
-varchar(20)
-用户名
-
-
-pwd
-varchar(20)
-密码
-
-
-sex
-char(2)
-性别
-
-
-birthday
-date
-出生日期
-
-
-cardid
-varchar(20)
-身份证号
-
-
-（2）地址表(tb_address)
-关联用户表
-
-
-
-字段名
-数据类型
-说明
-
-
-
-id
-int
-主键
-
-
-nickname
-varchar(20)
-收货人姓名
-
-
-telephone
-varchar(20)
-收货人联系方式
-
-
-address
-varchar(20)
-收货地址
-
-
-uid
-int
-外键，关联用户表中的 id
-
-
-（3）商品表(tb_goods)
-类别、是否为热门推荐
-
-
-
-字段名
-数据类型
-说明
-
-
-
-id
-int
-主键
-
-
-gn ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/19/eb52a7b2.html" title="Redis数据库">     <img class="post_bg" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118190009.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Redis数据库"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/19/eb52a7b2.html" title="Redis数据库">Redis数据库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-19T07:51:35.000Z" title="发表于 2020-06-19 15:51:35">2020-06-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/">实训日志</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Linux/">Linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%8A%80%E5%B7%A7/">技巧</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Redis/">Redis</a></span></div><div class="content">前言实训第五天，上午
-Redis数据库的学习
-
-
-一、Redis简介
-
-REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。
-Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库
-
-二、Redis安装安装Redis在ubuntu上，使用 apt工具可以非常方便的安装和卸载 redis数据库
-apt install redis-server
-
-查看安装位置用于检查是否安装成功
-whereis redis
-
-卸载Redisapt --purge autoremove redis-server
-
-三、连接Redis本地连接redis-cli
-12root@iZ2ze4ojx7qtz1wv44gajnZ:~# redis-cli127.0.0.1:6379&gt; 
-
-远程连接redis-cli -h IP地址 -p 6379
-四、Redis基本配置Redis 的配置文件位于 Redis 安装目录下，文件名为 redis.con ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/images/header.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Irving</div><div class="author-info__description">一个编程小白的博客，这里会长期分享学习干货、良心软件等</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ouwen666" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:mzxy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/6f706555.html" title="前端知识笔记"><img data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118190925.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="前端知识笔记"/></a><div class="content"><a class="title" href="/2020/11/13/6f706555.html" title="前端知识笔记">前端知识笔记</a><time datetime="2020-11-13T03:02:53.244Z" title="发表于 2020-11-13 11:02:53">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/f789481e.html" title="Java位运算"><img data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185412.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java位运算"/></a><div class="content"><a class="title" href="/2020/11/13/f789481e.html" title="Java位运算">Java位运算</a><time datetime="2020-11-13T02:45:03.089Z" title="发表于 2020-11-13 10:45:03">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/08/07/6f706555.html" title="Java基础笔记"><img data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185456.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java基础笔记"/></a><div class="content"><a class="title" href="/2020/08/07/6f706555.html" title="Java基础笔记">Java基础笔记</a><time datetime="2020-08-07T10:45:47.222Z" title="发表于 2020-08-07 18:45:47">2020-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现"><img data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185600.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="梦田票网-购物车实现"/></a><div class="content"><a class="title" href="/2020/07/20/12f0c952.html" title="梦田票网-购物车实现">梦田票网-购物车实现</a><time datetime="2020-07-20T11:22:50.000Z" title="发表于 2020-07-20 19:22:50">2020-07-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/07/10/17624929.html" title="梦田票网-地址管理"><img data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/img/20201118185646.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="梦田票网-地址管理"/></a><div class="content"><a class="title" href="/2020/07/10/17624929.html" title="梦田票网-地址管理">梦田票网-地址管理</a><time datetime="2020-07-10T11:22:50.000Z" title="发表于 2020-07-10 19:22:50">2020-07-10</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Android/"><span class="card-category-list-name">Android</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/"><span class="card-category-list-name">实训日志</span><span class="card-category-list-count">8</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E8%AE%AD%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">实训项目</span><span class="card-category-list-count">3</span></a></li>
-            
-            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/github/" style="font-size: 1.1em; color: rgb(70, 164, 142)">github</a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.2em; color: rgb(170, 141, 181)">教程</a><a href="/tags/Hexo/" style="font-size: 1.1em; color: rgb(34, 93, 43)">Hexo</a><a href="/tags/Java/" style="font-size: 1.2em; color: rgb(151, 134, 5)">Java</a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: rgb(181, 83, 133)">笔记</a><a href="/tags/Linux/" style="font-size: 1.4em; color: rgb(91, 91, 161)">Linux</a><a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 1.5em; color: rgb(193, 150, 196)">技巧</a><a href="/tags/MongDB/" style="font-size: 1.1em; color: rgb(80, 156, 37)">MongDB</a><a href="/tags/MySQL/" style="font-size: 1.1em; color: rgb(8, 175, 30)">MySQL</a><a href="/tags/Markdown/" style="font-size: 1.1em; color: rgb(79, 48, 139)">Markdown</a><a href="/tags/Nginx/" style="font-size: 1.2em; color: rgb(35, 91, 180)">Nginx</a><a href="/tags/Redis/" style="font-size: 1.1em; color: rgb(108, 160, 21)">Redis</a><a href="/tags/sts/" style="font-size: 1.3em; color: rgb(7, 11, 83)">sts</a><a href="/tags/mysql/" style="font-size: 1.3em; color: rgb(111, 127, 147)">mysql</a><a href="/tags/mybatis/" style="font-size: 1.3em; color: rgb(178, 88, 8)">mybatis</a><a href="/tags/Android-Studio/" style="font-size: 1.2em; color: rgb(49, 38, 114)">Android Studio</a><a href="/tags/%E6%8A%80%E5%B7%A7%EF%BC%8CFlutter/" style="font-size: 1.1em; color: rgb(73, 28, 44)">技巧，Flutter</a><a href="/tags/HTML-CSS/" style="font-size: 1.1em; color: rgb(103, 83, 102)">HTML/CSS</a><a href="/tags/bootstrap/" style="font-size: 1.1em; color: rgb(165, 81, 92)">bootstrap</a><a href="/tags/JavaScript-jQuery/" style="font-size: 1.1em; color: rgb(11, 153, 50)">JavaScript/jQuery</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/02/"><span class="card-archive-list-date">二月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/01/"><span class="card-archive-list-date">一月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-03-01T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">30.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2020-11-29T08:52:29.475Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://gitee.com/ouwen666/my-image/raw/master/img/index.png)"><div id="footer-wrap"><div class="copyright">&copy;2020 By Irving</div><div class="footer_custom_text">记录学习与成长的过程.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
- <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
-  $.getJSON('https://v1.hitokoto.cn', function (data) {
-    if (true) {
-      var from = '出自 ' + data.from
-      var sub = "永远相信美好的事即将发生".length == 0 ? new Array() : "永远相信美好的事即将发生".split(',')
-      var both = sub.unshift(data.hitokoto, from)
-      var typed = new Typed('#subtitle', {
-        strings: sub,
-        startDelay: 300,
-        typeSpeed: 150,
-        loop: true,
-        backSpeed: 50,
-      })
-    } else {
-      document.getElementById('subtitle').innerHTML = data.hitokoto
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/12/e33c148b.html" title="Docker容器学习">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212170545.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Docker容器学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/12/e33c148b.html" title="Docker容器学习">Docker容器学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-12-12T08:25:44.000Z" title="发表于 2021-12-12 16:25:44">2021-12-12</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/12/12/e33c148b.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/12/12/e33c148b.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Docker 容器学习Docker 概述
+Docker 学习
+
+
+Docker 概述
+Docker 安装
+Docker 命令
+镜像命令
+容器命令
+操作命令
+….
+
+
+Docker 镜像 *
+容器数据卷 *
+DockerFile
+Docker 网络原理
+IDEA 整合 Docker
+Docker Compose
+Docker Swarm
+CI\CD Jenkins
+
+Docker 概述Docker 为什么会出现？一款产品：开发 -&gt; 上线 两套环境！应用环境、应用配置！
+开发 运维。问题：我在我的电脑上可以运行！版本更新，导致服务不可用！
+环境配置是十分的麻烦，每一个机器都要部署环境（集群Redis、ES、Hadoop）！费时费力。
+发布一个项目（jar +（Redis MySQL jdk ES）），项目能不能都带上环境安装打包！
+Docker 给以上的问题，提出了解决方案！
+    
+Docerk 的思想就来自于集装箱！
+JRE – 多个应用（端口冲突）– 原来都是分叉的！
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/08/05/13a54546.html" title="Java操作Excel之POI与EasyExcel">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212180107.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java操作Excel之POI与EasyExcel"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/05/13a54546.html" title="Java操作Excel之POI与EasyExcel">Java操作Excel之POI与EasyExcel</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-05T08:25:44.000Z" title="发表于 2021-08-05 16:25:44">2021-08-05</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/08/05/13a54546.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/08/05/13a54546.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Java操作Excel之POI与EasyExcel前言在工作中，使用 excel 表格处理数据是很常见的操作，作为一个 Java 开发工程师，学会使用 Java 来操作 excel 表格是必备的技能之一。
+本文就通过市面上常用的两种方式来实现 Java 对 excel 表格的操作：
+
+Apache POI
+Alibaba EasyExcel
+
+一、Apache POI简介Apache POI官网： https://poi.apache.org/
+POI 是目前比较流行的 Java 处理 excel 框架，但是其缺点是 数据量大容易造成 OOM 异常
+基本结构
+HSSF － 提供读写[Microsoft Excel](https://baike.baidu.com/item/Microsoft Excel)格式档案的功能（03 版本 excel）
+XSSF － 提供读写Microsoft Excel OOXML格式档案的功能（07 版本 excel）
+HWPF － 提供读写[Microsoft Word](https://baike.baidu.com/item/Microsoft Wo ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/07/15/b5db2b95.html" title="Tomcat 配置 HTTPS 协议访问">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212174358.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Tomcat 配置 HTTPS 协议访问"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/15/b5db2b95.html" title="Tomcat 配置 HTTPS 协议访问">Tomcat 配置 HTTPS 协议访问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-15T08:25:44.000Z" title="发表于 2021-07-15 16:25:44">2021-07-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Tomcat/">Tomcat</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/15/b5db2b95.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/15/b5db2b95.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Tomcat 配置 HTTPS 协议访问一、前言Tomcat 默认支持 HTTP 协议访问，项目需求要修改 Tomcat 支持 HTTPS 协议访问。
+二、步骤1、使用 Java 自带的 keytool 生成证书打开控制台输入：
+123keytool -genkey -v -alias testKey -keyalg RSA -validity 3650 -keystore D:\apache-tomcat-7.0.26\keys\test.keystore -ext SAN=ip:127.0.0.1keytool -export -alias testKey -file wxsccp.cer -keystore test.jks
+
+参数说明：
+1234alias: 别名 这里起名keyskeyalg: 证书算法，RSAvalidity：证书有效时间，10年keystore：证书生成的目标路径和文件名,替换成你自己的路径即可,我定义的是D:\apache-tomcat-7.0.26\keys\test.keystore，其中keys文件夹必须存在
+
+之后回车，然后需要输入一些信息，其中 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/02/13a54546.html" title="Java中的集合">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212180319.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java中的集合"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/02/13a54546.html" title="Java中的集合">Java中的集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-07-02T08:25:44.000Z" title="发表于 2021-07-02 16:25:44">2021-07-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Java/">Java</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/07/02/13a54546.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/02/13a54546.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Java中的集合前言本文记录了Java中的集合框架，文章中的内容摘录自Java 集合框架 | 菜鸟教程 (runoob.com)、CSDN、博客园等开源网站。
+Java集合体系Java 集合框架主要包括两种类型的容器，一种是集合（Collection），存储一个元素集合，另一种是图（Map），存储键/值对映射。Collection 接口又有 3 种子类型，List、Set 和 Queue，再下面是一些抽象类，最后是具体实现类，常用的有 ArrayList、LinkedList、HashSet、LinkedHashSet、HashMap、LinkedHashMap 等等。
+集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：
+
+接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象
+实现（类）：是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。
+算法：是实现集合接口的对象里的方法执行的一些有 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/06/22/3db3af36.html" title="Nginx服务器">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212174004.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Nginx服务器"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/22/3db3af36.html" title="Nginx服务器">Nginx服务器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-22T08:25:44.000Z" title="发表于 2021-06-22 16:25:44">2021-06-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Nginx/">Nginx</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/06/22/3db3af36.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/06/22/3db3af36.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Nginx服务器什么是Nginx？Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。2011年6月1日，nginx 1.0.4发布。
+其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。在全球活跃的网站中有12.18%的使用比率，大约为2220万个网站。
+Nginx 是一个安装非常的简单、配置文件非常简洁（还能够支持perl语法）、Bug非常少的服务。Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够不间断服务的情况下进行软件版本的升级。
+Nginx代码完全用C语言从头写成。官方数据测试表明能够支持高达 50,000 个并发连接数的响应。
+Nginx作用？
+Http代理，反向代理：作为web服务器 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/06/22/eb9166f8.html" title="Linux系统基础">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212182238.jpeg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Linux系统基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/22/eb9166f8.html" title="Linux系统基础">Linux系统基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-22T08:25:44.000Z" title="发表于 2021-06-22 16:25:44">2021-06-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/06/22/eb9166f8.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/06/22/eb9166f8.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Linux系统基础入门概述
+我们为什么要学习Linux？
+
+linux诞生了这么多年，以前还喊着如何能取代windows系统，现在这个口号已经小多了，任何事物发展都有其局限性都有其天花板。就如同在国内再搞一个社交软件取代腾讯一样，想想而已基本不可能，因为用户已经习惯于使用微信交流，不是说技术上实现不了解而是老百姓已经习惯了，想让他们不用，即使他们自己不用亲戚朋友还是要用，没有办法的事情。
+用习惯了windows操作系统，再让大家切换到别的操作系统基本上是不可能的事情，改变一个人已经养成的习惯太难。没有办法深入到普通老百姓的生活中，并不意味着linux就没有用武之地了。在服务器端，在开发领域linux倒是越来越受欢迎，很多程序员都觉得不懂点linux都觉得不好意思，linux在开源社区的地位依然岿然不动。
+尤其是作为一个后端程序员，是必须要掌握Linux的，因为这都成为了你找工作的基础门槛了，所以不得不学习！
+
+Linux 简介
+
+Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。
+Linux 是一套免费使用和自由传播 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/06/22/eb9166f8.html" title="SpringCloud快速搭建">     <img class="post_bg" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212182044.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="SpringCloud快速搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/22/eb9166f8.html" title="SpringCloud快速搭建">SpringCloud快速搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-06-22T08:25:44.000Z" title="发表于 2021-06-22 16:25:44">2021-06-22</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Spring/">Spring</a></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-comments"></i><a href="/2021/06/22/eb9166f8.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/06/22/eb9166f8.html" itemprop="commentCount"></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">SpringCloud快速搭建SpringCloud五大组件
+服务注册与发现——Netflix Eureka
+负载均衡：
+客户端负载均衡——Netflix Ribbon
+服务端负载均衡：——Feign(其也是依赖于Ribbon，只是将调用方式RestTemplete 更改成Service 接口)
+
+
+断路器——Netflix Hystrix
+服务网关——Netflix Zuul
+分布式配置——Spring Cloud Config
+
+常见面试题
+ 什么是微服务？
+ 微服务之间是如何独立通讯的？
+ SpringCloud 和 Dubbo有那些区别？
+ SpringBoot 和 SpringCloud，请谈谈你对他们的理解
+ 什么是服务熔断？什么是服务降级？
+ 微服务的优缺点分别是什么？说下你在项目开发中遇到的坑
+ 你所知道的微服务技术栈有哪些？列举一二
+ Eureka和Zookeeper都可以提供服务注册与发现的功能，请说说两者的区别
+
+微服务概述什么是微服务
+什么是微服务？
+
+微服务(Microservice Architecture) 是近几年流行的一种架构思想，关于它的概念很难一言 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/images/header.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">IRVING</div><div class="author-info__description">一枚程序猿，记录平时工作学习中点点滴滴</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ouwen666" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:mzxy@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/12/12/e33c148b.html" title="Docker容器学习"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212170545.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Docker容器学习"/></a><div class="content"><a class="title" href="/2021/12/12/e33c148b.html" title="Docker容器学习">Docker容器学习</a><time datetime="2021-12-12T08:25:44.000Z" title="发表于 2021-12-12 16:25:44">2021-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/05/13a54546.html" title="Java操作Excel之POI与EasyExcel"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212180107.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java操作Excel之POI与EasyExcel"/></a><div class="content"><a class="title" href="/2021/08/05/13a54546.html" title="Java操作Excel之POI与EasyExcel">Java操作Excel之POI与EasyExcel</a><time datetime="2021-08-05T08:25:44.000Z" title="发表于 2021-08-05 16:25:44">2021-08-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/15/b5db2b95.html" title="Tomcat 配置 HTTPS 协议访问"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212174358.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Tomcat 配置 HTTPS 协议访问"/></a><div class="content"><a class="title" href="/2021/07/15/b5db2b95.html" title="Tomcat 配置 HTTPS 协议访问">Tomcat 配置 HTTPS 协议访问</a><time datetime="2021-07-15T08:25:44.000Z" title="发表于 2021-07-15 16:25:44">2021-07-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/02/13a54546.html" title="Java中的集合"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212180319.jpg" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Java中的集合"/></a><div class="content"><a class="title" href="/2021/07/02/13a54546.html" title="Java中的集合">Java中的集合</a><time datetime="2021-07-02T08:25:44.000Z" title="发表于 2021-07-02 16:25:44">2021-07-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/22/3db3af36.html" title="Nginx服务器"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://gitee.com/ouwen666/my-image/raw/master/20211212174004.png" onerror="this.onerror=null;this.src='/images/404.jpg'" alt="Nginx服务器"/></a><div class="content"><a class="title" href="/2021/06/22/3db3af36.html" title="Nginx服务器">Nginx服务器</a><time datetime="2021-06-22T08:25:44.000Z" title="发表于 2021-06-22 16:25:44">2021-06-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Git/"><span class="card-category-list-name">Git</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Java/"><span class="card-category-list-name">Java</span><span class="card-category-list-count">17</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Nginx/"><span class="card-category-list-name">Nginx</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/RabbitMQ/"><span class="card-category-list-name">RabbitMQ</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Redis/"><span class="card-category-list-name">Redis</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Spring/"><span class="card-category-list-name">Spring</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/ES/" style="font-size: 1.1em; color: #999">ES</a> <a href="/tags/HTML-CSS/" style="font-size: 1.1em; color: #999">HTML/CSS</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Java/" style="font-size: 1.17em; color: #999c9f">Java</a> <a href="/tags/JavaScript-jQuery/" style="font-size: 1.1em; color: #999">JavaScript/jQuery</a> <a href="/tags/Linux/" style="font-size: 1.23em; color: #999ea6">Linux</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/MongDB/" style="font-size: 1.1em; color: #999">MongDB</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Redis/" style="font-size: 1.23em; color: #999ea6">Redis</a> <a href="/tags/bootstrap/" style="font-size: 1.1em; color: #999">bootstrap</a> <a href="/tags/github/" style="font-size: 1.1em; color: #999">github</a> <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/" style="font-size: 1.3em; color: #99a1ac">中间件</a> <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.37em; color: #99a4b2">分布式</a> <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 1.1em; color: #999">多线程</a> <a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 1.1em; color: #999">容器</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 1.43em; color: #99a6b9">技巧</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.17em; color: #999c9f">教程</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.1em; color: #999">服务器</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.5em; color: #99a9bf">笔记</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">七月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">六月 2021</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">五月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">34</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-03-01T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">134.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-12-12T13:26:15.508Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By IRVING</div><div class="footer_custom_text">记录学习与成长的过程.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(() => {
+  function loadValine () {
+    function initValine () {
+      let initData = {
+        el: '#vcomment',
+        appId: 'EbQGoBUK6JYajIqOPsL7rS9f-gzGzoHsz',
+        appKey: '4vNyyPCgwRIckObjYhJfTWQL',
+      }
+      
+      const valine = new Valine(initData)
     }
-  })
+
+    if (typeof Valine === 'function') initValine() 
+    else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+  }
+
+  window.pjax ? loadValine() : window.addEventListener('load', loadValine)
+})()</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        var from = '出自 ' + data.from
+        var sub = "永远相信美好的事即将发生".length == 0 ? new Array() : "永远相信美好的事即将发生".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
 }
 
 if (true) {
-  if (typeof Typed === 'function') subtitleType()
-  else $.getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js', subtitleType)
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
 } else {
   subtitleType()
 }
-</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/1764de35.js","daovoice")
-</script><script>var isChatBtn = true
-daovoice('init', {
-  app_id: '1764de35',},{
-  launcher: { 
-     disableLauncherIcon: isChatBtn // 悬浮 ICON 是否显示
-  },
-});
-daovoice('update');
-
-if (isChatBtn) {
-  var chatBtnFn = () => {
-    var chatBtn = document.getElementById("chat_btn")
-    chatBtn.addEventListener("click", function(){
-      daovoice('show')
-    });
-  }
-  chatBtnFn()
-} else {
-  if (false) {
-    function chatBtnHide () {
-      daovoice('update', {},{
-        launcher: { 
-        disableLauncherIcon: true // 悬浮 ICON 是否显示
-        },
-      });
-    }
-    function chatBtnShow () {
-      daovoice('update', {},{
-        launcher: { 
-        disableLauncherIcon: false // 悬浮 ICON 是否显示
-        },
-      });
-    }
-  }
-}</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
   'title',
-  '#config_change',
+  '#config-diff',
   '#body-wrap',
   '#rightside-config-hide',
   '#rightside-config-show',
@@ -570,11 +384,39 @@ var pjax = new Pjax({
   scrollRestoration: false
 })
 
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
 document.addEventListener('pjax:complete', function () {
   window.refreshFn()
 
-  $('script[data-pjax]').each(function () {
-    $(this).parent().append($(this).remove())
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
   })
 
   GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
@@ -582,9 +424,11 @@ document.addEventListener('pjax:complete', function () {
   typeof chatBtnFn === 'function' && chatBtnFn()
   typeof panguInit === 'function' && panguInit()
 
-  if (typeof gtag === 'function') {
-    gtag('config', '', {'page_path': window.location.pathname});
-  }
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
   typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
@@ -599,35 +443,8 @@ document.addEventListener('pjax:complete', function () {
   typeof preloader === 'object' && preloader.endLoading()
 })
 
-
-document.addEventListener('pjax:send', function () {
-  typeof preloader === 'object' && preloader.initLoading()
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
-      }
-    }
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
   }
-
-  typeof typed === 'object' && typed.destroy()
-
-  $(window).off('scroll')
-
-  //reset readmode
-  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
-
-})</script><script>(function(){
-  const bp = document.createElement('script');
-  const curProtocol = window.location.protocol.split(':')[0];
-  if (curProtocol === 'https'){
-  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-  }
-  else{
-  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-  }
-  bp.dataset.pjax = ''
-  const s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(bp, s);
-})()</script></div></body></html>
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
