@@ -278,7 +278,27 @@
         <category>Git</category>
       </categories>
       <tags>
+        <tag>教程</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dom4j如何新增standalone？</title>
+    <url>/2021/12/16/2e39132d.html</url>
+    <content><![CDATA[<h1 id="Dom4j-如何新增-standalone？"><a href="#Dom4j-如何新增-standalone？" class="headerlink" title="Dom4j 如何新增 standalone？"></a>Dom4j 如何新增 standalone？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>工作中调用一个第三方接口，需要上传 xml 文件。Java 操作 xml 文件的 api 很多，有 Dom、SAX 、JDom、Dom4j。我一般常用的是 Dom4j，但是对接此接口上传的 xml 文件需要添加 <code>standalone=&quot;no&quot;</code> 属性。查阅相关资料，发现 <code>Dom4j -1.6.1</code> 版本并没有提供相应的方法设置。</p>
+<blockquote>
+<p>解决方案</p>
+</blockquote>
+<p>重写 <code>XMLWriter</code> 类中的 <code>writeDeclaration</code> 方法，具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.OutputFormat;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.XMLWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StandaloneWriter</span> <span class="keyword">extends</span> <span class="title">XMLWriter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StandaloneWriter</span><span class="params">(FileOutputStream fileOutputStream, OutputFormat format)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> UnsupportedEncodingException </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(fileOutputStream, format);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StandaloneWriter</span><span class="params">(FileWriter fileWriter, OutputFormat format)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> UnsupportedEncodingException </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(fileWriter, format);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">writeDeclaration</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        OutputFormat format = getOutputFormat();</span><br><span class="line"></span><br><span class="line">        String encoding = format.getEncoding();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!format.isSuppressDeclaration()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (encoding.equals(<span class="string">&quot;UTF8&quot;</span>)) &#123;</span><br><span class="line">                writer.write(<span class="string">&quot;&lt;?xml version=\&quot;1.0\&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (!format.isOmitEncoding()) &#123;</span><br><span class="line">                    writer.write(<span class="string">&quot; encoding=\&quot;UTF-8\&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                writer.write(<span class="string">&quot; standalone=\&quot;yes\&quot;&quot;</span>);</span><br><span class="line">                writer.write(<span class="string">&quot;?&gt;&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                writer.write(<span class="string">&quot;&lt;?xml version=\&quot;1.0\&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (!format.isOmitEncoding()) &#123;</span><br><span class="line">                    writer.write(<span class="string">&quot; encoding=\&quot;&quot;</span> + encoding + <span class="string">&quot;\&quot;&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                writer.write(<span class="string">&quot; standalone=\&quot;no\&quot;&quot;</span>);</span><br><span class="line">                writer.write(<span class="string">&quot;?&gt;&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (format.isNewLineAfterDeclaration()) &#123;</span><br><span class="line">                println();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用过程中，用 <code>StandaloneWriter</code> 替换掉 <code>XMLWriter</code> 即可。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>xml</tag>
         <tag>教程</tag>
       </tags>
   </entry>
@@ -8464,8 +8484,8 @@
       </categories>
       <tags>
         <tag>技巧</tag>
-        <tag>MySQL</tag>
         <tag>Linux</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
 </search>
