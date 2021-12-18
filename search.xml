@@ -1915,7 +1915,7 @@
   </entry>
   <entry>
     <title>SpringCloud快速搭建</title>
-    <url>/2021/06/22/eb9166f8.html</url>
+    <url>/2021/06/22/939440f7.html</url>
     <content><![CDATA[<h1 id="SpringCloud快速搭建"><a href="#SpringCloud快速搭建" class="headerlink" title="SpringCloud快速搭建"></a>SpringCloud快速搭建</h1><h2 id="SpringCloud五大组件"><a href="#SpringCloud五大组件" class="headerlink" title="SpringCloud五大组件"></a>SpringCloud五大组件</h2><ul>
 <li>服务注册与发现——Netflix Eureka</li>
 <li>负载均衡：<ul>
