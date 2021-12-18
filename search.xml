@@ -2680,60 +2680,8 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法</title>
-    <url>/2021/06/10/6b25d652.html</url>
-    <content><![CDATA[<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算法是程序的灵魂，优秀的程序员可以在海量的数据计算下，依旧保持着高速计算。</p>
-<p>目前程序员的门槛越来越高，简单的代码根本不用人来写，都是计算机自动生成，如果你不想永远都是代码工人，或者不想被时代淘汰，那就花时间来研究一下数据结构与算法。</p>
-<h2 id="一、数据结构和算法概述"><a href="#一、数据结构和算法概述" class="headerlink" title="一、数据结构和算法概述"></a>一、数据结构和算法概述</h2><h3 id="1-1、数据结构和算法的关系"><a href="#1-1、数据结构和算法的关系" class="headerlink" title="1.1、数据结构和算法的关系"></a>1.1、数据结构和算法的关系</h3><ol>
-<li>数据 data 结构 structure 是一门 <strong>研究组织数据方式</strong> 的学科，有了编程语言也有了数据结构，学好数据结构可以编写出更加漂亮，更加有效率的代码</li>
-<li>要学习好数据结构就要多多考虑如何将生活中遇到的问题，用程序去解决</li>
-<li><strong>程序 = 数据结构 + 算法</strong></li>
-<li>数据结构是算法的基础，换句话说，想要学好算法，需要把数据结构学到位</li>
-</ol>
-<h3 id="1-2、线性结构和非线性结构"><a href="#1-2、线性结构和非线性结构" class="headerlink" title="1.2、线性结构和非线性结构"></a>1.2、线性结构和非线性结构</h3><h4 id="1-2-1、线性结构"><a href="#1-2-1、线性结构" class="headerlink" title="1.2.1、线性结构"></a>1.2.1、线性结构</h4><ol>
-<li>线性结构作为最常用的数据结构，其特点是 <strong>数据元素之间存在一对一</strong> 的线性关系</li>
-<li>线性结构有两种不同的存储结构，即 <strong>顺序存储结构(数组)</strong> 和 **链式存储结构(链表)**。顺序存储结构的线性表成为顺序表，顺序表中的 <strong>存储元素是连续</strong> 的</li>
-<li>链式存储的线性表成为链表，链表中的 <strong>存储元素不一定是连续的</strong>，元素节点中存放数据元素以及相邻元素的地址信息</li>
-<li>线性结构常见的有：<strong>数组、队列、链表和栈</strong>，后面会详细总结</li>
-</ol>
-<h4 id="1-2-2、非线性结构"><a href="#1-2-2、非线性结构" class="headerlink" title="1.2.2、非线性结构"></a>1.2.2、非线性结构</h4><p>非线性结构包括：二维数组，多维数组，广义表，<strong>树结构，图结构</strong></p>
-<h2 id="二、稀疏数组和队列"><a href="#二、稀疏数组和队列" class="headerlink" title="二、稀疏数组和队列"></a>二、稀疏数组和队列</h2><h3 id="2-1、稀疏-sparsearray-数组"><a href="#2-1、稀疏-sparsearray-数组" class="headerlink" title="2.1、稀疏 sparsearray 数组"></a>2.1、稀疏 sparsearray 数组</h3><h4 id="2-1-1、这里有个实际的需求："><a href="#2-1-1、这里有个实际的需求：" class="headerlink" title="2.1.1、这里有个实际的需求："></a>2.1.1、这里有个实际的需求：</h4><p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210623133054.png" alt="image-20210623133047551"></p>
-<h4 id="2-1-2、基本概念"><a href="#2-1-2、基本概念" class="headerlink" title="2.1.2、基本概念"></a>2.1.2、基本概念</h4><ul>
-<li><p>当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存该数组</p>
-</li>
-<li><p>当稀疏数组的处理方式是：记录数组一共有几行几列，有多少个不同的值。把具有不同值的元素和行列记录在一个小规模的数组中，从而缩小程序的规模</p>
-</li>
-<li><p>如下图：左边是原始数组，右边是稀疏数组</p>
-<img src="https://gitee.com/ouwen666/my-image/raw/master/20210623134036.png" alt="image-20210623134036279" style="zoom: 33%;" />    </li>
-</ul>
-<h4 id="2-1-3、应用实例"><a href="#2-1-3、应用实例" class="headerlink" title="2.1.3、应用实例"></a>2.1.3、应用实例</h4><ol>
-<li><p>使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等)</p>
-</li>
-<li><p>把稀疏数组存盘，并且可以重新恢复原来的二维数组数</p>
-</li>
-<li><p>整体思路分析如下：</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210623134914.png" alt=" "></p>
-</li>
-<li><p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lxki.sparsearray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 稀疏数组</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING QQ:2362766003</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-23 10:06</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SparseArray</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个二维数组 11*11 0：没有棋子  1：黑棋  2：白棋</span></span><br><span class="line">        <span class="keyword">int</span>[][] chessArr1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        chessArr1[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        chessArr1[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        chessArr1[<span class="number">4</span>][<span class="number">5</span>] = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出原始的二维数组</span></span><br><span class="line">        System.out.println(<span class="string">&quot;===============原始的二维数组=================&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] rows : chessArr1) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> data : rows) &#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>, data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;===============将二维数组转为稀疏数组=================&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.先遍历二维数组 得到有效值的个数</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chessArr1[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.创建对应的稀疏数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] sparseArr = <span class="keyword">new</span> <span class="keyword">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        <span class="comment">// 给稀疏数组赋值</span></span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">11</span>;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">11</span>;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">2</span>] = sum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.遍历二维数组，将有效值存放到 sparseArr 中</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>; <span class="comment">// count 用于记录是第几个有效数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chessArr1[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                    count++;</span><br><span class="line">                    sparseArr[count][<span class="number">0</span>] = i;</span><br><span class="line">                    sparseArr[count][<span class="number">1</span>] = j;</span><br><span class="line">                    sparseArr[count][<span class="number">2</span>] = chessArr1[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.输出稀疏数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sparseArr.length; i++) &#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%d\t%d\t%d\t\n&quot;</span>,sparseArr[i][<span class="number">0</span>],sparseArr[i][<span class="number">1</span>],sparseArr[i][<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5.将稀疏数组还原成二维数组</span></span><br><span class="line">        <span class="comment">// 5.1 先读取稀疏数组的第一行，根据第一行的数据创建二维数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] chessArr2 = <span class="keyword">new</span> <span class="keyword">int</span>[sparseArr[<span class="number">0</span>][<span class="number">0</span>]][sparseArr[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="comment">// 5.2 在读取稀疏数组后几行的数据，并赋给原始的而额外数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; sparseArr.length; i++) &#123;</span><br><span class="line">            chessArr2[sparseArr[i][<span class="number">0</span>]][sparseArr[i][<span class="number">1</span>]] = sparseArr[i][<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6.输出恢复后的二维数组</span></span><br><span class="line">        System.out.println(<span class="string">&quot;===============将稀疏数组转为二维数组=================&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] rows : chessArr2) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> data : rows) &#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>, data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>未完待续….</p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深入理解RESTful风格</title>
-    <url>/2021/06/10/6b25d652.html</url>
+    <url>/2021/06/12/6b25d652.html</url>
     <content><![CDATA[<h1 id="到底什么是-RESTful-？"><a href="#到底什么是-RESTful-？" class="headerlink" title="到底什么是 RESTful ？"></a>到底什么是 RESTful ？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家对 RESTful 肯定不陌生，就算不知道它到底是什么，但肯定听过这个玩意。相信大家也很想知道 RESTful 能解决什么样的问题，有什么应用场景？看完本篇文章你就能明白：</p>
 <p>在互联网并没有盛行的时代， 移动端也还没有发展起来，页面请求和并发量也不高，那时候人们对接口的要求并不高，一些常规的动态页面（JSP）就能满足大部分人们的需求。</p>
 <img src="https://gitee.com/ouwen666/my-image/raw/master/20210610104619.png" alt="image-20210610104612710" style="zoom: 67%;" />
@@ -2854,6 +2802,58 @@
 <li>过分强调资源，而实际业务API可能有各种需求比较复杂，单单使用资源的增删改查可能并不能有效满足使用需求，强行使用<code>RESTful</code> 风格API只会增加开发难度和成本。</li>
 </ul>
 <p>所以，当你或你们的技术团队在设计 API 的时候，如果使用场景和 REST 风格很匹配，那么你们可以采用 RESTful 风格 API。但是如果业务需求和 RESTful 风格 API 不太匹配或者很麻烦，那也可以不用 RESTful 风格 API 或者可以借鉴一下，毕竟无论那种风格的 API 都是为了方便团队开发、协商以及管理，不能墨守成规。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法</title>
+    <url>/2021/06/10/6b25d652.html</url>
+    <content><![CDATA[<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>算法是程序的灵魂，优秀的程序员可以在海量的数据计算下，依旧保持着高速计算。</p>
+<p>目前程序员的门槛越来越高，简单的代码根本不用人来写，都是计算机自动生成，如果你不想永远都是代码工人，或者不想被时代淘汰，那就花时间来研究一下数据结构与算法。</p>
+<h2 id="一、数据结构和算法概述"><a href="#一、数据结构和算法概述" class="headerlink" title="一、数据结构和算法概述"></a>一、数据结构和算法概述</h2><h3 id="1-1、数据结构和算法的关系"><a href="#1-1、数据结构和算法的关系" class="headerlink" title="1.1、数据结构和算法的关系"></a>1.1、数据结构和算法的关系</h3><ol>
+<li>数据 data 结构 structure 是一门 <strong>研究组织数据方式</strong> 的学科，有了编程语言也有了数据结构，学好数据结构可以编写出更加漂亮，更加有效率的代码</li>
+<li>要学习好数据结构就要多多考虑如何将生活中遇到的问题，用程序去解决</li>
+<li><strong>程序 = 数据结构 + 算法</strong></li>
+<li>数据结构是算法的基础，换句话说，想要学好算法，需要把数据结构学到位</li>
+</ol>
+<h3 id="1-2、线性结构和非线性结构"><a href="#1-2、线性结构和非线性结构" class="headerlink" title="1.2、线性结构和非线性结构"></a>1.2、线性结构和非线性结构</h3><h4 id="1-2-1、线性结构"><a href="#1-2-1、线性结构" class="headerlink" title="1.2.1、线性结构"></a>1.2.1、线性结构</h4><ol>
+<li>线性结构作为最常用的数据结构，其特点是 <strong>数据元素之间存在一对一</strong> 的线性关系</li>
+<li>线性结构有两种不同的存储结构，即 <strong>顺序存储结构(数组)</strong> 和 **链式存储结构(链表)**。顺序存储结构的线性表成为顺序表，顺序表中的 <strong>存储元素是连续</strong> 的</li>
+<li>链式存储的线性表成为链表，链表中的 <strong>存储元素不一定是连续的</strong>，元素节点中存放数据元素以及相邻元素的地址信息</li>
+<li>线性结构常见的有：<strong>数组、队列、链表和栈</strong>，后面会详细总结</li>
+</ol>
+<h4 id="1-2-2、非线性结构"><a href="#1-2-2、非线性结构" class="headerlink" title="1.2.2、非线性结构"></a>1.2.2、非线性结构</h4><p>非线性结构包括：二维数组，多维数组，广义表，<strong>树结构，图结构</strong></p>
+<h2 id="二、稀疏数组和队列"><a href="#二、稀疏数组和队列" class="headerlink" title="二、稀疏数组和队列"></a>二、稀疏数组和队列</h2><h3 id="2-1、稀疏-sparsearray-数组"><a href="#2-1、稀疏-sparsearray-数组" class="headerlink" title="2.1、稀疏 sparsearray 数组"></a>2.1、稀疏 sparsearray 数组</h3><h4 id="2-1-1、这里有个实际的需求："><a href="#2-1-1、这里有个实际的需求：" class="headerlink" title="2.1.1、这里有个实际的需求："></a>2.1.1、这里有个实际的需求：</h4><p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210623133054.png" alt="image-20210623133047551"></p>
+<h4 id="2-1-2、基本概念"><a href="#2-1-2、基本概念" class="headerlink" title="2.1.2、基本概念"></a>2.1.2、基本概念</h4><ul>
+<li><p>当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存该数组</p>
+</li>
+<li><p>当稀疏数组的处理方式是：记录数组一共有几行几列，有多少个不同的值。把具有不同值的元素和行列记录在一个小规模的数组中，从而缩小程序的规模</p>
+</li>
+<li><p>如下图：左边是原始数组，右边是稀疏数组</p>
+<img src="https://gitee.com/ouwen666/my-image/raw/master/20210623134036.png" alt="image-20210623134036279" style="zoom: 33%;" />    </li>
+</ul>
+<h4 id="2-1-3、应用实例"><a href="#2-1-3、应用实例" class="headerlink" title="2.1.3、应用实例"></a>2.1.3、应用实例</h4><ol>
+<li><p>使用稀疏数组，来保留类似前面的二维数组(棋盘、地图等)</p>
+</li>
+<li><p>把稀疏数组存盘，并且可以重新恢复原来的二维数组数</p>
+</li>
+<li><p>整体思路分析如下：</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210623134914.png" alt=" "></p>
+</li>
+<li><p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lxki.sparsearray;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 稀疏数组</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING QQ:2362766003</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-23 10:06</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SparseArray</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建一个二维数组 11*11 0：没有棋子  1：黑棋  2：白棋</span></span><br><span class="line">        <span class="keyword">int</span>[][] chessArr1 = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">11</span>][<span class="number">11</span>];</span><br><span class="line">        chessArr1[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">1</span>;</span><br><span class="line">        chessArr1[<span class="number">2</span>][<span class="number">3</span>] = <span class="number">2</span>;</span><br><span class="line">        chessArr1[<span class="number">4</span>][<span class="number">5</span>] = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出原始的二维数组</span></span><br><span class="line">        System.out.println(<span class="string">&quot;===============原始的二维数组=================&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] rows : chessArr1) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> data : rows) &#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>, data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;===============将二维数组转为稀疏数组=================&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 1.先遍历二维数组 得到有效值的个数</span></span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chessArr1[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                    sum++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.创建对应的稀疏数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] sparseArr = <span class="keyword">new</span> <span class="keyword">int</span>[sum+<span class="number">1</span>][<span class="number">3</span>];</span><br><span class="line">        <span class="comment">// 给稀疏数组赋值</span></span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">11</span>;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">11</span>;</span><br><span class="line">        sparseArr[<span class="number">0</span>][<span class="number">2</span>] = sum;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.遍历二维数组，将有效值存放到 sparseArr 中</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>; <span class="comment">// count 用于记录是第几个有效数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">11</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (chessArr1[i][j] != <span class="number">0</span>) &#123;</span><br><span class="line">                    count++;</span><br><span class="line">                    sparseArr[count][<span class="number">0</span>] = i;</span><br><span class="line">                    sparseArr[count][<span class="number">1</span>] = j;</span><br><span class="line">                    sparseArr[count][<span class="number">2</span>] = chessArr1[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4.输出稀疏数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; sparseArr.length; i++) &#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%d\t%d\t%d\t\n&quot;</span>,sparseArr[i][<span class="number">0</span>],sparseArr[i][<span class="number">1</span>],sparseArr[i][<span class="number">2</span>]);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 5.将稀疏数组还原成二维数组</span></span><br><span class="line">        <span class="comment">// 5.1 先读取稀疏数组的第一行，根据第一行的数据创建二维数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] chessArr2 = <span class="keyword">new</span> <span class="keyword">int</span>[sparseArr[<span class="number">0</span>][<span class="number">0</span>]][sparseArr[<span class="number">0</span>][<span class="number">1</span>]];</span><br><span class="line">        <span class="comment">// 5.2 在读取稀疏数组后几行的数据，并赋给原始的而额外数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; sparseArr.length; i++) &#123;</span><br><span class="line">            chessArr2[sparseArr[i][<span class="number">0</span>]][sparseArr[i][<span class="number">1</span>]] = sparseArr[i][<span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6.输出恢复后的二维数组</span></span><br><span class="line">        System.out.println(<span class="string">&quot;===============将稀疏数组转为二维数组=================&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] rows : chessArr2) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> data : rows) &#123;</span><br><span class="line">                System.out.printf(<span class="string">&quot;%d\t&quot;</span>, data);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>未完待续….</p>
+</blockquote>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>Java</category>
