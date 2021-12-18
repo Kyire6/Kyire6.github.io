@@ -1080,104 +1080,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx服务器</title>
-    <url>/2021/06/22/3db3af36.html</url>
-    <content><![CDATA[<h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h2 id="什么是Nginx？"><a href="#什么是Nginx？" class="headerlink" title="什么是Nginx？"></a>什么是Nginx？</h2><p>Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。2011年6月1日，nginx 1.0.4发布。</p>
-<p>其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。在全球活跃的网站中有12.18%的使用比率，大约为2220万个网站。</p>
-<p>Nginx 是一个安装非常的简单、配置文件非常简洁（还能够支持perl语法）、Bug非常少的服务。Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够不间断服务的情况下进行软件版本的升级。</p>
-<p>Nginx代码完全用C语言从头写成。官方数据测试表明能够支持高达 50,000 个并发连接数的响应。</p>
-<h2 id="Nginx作用？"><a href="#Nginx作用？" class="headerlink" title="Nginx作用？"></a>Nginx作用？</h2><blockquote>
-<p>Http代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理。</p>
-</blockquote>
-<p>正向代理</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002026.png" alt="img">    </p>
-<p>反向代理</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002040.png" alt="img">    </p>
-<blockquote>
-<p>Nginx提供的负载均衡策略有2种：内置策略和扩展策略。内置策略为轮询，加权轮询，Ip hash。扩展策略，就天马行空，只有你想不到的没有他做不到的。</p>
-</blockquote>
-<p>轮询</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002126.png" alt="img">    </p>
-<p>加权轮询</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002224.png" alt="img">    </p>
-<p>iphash对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题。</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002257.png" alt="img">    </p>
-<blockquote>
-<p>动静分离，在我们的软件开发中，有些请求是需要后台处理的，有些请求是不需要经过后台处理的（如：css、html、jpg、js等等文件），这些不需要经过后台处理的文件称为静态文件。让动态网站里的动态网页根据一定规则把不变的资源和经常变的资源区分开来，动静资源做好了拆分以后，我们就可以根据静态资源的特点将其做缓存操作。提高资源响应的速度。</p>
-</blockquote>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002333.png" alt="img">    </p>
-<p>目前，通过使用Nginx大大提高了我们网站的响应速度，优化了用户体验，让网站的健壮性更上一层楼！</p>
-<h2 id="Nginx的安装"><a href="#Nginx的安装" class="headerlink" title="Nginx的安装"></a>Nginx的安装</h2><h3 id="windows下安装"><a href="#windows下安装" class="headerlink" title="windows下安装"></a>windows下安装</h3><p>1、下载nginx</p>
-<p><a href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 下载稳定版本。<br>以nginx/Windows-1.16.1为例，直接下载 nginx-1.16.1.zip。<br>下载后解压，解压后如下：</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011123.png" alt="img">    </p>
-<p>2、启动nginx</p>
-<p>有很多种方法启动nginx</p>
-<p>(1)直接双击nginx.exe，双击后一个黑色的弹窗一闪而过</p>
-<p>(2)打开cmd命令窗口，切换到nginx解压目录下，输入命令 <code>nginx.exe</code> ，回车即可</p>
-<p>3、检查nginx是否启动成功</p>
-<p>直接在浏览器地址栏输入网址 <a href="http://localhost/">http://localhost:80</a> 回车，出现以下页面说明启动成功！</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011140.png" alt="img">    </p>
-<p>4、配置监听</p>
-<p>nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听的端口为80，如果80端口被占用可以修改为未被占用的端口即可。</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011158.png" alt="img">    </p>
-<p>当我们修改了nginx的配置文件nginx.conf 时，不需要关闭nginx后重新启动nginx，只需要执行命令 <code>nginx -s reload</code> 即可让改动生效</p>
-<p>5、关闭nginx</p>
-<p>如果使用cmd命令窗口启动nginx， 关闭cmd窗口是不能结束nginx进程的，可使用两种方法关闭nginx</p>
-<p>(1)输入nginx命令 <code>nginx -s stop</code>(快速停止nginx) 或 <code>nginx -s quit</code>(完整有序的停止nginx)</p>
-<p>(2)使用taskkill <code>taskkill /f /t /im nginx.exe</code></p>
-<blockquote>
-<p>taskkill是用来终止进程的，<br>/f是强制终止 .<br>/t终止指定的进程和任何由此启动的子进程。<br>/im示指定的进程名称 .</p>
-</blockquote>
-<h3 id="Linux下安装"><a href="#Linux下安装" class="headerlink" title="Linux下安装"></a>Linux下安装</h3><p>1、安装gcc</p>
-<p>安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
-
-<p>2、PCRE pcre-devel 安装</p>
-<p>PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br></pre></td></tr></table></figure>
-
-<p>3、zlib 安装</p>
-<p>zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y zlib zlib-devel</span><br></pre></td></tr></table></figure>
-
-<p>4、OpenSSL 安装<br>OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。<br>nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http），所以需要在 Centos 安装 OpenSSL 库。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<p>5、下载安装包</p>
-<p>手动下载.tar.gz安装包，地址：<a href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011930.png" alt="img">    </p>
-<p>下载完毕上传到服务器上 /root</p>
-<p>6、解压</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br><span class="line"><span class="built_in">cd</span> nginx-1.18.0</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012024.png" alt="img">    </p>
-<p>7、配置</p>
-<p>使用默认配置，在nginx根目录下执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>查找安装路径： <code>whereis nginx</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012111.png" alt="img">    </p>
-<h2 id="Nginx常用命令"><a href="#Nginx常用命令" class="headerlink" title="Nginx常用命令"></a>Nginx常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/nginx/sbin/</span><br><span class="line">./nginx  启动</span><br><span class="line">./nginx -s stop  停止</span><br><span class="line">./nginx -s quit  安全退出</span><br><span class="line">./nginx -s reload  重新加载配置文件</span><br><span class="line">ps aux|grep nginx  查看nginx进程</span><br></pre></td></tr></table></figure>
-
-<p>启动成功访问 服务器ip:80</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012240.png" alt="img">    </p>
-<p>注意：如果连接不上，检查阿里云安全组是否开放端口，或者服务器防火墙是否开放端口！<br>相关命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br><span class="line"><span class="comment"># 查看防火墙规则</span></span><br><span class="line">firewall-cmd --list-all</span><br><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
-
-<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream lb&#123;</span><br><span class="line">    server 127.0.0.1:8080 weight=1;</span><br><span class="line">    server 127.0.0.1:8081 weight=1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location / &#123;</span><br><span class="line">    proxy_pass http://lb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Nginx</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux系统基础</title>
-    <url>/2021/06/22/eb9166f8.html</url>
+    <url>/2021/06/23/15ddae98.html</url>
     <content><![CDATA[<h1 id="Linux系统基础"><a href="#Linux系统基础" class="headerlink" title="Linux系统基础"></a>Linux系统基础</h1><h2 id="入门概述"><a href="#入门概述" class="headerlink" title="入门概述"></a>入门概述</h2><blockquote>
 <p>我们为什么要学习Linux？</p>
 </blockquote>
@@ -1907,6 +1811,102 @@
 ]]></content>
       <categories>
         <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx服务器</title>
+    <url>/2021/06/22/3db3af36.html</url>
+    <content><![CDATA[<h1 id="Nginx服务器"><a href="#Nginx服务器" class="headerlink" title="Nginx服务器"></a>Nginx服务器</h1><h2 id="什么是Nginx？"><a href="#什么是Nginx？" class="headerlink" title="什么是Nginx？"></a>什么是Nginx？</h2><p>Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。2011年6月1日，nginx 1.0.4发布。</p>
+<p>其特点是占有内存少，并发能力强，事实上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。在全球活跃的网站中有12.18%的使用比率，大约为2220万个网站。</p>
+<p>Nginx 是一个安装非常的简单、配置文件非常简洁（还能够支持perl语法）、Bug非常少的服务。Nginx 启动特别容易，并且几乎可以做到7*24不间断运行，即使运行数个月也不需要重新启动。你还能够不间断服务的情况下进行软件版本的升级。</p>
+<p>Nginx代码完全用C语言从头写成。官方数据测试表明能够支持高达 50,000 个并发连接数的响应。</p>
+<h2 id="Nginx作用？"><a href="#Nginx作用？" class="headerlink" title="Nginx作用？"></a>Nginx作用？</h2><blockquote>
+<p>Http代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理。</p>
+</blockquote>
+<p>正向代理</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002026.png" alt="img">    </p>
+<p>反向代理</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002040.png" alt="img">    </p>
+<blockquote>
+<p>Nginx提供的负载均衡策略有2种：内置策略和扩展策略。内置策略为轮询，加权轮询，Ip hash。扩展策略，就天马行空，只有你想不到的没有他做不到的。</p>
+</blockquote>
+<p>轮询</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002126.png" alt="img">    </p>
+<p>加权轮询</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002224.png" alt="img">    </p>
+<p>iphash对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题。</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002257.png" alt="img">    </p>
+<blockquote>
+<p>动静分离，在我们的软件开发中，有些请求是需要后台处理的，有些请求是不需要经过后台处理的（如：css、html、jpg、js等等文件），这些不需要经过后台处理的文件称为静态文件。让动态网站里的动态网页根据一定规则把不变的资源和经常变的资源区分开来，动静资源做好了拆分以后，我们就可以根据静态资源的特点将其做缓存操作。提高资源响应的速度。</p>
+</blockquote>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420002333.png" alt="img">    </p>
+<p>目前，通过使用Nginx大大提高了我们网站的响应速度，优化了用户体验，让网站的健壮性更上一层楼！</p>
+<h2 id="Nginx的安装"><a href="#Nginx的安装" class="headerlink" title="Nginx的安装"></a>Nginx的安装</h2><h3 id="windows下安装"><a href="#windows下安装" class="headerlink" title="windows下安装"></a>windows下安装</h3><p>1、下载nginx</p>
+<p><a href="http://nginx.org/en/download.html">http://nginx.org/en/download.html</a> 下载稳定版本。<br>以nginx/Windows-1.16.1为例，直接下载 nginx-1.16.1.zip。<br>下载后解压，解压后如下：</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011123.png" alt="img">    </p>
+<p>2、启动nginx</p>
+<p>有很多种方法启动nginx</p>
+<p>(1)直接双击nginx.exe，双击后一个黑色的弹窗一闪而过</p>
+<p>(2)打开cmd命令窗口，切换到nginx解压目录下，输入命令 <code>nginx.exe</code> ，回车即可</p>
+<p>3、检查nginx是否启动成功</p>
+<p>直接在浏览器地址栏输入网址 <a href="http://localhost/">http://localhost:80</a> 回车，出现以下页面说明启动成功！</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011140.png" alt="img">    </p>
+<p>4、配置监听</p>
+<p>nginx的配置文件是conf目录下的nginx.conf，默认配置的nginx监听的端口为80，如果80端口被占用可以修改为未被占用的端口即可。</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011158.png" alt="img">    </p>
+<p>当我们修改了nginx的配置文件nginx.conf 时，不需要关闭nginx后重新启动nginx，只需要执行命令 <code>nginx -s reload</code> 即可让改动生效</p>
+<p>5、关闭nginx</p>
+<p>如果使用cmd命令窗口启动nginx， 关闭cmd窗口是不能结束nginx进程的，可使用两种方法关闭nginx</p>
+<p>(1)输入nginx命令 <code>nginx -s stop</code>(快速停止nginx) 或 <code>nginx -s quit</code>(完整有序的停止nginx)</p>
+<p>(2)使用taskkill <code>taskkill /f /t /im nginx.exe</code></p>
+<blockquote>
+<p>taskkill是用来终止进程的，<br>/f是强制终止 .<br>/t终止指定的进程和任何由此启动的子进程。<br>/im示指定的进程名称 .</p>
+</blockquote>
+<h3 id="Linux下安装"><a href="#Linux下安装" class="headerlink" title="Linux下安装"></a>Linux下安装</h3><p>1、安装gcc</p>
+<p>安装 nginx 需要先将官网下载的源码进行编译，编译依赖 gcc 环境，如果没有 gcc 环境，则需要安装：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+
+<p>2、PCRE pcre-devel 安装</p>
+<p>PCRE(Perl Compatible Regular Expressions) 是一个Perl库，包括 perl 兼容的正则表达式库。nginx 的 http 模块使用 pcre 来解析正则表达式，所以需要在 linux 上安装 pcre 库，pcre-devel 是使用 pcre 开发的一个二次开发库。nginx也需要此库。命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br></pre></td></tr></table></figure>
+
+<p>3、zlib 安装</p>
+<p>zlib 库提供了很多种压缩和解压缩的方式， nginx 使用 zlib 对 http 包的内容进行 gzip ，所以需要在 Centos 上安装 zlib 库。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y zlib zlib-devel</span><br></pre></td></tr></table></figure>
+
+<p>4、OpenSSL 安装<br>OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及 SSL 协议，并提供丰富的应用程序供测试或其它目的使用。<br>nginx 不仅支持 http 协议，还支持 https（即在ssl协议上传输http），所以需要在 Centos 安装 OpenSSL 库。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+
+<p>5、下载安装包</p>
+<p>手动下载.tar.gz安装包，地址：<a href="https://nginx.org/en/download.html">https://nginx.org/en/download.html</a></p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420011930.png" alt="img">    </p>
+<p>下载完毕上传到服务器上 /root</p>
+<p>6、解压</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br><span class="line"><span class="built_in">cd</span> nginx-1.18.0</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012024.png" alt="img">    </p>
+<p>7、配置</p>
+<p>使用默认配置，在nginx根目录下执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>查找安装路径： <code>whereis nginx</code></p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012111.png" alt="img">    </p>
+<h2 id="Nginx常用命令"><a href="#Nginx常用命令" class="headerlink" title="Nginx常用命令"></a>Nginx常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/nginx/sbin/</span><br><span class="line">./nginx  启动</span><br><span class="line">./nginx -s stop  停止</span><br><span class="line">./nginx -s quit  安全退出</span><br><span class="line">./nginx -s reload  重新加载配置文件</span><br><span class="line">ps aux|grep nginx  查看nginx进程</span><br></pre></td></tr></table></figure>
+
+<p>启动成功访问 服务器ip:80</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012240.png" alt="img">    </p>
+<p>注意：如果连接不上，检查阿里云安全组是否开放端口，或者服务器防火墙是否开放端口！<br>相关命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br><span class="line"><span class="comment"># 查看防火墙规则</span></span><br><span class="line">firewall-cmd --list-all</span><br><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
+
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream lb&#123;</span><br><span class="line">    server 127.0.0.1:8080 weight=1;</span><br><span class="line">    server 127.0.0.1:8081 weight=1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location / &#123;</span><br><span class="line">    proxy_pass http://lb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Nginx</category>
       </categories>
       <tags>
         <tag>笔记</tag>
