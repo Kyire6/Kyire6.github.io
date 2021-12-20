@@ -383,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Hexo/</loc>
+    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -391,6 +391,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -405,13 +412,6 @@
   
   <url>
     <loc>https://www.lxki.top/tags/Java/</loc>
-    <lastmod>2021-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
