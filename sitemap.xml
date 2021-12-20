@@ -376,14 +376,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
-    <lastmod>2021-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/Hexo/</loc>
+    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,7 +390,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    <loc>https://www.lxki.top/tags/github/</loc>
+    <lastmod>2021-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -425,13 +425,6 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/MySQL/</loc>
-    <lastmod>2021-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/Linux/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -440,6 +433,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/MongDB/</loc>
+    <lastmod>2021-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/MySQL/</loc>
     <lastmod>2021-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
