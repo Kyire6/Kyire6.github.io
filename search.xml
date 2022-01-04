@@ -278,8 +278,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>github</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -298,8 +298,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>xml</tag>
         <tag>教程</tag>
+        <tag>xml</tag>
       </tags>
   </entry>
   <entry>
@@ -424,7 +424,7 @@
 </ol>
 <h2 id="三、Docker-的常用命令"><a href="#三、Docker-的常用命令" class="headerlink" title="三、Docker 的常用命令"></a>三、Docker 的常用命令</h2><h3 id="1、帮助命令"><a href="#1、帮助命令" class="headerlink" title="1、帮助命令"></a>1、帮助命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 显示docker的版本信息</span></span><br><span class="line">docker version</span><br><span class="line"><span class="meta">#</span><span class="bash"> 显示docker的系统信息，包括镜像和容器</span></span><br><span class="line">docker info</span><br><span class="line"><span class="meta">#</span><span class="bash"> 帮助命令</span></span><br><span class="line">docker 命令 --help</span><br></pre></td></tr></table></figure>
 
-<p> 帮助文档地址：<a href="https://docs.docker.com/engine/reference/commandline/cli/">Use the Docker command line | Docker Documentation</a></p>
+<p> 帮助文档地址：<a href="https://docs.docker.com/engine/reference/commandline/cli/">Docker官方帮助文档</a></p>
 <h3 id="2、镜像命令"><a href="#2、镜像命令" class="headerlink" title="2、镜像命令"></a>2、镜像命令</h3><h4 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h4><p>查看所有本地主机上的镜像</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@ouwen666 ~]# docker images</span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED        SIZE</span><br><span class="line">hello-world   latest    feb5d9fea6a5   2 months ago   13.3kB</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解释</span></span><br><span class="line">REPOSITORY  镜像的仓库源</span><br><span class="line">TAG         镜像的标签</span><br><span class="line">IMAGE ID    镜像的ID</span><br><span class="line">CREATED     镜像的创建时间</span><br><span class="line">SIZE        镜像的大小</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 可选项</span></span><br><span class="line">  -a， --all             # 列出所有镜像</span><br><span class="line">  -q， --quiet           # 只显示镜像的ID</span><br></pre></td></tr></table></figure>
 
@@ -2079,7 +2079,6 @@
 <h2 id="Nginx常用命令"><a href="#Nginx常用命令" class="headerlink" title="Nginx常用命令"></a>Nginx常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/nginx/sbin/</span><br><span class="line">./nginx  启动</span><br><span class="line">./nginx -s stop  停止</span><br><span class="line">./nginx -s quit  安全退出</span><br><span class="line">./nginx -s reload  重新加载配置文件</span><br><span class="line">ps aux|grep nginx  查看nginx进程</span><br></pre></td></tr></table></figure>
 
 <p>启动成功访问 服务器ip:80</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210420012240.png" alt="img">    </p>
 <p>注意：如果连接不上，检查阿里云安全组是否开放端口，或者服务器防火墙是否开放端口！<br>相关命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开启</span></span><br><span class="line">service firewalld start</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">service firewalld restart</span><br><span class="line"><span class="comment"># 关闭</span></span><br><span class="line">service firewalld stop</span><br><span class="line"><span class="comment"># 查看防火墙规则</span></span><br><span class="line">firewall-cmd --list-all</span><br><span class="line"><span class="comment"># 查询端口是否开放</span></span><br><span class="line">firewall-cmd --query-port=8080/tcp</span><br><span class="line"><span class="comment"># 开放80端口</span></span><br><span class="line">firewall-cmd --permanent --add-port=80/tcp</span><br><span class="line"><span class="comment"># 移除端口</span></span><br><span class="line">firewall-cmd --permanent --remove-port=8080/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启防火墙(修改配置后要重启防火墙)</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数解释</span></span><br><span class="line">1、firwall-cmd：是Linux提供的操作firewall的一个工具；</span><br><span class="line">2、--permanent：表示设置为持久；</span><br><span class="line">3、--add-port：标识添加的端口；</span><br></pre></td></tr></table></figure>
 
@@ -5184,7 +5183,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker容器学习</title>
+    <title>ElasticSearch的概述和使用</title>
     <url>/2021/05/04/e33c148b.html</url>
     <content><![CDATA[<h1 id="ElasticSearch的概述和使用"><a href="#ElasticSearch的概述和使用" class="headerlink" title="ElasticSearch的概述和使用"></a>ElasticSearch的概述和使用</h1><h2 id="ElasticSearch概述"><a href="#ElasticSearch概述" class="headerlink" title="ElasticSearch概述"></a>ElasticSearch概述</h2><p>Elaticsearch，简称为es， es是一个开源的<strong>高扩展</strong>的<strong>分布式全文检索引擎</strong>，它可以近乎<strong>实时的存储、检索数据</strong>；本身扩展性很好，可以扩展到上百台服务器，处理PB级别（大数据时代）的数据。es也使用Java开发并使用Lucene作为其核心来实现所有索引和搜索的功能，但是它的目的是通过简单的<strong>RESTful API</strong>来隐藏Lucene的复杂性，从而让全文搜索变得简单。</p>
 <p>据国际权威的数据库产品评测机构DB Engines的统计，在2016年1月，ElasticSearch已超过Solr等，<strong>成为排名第一的搜索引擎类应用。</strong></p>

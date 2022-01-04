@@ -362,7 +362,7 @@
 
   
   <url>
-    <loc>https://www.lxki.top/tags/xml/</loc>
+    <loc>https://www.lxki.top/tags/github/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -376,14 +376,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
-    <lastmod>2022-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/Hexo/</loc>
+    <loc>https://www.lxki.top/tags/xml/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -398,6 +391,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,6 +467,13 @@
   </url>
   
   <url>
+    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.lxki.top/tags/HTML-CSS/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -482,13 +489,6 @@
   
   <url>
     <loc>https://www.lxki.top/tags/JavaScript-jQuery/</loc>
-    <lastmod>2022-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -518,14 +518,14 @@
 
   
   <url>
-    <loc>https://www.lxki.top/categories/Java/</loc>
+    <loc>https://www.lxki.top/categories/Git/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Git/</loc>
+    <loc>https://www.lxki.top/categories/Java/</loc>
     <lastmod>2022-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
