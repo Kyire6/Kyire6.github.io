@@ -281,27 +281,9 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/2020/06/18/5065baa0.html</loc>
-    
-    <lastmod>2020-06-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/2020/06/18/bd0448f7.html</loc>
     
     <lastmod>2020-06-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/2020/06/17/268fc8fd.html</loc>
-    
-    <lastmod>2020-06-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -439,13 +421,6 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/MySQL/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/Redis/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -467,13 +442,6 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/HTML-CSS/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -489,6 +457,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/JavaScript-jQuery/</loc>
+    <lastmod>2022-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
