@@ -362,7 +362,7 @@
 
   
   <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
+    <loc>https://www.lxki.top/tags/xml/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -376,7 +376,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/xml/</loc>
+    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,14 +390,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Hexo/</loc>
+    <loc>https://www.lxki.top/tags/github/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -425,21 +425,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Linux/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/MongDB/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/MySQL/</loc>
+    <lastmod>2022-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/Linux/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -467,7 +460,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>https://www.lxki.top/tags/MongDB/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -489,6 +482,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/JavaScript-jQuery/</loc>
+    <lastmod>2022-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -518,14 +518,14 @@
 
   
   <url>
-    <loc>https://www.lxki.top/categories/Git/</loc>
+    <loc>https://www.lxki.top/categories/Java/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Java/</loc>
+    <loc>https://www.lxki.top/categories/Git/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -567,14 +567,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/RabbitMQ/</loc>
+    <loc>https://www.lxki.top/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://www.lxki.top/categories/RabbitMQ/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

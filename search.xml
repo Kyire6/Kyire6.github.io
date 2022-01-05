@@ -708,8 +708,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>xml</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -2735,8 +2735,8 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>分布式</tag>
+        <tag>笔记</tag>
         <tag>技巧</tag>
       </tags>
   </entry>
@@ -3176,8 +3176,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>分布式</tag>
+        <tag>笔记</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -3333,8 +3333,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>分布式</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5907,8 +5907,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>分布式</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -6886,8 +6886,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>分布式</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -8851,8 +8851,8 @@
       </categories>
       <tags>
         <tag>技巧</tag>
-        <tag>Linux</tag>
         <tag>MySQL</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -8883,8 +8883,8 @@
         <category>Git</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>教程</tag>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>
