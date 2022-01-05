@@ -362,7 +362,7 @@
 
   
   <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
+    <loc>https://www.lxki.top/tags/xml/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -370,6 +370,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/github/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,13 +397,6 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/xml/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,14 +404,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Java/</loc>
+    <loc>https://www.lxki.top/tags/%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://www.lxki.top/tags/Java/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -518,14 +518,14 @@
 
   
   <url>
-    <loc>https://www.lxki.top/categories/Git/</loc>
+    <loc>https://www.lxki.top/categories/Java/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Java/</loc>
+    <loc>https://www.lxki.top/categories/Git/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -546,14 +546,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Redis/</loc>
+    <loc>https://www.lxki.top/categories/Nginx/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Nginx/</loc>
+    <loc>https://www.lxki.top/categories/Redis/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
