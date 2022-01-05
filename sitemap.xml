@@ -376,7 +376,7 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
+    <loc>https://www.lxki.top/tags/Hexo/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -390,14 +390,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Hexo/</loc>
+    <loc>https://www.lxki.top/tags/github/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
+    <loc>https://www.lxki.top/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -425,14 +425,21 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/MySQL/</loc>
+    <loc>https://www.lxki.top/tags/Linux/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Linux/</loc>
+    <loc>https://www.lxki.top/tags/MongDB/</loc>
+    <lastmod>2022-01-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/MySQL/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -454,13 +461,6 @@
   
   <url>
     <loc>https://www.lxki.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2022-01-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/MongDB/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -525,14 +525,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Git/</loc>
+    <loc>https://www.lxki.top/categories/Hexo/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Hexo/</loc>
+    <loc>https://www.lxki.top/categories/Git/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -567,14 +567,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://www.lxki.top/categories/RabbitMQ/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/RabbitMQ/</loc>
+    <loc>https://www.lxki.top/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
