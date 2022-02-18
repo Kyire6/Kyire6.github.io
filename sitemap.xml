@@ -448,6 +448,13 @@
   </url>
   
   <url>
+    <loc>https://www.lxki.top/tags/Markdown/</loc>
+    <lastmod>2022-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.lxki.top/tags/Linux/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -470,13 +477,6 @@
   
   <url>
     <loc>https://www.lxki.top/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
-    <lastmod>2022-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/Markdown/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -548,14 +548,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Nginx/</loc>
+    <loc>https://www.lxki.top/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://www.lxki.top/categories/Nginx/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
