@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.lxki.top/2022/02/18/0.html</loc>
-    
-    <lastmod>2022-02-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/2022/01/11/3653ea16.html</loc>
     
     <lastmod>2022-01-11</lastmod>
@@ -209,6 +200,15 @@
   </url>
   
   <url>
+    <loc>https://www.lxki.top/2021/04/13/41166861.html</loc>
+    
+    <lastmod>2021-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.lxki.top/2021/04/07/13a54546.html</loc>
     
     <lastmod>2021-04-07</lastmod>
@@ -385,6 +385,13 @@
   </url>
   
   <url>
+    <loc>https://www.lxki.top/tags/github/</loc>
+    <lastmod>2022-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.lxki.top/tags/Docker/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -400,13 +407,6 @@
   
   <url>
     <loc>https://www.lxki.top/tags/git/</loc>
-    <lastmod>2022-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.lxki.top/tags/github/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -448,13 +448,6 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/tags/Markdown/</loc>
-    <lastmod>2022-02-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.lxki.top/tags/Linux/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -463,6 +456,13 @@
   
   <url>
     <loc>https://www.lxki.top/tags/MongDB/</loc>
+    <lastmod>2022-02-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lxki.top/tags/Markdown/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -527,14 +527,14 @@
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Linux/</loc>
+    <loc>https://www.lxki.top/categories/Git/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.lxki.top/categories/Git/</loc>
+    <loc>https://www.lxki.top/categories/Linux/</loc>
     <lastmod>2022-02-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
