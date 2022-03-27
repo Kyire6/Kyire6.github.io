@@ -108,6 +108,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker安装Centos7</title>
+    <url>/2021/12/12/e33c148b.html</url>
+    <content><![CDATA[<h1 id="Docker-安装-Centos7"><a href="#Docker-安装-Centos7" class="headerlink" title="Docker 安装 Centos7"></a>Docker 安装 Centos7</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本地化启动一个 <code>Linux</code> 服务器，使用 <code>Docker</code> 容器来构建一个包含SSH服务的 Linux 镜像。</p>
+<h2 id="准备centos官方镜像"><a href="#准备centos官方镜像" class="headerlink" title="准备centos官方镜像"></a>准备centos官方镜像</h2><p>具体步骤：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、拉取centos7官方镜像</span></span><br><span class="line">docker pull centos:7</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、启动镜像</span></span><br><span class="line">docker run -itd --privileged centos:7 init</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3、进入容器bash中</span></span><br><span class="line">docker exec -it 镜像ID bash</span><br><span class="line"><span class="meta">#</span><span class="bash"> 4、修改root用户密码</span></span><br><span class="line">[root@33c7ee24f43e /]# passwd</span><br><span class="line">Changing password for user root.</span><br><span class="line">New password:</span><br><span class="line">BAD PASSWORD: The password is shorter than 8 characters</span><br><span class="line">Retype new password:</span><br><span class="line">passwd: all authentication tokens updated successfully.</span><br><span class="line"><span class="meta">#</span><span class="bash"> 5、安装和配置ssh服务</span></span><br><span class="line">yum install openssh-server -y</span><br><span class="line"><span class="meta">#</span><span class="bash"> 6、修改/etc/ssh/sshd_config配置并保存：PermitRootLogin yes    UsePAM no</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20220223145834.png" alt="image-20220223145827608">    </p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20220223145949.png" alt="image-20220223145949729">    </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 7、启动ssh服务</span></span><br><span class="line">[root@33c7ee24f43e /]# systemctl start sshd</span><br><span class="line"><span class="meta">#</span><span class="bash"> 8、退出容器</span></span><br><span class="line">[root@33c7ee24f43e /]# exit</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h2 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h2><p>通过 <code>docker commit</code> 来构建包含 ssh 服务的镜像</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1、通过commit构建镜像</span></span><br><span class="line">docker commit -a=&quot;Irving&quot; -m=&quot;本地linux镜像&quot; 容器ID mycentos:1.0</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2、启动镜像 -p 10000:22 映射本地10000端口</span></span><br><span class="line">docker run -d -p 10000:22 --name 容器名 镜像ID /usr/sbin/sshd -D</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用xshell进行连接"><a href="#使用xshell进行连接" class="headerlink" title="使用xshell进行连接"></a>使用xshell进行连接</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh://root:****@127.0.0.1:10000</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>容器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker容器-基础篇</title>
     <url>/2021/12/12/e33c148b.html</url>
     <content><![CDATA[<h1 id="Docker-容器"><a href="#Docker-容器" class="headerlink" title="Docker 容器"></a>Docker 容器</h1><h2 id="一、Docker-概述"><a href="#一、Docker-概述" class="headerlink" title="一、Docker 概述"></a>一、Docker 概述</h2><h3 id="1、Docker-为什么会出现？"><a href="#1、Docker-为什么会出现？" class="headerlink" title="1、Docker 为什么会出现？"></a>1、Docker 为什么会出现？</h3><blockquote>
@@ -6913,129 +6940,36 @@
       </tags>
   </entry>
   <entry>
-    <title>Git基本设置</title>
+    <title>Git分支管理</title>
     <url>/2021/04/05/13a54546.html</url>
-    <content><![CDATA[<h2 id="Git基本设置"><a href="#Git基本设置" class="headerlink" title="Git基本设置"></a>Git基本设置</h2><blockquote>
-<p>基本的Linux命令学习</p>
-</blockquote>
-<ol>
-<li><code>cd</code>：改变目录</li>
-<li><code>cd..</code> ：回退到上一个目录，直接cd进入默认目录</li>
-<li><code>pwd</code>：显示当前所在的目录路径</li>
-<li><code>ls(ll)</code>：都是列出当前目录中的所有文件，只不过<code>ll</code>列出的内容更为详细</li>
-<li><code>touch</code>：新建一个文件 如<code>touch index.js</code> 就会在当前目录下新建一个index.js文件</li>
-<li><code>rm</code>：删除一个文件 如<code>rm index.js</code>就会把index.js文件删除</li>
-<li><code>mkdir</code>：新建一个目录，就是新建一个文件夹</li>
-<li><code>rm-f</code>：删除一个文件夹 如<code>rm-f src</code> 删除src目录</li>
-<li><code>mv</code>：移动文件，</li>
-<li><code>reset</code>：重新初始化终端/清屏</li>
-<li><code>clear</code>：清屏</li>
-<li><code>history</code>：查看历史命令</li>
-<li><code>help</code>：查看帮助</li>
-<li><code>exit</code>：退出</li>
-<li>#表示注释</li>
-</ol>
-<blockquote>
-<p>Git 配置</p>
-</blockquote>
-<p>所有的配置文件都保存在本地！</p>
-<p>查看配置 <code>git config -l</code></p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210404003627.png" alt="image-20210404003618996"></p>
-<p>查看不同级别的配置文件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看系统config</span></span><br><span class="line">git config --system --list</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看当前用户（global）配置</span></span><br><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<p><strong>Git相关的配置文件</strong></p>
-<ol>
-<li>Git\mingw64\etc\gitconfig ：Git安装目录下的gitconfig  –system系统级</li>
-<li>C:\Users\ya’ya.gitconfig ：只适用于当前登录用户的配置  – global 全局</li>
-</ol>
-<p>这里可以直接编辑配置文件，通过命令设置后会响应到这里。</p>
-<blockquote>
-<p>设置用户名和邮箱</p>
-</blockquote>
-<p>当你安装Git后首先要做的事情就是设置你的用户名和邮箱地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远嵌入到了你的提交中：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;IRVING&quot; #名称</span><br><span class="line">git config --global user.email 2362766003@qq.com #邮箱</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210404005634.png" alt="image-20210404005633880"></p>
-<h2 id="Git基本理论（核心）"><a href="#Git基本理论（核心）" class="headerlink" title="Git基本理论（核心）"></a>Git基本理论（核心）</h2><blockquote>
-<p>工作区域</p>
-</blockquote>
-<p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区（Stage/Index）、资源库（Repository/Git  Directory）。如果加上远程的git仓库（Remote Directory）就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
-<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20210404010306.webp" alt="img"></p>
-<ul>
-<li>workspace：工作区，就是你平时存放代码的地方</li>
-<li>Stage/Index：暂存区，用于临时存放你的改动，事实上他就是一个文件，保存即将提交到文件列表信息</li>
-<li>Repository：仓库区（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据，其中head指向最新放入仓库的版本</li>
-<li>Remote ：远程仓库，托管代码的服务器</li>
-</ul>
-<p>本地的三个区域确切来说应该是git仓库中Head指向的版本</p>
-<h2 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h2><blockquote>
-<p>本地仓库搭建</p>
-</blockquote>
-<p>创建本地仓库的方式有两种：一种是创建全新的仓库，另一种是克隆远程仓库。</p>
-<p>1、创建全新的仓库，需要用GIT管理的项目的根目录执行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在当前项目新建一个git代码库</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git init</span></span><br></pre></td></tr></table></figure>
-
-<p>2、执行后可以看到，仅仅在项目目录多出了一个.git目录，关于版本等的所有信息都在这个目录里面。</p>
-<blockquote>
-<p>克隆远程仓库</p>
-</blockquote>
-<p>1、另一种方式是克隆远程目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">克隆一个项目和它的整个代码历史（版本信息）</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> [url]</span></span><br></pre></td></tr></table></figure>
-
-<p>2、去gitee或github上克隆一个测试！</p>
-<h2 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h2><blockquote>
-<p>文件4中状态</p>
-</blockquote>
-<p>版本控制就是对文件的版本控制，要对文件进行修改，提交等操作，首先要知道文件当前在什么状态，不然可能会提交不了现在还不想提交的文件，或者要提交的文件没提交上。</p>
-<ul>
-<li><strong>Untracked</strong>: 未跟踪, 此文件在文件夹中, 但并没有加入到git库, 不参与版本控制. 通过<code>git add</code> 状态变为<code>Staged</code></li>
-<li><strong>Unmodify</strong>: 文件已经入库, 未修改, 即版本库中的文件快照内容与文件夹中完全一致. 这种类型的文件有两种去处, 如果它被修改, 而变为<code>Modified</code>. 如果使用<code>git rm</code>移出版本库, 则成为<code>Untracked</code>文件</li>
-<li><strong>Modified</strong>: 文件已修改, 仅仅是修改, 并没有进行其他的操作. 这个文件也有两个去处, 通过<code>git add</code>可进入暂存<code>staged</code>状态, 使用<code>git checkout</code> 则丢弃修改过, 返回到<code>unmodify</code>状态, 这个<code>git checkout</code>即从库中取出文件, 覆盖当前修改</li>
-<li><strong>Staged</strong>: 暂存状态. 执行<code>git commit</code>则将修改同步到库中, 这时库中的文件和本地文件又变为一致, 文件为<code>Unmodify</code>状态. 执行<code>git reset HEAD filename</code>取消暂存, 文件状态为<code>Modified</code></li>
-</ul>
-<blockquote>
-<p>查看文件状态</p>
-</blockquote>
-<p>上面说文件有4中状态，通过如下命令可以查看到文件的状态：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看指定的文件状态</span></span><br><span class="line">git status [filename]</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">查看所有文件状态</span></span><br><span class="line">git status </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> git add .      添加所有文件到暂存区</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> git commit -m “提交消息”  提交暂存区中的内容到本地仓库 -m 提交消息</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>忽略文件</p>
-</blockquote>
-<p>有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等</p>
-<p>在主目录下建立”.gitignore”文件，此文件有以下规则：</p>
-<ol>
-<li>忽略文件中的空行或以井号（#）开始的行会被忽略</li>
-<li>可以使用Linux通配符。例如：星号（*）代表任意多个字符，问号（?）代表一个字符，方括号（[abc]）代表可选字符范围，大括号（{string1,string2}）代表可选字符串等</li>
-<li>如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略</li>
-<li>如果名称的最前面是一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录中的文件不忽略</li>
-<li>如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#为注释</span></span><br><span class="line">*.txt      <span class="comment">#忽略所有 .txt结尾的文件</span></span><br><span class="line">!lib.txt   <span class="comment">#lib.txt除外</span></span><br><span class="line">/temp	   <span class="comment">#仅忽略项目根目录下的TODO文件，不包括其他目录temp</span></span><br><span class="line">build/     <span class="comment">#忽略build/目录下的所有文件</span></span><br><span class="line">doc/*.txt  <span class="comment">#会忽略 doc/notes.txt 但不包括 doc/server/arch.txt</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="使用码云Gitee"><a href="#使用码云Gitee" class="headerlink" title="使用码云Gitee"></a>使用码云Gitee</h2><ol>
-<li><p>注册码云，完善个人信息</p>
-</li>
-<li><p>设置本机绑定的SSH公钥，实现免密码登录</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入 C:\Users\ya&#x27;ya\.ssh 目录</span></span><br><span class="line"><span class="comment"># 生成公钥</span></span><br><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure></li>
-<li><p>将公钥信息public key 添加到码云账户中</p>
-</li>
-<li><p>使用码云创建一个自己的仓库！</p>
-</li>
-</ol>
-<h2 id="IDEA中集成Git"><a href="#IDEA中集成Git" class="headerlink" title="IDEA中集成Git"></a>IDEA中集成Git</h2><ol>
-<li>新建项目，绑定git<ul>
-<li>将我们远程的git文件目录拷贝到项目中即可</li>
-</ul>
-</li>
-<li>修改文件，操作IDEA提交<ul>
-<li>添加到暂存区</li>
-<li>commit到本地仓库</li>
-<li>push到远程仓库</li>
-</ul>
-</li>
-</ol>
+    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
+<p><img src="https://gitee.com/ouwen666/my-image/raw/master/20220226151839.png" alt="image-20220226151832730">    </p>
+<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
+<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>Git</category>
