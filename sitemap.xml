@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/git/</loc>
+    <loc>https://ouwen666.gitee.io/tags/github/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/github/</loc>
+    <loc>https://ouwen666.gitee.io/tags/git/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -443,13 +443,6 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2022-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ouwen666.gitee.io/tags/Java/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -457,7 +450,7 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/Markdown/</loc>
+    <loc>https://ouwen666.gitee.io/tags/%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -472,6 +465,13 @@
   
   <url>
     <loc>https://ouwen666.gitee.io/tags/MongDB/</loc>
+    <lastmod>2022-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ouwen666.gitee.io/tags/Markdown/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -499,6 +499,13 @@
   </url>
   
   <url>
+    <loc>https://ouwen666.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <lastmod>2022-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ouwen666.gitee.io/tags/HTML-CSS/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -507,13 +514,6 @@
   
   <url>
     <loc>https://ouwen666.gitee.io/tags/JavaScript/</loc>
-    <lastmod>2022-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ouwen666.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
