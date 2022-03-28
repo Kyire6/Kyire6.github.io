@@ -598,7 +598,7 @@
 <ul>
 <li>docker容器与容器之间是可以ping通的（同一网段下）</li>
 </ul>
-<p>==所有的容器在不指定网络的情况下，都是 docker0 路由的，docker会给我们的容器分配一个可用的IP==</p>
+<p><mark>所有的容器在不指定网络的情况下，都是 docker0 路由的，docker会给我们的容器分配一个可用的IP</mark></p>
 <blockquote>
 <p>总结：docker网络采用的是Linux桥接模式，通过veth成对建立连接</p>
 </blockquote>
