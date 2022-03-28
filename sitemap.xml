@@ -380,20 +380,6 @@
 
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/Docker/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ouwen666.gitee.io/tags/%E5%AE%B9%E5%99%A8/</loc>
-    <lastmod>2022-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ouwen666.gitee.io/tags/xml/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -408,7 +394,14 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/github/</loc>
+    <loc>https://ouwen666.gitee.io/tags/Docker/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ouwen666.gitee.io/tags/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -416,6 +409,13 @@
   
   <url>
     <loc>https://ouwen666.gitee.io/tags/git/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ouwen666.gitee.io/tags/github/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -436,14 +436,14 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/Java/</loc>
+    <loc>https://ouwen666.gitee.io/tags/Hexo/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/Hexo/</loc>
+    <loc>https://ouwen666.gitee.io/tags/Java/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -529,14 +529,14 @@
 
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/Linux/</loc>
+    <loc>https://ouwen666.gitee.io/categories/Java/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/Java/</loc>
+    <loc>https://ouwen666.gitee.io/categories/Linux/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -557,14 +557,14 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://ouwen666.gitee.io/categories/Nginx/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/Nginx/</loc>
+    <loc>https://ouwen666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
