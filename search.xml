@@ -48,6 +48,38 @@
       </tags>
   </entry>
   <entry>
+    <title>Github代码仓库更新</title>
+    <url>/2020/02/18/d1b54efa.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
+<p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
+<p>–废话不多说，直接开始更新–</p>
+<span id="more"></span>
+
+<h2 id="更新步骤"><a href="#更新步骤" class="headerlink" title="更新步骤"></a>更新步骤</h2><ol>
+<li>第一步切换到本地仓库中需要更新的目录下</li>
+<li>鼠标右键选择<code>Git Bash Here</code>选项，打开Git Bash工具</li>
+<li>依次运行下列命令：</li>
+</ol>
+<ul>
+<li>查看仓库状态<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git status</span><br></pre></td></tr></table></figure></li>
+<li>更新所有代码<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ git <span class="builtin-name">add</span> *</span><br></pre></td></tr></table></figure></li>
+<li>本次推送备注<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git commit -m <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>将本地仓库的代码更新到github仓库的master分支<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li>刷新github仓库页面，更新完成</li>
+</ol>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>代码记得勤推送，github仓库勤更新！</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitLab安装与使用</title>
     <url>/2022/01/11/3653ea16.html</url>
     <content><![CDATA[<h1 id="GitLab-安装与使用"><a href="#GitLab-安装与使用" class="headerlink" title="GitLab 安装与使用"></a>GitLab 安装与使用</h1><h2 id="Docker-安装-GitLab"><a href="#Docker-安装-GitLab" class="headerlink" title="Docker 安装 GitLab"></a>Docker 安装 GitLab</h2><p>DockerHub 上有许多制作完善的镜像，直接搜索 <code>gitlab</code> 查看镜像：</p>
@@ -86,35 +118,43 @@
       </tags>
   </entry>
   <entry>
-    <title>Github代码仓库更新</title>
-    <url>/2020/02/18/d1b54efa.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在学习git，接触github也有段时间了，此篇文章记录一下有关github仓库代码更新的方法。</p>
-<p>仓库代码更新步骤非常简单，只需要短短的几行代码就可以将我们的本地代码推送到github上的云<br>仓库中，推送代码到云端是一个优秀程序员必不可少的技能，这样保存代码较安全不易丢失。</p>
-<p>–废话不多说，直接开始更新–</p>
-<span id="more"></span>
-
-<h2 id="更新步骤"><a href="#更新步骤" class="headerlink" title="更新步骤"></a>更新步骤</h2><ol>
-<li>第一步切换到本地仓库中需要更新的目录下</li>
-<li>鼠标右键选择<code>Git Bash Here</code>选项，打开Git Bash工具</li>
-<li>依次运行下列命令：</li>
-</ol>
-<ul>
-<li>查看仓库状态<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git status</span><br></pre></td></tr></table></figure></li>
-<li>更新所有代码<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ git <span class="builtin-name">add</span> *</span><br></pre></td></tr></table></figure></li>
-<li>本次推送备注<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>git commit -m <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>将本地仓库的代码更新到github仓库的master分支<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">push</span> <span class="built_in">origin</span> master</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="4">
-<li>刷新github仓库页面，更新完成</li>
-</ol>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>代码记得勤推送，github仓库勤更新！</p>
+    <title>Git分支管理</title>
+    <url>/2021/04/05/13a54546.html</url>
+    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
+<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
+<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>笔记</tag>
         <tag>Git</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -159,46 +199,6 @@
         <tag>笔记</tag>
         <tag>Git</tag>
         <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git分支管理</title>
-    <url>/2021/04/05/13a54546.html</url>
-    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
-<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
-<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
-<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
-<thead>
-<tr>
-<th>命令名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>git branch 分支名</td>
-<td>创建分支</td>
-</tr>
-<tr>
-<td>git branch -v</td>
-<td>查看分支</td>
-</tr>
-<tr>
-<td>git checkout 分支名</td>
-<td>切换分支</td>
-</tr>
-<tr>
-<td>git merge 分支名</td>
-<td>把指定的分支合并到当前分支上</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -785,149 +785,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown基本语法</title>
-    <url>/2020/02/19/5d36ff15.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-<p>Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。</p>
-<p>本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：</p>
-<span id="more"></span>
-
-<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个<code>#</code>号，二级标题对应两个<code>#</code>号，以此类推。</p>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
-<h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><p>Markdown 可以使用以下几种字体：</p>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*斜体文本*</span></span><br><span class="line"><span class="strong">**粗体文本**</span></span><br><span class="line"><span class="strong">***粗斜体文本**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：<br><em>斜体文本</em><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><del>这是加删除线的文字</del></p>
-<hr>
-<h2 id="三、下划线"><a href="#三、下划线" class="headerlink" title="三、下划线"></a>三、下划线</h2><p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>带下划线文本<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<p><u>带下划线文本</u></p>
-<hr>
-<h2 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h2><p>Markdown 支持有序列表和无序列表。</p>
-<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="bullet">*</span> 第二项</span><br><span class="line"><span class="bullet">*</span> 第三项</span><br><span class="line"></span><br><span class="line"><span class="bullet">+</span> 第一项</span><br><span class="line"><span class="bullet">+</span> 第二项</span><br><span class="line"><span class="bullet">+</span> 第三项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 第一项</span><br><span class="line"><span class="bullet">-</span> 第二项</span><br><span class="line"><span class="bullet">-</span> 第三项</span><br></pre></td></tr></table></figure>
-<p>显示结果如下：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>有序列表使用数字并加上 . 号来表示，如：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br><span class="line"><span class="bullet">3.</span> 第三项</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项：</span><br><span class="line"><span class="bullet">    -</span> 第一项嵌套的第一个元素</span><br><span class="line"><span class="bullet">    -</span> 第一项嵌套的第二个元素</span><br><span class="line"><span class="bullet">2.</span> 第二项：</span><br><span class="line"><span class="bullet">    -</span> 第二项嵌套的第一个元素</span><br><span class="line"><span class="bullet">    -</span> 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下：</p>
-<ol>
-<li>第一项：<ul>
-<li>第一项嵌套的第一个元素</li>
-<li>第一项嵌套的第二个元素</li>
-</ul>
-</li>
-<li>第二项：<ul>
-<li>第二项嵌套的第一个元素</li>
-<li>第二项嵌套的第二个元素</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="五、引用"><a href="#五、引用" class="headerlink" title="五、引用"></a>五、引用</h2><p>Markdown 引用是在段落开头使用<code>&gt;</code>符号 ，然后后面紧跟一个空格符号，引用也可以嵌套，例如两个<code>&gt;&gt;</code>，三个<code>&gt;&gt;&gt;</code>，以此类推：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> 这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; 这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; 这是引用的内容</span></span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<blockquote>
-<p>这是引用的内容</p>
-<blockquote>
-<p>这是引用的内容</p>
-<blockquote>
-<p>这是引用的内容</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<hr>
-<h2 id="六、分割线"><a href="#六、分割线" class="headerlink" title="六、分割线"></a>六、分割线</h2><p>分割线可以三个或三个以上的<code>-</code>或者<code>*</code>都可以：</p>
-<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">----</span></span><br><span class="line"><span class="bullet">***</span></span><br><span class="line"><span class="bullet"></span><span class="strong">*****</span></span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><p>单行代码：代码之间分别用一个反引号包起来，例如：</p>
-<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="string">`这是单行代码`</span></span><br></pre></td></tr></table></figure>
-<p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
-<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">(```)</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">(```)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：为了防止演示代码与撰写博客文章的markdown语法转译，我这里用括号将三个反引号隔开了，实际使用时去掉括号就行了。</p>
-</blockquote>
-<p>显示效果如下：<br>单行代码：</p>
-<p><code>这是单行代码</code></p>
-<p>代码块：</p>
-<figure class="highlight erlang"><table><tr><td class="code"><pre><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="八、超链接"><a href="#八、超链接" class="headerlink" title="八、超链接"></a>八、超链接</h2><p>语法如下：</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure>
-<p>例如：</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">[百度](http:<span class="regexp">//</span>baidu.com)</span><br><span class="line">[Irving的个人博客](https:<span class="regexp">//</span>ouwen666.gitee.io <span class="string">&quot;大爷，来玩啊！&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<p><a href="http://baidu.com/">百度</a><br><a href="https://ouwen666.gitee.io/" title="大爷，来玩啊！">Irving的个人博客</a></p>
-<hr>
-<h2 id="九、表格"><a href="#九、表格" class="headerlink" title="九、表格"></a>九、表格</h2><p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。<br>语法如下：</p>
-<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">  表头   </span>|<span class="string"> 表头  </span>|</span><br><span class="line">|<span class="string">  ----  </span>|<span class="string"> ----  </span>|</span><br><span class="line">|<span class="string"> 单元格  </span>|<span class="string"> 单元格 </span>|</span><br><span class="line">|<span class="string"> 单元格  </span>|<span class="string"> 单元格 </span>|</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="十、图片"><a href="#十、图片" class="headerlink" title="十、图片"></a>十、图片</h2><p>语法如下：</p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
-<p>例如：</p>
-<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">![Markdown](<span class="regexp">/images/m</span>d.jpg)</span><br></pre></td></tr></table></figure>
-<p>显示效果如下：<br><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/md.jpg"></p>
-<blockquote>
-<p>注：我这里图片是保存在本地的，所以图片地址哪里是本地目录，也可以用图片的在线链接地址</p>
-</blockquote>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>此篇博客总结了我写Hexo博客常用的Markdown语法，如有不妥之处请查阅MD官方文档。</p>
-<p>因为显示效果都是用Markdown语法呈现的，而我采用的next主题又是通过文章的标题来显示文章目录，所以左侧的文章目录可能有点混乱···</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>技巧</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java注解与反射</title>
     <url>/2021/04/07/13a54546.html</url>
     <content><![CDATA[<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><p>java.Annotation</p>
@@ -1325,6 +1182,149 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown基本语法</title>
+    <url>/2020/02/19/5d36ff15.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+<p>Markdown 能被使用来撰写电子书、博客等，当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、Gitee等。</p>
+<p>本站的所有文章也是通过Markdown语法来写的。Markdown语法虽然操作简单，但还是需要记一些语法，下面让我们来学习这些语法：</p>
+<span id="more"></span>
+
+<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个<code>#</code>号，二级标题对应两个<code>#</code>号，以此类推。</p>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
+<h2 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h2><p>Markdown 可以使用以下几种字体：</p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">*斜体文本*</span></span><br><span class="line"><span class="strong">**粗体文本**</span></span><br><span class="line"><span class="strong">***粗斜体文本**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：<br><em>斜体文本</em><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><del>这是加删除线的文字</del></p>
+<hr>
+<h2 id="三、下划线"><a href="#三、下划线" class="headerlink" title="三、下划线"></a>三、下划线</h2><p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">u</span>&gt;</span>带下划线文本<span class="tag">&lt;/<span class="name">u</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<p><u>带下划线文本</u></p>
+<hr>
+<h2 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h2><p>Markdown 支持有序列表和无序列表。</p>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="bullet">*</span> 第二项</span><br><span class="line"><span class="bullet">*</span> 第三项</span><br><span class="line"></span><br><span class="line"><span class="bullet">+</span> 第一项</span><br><span class="line"><span class="bullet">+</span> 第二项</span><br><span class="line"><span class="bullet">+</span> 第三项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 第一项</span><br><span class="line"><span class="bullet">-</span> 第二项</span><br><span class="line"><span class="bullet">-</span> 第三项</span><br></pre></td></tr></table></figure>
+<p>显示结果如下：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><p>有序列表使用数字并加上 . 号来表示，如：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br><span class="line"><span class="bullet">3.</span> 第三项</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h4 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h4><p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项：</span><br><span class="line"><span class="bullet">    -</span> 第一项嵌套的第一个元素</span><br><span class="line"><span class="bullet">    -</span> 第一项嵌套的第二个元素</span><br><span class="line"><span class="bullet">2.</span> 第二项：</span><br><span class="line"><span class="bullet">    -</span> 第二项嵌套的第一个元素</span><br><span class="line"><span class="bullet">    -</span> 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<p>显示效果如下：</p>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="五、引用"><a href="#五、引用" class="headerlink" title="五、引用"></a>五、引用</h2><p>Markdown 引用是在段落开头使用<code>&gt;</code>符号 ，然后后面紧跟一个空格符号，引用也可以嵌套，例如两个<code>&gt;&gt;</code>，三个<code>&gt;&gt;&gt;</code>，以此类推：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> 这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; 这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; 这是引用的内容</span></span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h2 id="六、分割线"><a href="#六、分割线" class="headerlink" title="六、分割线"></a>六、分割线</h2><p>分割线可以三个或三个以上的<code>-</code>或者<code>*</code>都可以：</p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">----</span></span><br><span class="line"><span class="bullet">***</span></span><br><span class="line"><span class="bullet"></span><span class="strong">*****</span></span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><p>单行代码：代码之间分别用一个反引号包起来，例如：</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="string">`这是单行代码`</span></span><br></pre></td></tr></table></figure>
+<p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><span class="line">(```)</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">(```)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：为了防止演示代码与撰写博客文章的markdown语法转译，我这里用括号将三个反引号隔开了，实际使用时去掉括号就行了。</p>
+</blockquote>
+<p>显示效果如下：<br>单行代码：</p>
+<p><code>这是单行代码</code></p>
+<p>代码块：</p>
+<figure class="highlight erlang"><table><tr><td class="code"><pre><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br><span class="line">这是多行代码...</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="八、超链接"><a href="#八、超链接" class="headerlink" title="八、超链接"></a>八、超链接</h2><p>语法如下：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">[百度](http:<span class="regexp">//</span>baidu.com)</span><br><span class="line">[Irving的个人博客](https:<span class="regexp">//</span>ouwen666.gitee.io <span class="string">&quot;大爷，来玩啊！&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<p><a href="http://baidu.com/">百度</a><br><a href="https://ouwen666.gitee.io/" title="大爷，来玩啊！">Irving的个人博客</a></p>
+<hr>
+<h2 id="九、表格"><a href="#九、表格" class="headerlink" title="九、表格"></a>九、表格</h2><p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。<br>语法如下：</p>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string">  表头   </span>|<span class="string"> 表头  </span>|</span><br><span class="line">|<span class="string">  ----  </span>|<span class="string"> ----  </span>|</span><br><span class="line">|<span class="string"> 单元格  </span>|<span class="string"> 单元格 </span>|</span><br><span class="line">|<span class="string"> 单元格  </span>|<span class="string"> 单元格 </span>|</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十、图片"><a href="#十、图片" class="headerlink" title="十、图片"></a>十、图片</h2><p>语法如下：</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">![Markdown](<span class="regexp">/images/m</span>d.jpg)</span><br></pre></td></tr></table></figure>
+<p>显示效果如下：<br><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/md.jpg"></p>
+<blockquote>
+<p>注：我这里图片是保存在本地的，所以图片地址哪里是本地目录，也可以用图片的在线链接地址</p>
+</blockquote>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>此篇博客总结了我写Hexo博客常用的Markdown语法，如有不妥之处请查阅MD官方文档。</p>
+<p>因为显示效果都是用Markdown语法呈现的，而我采用的next主题又是通过文章的标题来显示文章目录，所以左侧的文章目录可能有点混乱···</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MongoDB数据库</title>
     <url>/2020/06/18/bd0448f7.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>MongoDB数据库的学习</p>
@@ -1712,162 +1712,6 @@
       </tags>
   </entry>
   <entry>
-    <title>接口幂等性问题</title>
-    <url>/2021/05/20/63f0196d.html</url>
-    <content><![CDATA[<h1 id="高并发下如何保证接口的幂等性？"><a href="#高并发下如何保证接口的幂等性？" class="headerlink" title="高并发下如何保证接口的幂等性？"></a>高并发下如何保证接口的幂等性？</h1><h2 id="接口调用出现的问题"><a href="#接口调用出现的问题" class="headerlink" title="接口调用出现的问题"></a>接口调用出现的问题</h2><p>在分布式架构的系统中，通常是多个微服务之间互相调用，而服务调用服务无非就是RPC或Restful进行通信，既然是通信，那么就存在服务器处理完毕返回结果的途中挂掉，这也是分布式系统因网络不可达出现的问题。这个时候用户端很久没有得到服务端的响应，那么就会多次点击按钮，这样请求多次，那么处理数据的结果是否要保持一致呢？答案是肯定的！尤其是在一些订单与支付的场景。</p>
-<h2 id="什么是接口幂等性？"><a href="#什么是接口幂等性？" class="headerlink" title="什么是接口幂等性？"></a>什么是接口幂等性？</h2><p>接口幂等性就是用户对于同一操作发起的一次请求或者多次请求的结果是一致的，不会因为多次点击而产生了副作用。举个最简单的例子，那就是支付，用户购买商品后支付，支付扣款成功，但是返回结果的时候网络异常，此时钱已经扣了，用户再次点击按钮，此时会进行第二次扣款，返回结果成功，用户查询余额返发现多扣钱了，流水记录也变成了两条，这就没有保证接口的幂等性。</p>
-<h2 id="什么情况下需要保持接口的幂等性？"><a href="#什么情况下需要保持接口的幂等性？" class="headerlink" title="什么情况下需要保持接口的幂等性？"></a>什么情况下需要保持接口的幂等性？</h2><p>我们对处理数据无非就是增删改查四个操作？那么那些操作需要保持接口的幂等性？==&gt; <strong>insert 与 update</strong></p>
-<ul>
-<li>查询操作 ==&gt; 查询一次或者多次对于结果的影响是不会有改变的，所以 select 是天然的幂等性操作</li>
-<li>删除操作 ==&gt; 删除一次与删除多次都是将数据删除（但是注意返回的结果是不一样的，成功1失败0，在不考虑结果的情况下，删除操作也是幂等性操作）</li>
-<li>更新操作 ==&gt; 修改操作在大多情况下结果都是一样的，除非是增量修改，那么就是要保持幂等性的。例如：<ul>
-<li>将表中的某条记录的某个字段设置为1 ==&gt; 这个操作不管执行多少次都是幂等的</li>
-<li>将表中的某条记录的某个字段增加1  ==&gt; 这个操作是不保证幂等性的</li>
-</ul>
-</li>
-<li>新增操作 ==&gt;  新增操作肯定是会出现幂等性问题的，例如上面的支付问题。、</li>
-</ul>
-<h2 id="那么如何才能保持接口的幂等性？"><a href="#那么如何才能保持接口的幂等性？" class="headerlink" title="那么如何才能保持接口的幂等性？"></a>那么如何才能保持接口的幂等性？</h2><h3 id="增加数据之前先查询"><a href="#增加数据之前先查询" class="headerlink" title="增加数据之前先查询"></a>增加数据之前先查询</h3><p>通常情况下，在保存数据的接口中，我们为了防止产生重复数据，一般会在<code>insert</code>前，先根据<code>name</code>或<code>code</code>字段<code>select</code>一下数据。如果该数据已存在，则执行<code>update</code>操作，如果不存在，才执行<code>insert</code>操作。</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210519235210.png" alt="image-20210519235203446" style="zoom: 50%;" />
-
-<p>==该方案并不适用于并发场景，在并发场景中，要配合其他的方案一起使用，否则还是会造成重复的数据。==</p>
-<h3 id="加悲观锁"><a href="#加悲观锁" class="headerlink" title="加悲观锁"></a>加悲观锁</h3><p>在支付场景中，用户A的账号余额有150元，想转出100元，正常情况下用户A的余额只剩50元。一般情况下，sql是这样的：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> amount <span class="operator">=</span> amount<span class="number">-100</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span>;</span><br></pre></td></tr></table></figure>
-
-<p>如果出现多次相同的请求，可能会导致用户A的余额变成负数。这种情况，用户A来可能要哭了。与此同时，系统开发人员可能也要哭了，因为这是很严重的系统bug。</p>
-<p>为了解决这个问题，可以加悲观锁，将用户A的那行数据锁住，在同一时刻只允许一个请求获得锁，更新数据，其他的请求则等待。</p>
-<p>通常情况下通过如下sql锁住单行数据：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> <span class="keyword">user</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">for</span> update;</span><br></pre></td></tr></table></figure>
-
-<p>具体的流程如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210519235501.png" alt="image-20210519235500888" style="zoom:50%;" />
-
-<p>具体步骤：</p>
-<ol>
-<li>多个请求同时根据id查询用户信息</li>
-<li>判断余额是否不足100，如果余额不足，则直接返回余额不足</li>
-<li>如果余额充足，则通过for update再次查询用户信息，并且尝试获取锁</li>
-<li>只有第一个请求能获取到行锁，其余没有获取锁的请求，则等待下一次获取锁的机会</li>
-<li>第一个请求获取到锁之后，判断余额是否不足100，如果余额足够，则进行update操作</li>
-<li>如果余额不足，说明是重复请求，则直接返回成功</li>
-</ol>
-<blockquote>
-<p><strong>需要特别注意的是：如果使用的是mysql数据库，存储引擎必须用innodb，因为它才支持事务。此外，这里id字段一定要是主键或者唯一索引，不然会锁住整张表。</strong></p>
-</blockquote>
-<p>悲观锁需要在同一个事务操作过程中锁住一行数据，如果事务耗时比较长，会造成大量的请求等待，影响接口性能。</p>
-<p>此外，每次请求接口很难保证都有相同的返回值，所以不适合幂等性设计场景，但是在防重场景中是可以的使用的。</p>
-<p>在这里顺便说一下，<code>防重设计</code>和<code>幂等设计</code>，其实是有区别的。 防重设计主要为了避免产生重复数据，对接口返回没有太多要求。 而幂等设计除了避免产生重复数据之外，还要求每次请求都返回一样的结果。</p>
-<h3 id="加乐观锁"><a href="#加乐观锁" class="headerlink" title="加乐观锁"></a>加乐观锁</h3><p>既然悲观锁有性能问题，为了提升接口性能，我们可以使用乐观锁。需要在表中增加一个<code>timestamp</code>或者<code>version</code>字段，这里以<code>version</code>字段为例。</p>
-<p>在更新数据之前先查询一下数据：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> id,amount,version <span class="keyword">from</span> <span class="keyword">user</span> id<span class="operator">=</span><span class="number">123</span>;</span><br></pre></td></tr></table></figure>
-
-<p>如果数据存在，假设查到的<code>version</code>等于<code>1</code>，再使用<code>id</code>和<code>version</code>字段作为查询条件更新数据：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> <span class="keyword">set</span> amount<span class="operator">=</span>amount<span class="operator">+</span><span class="number">100</span>,version<span class="operator">=</span>version<span class="operator">+</span><span class="number">1</span><span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> version<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<p>更新数据的同时<code>version+1</code>，然后判断本次<code>update</code>操作的影响行数，如果大于0，则说明本次更新成功，如果等于0，则说明本次更新没有让数据变更。</p>
-<p>由于第一次请求<code>version</code>等于<code>1</code>是可以成功的，操作成功后<code>version</code>变成<code>2</code>了。这时如果并发的请求过来，再执行相同的sql：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> <span class="keyword">set</span> amount<span class="operator">=</span>amount<span class="operator">+</span><span class="number">100</span>,version<span class="operator">=</span>version<span class="operator">+</span><span class="number">1</span><span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> version<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<p>该<code>update</code>操作不会真正更新数据，最终sql的执行结果影响行数是<code>0</code>，因为<code>version</code>已经变成<code>2</code>了，<code>where</code>中的<code>version=1</code>肯定无法满足条件。但为了保证接口幂等性，接口可以直接返回成功，因为<code>version</code>值已经修改了，那么前面必定已经成功过一次，后面都是重复的请求。</p>
-<p>具体的流程如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520000025.png" alt="image-20210520000025733" style="zoom:50%;" />
-
-<p>具体步骤：</p>
-<ol>
-<li>先根据id查询用户信息，包含version字段</li>
-<li>根据id和version字段值作为where条件的参数，更新用户信息，同时version+1</li>
-<li>判断操作影响行数，如果影响1行，则说明是一次请求，可以做其他数据操作</li>
-<li>如果影响0行，说明是重复请求，则直接返回成功</li>
-</ol>
-<h3 id="加唯一索引"><a href="#加唯一索引" class="headerlink" title="加唯一索引"></a>加唯一索引</h3><p>绝大数情况下，为了防止重复数据的产生，我们都会在表中加唯一索引，这是一个非常简单，并且有效的方案。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `<span class="keyword">order</span>` <span class="keyword">add</span> <span class="keyword">UNIQUE</span> KEY `un_code` (`code`);</span><br></pre></td></tr></table></figure>
-
-<p>加了唯一索引之后，第一次请求数据可以插入成功。但后面的相同请求，插入数据时会报<code>Duplicate entry &#39;002&#39; for key &#39;order.un_code</code>异常，表示唯一索引有冲突。</p>
-<p>虽说抛异常对数据来说没有影响，不会造成错误数据。但是为了保证接口幂等性，我们需要对该异常进行捕获，然后返回成功。</p>
-<p>如果是<code>java</code>程序需要捕获：<code>DuplicateKeyException</code>异常，如果使用了<code>spring</code>框架还需要捕获：<code>MySQLIntegrityConstraintViolationException</code>异常。</p>
-<p>具体流程如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520000719.png" alt="image-20210520000719765" style="zoom:50%;" />
-
-<p>具体步骤：</p>
-<ol>
-<li>用户通过浏览器发起请求，服务端收集数据</li>
-<li>将该数据插入mysql</li>
-<li>判断是否执行成功，如果成功，则操作其他数据（可能还有其他的业务逻辑）</li>
-<li>如果执行失败，捕获唯一索引冲突异常，直接返回成功</li>
-</ol>
-<h3 id="根据状态判断"><a href="#根据状态判断" class="headerlink" title="根据状态判断"></a>根据状态判断</h3><p>很多时候业务表是有状态的，比如订单表中有：1-下单、2-已支付、3-完成、4-撤销等状态。如果这些状态的值是有规律的，按照业务节点正好是从小到大，我们就能通过它来保证接口的幂等性。</p>
-<p>假如id=123的订单状态是<code>已支付</code>，现在要变成<code>完成</code>状态：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update `<span class="keyword">order</span>` <span class="keyword">set</span> status<span class="operator">=</span><span class="number">3</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> status<span class="operator">=</span><span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-
-<p>第一次请求时，该订单的状态是<code>已支付</code>，值是<code>2</code>，所以该<code>update</code>语句可以正常更新数据，sql执行结果的影响行数是<code>1</code>，订单状态变成了<code>3</code>。</p>
-<p>后面有相同的请求过来，再执行相同的sql时，由于订单状态变成了<code>3</code>，再用<code>status=2</code>作为条件，无法查询出需要更新的数据，所以最终sql执行结果的影响行数是<code>0</code>，即不会真正的更新数据。但为了保证接口幂等性，影响行数是<code>0</code>时，接口也可以直接返回成功。</p>
-<p>具体的流程如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520001401.png" alt="image-20210520001401770" style="zoom:50%;" />
-
-<p>具体步骤：</p>
-<ol>
-<li>用户通过浏览器发起请求，服务端收集数据</li>
-<li>根据id和当前状态作为条件，更新成下一个状态</li>
-<li>判断操作影响行数，如果影响了1行，说明当前操作成功，可以进行其他数据操作</li>
-<li>如果影响了0行，说明是重复请求，直接返回成功</li>
-</ol>
-<blockquote>
-<p><strong>主要特别注意的是，该方案仅限于要更新的表有状态字段，并且刚好要更新状态字段的这种特殊情况，并非所有场景都适用。</strong></p>
-</blockquote>
-<h3 id="加分布式锁"><a href="#加分布式锁" class="headerlink" title="加分布式锁"></a>加分布式锁</h3><p>其实前面介绍过的<code>加唯一索引</code>或者<code>加防重表</code>，本质是使用了<code>数据库</code>的<code>分布式锁</code>，也属于分布式锁的一种。但由于<code>数据库分布式锁</code>的性能不太好，我们可以改用：<code>redis</code>或<code>zookeeper</code>。本文主要介绍<code>redis</code>的分布式锁：</p>
-<p>目前主要有三种方式实现redis的分布式锁：</p>
-<ol>
-<li>setNx命令</li>
-<li>set命令</li>
-<li>Redission框架</li>
-</ol>
-<p>具体流程如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520002920.png" alt="image-20210520002920546" style="zoom:50%;" />
-
-<p>具体步骤：</p>
-<ol>
-<li>用户通过浏览器发起请求，服务端会收集数据，并且生成订单号code作为唯一业务字段</li>
-<li>使用redis的set命令，将该订单code设置到redis中，同时设置超时时间</li>
-<li>判断是否设置成功，如果设置成功，说明是第一次请求，则进行数据操作</li>
-<li>如果设置失败，说明是重复请求，则直接返回成功</li>
-</ol>
-<blockquote>
-<p><strong>需要特别注意的是：分布式锁一定要设置一个合理的过期时间，如果设置过短，无法有效的防止重复请求。如果设置过长，可能会浪费redis的存储空间，需要根据实际业务情况而定。</strong></p>
-</blockquote>
-<h3 id="根据token判断"><a href="#根据token判断" class="headerlink" title="根据token判断"></a>根据token判断</h3><p>除了上述方案之外，还有最后一种使用<code>token</code>的方案。该方案跟之前的所有方案都有点不一样，需要两次请求才能完成一次业务操作。</p>
-<ol>
-<li>第一次请求获取<code>token</code></li>
-<li>第二次请求带着这个<code>token</code>，完成业务操作</li>
-</ol>
-<p>具体的流程如下：</p>
-<ol>
-<li><p>获取<code>token</code></p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520003135.png" alt="image-20210520003135146" style="zoom:50%;" />    </li>
-<li><p>做具体业务</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520003206.png" alt="image-20210520003206028" style="zoom:50%;" />    </li>
-</ol>
-<p>具体步骤：</p>
-<ol>
-<li>用户访问页面时，浏览器自动发起获取token请求</li>
-<li>服务端生成token，保存到redis中，然后返回给浏览器</li>
-<li>用户通过浏览器发起请求时，携带该token</li>
-<li>在redis中查询该token是否存在，如果不存在，说明是第一次请求，做则后续的数据操作</li>
-<li>如果存在，说明是重复请求，则直接返回成功</li>
-<li>在redis中token会在过期时间之后，被自动删除</li>
-</ol>
-<blockquote>
-<p><strong>需要特别注意的是：token必须是全局唯一的。</strong></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前后端分离</title>
     <url>/2021/03/06/cc9e7a55.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>到底什么是<strong>前后端分离</strong>？通俗的来说就是前端的开发与后端的开发分离，前后端分离已成为互联网项目开发的业界标准使用方式，通过<strong>Nginx</strong>+<strong>Tomcat</strong>的方式（也可以中间加一个NodeJS）有效地对前端和后端的开发进行解耦。其实，前后端分离的核心思想就是前端HTML页面通过<strong>AJAX</strong>调用后端的<strong>RESTFUL API</strong>接口，并通过<strong>JSON</strong>数据进行交互。</p>
@@ -2159,6 +2003,162 @@
       <tags>
         <tag>笔记</tag>
         <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>接口幂等性问题</title>
+    <url>/2021/05/20/63f0196d.html</url>
+    <content><![CDATA[<h1 id="高并发下如何保证接口的幂等性？"><a href="#高并发下如何保证接口的幂等性？" class="headerlink" title="高并发下如何保证接口的幂等性？"></a>高并发下如何保证接口的幂等性？</h1><h2 id="接口调用出现的问题"><a href="#接口调用出现的问题" class="headerlink" title="接口调用出现的问题"></a>接口调用出现的问题</h2><p>在分布式架构的系统中，通常是多个微服务之间互相调用，而服务调用服务无非就是RPC或Restful进行通信，既然是通信，那么就存在服务器处理完毕返回结果的途中挂掉，这也是分布式系统因网络不可达出现的问题。这个时候用户端很久没有得到服务端的响应，那么就会多次点击按钮，这样请求多次，那么处理数据的结果是否要保持一致呢？答案是肯定的！尤其是在一些订单与支付的场景。</p>
+<h2 id="什么是接口幂等性？"><a href="#什么是接口幂等性？" class="headerlink" title="什么是接口幂等性？"></a>什么是接口幂等性？</h2><p>接口幂等性就是用户对于同一操作发起的一次请求或者多次请求的结果是一致的，不会因为多次点击而产生了副作用。举个最简单的例子，那就是支付，用户购买商品后支付，支付扣款成功，但是返回结果的时候网络异常，此时钱已经扣了，用户再次点击按钮，此时会进行第二次扣款，返回结果成功，用户查询余额返发现多扣钱了，流水记录也变成了两条，这就没有保证接口的幂等性。</p>
+<h2 id="什么情况下需要保持接口的幂等性？"><a href="#什么情况下需要保持接口的幂等性？" class="headerlink" title="什么情况下需要保持接口的幂等性？"></a>什么情况下需要保持接口的幂等性？</h2><p>我们对处理数据无非就是增删改查四个操作？那么那些操作需要保持接口的幂等性？==&gt; <strong>insert 与 update</strong></p>
+<ul>
+<li>查询操作 ==&gt; 查询一次或者多次对于结果的影响是不会有改变的，所以 select 是天然的幂等性操作</li>
+<li>删除操作 ==&gt; 删除一次与删除多次都是将数据删除（但是注意返回的结果是不一样的，成功1失败0，在不考虑结果的情况下，删除操作也是幂等性操作）</li>
+<li>更新操作 ==&gt; 修改操作在大多情况下结果都是一样的，除非是增量修改，那么就是要保持幂等性的。例如：<ul>
+<li>将表中的某条记录的某个字段设置为1 ==&gt; 这个操作不管执行多少次都是幂等的</li>
+<li>将表中的某条记录的某个字段增加1  ==&gt; 这个操作是不保证幂等性的</li>
+</ul>
+</li>
+<li>新增操作 ==&gt;  新增操作肯定是会出现幂等性问题的，例如上面的支付问题。、</li>
+</ul>
+<h2 id="那么如何才能保持接口的幂等性？"><a href="#那么如何才能保持接口的幂等性？" class="headerlink" title="那么如何才能保持接口的幂等性？"></a>那么如何才能保持接口的幂等性？</h2><h3 id="增加数据之前先查询"><a href="#增加数据之前先查询" class="headerlink" title="增加数据之前先查询"></a>增加数据之前先查询</h3><p>通常情况下，在保存数据的接口中，我们为了防止产生重复数据，一般会在<code>insert</code>前，先根据<code>name</code>或<code>code</code>字段<code>select</code>一下数据。如果该数据已存在，则执行<code>update</code>操作，如果不存在，才执行<code>insert</code>操作。</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210519235210.png" alt="image-20210519235203446" style="zoom: 50%;" />
+
+<p>==该方案并不适用于并发场景，在并发场景中，要配合其他的方案一起使用，否则还是会造成重复的数据。==</p>
+<h3 id="加悲观锁"><a href="#加悲观锁" class="headerlink" title="加悲观锁"></a>加悲观锁</h3><p>在支付场景中，用户A的账号余额有150元，想转出100元，正常情况下用户A的余额只剩50元。一般情况下，sql是这样的：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> amount <span class="operator">=</span> amount<span class="number">-100</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果出现多次相同的请求，可能会导致用户A的余额变成负数。这种情况，用户A来可能要哭了。与此同时，系统开发人员可能也要哭了，因为这是很严重的系统bug。</p>
+<p>为了解决这个问题，可以加悲观锁，将用户A的那行数据锁住，在同一时刻只允许一个请求获得锁，更新数据，其他的请求则等待。</p>
+<p>通常情况下通过如下sql锁住单行数据：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> <span class="keyword">user</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">for</span> update;</span><br></pre></td></tr></table></figure>
+
+<p>具体的流程如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210519235501.png" alt="image-20210519235500888" style="zoom:50%;" />
+
+<p>具体步骤：</p>
+<ol>
+<li>多个请求同时根据id查询用户信息</li>
+<li>判断余额是否不足100，如果余额不足，则直接返回余额不足</li>
+<li>如果余额充足，则通过for update再次查询用户信息，并且尝试获取锁</li>
+<li>只有第一个请求能获取到行锁，其余没有获取锁的请求，则等待下一次获取锁的机会</li>
+<li>第一个请求获取到锁之后，判断余额是否不足100，如果余额足够，则进行update操作</li>
+<li>如果余额不足，说明是重复请求，则直接返回成功</li>
+</ol>
+<blockquote>
+<p><strong>需要特别注意的是：如果使用的是mysql数据库，存储引擎必须用innodb，因为它才支持事务。此外，这里id字段一定要是主键或者唯一索引，不然会锁住整张表。</strong></p>
+</blockquote>
+<p>悲观锁需要在同一个事务操作过程中锁住一行数据，如果事务耗时比较长，会造成大量的请求等待，影响接口性能。</p>
+<p>此外，每次请求接口很难保证都有相同的返回值，所以不适合幂等性设计场景，但是在防重场景中是可以的使用的。</p>
+<p>在这里顺便说一下，<code>防重设计</code>和<code>幂等设计</code>，其实是有区别的。 防重设计主要为了避免产生重复数据，对接口返回没有太多要求。 而幂等设计除了避免产生重复数据之外，还要求每次请求都返回一样的结果。</p>
+<h3 id="加乐观锁"><a href="#加乐观锁" class="headerlink" title="加乐观锁"></a>加乐观锁</h3><p>既然悲观锁有性能问题，为了提升接口性能，我们可以使用乐观锁。需要在表中增加一个<code>timestamp</code>或者<code>version</code>字段，这里以<code>version</code>字段为例。</p>
+<p>在更新数据之前先查询一下数据：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> id,amount,version <span class="keyword">from</span> <span class="keyword">user</span> id<span class="operator">=</span><span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果数据存在，假设查到的<code>version</code>等于<code>1</code>，再使用<code>id</code>和<code>version</code>字段作为查询条件更新数据：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> <span class="keyword">set</span> amount<span class="operator">=</span>amount<span class="operator">+</span><span class="number">100</span>,version<span class="operator">=</span>version<span class="operator">+</span><span class="number">1</span><span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> version<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>更新数据的同时<code>version+1</code>，然后判断本次<code>update</code>操作的影响行数，如果大于0，则说明本次更新成功，如果等于0，则说明本次更新没有让数据变更。</p>
+<p>由于第一次请求<code>version</code>等于<code>1</code>是可以成功的，操作成功后<code>version</code>变成<code>2</code>了。这时如果并发的请求过来，再执行相同的sql：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update <span class="keyword">user</span> <span class="keyword">set</span> amount<span class="operator">=</span>amount<span class="operator">+</span><span class="number">100</span>,version<span class="operator">=</span>version<span class="operator">+</span><span class="number">1</span><span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> version<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>该<code>update</code>操作不会真正更新数据，最终sql的执行结果影响行数是<code>0</code>，因为<code>version</code>已经变成<code>2</code>了，<code>where</code>中的<code>version=1</code>肯定无法满足条件。但为了保证接口幂等性，接口可以直接返回成功，因为<code>version</code>值已经修改了，那么前面必定已经成功过一次，后面都是重复的请求。</p>
+<p>具体的流程如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520000025.png" alt="image-20210520000025733" style="zoom:50%;" />
+
+<p>具体步骤：</p>
+<ol>
+<li>先根据id查询用户信息，包含version字段</li>
+<li>根据id和version字段值作为where条件的参数，更新用户信息，同时version+1</li>
+<li>判断操作影响行数，如果影响1行，则说明是一次请求，可以做其他数据操作</li>
+<li>如果影响0行，说明是重复请求，则直接返回成功</li>
+</ol>
+<h3 id="加唯一索引"><a href="#加唯一索引" class="headerlink" title="加唯一索引"></a>加唯一索引</h3><p>绝大数情况下，为了防止重复数据的产生，我们都会在表中加唯一索引，这是一个非常简单，并且有效的方案。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `<span class="keyword">order</span>` <span class="keyword">add</span> <span class="keyword">UNIQUE</span> KEY `un_code` (`code`);</span><br></pre></td></tr></table></figure>
+
+<p>加了唯一索引之后，第一次请求数据可以插入成功。但后面的相同请求，插入数据时会报<code>Duplicate entry &#39;002&#39; for key &#39;order.un_code</code>异常，表示唯一索引有冲突。</p>
+<p>虽说抛异常对数据来说没有影响，不会造成错误数据。但是为了保证接口幂等性，我们需要对该异常进行捕获，然后返回成功。</p>
+<p>如果是<code>java</code>程序需要捕获：<code>DuplicateKeyException</code>异常，如果使用了<code>spring</code>框架还需要捕获：<code>MySQLIntegrityConstraintViolationException</code>异常。</p>
+<p>具体流程如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520000719.png" alt="image-20210520000719765" style="zoom:50%;" />
+
+<p>具体步骤：</p>
+<ol>
+<li>用户通过浏览器发起请求，服务端收集数据</li>
+<li>将该数据插入mysql</li>
+<li>判断是否执行成功，如果成功，则操作其他数据（可能还有其他的业务逻辑）</li>
+<li>如果执行失败，捕获唯一索引冲突异常，直接返回成功</li>
+</ol>
+<h3 id="根据状态判断"><a href="#根据状态判断" class="headerlink" title="根据状态判断"></a>根据状态判断</h3><p>很多时候业务表是有状态的，比如订单表中有：1-下单、2-已支付、3-完成、4-撤销等状态。如果这些状态的值是有规律的，按照业务节点正好是从小到大，我们就能通过它来保证接口的幂等性。</p>
+<p>假如id=123的订单状态是<code>已支付</code>，现在要变成<code>完成</code>状态：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update `<span class="keyword">order</span>` <span class="keyword">set</span> status<span class="operator">=</span><span class="number">3</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">123</span> <span class="keyword">and</span> status<span class="operator">=</span><span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>第一次请求时，该订单的状态是<code>已支付</code>，值是<code>2</code>，所以该<code>update</code>语句可以正常更新数据，sql执行结果的影响行数是<code>1</code>，订单状态变成了<code>3</code>。</p>
+<p>后面有相同的请求过来，再执行相同的sql时，由于订单状态变成了<code>3</code>，再用<code>status=2</code>作为条件，无法查询出需要更新的数据，所以最终sql执行结果的影响行数是<code>0</code>，即不会真正的更新数据。但为了保证接口幂等性，影响行数是<code>0</code>时，接口也可以直接返回成功。</p>
+<p>具体的流程如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520001401.png" alt="image-20210520001401770" style="zoom:50%;" />
+
+<p>具体步骤：</p>
+<ol>
+<li>用户通过浏览器发起请求，服务端收集数据</li>
+<li>根据id和当前状态作为条件，更新成下一个状态</li>
+<li>判断操作影响行数，如果影响了1行，说明当前操作成功，可以进行其他数据操作</li>
+<li>如果影响了0行，说明是重复请求，直接返回成功</li>
+</ol>
+<blockquote>
+<p><strong>主要特别注意的是，该方案仅限于要更新的表有状态字段，并且刚好要更新状态字段的这种特殊情况，并非所有场景都适用。</strong></p>
+</blockquote>
+<h3 id="加分布式锁"><a href="#加分布式锁" class="headerlink" title="加分布式锁"></a>加分布式锁</h3><p>其实前面介绍过的<code>加唯一索引</code>或者<code>加防重表</code>，本质是使用了<code>数据库</code>的<code>分布式锁</code>，也属于分布式锁的一种。但由于<code>数据库分布式锁</code>的性能不太好，我们可以改用：<code>redis</code>或<code>zookeeper</code>。本文主要介绍<code>redis</code>的分布式锁：</p>
+<p>目前主要有三种方式实现redis的分布式锁：</p>
+<ol>
+<li>setNx命令</li>
+<li>set命令</li>
+<li>Redission框架</li>
+</ol>
+<p>具体流程如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520002920.png" alt="image-20210520002920546" style="zoom:50%;" />
+
+<p>具体步骤：</p>
+<ol>
+<li>用户通过浏览器发起请求，服务端会收集数据，并且生成订单号code作为唯一业务字段</li>
+<li>使用redis的set命令，将该订单code设置到redis中，同时设置超时时间</li>
+<li>判断是否设置成功，如果设置成功，说明是第一次请求，则进行数据操作</li>
+<li>如果设置失败，说明是重复请求，则直接返回成功</li>
+</ol>
+<blockquote>
+<p><strong>需要特别注意的是：分布式锁一定要设置一个合理的过期时间，如果设置过短，无法有效的防止重复请求。如果设置过长，可能会浪费redis的存储空间，需要根据实际业务情况而定。</strong></p>
+</blockquote>
+<h3 id="根据token判断"><a href="#根据token判断" class="headerlink" title="根据token判断"></a>根据token判断</h3><p>除了上述方案之外，还有最后一种使用<code>token</code>的方案。该方案跟之前的所有方案都有点不一样，需要两次请求才能完成一次业务操作。</p>
+<ol>
+<li>第一次请求获取<code>token</code></li>
+<li>第二次请求带着这个<code>token</code>，完成业务操作</li>
+</ol>
+<p>具体的流程如下：</p>
+<ol>
+<li><p>获取<code>token</code></p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520003135.png" alt="image-20210520003135146" style="zoom:50%;" />    </li>
+<li><p>做具体业务</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210520003206.png" alt="image-20210520003206028" style="zoom:50%;" />    </li>
+</ol>
+<p>具体步骤：</p>
+<ol>
+<li>用户访问页面时，浏览器自动发起获取token请求</li>
+<li>服务端生成token，保存到redis中，然后返回给浏览器</li>
+<li>用户通过浏览器发起请求时，携带该token</li>
+<li>在redis中查询该token是否存在，如果不存在，说明是第一次请求，做则后续的数据操作</li>
+<li>如果存在，说明是重复请求，则直接返回成功</li>
+<li>在redis中token会在过期时间之后，被自动删除</li>
+</ol>
+<blockquote>
+<p><strong>需要特别注意的是：token必须是全局唯一的。</strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>分布式</tag>
       </tags>
   </entry>
   <entry>
