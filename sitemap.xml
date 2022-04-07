@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ouwen666.gitee.io/2022/04/07/bdda9ccd.html</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ouwen666.gitee.io/2022/04/07/816ad4bd.html</loc>
     
     <lastmod>2022-04-07</lastmod>
@@ -470,13 +479,6 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/Nginx/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ouwen666.gitee.io/tags/Linux/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -485,6 +487,13 @@
   
   <url>
     <loc>https://ouwen666.gitee.io/tags/MongDB/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ouwen666.gitee.io/tags/Nginx/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -512,13 +521,6 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ouwen666.gitee.io/tags/HTML-CSS/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -527,6 +529,13 @@
   
   <url>
     <loc>https://ouwen666.gitee.io/tags/JavaScript/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ouwen666.gitee.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -563,14 +572,14 @@
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://ouwen666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ouwen666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://ouwen666.gitee.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
