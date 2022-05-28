@@ -80,46 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git分支管理</title>
-    <url>/2021/04/05/13a54546.html</url>
-    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
-<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
-<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
-<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
-<thead>
-<tr>
-<th>命令名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>git branch 分支名</td>
-<td>创建分支</td>
-</tr>
-<tr>
-<td>git branch -v</td>
-<td>查看分支</td>
-</tr>
-<tr>
-<td>git checkout 分支名</td>
-<td>切换分支</td>
-</tr>
-<tr>
-<td>git merge 分支名</td>
-<td>把指定的分支合并到当前分支上</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitLab安装与使用</title>
     <url>/2022/01/11/3653ea16.html</url>
     <content><![CDATA[<h1 id="GitLab-安装与使用"><a href="#GitLab-安装与使用" class="headerlink" title="GitLab 安装与使用"></a>GitLab 安装与使用</h1><h2 id="Docker-安装-GitLab"><a href="#Docker-安装-GitLab" class="headerlink" title="Docker 安装 GitLab"></a>Docker 安装 GitLab</h2><p>DockerHub 上有许多制作完善的镜像，直接搜索 <code>gitlab</code> 查看镜像：</p>
@@ -199,6 +159,151 @@
         <tag>笔记</tag>
         <tag>Git</tag>
         <tag>分布式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git分支管理</title>
+    <url>/2021/04/05/13a54546.html</url>
+    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
+<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
+<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA-IO流</title>
+    <url>/2021/04/04/13a54546.html</url>
+    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>Java的I/O主要的用途就是文件数据的读写、数据的网络发送与接收等场合。</p>
+<p>流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称之为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。对于文件内容的操作主要分为两大类：字符流和字节流。</p>
+<h2 id="二、I-O流的分类"><a href="#二、I-O流的分类" class="headerlink" title="二、I/O流的分类"></a>二、I/O流的分类</h2><p>根据处理数据类型的不同分为：字符流和字节流。</p>
+<p>根据数据流向不同分为：输入流和输出流。</p>
+<h3 id="1、字符流和字节流"><a href="#1、字符流和字节流" class="headerlink" title="1、字符流和字节流"></a>1、字符流和字节流</h3><p>字符流的由来：因为数据编码的不同，而有了对字符进行高效操作的流对象。本质其实就是基于字节流流读取时，去查了指定的码表。字节流和字符流的区别：</p>
+<ol>
+<li>读写单位不同：字节流以字节（8bit）为单位，字符流以字符为单位，根据码表映射字符，一次可能多个字节。</li>
+<li>处理对象不同：字节流能处理所有类型的数据（如图片、avi等），而字符流只能处理字符类型的数据。</li>
+<li>字节流在操作的时候本身是不会用到缓冲区的，是文件本事的直接操作的；而字符流在操作的时候下后是会用到缓冲区的，通过缓冲区来操作文件。</li>
+</ol>
+<p><strong>结论：优先选用字节流。首先因为硬盘上的所有文件都是以字节的形式进行传输或者保存的，包括图片等内容。但是字符只是在内存汇总才会形成，所以在开发中，字节流使用广泛。</strong></p>
+<h3 id="2、输入流和输出流"><a href="#2、输入流和输出流" class="headerlink" title="2、输入流和输出流"></a>2、输入流和输出流</h3><p>对输入流只能进行读操作，对输出流只能进行写操作，程序中需要根据待传输数据的不同特性而使用不同的流。</p>
+<h3 id="3、常见I-O流对象"><a href="#3、常见I-O流对象" class="headerlink" title="3、常见I/O流对象"></a>3、常见I/O流对象</h3><ul>
+<li><p>InputStream</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214602.png" alt="img"></p>
+</li>
+<li><p>OutputStream</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214647.png" alt="img"  /></li>
+<li><p>Reader</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214855.png" alt="img"></p>
+</li>
+<li><p>Writer</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214921.png" alt="img"></p>
+</li>
+</ul>
+<h2 id="三、常见问题"><a href="#三、常见问题" class="headerlink" title="三、常见问题"></a>三、常见问题</h2><h3 id="1、字节流和字符流的使用情况"><a href="#1、字节流和字符流的使用情况" class="headerlink" title="1、字节流和字符流的使用情况"></a>1、字节流和字符流的使用情况</h3><p>字符流和字节流的使用范围：字节流一般用来处理图像、视频，以及PPT、Word类型的文件。字符流一般用于处理纯文本类型的文件，如txt文件等，字节流可以用来处理纯文本文件，但字符流不能用户处理图像、视频等非文本类型的文件。</p>
+<h3 id="2、字符流与字节流的转换"><a href="#2、字符流与字节流的转换" class="headerlink" title="2、字符流与字节流的转换"></a>2、字符流与字节流的转换</h3><p>转换流的作用，文本文件在硬盘中以字节流的形式存储时，通过InputStreamReader读取后转化成字符流交给程序处理，程序处理的字符流通过OutputStreamWriter转换成字节流保存。</p>
+<h3 id="3、字节流与字符流的区别"><a href="#3、字节流与字符流的区别" class="headerlink" title="3、字节流与字符流的区别"></a>3、字节流与字符流的区别</h3><p>字节流没有缓冲区，是直接输出的，而字符流需要输出到缓冲区的。因此在输出时，字节流不调用close()方法时，信息已经输出了，而字符流只有在调用close()方法关闭缓冲区时，信息才输出。要想字符流在未关闭时输出信息，需要手动调用flush()方法。</p>
+<ol>
+<li>读写单位不同：字节流以字节（8bit）为单位，字符流以字符为单位，根据码表映射字符，一次可能多个字节。</li>
+<li>处理对象不同：字节流能处理所有类型的数据（如图片、avi等），而字符流只能处理字符类型的数据。</li>
+<li>字节流在操作的时候本身是不会用到缓冲区的，是文件本事的直接操作的；而字符流在操作的时候下后是会用到缓冲区的，通过缓冲区来操作文件。</li>
+</ol>
+<h2 id="四、IO-NIO面试题"><a href="#四、IO-NIO面试题" class="headerlink" title="四、IO/NIO面试题"></a>四、IO/NIO面试题</h2><h3 id="1、Java中IO流分为几种"><a href="#1、Java中IO流分为几种" class="headerlink" title="1、Java中IO流分为几种"></a>1、Java中IO流分为几种</h3><ol>
+<li>按照流的流向分：分为输入流与输出流</li>
+<li>按照操作单元分：分为字节流与字符流</li>
+<li>按照流的角色分：分为节点流与处理流</li>
+</ol>
+<h3 id="2、Java-IO与-NIO的区别"><a href="#2、Java-IO与-NIO的区别" class="headerlink" title="2、Java IO与 NIO的区别"></a>2、Java IO与 NIO的区别</h3><p>NIO即New IO，这个库是在JDK1.4中才引入的。NIO和IO有相同的作用和目的，NIO主要用到的是块，所以NIO的效率要比IO高很多。在Java API中提供了两套NIO，一套是针对标准输入输出NIO，另一套就是网络编程NIO。</p>
+<h3 id="3、Java中常用的IO类有哪些"><a href="#3、Java中常用的IO类有哪些" class="headerlink" title="3、Java中常用的IO类有哪些"></a>3、Java中常用的IO类有哪些</h3><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">File</span><br><span class="line">FileInputStream、FileOutputStream</span><br><span class="line"><span class="keyword">BufferedInputStream、BufferedOutputStream</span></span><br><span class="line"><span class="keyword"></span>FileReader、FileWrter</span><br><span class="line"><span class="keyword">BufferedReader、BufferedWriter</span></span><br><span class="line"><span class="keyword"></span>ObjectInputStream、ObjectOutputStream</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、字节流与字符流的区别"><a href="#4、字节流与字符流的区别" class="headerlink" title="4、字节流与字符流的区别"></a>4、字节流与字符流的区别</h3><p>字节流是以字节为单位进行传输，大小为8bit</p>
+<p>字符流是以字符为单位进行传输，大小为16bit</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java8新特性</title>
+    <url>/2021/06/17/397c083a.html</url>
+    <content><![CDATA[<h1 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Java8 有一个非常显著的特点，就是提供了函数式编程，本文也将介绍 Java8 的几个新特性来实现函数式编程。学会这些 API 能够编写出简单、干净、易读的代码（尤其是对集合的操作）。Java8 新特性包括：</p>
+<ul>
+<li>Lambda 表达式</li>
+<li>Stream API</li>
+<li>接口新特性<ul>
+<li>函数式接口（<code>@FunctionalInterface</code>）</li>
+<li>默认方法（<code>default</code>）</li>
+</ul>
+</li>
+<li>Optional API</li>
+<li>方法引用</li>
+</ul>
+<h2 id="一、Lambda-表达式"><a href="#一、Lambda-表达式" class="headerlink" title="一、Lambda 表达式"></a>一、Lambda 表达式</h2><p>Lambda 表达式，也可称为闭包，是 Java8 发布的一个新特性。</p>
+<p>Lambda 允许把函数作为一个方法的参数（将函数传递到方法中）。</p>
+<p>使用 Lambda 表达式可以使代码更简洁紧凑。</p>
+<p><strong>下面是 Lambda 的主要特征：</strong></p>
+<ul>
+<li>可选类型声明：不需要声明参数类型，编译器可以统一识别参数值</li>
+<li>可选的参数圆括号：一个参数无需定义圆括号，但多个参数需要定义圆括号</li>
+<li>可选的大括号：如果主体包含了一个语句，就不需要使用大括号</li>
+<li>可选的返回关键字：如果主体只有一个表达式返回值则编译器会自动返回值，大括号需要指定明表达式返回了一个数值</li>
+</ul>
+<p><strong>Lambda 表达式的简单例子：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 不需要参数,返回值为 5  </span></span><br><span class="line">() -&gt; <span class="number">5</span>  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 2. 接收一个参数(数字类型),返回其2倍的值  </span></span><br><span class="line">x -&gt; <span class="number">2</span> * x  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 3. 接受2个参数(数字),并返回他们的差值  </span></span><br><span class="line">(x, y) -&gt; x – y  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 4. 接收2个int型整数,返回他们的和  </span></span><br><span class="line">(<span class="type">int</span> x, <span class="type">int</span> y) -&gt; x + y  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void)  </span></span><br><span class="line">(String s) -&gt; System.out.print(s)</span><br></pre></td></tr></table></figure>
+
+<p><strong>变量作用域</strong></p>
+<p>如果你曾使用过匿名内部类，也许会遇到这种情况：需要引用它所在方法中的变量。这个变量必须声明为 <code>final</code> 类型，将变量声明为 final ，意味着不能为其重复赋值。Java8 虽然放松了这一限制，可以引用非 final 变量，但是该变量隐性为 final 变量。虽然无需声明 final 类型，但在 Lambda 表达式中，若重复为其赋值，编译器就会报错。</p>
+<h2 id="二、Stream-API"><a href="#二、Stream-API" class="headerlink" title="二、Stream API"></a>二、Stream API</h2><p>Stream（流）是一个来自数据源的元素队列并支持聚合操作</p>
+<ul>
+<li>元素是特定类型的对象，形成一个队列。Java 中的 Stream 并不会存储元素，而是按需计算</li>
+<li><strong>数据源</strong> 流的来源。可以是集合，数组，IO channel，产生器 generate 等</li>
+<li><strong>聚合操作</strong> 类似 SQL 一样的操作，比如 filter、map、reduce、find、match、sorted等</li>
+</ul>
+<p>和以前的 Collection 操作不同，Stream 操作还有两个基础的特征：</p>
+<ul>
+<li><strong>pipelining</strong>：中间操作都会返回流对象本身，这样多个操作可以串联成一个管道，如同流式风格（fluent style）。这样做可以对操作进行优化</li>
+<li><strong>内部迭代：</strong>以前对集合遍历都是通过 Iterator 或者 for-each 的方式，显示的在集合外部进行迭代，这叫做外部迭代。Stream 提供了内部迭代的方式。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -343,61 +448,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA-IO流</title>
-    <url>/2021/04/04/13a54546.html</url>
-    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>Java的I/O主要的用途就是文件数据的读写、数据的网络发送与接收等场合。</p>
-<p>流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即数据在两设备间的传输称之为流，流的本质是数据传输，根据数据传输特性将流抽象为各种类，方便更直观的进行数据操作。对于文件内容的操作主要分为两大类：字符流和字节流。</p>
-<h2 id="二、I-O流的分类"><a href="#二、I-O流的分类" class="headerlink" title="二、I/O流的分类"></a>二、I/O流的分类</h2><p>根据处理数据类型的不同分为：字符流和字节流。</p>
-<p>根据数据流向不同分为：输入流和输出流。</p>
-<h3 id="1、字符流和字节流"><a href="#1、字符流和字节流" class="headerlink" title="1、字符流和字节流"></a>1、字符流和字节流</h3><p>字符流的由来：因为数据编码的不同，而有了对字符进行高效操作的流对象。本质其实就是基于字节流流读取时，去查了指定的码表。字节流和字符流的区别：</p>
-<ol>
-<li>读写单位不同：字节流以字节（8bit）为单位，字符流以字符为单位，根据码表映射字符，一次可能多个字节。</li>
-<li>处理对象不同：字节流能处理所有类型的数据（如图片、avi等），而字符流只能处理字符类型的数据。</li>
-<li>字节流在操作的时候本身是不会用到缓冲区的，是文件本事的直接操作的；而字符流在操作的时候下后是会用到缓冲区的，通过缓冲区来操作文件。</li>
-</ol>
-<p><strong>结论：优先选用字节流。首先因为硬盘上的所有文件都是以字节的形式进行传输或者保存的，包括图片等内容。但是字符只是在内存汇总才会形成，所以在开发中，字节流使用广泛。</strong></p>
-<h3 id="2、输入流和输出流"><a href="#2、输入流和输出流" class="headerlink" title="2、输入流和输出流"></a>2、输入流和输出流</h3><p>对输入流只能进行读操作，对输出流只能进行写操作，程序中需要根据待传输数据的不同特性而使用不同的流。</p>
-<h3 id="3、常见I-O流对象"><a href="#3、常见I-O流对象" class="headerlink" title="3、常见I/O流对象"></a>3、常见I/O流对象</h3><ul>
-<li><p>InputStream</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214602.png" alt="img"></p>
-</li>
-<li><p>OutputStream</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214647.png" alt="img"  /></li>
-<li><p>Reader</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214855.png" alt="img"></p>
-</li>
-<li><p>Writer</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210401214921.png" alt="img"></p>
-</li>
-</ul>
-<h2 id="三、常见问题"><a href="#三、常见问题" class="headerlink" title="三、常见问题"></a>三、常见问题</h2><h3 id="1、字节流和字符流的使用情况"><a href="#1、字节流和字符流的使用情况" class="headerlink" title="1、字节流和字符流的使用情况"></a>1、字节流和字符流的使用情况</h3><p>字符流和字节流的使用范围：字节流一般用来处理图像、视频，以及PPT、Word类型的文件。字符流一般用于处理纯文本类型的文件，如txt文件等，字节流可以用来处理纯文本文件，但字符流不能用户处理图像、视频等非文本类型的文件。</p>
-<h3 id="2、字符流与字节流的转换"><a href="#2、字符流与字节流的转换" class="headerlink" title="2、字符流与字节流的转换"></a>2、字符流与字节流的转换</h3><p>转换流的作用，文本文件在硬盘中以字节流的形式存储时，通过InputStreamReader读取后转化成字符流交给程序处理，程序处理的字符流通过OutputStreamWriter转换成字节流保存。</p>
-<h3 id="3、字节流与字符流的区别"><a href="#3、字节流与字符流的区别" class="headerlink" title="3、字节流与字符流的区别"></a>3、字节流与字符流的区别</h3><p>字节流没有缓冲区，是直接输出的，而字符流需要输出到缓冲区的。因此在输出时，字节流不调用close()方法时，信息已经输出了，而字符流只有在调用close()方法关闭缓冲区时，信息才输出。要想字符流在未关闭时输出信息，需要手动调用flush()方法。</p>
-<ol>
-<li>读写单位不同：字节流以字节（8bit）为单位，字符流以字符为单位，根据码表映射字符，一次可能多个字节。</li>
-<li>处理对象不同：字节流能处理所有类型的数据（如图片、avi等），而字符流只能处理字符类型的数据。</li>
-<li>字节流在操作的时候本身是不会用到缓冲区的，是文件本事的直接操作的；而字符流在操作的时候下后是会用到缓冲区的，通过缓冲区来操作文件。</li>
-</ol>
-<h2 id="四、IO-NIO面试题"><a href="#四、IO-NIO面试题" class="headerlink" title="四、IO/NIO面试题"></a>四、IO/NIO面试题</h2><h3 id="1、Java中IO流分为几种"><a href="#1、Java中IO流分为几种" class="headerlink" title="1、Java中IO流分为几种"></a>1、Java中IO流分为几种</h3><ol>
-<li>按照流的流向分：分为输入流与输出流</li>
-<li>按照操作单元分：分为字节流与字符流</li>
-<li>按照流的角色分：分为节点流与处理流</li>
-</ol>
-<h3 id="2、Java-IO与-NIO的区别"><a href="#2、Java-IO与-NIO的区别" class="headerlink" title="2、Java IO与 NIO的区别"></a>2、Java IO与 NIO的区别</h3><p>NIO即New IO，这个库是在JDK1.4中才引入的。NIO和IO有相同的作用和目的，NIO主要用到的是块，所以NIO的效率要比IO高很多。在Java API中提供了两套NIO，一套是针对标准输入输出NIO，另一套就是网络编程NIO。</p>
-<h3 id="3、Java中常用的IO类有哪些"><a href="#3、Java中常用的IO类有哪些" class="headerlink" title="3、Java中常用的IO类有哪些"></a>3、Java中常用的IO类有哪些</h3><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">File</span><br><span class="line">FileInputStream、FileOutputStream</span><br><span class="line"><span class="keyword">BufferedInputStream、BufferedOutputStream</span></span><br><span class="line"><span class="keyword"></span>FileReader、FileWrter</span><br><span class="line"><span class="keyword">BufferedReader、BufferedWriter</span></span><br><span class="line"><span class="keyword"></span>ObjectInputStream、ObjectOutputStream</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、字节流与字符流的区别"><a href="#4、字节流与字符流的区别" class="headerlink" title="4、字节流与字符流的区别"></a>4、字节流与字符流的区别</h3><p>字节流是以字节为单位进行传输，大小为8bit</p>
-<p>字符流是以字符为单位进行传输，大小为16bit</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -583,56 +633,6 @@
 </li>
 </ul>
 <p><a href="https://www.cnblogs.com/qianguyihao/p/4744233.html">参考链接</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java8新特性</title>
-    <url>/2021/06/17/397c083a.html</url>
-    <content><![CDATA[<h1 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Java8 有一个非常显著的特点，就是提供了函数式编程，本文也将介绍 Java8 的几个新特性来实现函数式编程。学会这些 API 能够编写出简单、干净、易读的代码（尤其是对集合的操作）。Java8 新特性包括：</p>
-<ul>
-<li>Lambda 表达式</li>
-<li>Stream API</li>
-<li>接口新特性<ul>
-<li>函数式接口（<code>@FunctionalInterface</code>）</li>
-<li>默认方法（<code>default</code>）</li>
-</ul>
-</li>
-<li>Optional API</li>
-<li>方法引用</li>
-</ul>
-<h2 id="一、Lambda-表达式"><a href="#一、Lambda-表达式" class="headerlink" title="一、Lambda 表达式"></a>一、Lambda 表达式</h2><p>Lambda 表达式，也可称为闭包，是 Java8 发布的一个新特性。</p>
-<p>Lambda 允许把函数作为一个方法的参数（将函数传递到方法中）。</p>
-<p>使用 Lambda 表达式可以使代码更简洁紧凑。</p>
-<p><strong>下面是 Lambda 的主要特征：</strong></p>
-<ul>
-<li>可选类型声明：不需要声明参数类型，编译器可以统一识别参数值</li>
-<li>可选的参数圆括号：一个参数无需定义圆括号，但多个参数需要定义圆括号</li>
-<li>可选的大括号：如果主体包含了一个语句，就不需要使用大括号</li>
-<li>可选的返回关键字：如果主体只有一个表达式返回值则编译器会自动返回值，大括号需要指定明表达式返回了一个数值</li>
-</ul>
-<p><strong>Lambda 表达式的简单例子：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 不需要参数,返回值为 5  </span></span><br><span class="line">() -&gt; <span class="number">5</span>  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 2. 接收一个参数(数字类型),返回其2倍的值  </span></span><br><span class="line">x -&gt; <span class="number">2</span> * x  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 3. 接受2个参数(数字),并返回他们的差值  </span></span><br><span class="line">(x, y) -&gt; x – y  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 4. 接收2个int型整数,返回他们的和  </span></span><br><span class="line">(<span class="type">int</span> x, <span class="type">int</span> y) -&gt; x + y  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 5. 接受一个 string 对象,并在控制台打印,不返回任何值(看起来像是返回void)  </span></span><br><span class="line">(String s) -&gt; System.out.print(s)</span><br></pre></td></tr></table></figure>
-
-<p><strong>变量作用域</strong></p>
-<p>如果你曾使用过匿名内部类，也许会遇到这种情况：需要引用它所在方法中的变量。这个变量必须声明为 <code>final</code> 类型，将变量声明为 final ，意味着不能为其重复赋值。Java8 虽然放松了这一限制，可以引用非 final 变量，但是该变量隐性为 final 变量。虽然无需声明 final 类型，但在 Lambda 表达式中，若重复为其赋值，编译器就会报错。</p>
-<h2 id="二、Stream-API"><a href="#二、Stream-API" class="headerlink" title="二、Stream API"></a>二、Stream API</h2><p>Stream（流）是一个来自数据源的元素队列并支持聚合操作</p>
-<ul>
-<li>元素是特定类型的对象，形成一个队列。Java 中的 Stream 并不会存储元素，而是按需计算</li>
-<li><strong>数据源</strong> 流的来源。可以是集合，数组，IO channel，产生器 generate 等</li>
-<li><strong>聚合操作</strong> 类似 SQL 一样的操作，比如 filter、map、reduce、find、match、sorted等</li>
-</ul>
-<p>和以前的 Collection 操作不同，Stream 操作还有两个基础的特征：</p>
-<ul>
-<li><strong>pipelining</strong>：中间操作都会返回流对象本身，这样多个操作可以串联成一个管道，如同流式风格（fluent style）。这样做可以对操作进行优化</li>
-<li><strong>内部迭代：</strong>以前对集合遍历都是通过 Iterator 或者 for-each 的方式，显示的在集合外部进行迭代，这叫做外部迭代。Stream 提供了内部迭代的方式。</li>
-</ul>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -1219,6 +1219,93 @@
       </tags>
   </entry>
   <entry>
+    <title>MongoDB数据库</title>
+    <url>/2020/06/18/bd0448f7.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>MongoDB数据库的学习</p>
+<span id="more"></span>
+
+<h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo.jpg"></p>
+<ul>
+<li>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。</li>
+<li>在高负载的情况下，添加更多的节点，可以保证服务器性能。</li>
+<li>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。</li>
+<li>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成</li>
+<li>MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</li>
+</ul>
+<h2 id="二、MongoDB的安装"><a href="#二、MongoDB的安装" class="headerlink" title="二、MongoDB的安装"></a>二、MongoDB的安装</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p><code>apt install mongodb</code></p>
+<p>安装完成可以用<code>mongo -version</code>来查看版本检查是否安装成功</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo1.jpg"></p>
+<h3 id="2-2-MongoDB基本管理"><a href="#2-2-MongoDB基本管理" class="headerlink" title="2.2 MongoDB基本管理"></a>2.2 MongoDB基本管理</h3><p>通过以下命令，可以对 mongoDB 数据库进行一些基本的操作：</p>
+<ul>
+<li>查看服务状态<br>service mongodb status</li>
+<li>启动服务<br>service mongodb start</li>
+<li>停止服务<br>service mongodb stop</li>
+<li>重新载入资源<br>service mongodb reload</li>
+</ul>
+<h3 id="2-3-卸载"><a href="#2-3-卸载" class="headerlink" title="2.3 卸载"></a>2.3 卸载</h3><p><code>apt --purge remove mongodb mongodb-clients mongodb-server</code></p>
+<h2 id="三、MongoDB基本配置"><a href="#三、MongoDB基本配置" class="headerlink" title="三、MongoDB基本配置"></a>三、MongoDB基本配置</h2><h3 id="3-1-MongoDB文件结构"><a href="#3-1-MongoDB文件结构" class="headerlink" title="3.1 MongoDB文件结构"></a>3.1 MongoDB文件结构</h3><p>mongoDB 数据库安装好以后，有以下四个比较重要的文件和目录：</p>
+<ul>
+<li>主启动文件：/usr/bin/mongod  </li>
+<li>配置文件：/etc/mongodb.conf  </li>
+<li>日志文件存放目录：/var/log/mongodb  </li>
+<li>数据存放位置目录：/var/lib/mongodb  </li>
+</ul>
+<h2 id="四、MongoDB基本操作"><a href="#四、MongoDB基本操作" class="headerlink" title="四、MongoDB基本操作"></a>四、MongoDB基本操作</h2><p>启动MongoDB服务后可以进行MongoDB的基本操作</p>
+<h3 id="4-1-连接数据库"><a href="#4-1-连接数据库" class="headerlink" title="4.1 连接数据库"></a>4.1 连接数据库</h3><p>使用<code>mongo</code>命令连接数据库：</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo2.jpg"></p>
+<h3 id="4-2-查看已有的数据库"><a href="#4-2-查看已有的数据库" class="headerlink" title="4.2 查看已有的数据库"></a>4.2 查看已有的数据库</h3><p>使用<code>show dbs</code>命令进行查看：</p>
+<figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">show dbs</span></span><br><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line">local   0.000GB</span><br><span class="line"><span class="meta prompt_">&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-使用数据库"><a href="#4-3-使用数据库" class="headerlink" title="4.3 使用数据库"></a>4.3 使用数据库</h3><p>如果使用的数据库不存在，就创建同名数据库：</p>
+<figure class="highlight fsharp"><table><tr><td class="code"><pre><span class="line"><span class="operator">&gt;</span> <span class="keyword">use</span> books</span><br><span class="line">switched <span class="keyword">to</span> db books  <span class="comment">//选中books数据库</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-创建数据集合"><a href="#4-4-创建数据集合" class="headerlink" title="4.4 创建数据集合"></a>4.4 创建数据集合</h3><p>类似于一张表，命令为<code>db.createCollection(&quot;表名&quot;)</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="title function_">createCollection</span>(<span class="params"><span class="string">&quot;user&quot;</span></span>)</span><br><span class="line">&#123; <span class="string">&quot;ok&quot;</span> : <span class="number">1</span> &#125;   <span class="comment">//user创建成功</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-对数据集合进行操作"><a href="#4-5-对数据集合进行操作" class="headerlink" title="4.5 对数据集合进行操作"></a>4.5 对数据集合进行操作</h3><h4 id="4-5-1-插入数据"><a href="#4-5-1-插入数据" class="headerlink" title="4.5.1 插入数据"></a>4.5.1 插入数据</h4><p>插入命令有两种</p>
+<p><code>db.表名.insert(&#123;&#125;)</code></p>
+<p><code>db.表名.save(&#123;&#125;)</code></p>
+<p>两者区别在于：插入数据时，如果_id存在，insert操作时，则插入失败，save操作时，则更新数据</p>
+<h5 id="插入一条数据："><a href="#插入一条数据：" class="headerlink" title="插入一条数据："></a>插入一条数据：</h5><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.insert</span>(&#123;_id:<span class="number">1</span>,uname:<span class="string">&quot;zhangsan&quot;</span>,age:<span class="number">20</span>,sex:<span class="string">&quot;男&quot;</span>&#125;)  </span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nInserted&quot;</span> : <span class="number">1</span> &#125;)</span></span>   <span class="comment">//一般情况，第一个字段都是_id,如果没有，也会自动添加一个_id</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="插入多条数据："><a href="#插入多条数据：" class="headerlink" title="插入多条数据："></a>插入多条数据：</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&gt; db.user.<span class="title function_ invoke__">insert</span>([&#123;<span class="attr">_id</span>:<span class="number">2</span>,<span class="attr">uname</span>:<span class="string">&quot;lisi&quot;</span>,<span class="attr">age</span>:<span class="number">19</span>,<span class="attr">sex</span>:<span class="string">&quot;男&quot;</span>&#125;,&#123;<span class="attr">_id</span>:<span class="number">3</span>,<span class="attr">uname</span>:<span class="string">&quot;wangwu&quot;</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">sex</span>:<span class="string">&quot;女&quot;</span>&#125;])   <span class="comment">//插入多条数据中间用逗号分开，然后用[]包起来就行</span></span><br><span class="line"><span class="title function_ invoke__">BulkWriteResult</span>(&#123;</span><br><span class="line">        <span class="string">&quot;writeErrors&quot;</span> : [ ],</span><br><span class="line">        <span class="string">&quot;writeConcernErrors&quot;</span> : [ ],</span><br><span class="line">        <span class="string">&quot;nInserted&quot;</span> : <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;nUpserted&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nMatched&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nModified&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nRemoved&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;upserted&quot;</span> : [ ]</span><br><span class="line">&#125;)   </span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-2-查询数据"><a href="#4-5-2-查询数据" class="headerlink" title="4.5.2 查询数据"></a>4.5.2 查询数据</h4><h5 id="不带条件的查询"><a href="#不带条件的查询" class="headerlink" title="不带条件的查询"></a>不带条件的查询</h5><p>查询命令：<code>db.表名.find()</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="property">user</span>.<span class="title function_">find</span>(<span class="params"></span>)</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">2</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">19</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="带条件的查询"><a href="#带条件的查询" class="headerlink" title="带条件的查询"></a>带条件的查询</h5><p>查询命令：<code>db.表名.find(&#123;条件&#125;)</code></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&gt; db.user.<span class="title function_ invoke__">find</span>(&#123;<span class="attr">sex</span>:<span class="string">&quot;男&quot;</span>,<span class="attr">uname</span>:<span class="string">&quot;zhangsan&quot;</span>&#125;)  <span class="comment">//支持多条件查询</span></span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-3-更新数据"><a href="#4-5-3-更新数据" class="headerlink" title="4.5.3 更新数据"></a>4.5.3 更新数据</h4><p>更新命令：<code>db.表名.update(&#123;条件&#125;,&#123;$set:&#123;&#125;&#125;)</code>  //这里条件也和查询一样支持多条件</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.update</span>(&#123;_id:<span class="number">1</span>&#125;,&#123;<span class="variable">$set</span>:&#123;uname:<span class="string">&quot;ouwen&quot;</span>&#125;&#125;)  <span class="comment">//把_id为1的uname改为ouwen</span></span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nMatched&quot;</span> : <span class="number">1</span>, <span class="string">&quot;nUpserted&quot;</span> : <span class="number">0</span>, <span class="string">&quot;nModified&quot;</span> : <span class="number">1</span> &#125;)</span></span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>()</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;ouwen&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;  <span class="comment">//修改成功</span></span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">2</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">19</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-4-删除数据"><a href="#4-5-4-删除数据" class="headerlink" title="4.5.4 删除数据"></a>4.5.4 删除数据</h4><p>删除命令：<code>db.表名.remove(&#123;条件&#125;)</code></p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.remove</span>(&#123;uname:<span class="string">&quot;lisi&quot;</span>&#125;) <span class="comment">//删除uname为lisi的数据</span></span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nRemoved&quot;</span> : <span class="number">1</span> &#125;)</span></span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>()</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;ouwen&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-5-查看所有的数据集"><a href="#4-5-5-查看所有的数据集" class="headerlink" title="4.5.5 查看所有的数据集"></a>4.5.5 查看所有的数据集</h4><p>相当于查看表：<code>show collections</code></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">show collections</span><br><span class="line">user    <span class="regexp">//</span>我这里只有一张表</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-6-删除数据集合"><a href="#4-5-6-删除数据集合" class="headerlink" title="4.5.6 删除数据集合"></a>4.5.6 删除数据集合</h4><p>类似于删除表：<code>db.表名.drop()</code></p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="keyword">user</span>.<span class="keyword">drop</span>()</span><br><span class="line"><span class="keyword">true</span>    //成功删除<span class="keyword">user</span>表</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-删除数据库"><a href="#4-6-删除数据库" class="headerlink" title="4.6 删除数据库"></a>4.6 删除数据库</h3><p>先使用要删除的数据库：<code>use books</code></p>
+<p>删除命令：<code>db.dropDatabase()</code></p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">use</span> books   <span class="comment">//使用books数据库</span></span><br><span class="line">switched to <span class="keyword">db</span> books</span><br><span class="line">&gt; <span class="keyword">db</span>.dropDatabase()   <span class="comment">//删除它</span></span><br><span class="line">&#123; <span class="string">&quot;dropped&quot;</span> : <span class="string">&quot;books&quot;</span>, <span class="string">&quot;ok&quot;</span> : 1 &#125;</span><br><span class="line">&gt; show dbs</span><br><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line"><span class="keyword">local</span>   0.000GB</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-7-退出数据库连接"><a href="#4-7-退出数据库连接" class="headerlink" title="4.7 退出数据库连接"></a>4.7 退出数据库连接</h3><p>可以使用<code>Crl+C</code>或者输入<code>exit</code>回车</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">exit</span></span><br><span class="line">bye</span><br><span class="line">root@iZ2ze4ojx7qtz1wv44gajnZ:~<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>实训日志</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>Linux</tag>
+        <tag>MongDB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown基本语法</title>
     <url>/2020/02/19/5d36ff15.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
@@ -1359,93 +1446,6 @@
       <tags>
         <tag>技巧</tag>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MongoDB数据库</title>
-    <url>/2020/06/18/bd0448f7.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>MongoDB数据库的学习</p>
-<span id="more"></span>
-
-<h2 id="一、MongoDB的简介"><a href="#一、MongoDB的简介" class="headerlink" title="一、MongoDB的简介"></a>一、MongoDB的简介</h2><h3 id="1-1-MongoDB的概述"><a href="#1-1-MongoDB的概述" class="headerlink" title="1.1 MongoDB的概述"></a>1.1 MongoDB的概述</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo.jpg"></p>
-<ul>
-<li>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。</li>
-<li>在高负载的情况下，添加更多的节点，可以保证服务器性能。</li>
-<li>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。</li>
-<li>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成</li>
-<li>MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</li>
-</ul>
-<h2 id="二、MongoDB的安装"><a href="#二、MongoDB的安装" class="headerlink" title="二、MongoDB的安装"></a>二、MongoDB的安装</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p><code>apt install mongodb</code></p>
-<p>安装完成可以用<code>mongo -version</code>来查看版本检查是否安装成功</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo1.jpg"></p>
-<h3 id="2-2-MongoDB基本管理"><a href="#2-2-MongoDB基本管理" class="headerlink" title="2.2 MongoDB基本管理"></a>2.2 MongoDB基本管理</h3><p>通过以下命令，可以对 mongoDB 数据库进行一些基本的操作：</p>
-<ul>
-<li>查看服务状态<br>service mongodb status</li>
-<li>启动服务<br>service mongodb start</li>
-<li>停止服务<br>service mongodb stop</li>
-<li>重新载入资源<br>service mongodb reload</li>
-</ul>
-<h3 id="2-3-卸载"><a href="#2-3-卸载" class="headerlink" title="2.3 卸载"></a>2.3 卸载</h3><p><code>apt --purge remove mongodb mongodb-clients mongodb-server</code></p>
-<h2 id="三、MongoDB基本配置"><a href="#三、MongoDB基本配置" class="headerlink" title="三、MongoDB基本配置"></a>三、MongoDB基本配置</h2><h3 id="3-1-MongoDB文件结构"><a href="#3-1-MongoDB文件结构" class="headerlink" title="3.1 MongoDB文件结构"></a>3.1 MongoDB文件结构</h3><p>mongoDB 数据库安装好以后，有以下四个比较重要的文件和目录：</p>
-<ul>
-<li>主启动文件：/usr/bin/mongod  </li>
-<li>配置文件：/etc/mongodb.conf  </li>
-<li>日志文件存放目录：/var/log/mongodb  </li>
-<li>数据存放位置目录：/var/lib/mongodb  </li>
-</ul>
-<h2 id="四、MongoDB基本操作"><a href="#四、MongoDB基本操作" class="headerlink" title="四、MongoDB基本操作"></a>四、MongoDB基本操作</h2><p>启动MongoDB服务后可以进行MongoDB的基本操作</p>
-<h3 id="4-1-连接数据库"><a href="#4-1-连接数据库" class="headerlink" title="4.1 连接数据库"></a>4.1 连接数据库</h3><p>使用<code>mongo</code>命令连接数据库：</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/img/mongo2.jpg"></p>
-<h3 id="4-2-查看已有的数据库"><a href="#4-2-查看已有的数据库" class="headerlink" title="4.2 查看已有的数据库"></a>4.2 查看已有的数据库</h3><p>使用<code>show dbs</code>命令进行查看：</p>
-<figure class="highlight node-repl"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span> <span class="language-javascript">show dbs</span></span><br><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line">local   0.000GB</span><br><span class="line"><span class="meta prompt_">&gt;</span> </span><br></pre></td></tr></table></figure>
-
-<h3 id="4-3-使用数据库"><a href="#4-3-使用数据库" class="headerlink" title="4.3 使用数据库"></a>4.3 使用数据库</h3><p>如果使用的数据库不存在，就创建同名数据库：</p>
-<figure class="highlight fsharp"><table><tr><td class="code"><pre><span class="line"><span class="operator">&gt;</span> <span class="keyword">use</span> books</span><br><span class="line">switched <span class="keyword">to</span> db books  <span class="comment">//选中books数据库</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-4-创建数据集合"><a href="#4-4-创建数据集合" class="headerlink" title="4.4 创建数据集合"></a>4.4 创建数据集合</h3><p>类似于一张表，命令为<code>db.createCollection(&quot;表名&quot;)</code></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="title function_">createCollection</span>(<span class="params"><span class="string">&quot;user&quot;</span></span>)</span><br><span class="line">&#123; <span class="string">&quot;ok&quot;</span> : <span class="number">1</span> &#125;   <span class="comment">//user创建成功</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-5-对数据集合进行操作"><a href="#4-5-对数据集合进行操作" class="headerlink" title="4.5 对数据集合进行操作"></a>4.5 对数据集合进行操作</h3><h4 id="4-5-1-插入数据"><a href="#4-5-1-插入数据" class="headerlink" title="4.5.1 插入数据"></a>4.5.1 插入数据</h4><p>插入命令有两种</p>
-<p><code>db.表名.insert(&#123;&#125;)</code></p>
-<p><code>db.表名.save(&#123;&#125;)</code></p>
-<p>两者区别在于：插入数据时，如果_id存在，insert操作时，则插入失败，save操作时，则更新数据</p>
-<h5 id="插入一条数据："><a href="#插入一条数据：" class="headerlink" title="插入一条数据："></a>插入一条数据：</h5><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.insert</span>(&#123;_id:<span class="number">1</span>,uname:<span class="string">&quot;zhangsan&quot;</span>,age:<span class="number">20</span>,sex:<span class="string">&quot;男&quot;</span>&#125;)  </span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nInserted&quot;</span> : <span class="number">1</span> &#125;)</span></span>   <span class="comment">//一般情况，第一个字段都是_id,如果没有，也会自动添加一个_id</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="插入多条数据："><a href="#插入多条数据：" class="headerlink" title="插入多条数据："></a>插入多条数据：</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&gt; db.user.<span class="title function_ invoke__">insert</span>([&#123;<span class="attr">_id</span>:<span class="number">2</span>,<span class="attr">uname</span>:<span class="string">&quot;lisi&quot;</span>,<span class="attr">age</span>:<span class="number">19</span>,<span class="attr">sex</span>:<span class="string">&quot;男&quot;</span>&#125;,&#123;<span class="attr">_id</span>:<span class="number">3</span>,<span class="attr">uname</span>:<span class="string">&quot;wangwu&quot;</span>,<span class="attr">age</span>:<span class="number">18</span>,<span class="attr">sex</span>:<span class="string">&quot;女&quot;</span>&#125;])   <span class="comment">//插入多条数据中间用逗号分开，然后用[]包起来就行</span></span><br><span class="line"><span class="title function_ invoke__">BulkWriteResult</span>(&#123;</span><br><span class="line">        <span class="string">&quot;writeErrors&quot;</span> : [ ],</span><br><span class="line">        <span class="string">&quot;writeConcernErrors&quot;</span> : [ ],</span><br><span class="line">        <span class="string">&quot;nInserted&quot;</span> : <span class="number">2</span>,</span><br><span class="line">        <span class="string">&quot;nUpserted&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nMatched&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nModified&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;nRemoved&quot;</span> : <span class="number">0</span>,</span><br><span class="line">        <span class="string">&quot;upserted&quot;</span> : [ ]</span><br><span class="line">&#125;)   </span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-2-查询数据"><a href="#4-5-2-查询数据" class="headerlink" title="4.5.2 查询数据"></a>4.5.2 查询数据</h4><h5 id="不带条件的查询"><a href="#不带条件的查询" class="headerlink" title="不带条件的查询"></a>不带条件的查询</h5><p>查询命令：<code>db.表名.find()</code></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="property">user</span>.<span class="title function_">find</span>(<span class="params"></span>)</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">2</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">19</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="带条件的查询"><a href="#带条件的查询" class="headerlink" title="带条件的查询"></a>带条件的查询</h5><p>查询命令：<code>db.表名.find(&#123;条件&#125;)</code></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&gt; db.user.<span class="title function_ invoke__">find</span>(&#123;<span class="attr">sex</span>:<span class="string">&quot;男&quot;</span>,<span class="attr">uname</span>:<span class="string">&quot;zhangsan&quot;</span>&#125;)  <span class="comment">//支持多条件查询</span></span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-3-更新数据"><a href="#4-5-3-更新数据" class="headerlink" title="4.5.3 更新数据"></a>4.5.3 更新数据</h4><p>更新命令：<code>db.表名.update(&#123;条件&#125;,&#123;$set:&#123;&#125;&#125;)</code>  //这里条件也和查询一样支持多条件</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.update</span>(&#123;_id:<span class="number">1</span>&#125;,&#123;<span class="variable">$set</span>:&#123;uname:<span class="string">&quot;ouwen&quot;</span>&#125;&#125;)  <span class="comment">//把_id为1的uname改为ouwen</span></span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nMatched&quot;</span> : <span class="number">1</span>, <span class="string">&quot;nUpserted&quot;</span> : <span class="number">0</span>, <span class="string">&quot;nModified&quot;</span> : <span class="number">1</span> &#125;)</span></span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>()</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;ouwen&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;  <span class="comment">//修改成功</span></span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">2</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;lisi&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">19</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-4-删除数据"><a href="#4-5-4-删除数据" class="headerlink" title="4.5.4 删除数据"></a>4.5.4 删除数据</h4><p>删除命令：<code>db.表名.remove(&#123;条件&#125;)</code></p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.remove</span>(&#123;uname:<span class="string">&quot;lisi&quot;</span>&#125;) <span class="comment">//删除uname为lisi的数据</span></span><br><span class="line"><span class="function"><span class="title">WriteResult</span><span class="params">(&#123; <span class="string">&quot;nRemoved&quot;</span> : <span class="number">1</span> &#125;)</span></span></span><br><span class="line">&gt; db<span class="selector-class">.user</span><span class="selector-class">.find</span>()</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">1</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;ouwen&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">20</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;男&quot;</span> &#125;</span><br><span class="line">&#123; <span class="string">&quot;_id&quot;</span> : <span class="number">3</span>, <span class="string">&quot;uname&quot;</span> : <span class="string">&quot;wangwu&quot;</span>, <span class="string">&quot;age&quot;</span> : <span class="number">18</span>, <span class="string">&quot;sex&quot;</span> : <span class="string">&quot;女&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-5-查看所有的数据集"><a href="#4-5-5-查看所有的数据集" class="headerlink" title="4.5.5 查看所有的数据集"></a>4.5.5 查看所有的数据集</h4><p>相当于查看表：<code>show collections</code></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">show collections</span><br><span class="line">user    <span class="regexp">//</span>我这里只有一张表</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-5-6-删除数据集合"><a href="#4-5-6-删除数据集合" class="headerlink" title="4.5.6 删除数据集合"></a>4.5.6 删除数据集合</h4><p>类似于删除表：<code>db.表名.drop()</code></p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">&gt; db.<span class="keyword">user</span>.<span class="keyword">drop</span>()</span><br><span class="line"><span class="keyword">true</span>    //成功删除<span class="keyword">user</span>表</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-6-删除数据库"><a href="#4-6-删除数据库" class="headerlink" title="4.6 删除数据库"></a>4.6 删除数据库</h3><p>先使用要删除的数据库：<code>use books</code></p>
-<p>删除命令：<code>db.dropDatabase()</code></p>
-<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">use</span> books   <span class="comment">//使用books数据库</span></span><br><span class="line">switched to <span class="keyword">db</span> books</span><br><span class="line">&gt; <span class="keyword">db</span>.dropDatabase()   <span class="comment">//删除它</span></span><br><span class="line">&#123; <span class="string">&quot;dropped&quot;</span> : <span class="string">&quot;books&quot;</span>, <span class="string">&quot;ok&quot;</span> : 1 &#125;</span><br><span class="line">&gt; show dbs</span><br><span class="line">admin   0.000GB</span><br><span class="line">config  0.000GB</span><br><span class="line"><span class="keyword">local</span>   0.000GB</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-7-退出数据库连接"><a href="#4-7-退出数据库连接" class="headerlink" title="4.7 退出数据库连接"></a>4.7 退出数据库连接</h3><p>可以使用<code>Crl+C</code>或者输入<code>exit</code>回车</p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">&gt; <span class="keyword">exit</span></span><br><span class="line">bye</span><br><span class="line">root@iZ2ze4ojx7qtz1wv44gajnZ:~<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>实训日志</category>
-      </categories>
-      <tags>
-        <tag>技巧</tag>
-        <tag>Linux</tag>
-        <tag>MongDB</tag>
       </tags>
   </entry>
   <entry>
@@ -1751,6 +1751,116 @@
       </tags>
   </entry>
   <entry>
+    <title>前后端分离</title>
+    <url>/2021/03/06/cc9e7a55.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>到底什么是<strong>前后端分离</strong>？通俗的来说就是前端的开发与后端的开发分离，前后端分离已成为互联网项目开发的业界标准使用方式，通过<strong>Nginx</strong>+<strong>Tomcat</strong>的方式（也可以中间加一个NodeJS）有效地对前端和后端的开发进行解耦。其实，前后端分离的核心思想就是前端HTML页面通过<strong>AJAX</strong>调用后端的<strong>RESTFUL API</strong>接口，并通过<strong>JSON</strong>数据进行交互。</p>
+<h2 id="为什么要进行前后端分离？"><a href="#为什么要进行前后端分离？" class="headerlink" title="为什么要进行前后端分离？"></a>为什么要进行前后端分离？</h2><ol>
+<li>前后端耦合的缺点（以JSP为例）<ul>
+<li>动态资源和静态资源全部耦合在一起，服务器压力大</li>
+<li>第一次请求JSP，必须要在WEB服务器中编译成Servlet，第一次运行会较慢</li>
+<li>如果JSP中的内容很多，页面响应会很慢，因为是同步加载，一次输出所有内容</li>
+<li>······</li>
+</ul>
+</li>
+<li>前后端分离的优点<ul>
+<li>前后端分离可以真正地实现前后端解耦，前端服务器使用Nginx，前端服务器负责控制页面引用、跳转和路由，前端页面通过AJAX异步调用后端的接口，后端服务器使用Tomcat，加快整体响应速度</li>
+<li>前后端分离的模式下，即使后端服务器暂时超时或宕机了，前端页面也会正常访问，只不过数据刷不出来而已</li>
+<li>前后端分离的模式下，后台的接口可以复用。（多端应用）</li>
+<li>页面显示再多的内容也不怕了，因为从同步加载改成了异步加载。</li>
+<li>······</li>
+</ul>
+</li>
+</ol>
+<h2 id="如何实现前后端分离？"><a href="#如何实现前后端分离？" class="headerlink" title="如何实现前后端分离？"></a>如何实现前后端分离？</h2><p>这里讲解的方式是SpringBoot+Vue进行分离，分别部署到Tomcat与NodeJs两个不同的服务器上。</p>
+<h3 id="创建一个SpringBoot项目"><a href="#创建一个SpringBoot项目" class="headerlink" title="创建一个SpringBoot项目"></a>创建一个SpringBoot项目</h3><p>…</p>
+<h3 id="使用vue-cli创建vue项目"><a href="#使用vue-cli创建vue项目" class="headerlink" title="使用vue-cli创建vue项目"></a>使用vue-cli创建vue项目</h3><p>vue-cli官网：<a href="https://cli.vuejs.org/zh/">https://cli.vuejs.org/zh/</a></p>
+<ol>
+<li><p>安装nodejs环境</p>
+<p><a href="https://nodejs.org/en/download/">官网下载</a></p>
+<p>一直默认下一步就行，路径可以自定义，安装完之后输入<code>node -v</code>，<code>npm -v</code>查看版本号。</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210305235506.png" alt="image-20210305234857573" style="zoom: 67%;" /></li>
+<li><p>安装<strong>vue-cli</strong></p>
+<ul>
+<li>npm默认是从国外的服务器下载，受网络影响较大。设置淘宝镜像可以解决这个问题</li>
+</ul>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm config set registry https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检测是否设置成功</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">npm<span class="built_in"> config </span><span class="built_in">get</span> registry</span><br></pre></td></tr></table></figure>
+
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306000237.png" alt="image-20210306000227284" style="zoom: 67%;" />
+
+<ul>
+<li>全局安装<code>vue-cli</code></li>
+</ul>
+<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检查是否安装成功</li>
+</ul>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">vue <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306000601.png" alt="image-20210306000556387" style="zoom: 67%;" /></li>
+<li><p>创建新项目</p>
+<ul>
+<li>运行以下命令来创建一个新项目：</li>
+</ul>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vue create hello-world</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>选择相应的设置(预设)完成创建</li>
+</ul>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306002820.png" alt="image-20210306002818051" style="zoom:67%;" />
+
+<ul>
+<li>创建成功</li>
+</ul>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306003127.png" alt="image-20210306003126725" style="zoom: 50%;" /></li>
+<li><p>启动vue项目</p>
+</li>
+</ol>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">run</span> serve</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置vue项目"><a href="#配置vue项目" class="headerlink" title="配置vue项目"></a>配置vue项目</h3><ul>
+<li>安装<code>axios</code></li>
+</ul>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> axios</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>初始化vue项目结构</p>
+<p>使用<code>vue-cli</code>创建vue项目会有一个初始页面，我们在开发过程中并不需要，将无用的东西去掉</p>
+</li>
+</ul>
+<h3 id="解决跨域的问题"><a href="#解决跨域的问题" class="headerlink" title="解决跨域的问题"></a>解决跨域的问题</h3><blockquote>
+<p>在Web端Vue项目开发过程中，跨域问题是不可避免的；</p>
+</blockquote>
+<h4 id="Webpack配置proxy实现代理——开发环境"><a href="#Webpack配置proxy实现代理——开发环境" class="headerlink" title="Webpack配置proxy实现代理——开发环境"></a>Webpack配置proxy实现代理——开发环境</h4><blockquote>
+<p>我们的项目工程是通过<code>Vue-cli3</code>来搭建的，因此没有了<code>Webpack</code>的显式配置文件；需要我们在工程根目录下手动创建<code>vue.config.js</code>去实现 Webpack的配置</p>
+</blockquote>
+<ol>
+<li><p>新增<code>vue.config.js</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">8080</span>,</span><br><span class="line">    <span class="attr">open</span>: <span class="literal">true</span>,<span class="comment">// vue项目启动时自动打开浏览器</span></span><br><span class="line">    <span class="attr">proxy</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123; <span class="comment">// &#x27;/api&#x27;是代理标识，用于告诉node，url前面是/api的就是使用代理的</span></span><br><span class="line">        <span class="attr">target</span>: <span class="string">&quot;http://localhost:8081&quot;</span>, <span class="comment">//目标地址，一般是指后台服务器地址</span></span><br><span class="line">        <span class="attr">changeOrigin</span>: <span class="literal">true</span>, <span class="comment">//是否跨域</span></span><br><span class="line">        <span class="attr">pathRewrite</span>: &#123; <span class="comment">// pathRewrite 的作用是把实际Request Url中的&#x27;/api&#x27;用&quot;&quot;代替</span></span><br><span class="line">          <span class="string">&#x27;^/api&#x27;</span>: <span class="string">&quot;&quot;</span> </span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，我们发起的每次http请求的Request Url的前面一部分都会和我们配置的源一样；</p>
+<p>举例：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">axios.<span class="title function_">get</span>(<span class="string">&quot;/api/getUserList&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>我们项目跑在开发环境下的<code>http://localhost:8080</code>上，那么上述请求的Request Url的就是 <code>http://localhost:8080/api/bookCate</code>;这应该就是我们的代理服务器中该资源的地址，与客户端同源；而数据的实际来源则是<code>http://localhost:8081/api/bookCate</code>，这样即实现代理跨域；</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>前后端分离并非仅仅是一种开发模式，而是一种架构模式（前后端分离架构）。千万不要以为只有在写代码的时候把前端和后端分开就是前后端分离了，这样的理解太片面了。前后端分离是需要区分前后端项目的，即前端项目和后端项目是两个项目，放在两个不同的服务器，需要独立部署，两个不同的工程，两个不同的代码库，两组不同的开发人员。前后端开发工程师需要约定交互的接口，实现并行开发。而在开发结束之后，前端项目和后端项目都需要进行独立部署，前端通过AJAX来调用HTTP请求，调用后端的RESTFUL API。前端只需要关注页面的样式与动态数据的解析和渲染，不用关心数据是怎么产生的；后端则专注于具体的业务逻辑，返回前端展现所需要的业务数据即可。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>分库分表</title>
     <url>/2022/02/18/a3a0c28e.html</url>
     <content><![CDATA[<h1 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h1><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>当一张表的数据达到几千万时，查询一次所花的时间会变得很长，系统效率会下降。<code>Oracle</code> 官方推荐单表容量为 <strong>500w</strong> 以下为最佳状态。</p>
@@ -1865,248 +1975,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前后端分离</title>
-    <url>/2021/03/06/cc9e7a55.html</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>到底什么是<strong>前后端分离</strong>？通俗的来说就是前端的开发与后端的开发分离，前后端分离已成为互联网项目开发的业界标准使用方式，通过<strong>Nginx</strong>+<strong>Tomcat</strong>的方式（也可以中间加一个NodeJS）有效地对前端和后端的开发进行解耦。其实，前后端分离的核心思想就是前端HTML页面通过<strong>AJAX</strong>调用后端的<strong>RESTFUL API</strong>接口，并通过<strong>JSON</strong>数据进行交互。</p>
-<h2 id="为什么要进行前后端分离？"><a href="#为什么要进行前后端分离？" class="headerlink" title="为什么要进行前后端分离？"></a>为什么要进行前后端分离？</h2><ol>
-<li>前后端耦合的缺点（以JSP为例）<ul>
-<li>动态资源和静态资源全部耦合在一起，服务器压力大</li>
-<li>第一次请求JSP，必须要在WEB服务器中编译成Servlet，第一次运行会较慢</li>
-<li>如果JSP中的内容很多，页面响应会很慢，因为是同步加载，一次输出所有内容</li>
-<li>······</li>
-</ul>
-</li>
-<li>前后端分离的优点<ul>
-<li>前后端分离可以真正地实现前后端解耦，前端服务器使用Nginx，前端服务器负责控制页面引用、跳转和路由，前端页面通过AJAX异步调用后端的接口，后端服务器使用Tomcat，加快整体响应速度</li>
-<li>前后端分离的模式下，即使后端服务器暂时超时或宕机了，前端页面也会正常访问，只不过数据刷不出来而已</li>
-<li>前后端分离的模式下，后台的接口可以复用。（多端应用）</li>
-<li>页面显示再多的内容也不怕了，因为从同步加载改成了异步加载。</li>
-<li>······</li>
-</ul>
-</li>
-</ol>
-<h2 id="如何实现前后端分离？"><a href="#如何实现前后端分离？" class="headerlink" title="如何实现前后端分离？"></a>如何实现前后端分离？</h2><p>这里讲解的方式是SpringBoot+Vue进行分离，分别部署到Tomcat与NodeJs两个不同的服务器上。</p>
-<h3 id="创建一个SpringBoot项目"><a href="#创建一个SpringBoot项目" class="headerlink" title="创建一个SpringBoot项目"></a>创建一个SpringBoot项目</h3><p>…</p>
-<h3 id="使用vue-cli创建vue项目"><a href="#使用vue-cli创建vue项目" class="headerlink" title="使用vue-cli创建vue项目"></a>使用vue-cli创建vue项目</h3><p>vue-cli官网：<a href="https://cli.vuejs.org/zh/">https://cli.vuejs.org/zh/</a></p>
-<ol>
-<li><p>安装nodejs环境</p>
-<p><a href="https://nodejs.org/en/download/">官网下载</a></p>
-<p>一直默认下一步就行，路径可以自定义，安装完之后输入<code>node -v</code>，<code>npm -v</code>查看版本号。</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210305235506.png" alt="image-20210305234857573" style="zoom: 67%;" /></li>
-<li><p>安装<strong>vue-cli</strong></p>
-<ul>
-<li>npm默认是从国外的服务器下载，受网络影响较大。设置淘宝镜像可以解决这个问题</li>
-</ul>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm config set registry https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>检测是否设置成功</li>
-</ul>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">npm<span class="built_in"> config </span><span class="built_in">get</span> registry</span><br></pre></td></tr></table></figure>
-
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306000237.png" alt="image-20210306000227284" style="zoom: 67%;" />
-
-<ul>
-<li>全局安装<code>vue-cli</code></li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g @vue/cli</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>检查是否安装成功</li>
-</ul>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">vue <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
-
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306000601.png" alt="image-20210306000556387" style="zoom: 67%;" /></li>
-<li><p>创建新项目</p>
-<ul>
-<li>运行以下命令来创建一个新项目：</li>
-</ul>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">vue create hello-world</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>选择相应的设置(预设)完成创建</li>
-</ul>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306002820.png" alt="image-20210306002818051" style="zoom:67%;" />
-
-<ul>
-<li>创建成功</li>
-</ul>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210306003127.png" alt="image-20210306003126725" style="zoom: 50%;" /></li>
-<li><p>启动vue项目</p>
-</li>
-</ol>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">npm <span class="built_in">run</span> serve</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置vue项目"><a href="#配置vue项目" class="headerlink" title="配置vue项目"></a>配置vue项目</h3><ul>
-<li>安装<code>axios</code></li>
-</ul>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> axios</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>初始化vue项目结构</p>
-<p>使用<code>vue-cli</code>创建vue项目会有一个初始页面，我们在开发过程中并不需要，将无用的东西去掉</p>
-</li>
-</ul>
-<h3 id="解决跨域的问题"><a href="#解决跨域的问题" class="headerlink" title="解决跨域的问题"></a>解决跨域的问题</h3><blockquote>
-<p>在Web端Vue项目开发过程中，跨域问题是不可避免的；</p>
-</blockquote>
-<h4 id="Webpack配置proxy实现代理——开发环境"><a href="#Webpack配置proxy实现代理——开发环境" class="headerlink" title="Webpack配置proxy实现代理——开发环境"></a>Webpack配置proxy实现代理——开发环境</h4><blockquote>
-<p>我们的项目工程是通过<code>Vue-cli3</code>来搭建的，因此没有了<code>Webpack</code>的显式配置文件；需要我们在工程根目录下手动创建<code>vue.config.js</code>去实现 Webpack的配置</p>
-</blockquote>
-<ol>
-<li><p>新增<code>vue.config.js</code></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">devServer</span>: &#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">8080</span>,</span><br><span class="line">    <span class="attr">open</span>: <span class="literal">true</span>,<span class="comment">// vue项目启动时自动打开浏览器</span></span><br><span class="line">    <span class="attr">proxy</span>: &#123;</span><br><span class="line">      <span class="string">&#x27;/api&#x27;</span>: &#123; <span class="comment">// &#x27;/api&#x27;是代理标识，用于告诉node，url前面是/api的就是使用代理的</span></span><br><span class="line">        <span class="attr">target</span>: <span class="string">&quot;http://localhost:8081&quot;</span>, <span class="comment">//目标地址，一般是指后台服务器地址</span></span><br><span class="line">        <span class="attr">changeOrigin</span>: <span class="literal">true</span>, <span class="comment">//是否跨域</span></span><br><span class="line">        <span class="attr">pathRewrite</span>: &#123; <span class="comment">// pathRewrite 的作用是把实际Request Url中的&#x27;/api&#x27;用&quot;&quot;代替</span></span><br><span class="line">          <span class="string">&#x27;^/api&#x27;</span>: <span class="string">&quot;&quot;</span> </span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>配置完成后，我们发起的每次http请求的Request Url的前面一部分都会和我们配置的源一样；</p>
-<p>举例：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">axios.<span class="title function_">get</span>(<span class="string">&quot;/api/getUserList&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>我们项目跑在开发环境下的<code>http://localhost:8080</code>上，那么上述请求的Request Url的就是 <code>http://localhost:8080/api/bookCate</code>;这应该就是我们的代理服务器中该资源的地址，与客户端同源；而数据的实际来源则是<code>http://localhost:8081/api/bookCate</code>，这样即实现代理跨域；</p>
-</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>前后端分离并非仅仅是一种开发模式，而是一种架构模式（前后端分离架构）。千万不要以为只有在写代码的时候把前端和后端分开就是前后端分离了，这样的理解太片面了。前后端分离是需要区分前后端项目的，即前端项目和后端项目是两个项目，放在两个不同的服务器，需要独立部署，两个不同的工程，两个不同的代码库，两组不同的开发人员。前后端开发工程师需要约定交互的接口，实现并行开发。而在开发结束之后，前端项目和后端项目都需要进行独立部署，前端通过AJAX来调用HTTP请求，调用后端的RESTFUL API。前端只需要关注页面的样式与动态数据的解析和渲染，不用关心数据是怎么产生的；后端则专注于具体的业务逻辑，返回前端展现所需要的业务数据即可。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深入理解RESTful风格</title>
-    <url>/2021/06/12/6b25d652.html</url>
-    <content><![CDATA[<h1 id="到底什么是-RESTful-？"><a href="#到底什么是-RESTful-？" class="headerlink" title="到底什么是 RESTful ？"></a>到底什么是 RESTful ？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家对 RESTful 肯定不陌生，就算不知道它到底是什么，但肯定听过这个玩意。相信大家也很想知道 RESTful 能解决什么样的问题，有什么应用场景？看完本篇文章你就能明白：</p>
-<p>在互联网并没有盛行的时代， 移动端也还没有发展起来，页面请求和并发量也不高，那时候人们对接口的要求并不高，一些常规的动态页面（JSP）就能满足大部分人们的需求。</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610104619.png" alt="image-20210610104612710" style="zoom: 67%;" />
-
-<p>但是随着移动设备和互联网的发展，人们对 Web 应用的需求也逐渐增加，传统的动态页面（JSP）也因效率低下而渐渐被 HTML + JavaScript（Ajax）的前后端分离所替代，而安卓、IOS、小程序等不同的客户端层出不穷，客户端的种类出现多元化，<strong>而客户端需要接口跟服务端进行通信</strong>，但接口的 <strong>规范性</strong> 就成了一个问题：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610105253.png" alt="image-20210610105253175" style="zoom: 67%;" />
-
-<p>所以一套 <strong>结构清晰、符合标准、易于理解、扩展方便</strong> 并且让大部分人都能理解并接收的接口风格就显得尤为重要，而 RESTful 风格的接口（RESTful API）刚好符合以上标准，就逐渐被应用从而流行起来。</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610105729.png" alt="image-20210610105729739" style="zoom: 67%;" />
-
-<p>现在，RESTful 是目前最流行的接口设计规范，在很多公司有着广泛的使用。在开发实践中我们很多人可能还是使用传统API进行请求交互，很多人其实并不特别了解RESTful API，对RESTful API的认知可能会停留在：</p>
-<ul>
-<li>面向资源类型的</li>
-<li>是一种风格</li>
-<li>（误区）接口传递参数使用斜杆（/）分割而用问号（?）传参</li>
-</ul>
-<p>而其实一个很大的误区不要认为没有查询字符串就是RESTful API，也不要认为用了查询字符串就不是RESTful API，更不要认为用了JSON传输的API就是RESTful API。</p>
-<h2 id="一、REST-介绍"><a href="#一、REST-介绍" class="headerlink" title="一、REST 介绍"></a>一、REST 介绍</h2><p>REST涉及一些概念性的东西可能比较多，在实战RESTful API之前，要对REST相关的知识有个系统的认知。</p>
-<h3 id="REST-的诞生"><a href="#REST-的诞生" class="headerlink" title="REST 的诞生"></a>REST 的诞生</h3><p>REST（英文：Representational State Transfer，简称REST，直译过来表现层状态转换）是一种软件架构风格、设计风格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。</p>
-<p>它首次出现在 2000 年 Roy Thomas Fielding 的博士论文中，这篇论文定义并详细介绍了表述性状态转移（Representational State Transfer，REST）的架构风格，并且描述了 如何使用 REST 来指导现代 Web 架构的设计和开发。用他自己的原话说：</p>
-<blockquote>
-<p>写这篇文章的目的是：在符合架构原理前提下，理解和评估基于网络的应用软件的架构设计，得到一个功能强、性能好、适宜通信的架构。</p>
-</blockquote>
-<p>需要注意的是 <strong>REST并没有一个明确的标准，而更像是一种设计的风格</strong> ，满足这种设计风格的程序或接口我们称之为RESTful(从单词字面来看就是一个形容词)。所以RESTful API 就是满足REST架构风格的接口。</p>
-<h3 id="REST-架构特征"><a href="#REST-架构特征" class="headerlink" title="REST 架构特征"></a>REST 架构特征</h3><p>既然知道REST和RESTful的联系和区别，现在就要开始好好了解RESTful的一些约束条件和规则，RESTful是一种风格而不是标准，而这个风格大致有以下几个主要 <strong>特征</strong>：</p>
-<p><strong>以资源为基础</strong> ：资源可以是一个图片、音乐、一个XML格式、HTML格式或者JSON格式等网络上的一个实体，除了一些二进制的资源外普通的文本资源更多以JSON为载体、面向用户的一组数据(通常从数据库中查询而得到)。</p>
-<p><strong>统一接口</strong>: 对资源的操作包括获取、创建、修改和删除，这些操作正好对应HTTP协议提供的GET、POST、PUT和DELETE方法。换言而知，使用RESTful风格的接口但从接口上你可能只能定位其资源，但是无法知晓它具体进行了什么操作，需要具体了解其发生了什么操作动作要从其HTTP请求方法类型上进行判断。具体的HTTP方法和方法含义如下：</p>
-<ul>
-<li>GET（SELECT）：从服务器取出资源（一项或多项）。</li>
-<li>POST（CREATE）：在服务器新建一个资源。</li>
-<li>PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）。</li>
-<li>PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）。</li>
-<li>DELETE（DELETE）：从服务器删除资源。</li>
-</ul>
-<p>当然也有很多在具体使用的时候使用PUT表示更新。从请求的流程来看，RESTful API和传统API大致架构如下：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610133407.png" alt="image-20210610133407454" style="zoom:67%;" />
-
-<p><strong>URI指向资源</strong>：URI = Universal Resource Identifier 统一资源标志符，用来标识抽象或物理资源的一个紧凑字符串。URI包括URL和URN，在这里更多时候可能代指URL(统一资源定位符)。RESTful是面向资源的，每种资源可能由一个或多个URI对应，但一个URI只指向一种资源。</p>
-<p><strong>无状态</strong>：服务器不能保存客户端的信息， 每一次从客户端发送的请求中，要包含所有必须的状态信息，会话信息由客户端保存， 服务器端根据这些状态信息来处理请求。当客户端可以切换到一个新状态的时候发送请求信息， 当一个或者多个请求被发送之后, 客户端就处于一个状态变迁过程中。每一个应用的状态描述可以被客户端用来初始化下一次的状态变迁。</p>
-<h3 id="REST-架构限制条件"><a href="#REST-架构限制条件" class="headerlink" title="REST 架构限制条件"></a>REST 架构限制条件</h3><p>Fielding在论文中提出REST架构的6个<strong>限制条件</strong>，也可称为RESTful 6大原则， 标准的REST约束应满足以下6个原则：</p>
-<p><strong>客户端-服务端（Client-Server）</strong>: 这个更专注客户端和服务端的分离，服务端独立可更好服务于前端、安卓、IOS等客户端设备。</p>
-<p><strong>无状态（Stateless）</strong>：服务端不保存客户端状态，客户端保存状态信息每次请求携带状态信息。</p>
-<p><strong>可缓存性（Cacheability）</strong> ：服务端需回复是否可以缓存以让客户端甄别是否缓存提高效率。</p>
-<p><strong>统一接口（Uniform Interface）</strong>：通过一定原则设计接口降低耦合，简化系统架构，这是RESTful设计的基本出发点。</p>
-<p><strong>分层系统（Layered System）</strong>：客户端无法直接知道连接的到终端还是中间设备，分层允许你灵活的部署服务端项目。</p>
-<p><strong>按需代码（Code-On-Demand，可选）</strong>：按需代码允许我们灵活的发送一些看似特殊的代码给客户端例如JavaScript代码。</p>
-<h2 id="二、RESTful-API-设计规范"><a href="#二、RESTful-API-设计规范" class="headerlink" title="二、RESTful API 设计规范"></a>二、RESTful API 设计规范</h2><p>既然了解了RESTful的一些规则和特性，那么具体该怎么去设计一个RESTful API呢？要从URL路径、HTTP请求动词、状态码和返回结果等方面详细考虑。</p>
-<h3 id="URL-设计规范"><a href="#URL-设计规范" class="headerlink" title="URL 设计规范"></a>URL 设计规范</h3><p>URL为统一资源定位器 ,接口属于服务端资源，首先要通过URL定位到资源才能去访问，而通常一个完整的URL组成由以下几个部分构成：</p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">URI</span> <span class="operator">=</span> scheme <span class="string">&quot;://&quot;</span> host  <span class="string">&quot;:&quot;</span>  port <span class="string">&quot;/&quot;</span> path [ <span class="string">&quot;?&quot;</span> query ][ <span class="string">&quot;#&quot;</span> fragment ]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>scheme: 指底层用的协议，如http、https、ftp</li>
-<li>host: 服务器的IP地址或者域名</li>
-<li>port: 端口，http默认为80端口</li>
-<li>path: 访问资源的路径，就是各种web 框架中定义的route路由</li>
-<li>query: 查询字符串，为发送给服务器的参数，在这里更多发送数据分页、排序等参数。</li>
-<li>fragment: 锚点，定位到页面的资源</li>
-</ul>
-<p>我们在设计 API 时 URL 的 path 是需要认真考虑的，而 RESTful 对 path 的设计做了一些规范，通常一个 RESTful API 的 path 组成如下：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>version：API版本号，有些版本号放置在头信息中也可以，通过控制版本号有利于应用迭代。</li>
-<li>resources：资源，RESTful API推荐用小写英文单词的复数形式。</li>
-<li>resource_id：资源的id，访问或操作该资源。</li>
-</ul>
-<p>当然，有时候可能资源级别较大，其下还可细分很多子资源也可以灵活设计URL的path，例如：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>subresources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>subresource_id<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>此外，有时可能增删改查无法满足业务要求，可以在URL末尾加上action，例如：</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span>/action</span><br></pre></td></tr></table></figure>
-
-<p>其中 action 就是对资源的操作。</p>
-<p>从大体样式了解URL路径组成之后，对于RESTful API的URL具体设计的规范如下：</p>
-<ol>
-<li>不用大写字母，所有单词使用英文且小写。</li>
-<li>连字符用中杠<code>&quot;-&quot;</code>而不用下杠<code>&quot;_&quot;</code></li>
-<li>正确使用 <code>&quot;/&quot;</code>表示层级关系,URL的层级不要过深，并且越靠前的层级应该相对越稳定</li>
-<li>结尾不要包含正斜杠分隔符<code>&quot;/&quot;</code></li>
-<li>URL中不出现动词，用请求方式表示动作</li>
-<li>资源表示用复数不要用单数</li>
-<li>不要使用文件扩展名</li>
-</ol>
-<h3 id="HTTP-动词"><a href="#HTTP-动词" class="headerlink" title="HTTP 动词"></a>HTTP 动词</h3><p>在 <code>RESTful API</code> 中，不同的HTTP请求方法有各自的含义，这里就展示 <code>GET,POST,PUT,DELETE</code> 几种请求API的设计与含义分析。针对不同操作，具体的含义如下：</p>
-<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">GET /collection：从服务器查询资源的列表（数组）</span><br><span class="line">GET <span class="regexp">/collection/</span>resource：从服务器查询单个资源</span><br><span class="line">POST /collection：在服务器创建新的资源</span><br><span class="line">PUT <span class="regexp">/collection/</span>resource：更新服务器资源</span><br><span class="line"><span class="keyword">DELETE</span> <span class="regexp">/collection/</span>resource：从服务器删除资源</span><br></pre></td></tr></table></figure>
-
-<p>在非RESTful风格的API中，我们通常使用GET请求和POST请求完成增删改查以及其他操作，查询和删除一般使用GET方式请求，更新和插入一般使用POST请求。从请求方式上无法知道API具体是干嘛的，所有在URL上都会有操作的动词来表示API进行的动作，例如：<code>query，add，update，delete</code> 等等。</p>
-<p>而 RESTful 风格的 API 则要求在 URL 上的都以名词的方式出现，从几种请求方式上就可以看出想要进行的操作，这与非 RSETful 风格的 API 形成鲜明的对比。</p>
-<p>在谈及 <code>GET,POST,PUT,DELETE</code> 的时候，就必须提一下接口的 <strong>安全性和幂等性</strong>，其中安全性是指方法不会修改资源状态，即读的为安全的，写的操作为非安全的。而幂等性的意思是操作一次和操作多次的最终效果相同，客户端重复调用也只返回同一个结果。</p>
-<p>上述四个HTTP请求方法的安全性和幂等性如下：</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610143432.png" alt="image-20210610143431940"></p>
-<h3 id="状态码和返回数据"><a href="#状态码和返回数据" class="headerlink" title="状态码和返回数据"></a>状态码和返回数据</h3><p>服务端处理完成后客户端也可能不知道具体成功了还是失败了，服务器响应时，包含<strong>状态码</strong>和<strong>返回数据</strong>两个部分。</p>
-<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>我们首先要正确使用各类状态码来表示该请求的处理执行结果。状态码主要分为五大类：</p>
-<blockquote>
-<p>1xx：相关信息<br>2xx：操作成功<br>3xx：重定向<br>4xx：客户端错误<br>5xx：服务器错误</p>
-</blockquote>
-<p>每一大类有若干小类，状态码的种类比较多，而主要常用状态码罗列在下面：</p>
-<ul>
-<li>200 <code>OK - [GET]</code>：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）</li>
-<li>201 <code>CREATED - [POST/PUT/PATCH]</code>：用户新建或修改数据成功</li>
-<li>202 <code>Accepted - [*]</code>：表示一个请求已经进入后台排队（异步任务）</li>
-<li>204 <code>NO CONTENT - [DELETE]</code>：用户删除数据成功。</li>
-<li>400 <code>INVALID REQUEST - [POST/PUT/PATCH]</code>：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的</li>
-<li>401 <code>Unauthorized - [*]</code>：表示用户没有权限（令牌、用户名、密码错误）</li>
-<li>403 <code>Forbidden - [*]</code> 表示用户得到授权（与401错误相对），但是访问是被禁止的</li>
-<li>404 <code>NOT FOUND - [*]</code>：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的</li>
-<li>406 <code>Not Acceptable - [GET]</code>：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）</li>
-<li>410 <code>Gone -[GET]</code>：用户请求的资源被永久删除，且不会再得到的</li>
-<li>422 <code>Unprocesable entity - [POST/PUT/PATCH]</code> 当创建一个对象时，发生一个验证错误</li>
-<li>500 <code>INTERNAL SERVER ERROR - [*]</code>：服务器发生错误，用户将无法判断发出的请求是否成功</li>
-</ul>
-<h4 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h4><p>针对不同操作，服务器向用户返回数据，而各个团队或公司封装的返回实体类也不同，但都返回JSON格式数据给客户端。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>RESTful风格的API 固然很好很规范，但大多数互联网公司并没有按照或者完全按照其规则来设计，因为REST是一种风格，而不是一种约束或规则，过于理想的RESTful API 会付出太多的成本。</p>
-<p>比如RESTful API也有一些缺点：</p>
-<ul>
-<li>比如操作方式繁琐，<code>RESTful API</code> 通常根据 <code>GET、POST、PUT、DELETE</code> 来区分操作资源的动作，而 HTTP Method 本身不可直接见，是隐藏的，而如果将动作放到 URL 的 <code>path</code> 上反而清晰可见，更利于团队的理解和交流。</li>
-<li>并且有些浏览器对 <code>GET,POST</code> 之外的请求支持不太友好，还需要特殊额外的处理。</li>
-<li>过分强调资源，而实际业务API可能有各种需求比较复杂，单单使用资源的增删改查可能并不能有效满足使用需求，强行使用<code>RESTful</code> 风格API只会增加开发难度和成本。</li>
-</ul>
-<p>所以，当你或你们的技术团队在设计 API 的时候，如果使用场景和 REST 风格很匹配，那么你们可以采用 RESTful 风格 API。但是如果业务需求和 RESTful 风格 API 不太匹配或者很麻烦，那也可以不用 RESTful 风格 API 或者可以借鉴一下，毕竟无论那种风格的 API 都是为了方便团队开发、协商以及管理，不能墨守成规。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>技巧</tag>
       </tags>
   </entry>
   <entry>
@@ -2266,21 +2134,128 @@
       </tags>
   </entry>
   <entry>
-    <title>项目安全漏洞修复</title>
-    <url>/2021/06/09/13a54546.html</url>
-    <content><![CDATA[<h1 id="项目安全漏洞修复"><a href="#项目安全漏洞修复" class="headerlink" title="项目安全漏洞修复"></a>项目安全漏洞修复</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>低风险漏洞：</p>
+    <title>深入理解RESTful风格</title>
+    <url>/2021/06/12/6b25d652.html</url>
+    <content><![CDATA[<h1 id="到底什么是-RESTful-？"><a href="#到底什么是-RESTful-？" class="headerlink" title="到底什么是 RESTful ？"></a>到底什么是 RESTful ？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家对 RESTful 肯定不陌生，就算不知道它到底是什么，但肯定听过这个玩意。相信大家也很想知道 RESTful 能解决什么样的问题，有什么应用场景？看完本篇文章你就能明白：</p>
+<p>在互联网并没有盛行的时代， 移动端也还没有发展起来，页面请求和并发量也不高，那时候人们对接口的要求并不高，一些常规的动态页面（JSP）就能满足大部分人们的需求。</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610104619.png" alt="image-20210610104612710" style="zoom: 67%;" />
+
+<p>但是随着移动设备和互联网的发展，人们对 Web 应用的需求也逐渐增加，传统的动态页面（JSP）也因效率低下而渐渐被 HTML + JavaScript（Ajax）的前后端分离所替代，而安卓、IOS、小程序等不同的客户端层出不穷，客户端的种类出现多元化，<strong>而客户端需要接口跟服务端进行通信</strong>，但接口的 <strong>规范性</strong> 就成了一个问题：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610105253.png" alt="image-20210610105253175" style="zoom: 67%;" />
+
+<p>所以一套 <strong>结构清晰、符合标准、易于理解、扩展方便</strong> 并且让大部分人都能理解并接收的接口风格就显得尤为重要，而 RESTful 风格的接口（RESTful API）刚好符合以上标准，就逐渐被应用从而流行起来。</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610105729.png" alt="image-20210610105729739" style="zoom: 67%;" />
+
+<p>现在，RESTful 是目前最流行的接口设计规范，在很多公司有着广泛的使用。在开发实践中我们很多人可能还是使用传统API进行请求交互，很多人其实并不特别了解RESTful API，对RESTful API的认知可能会停留在：</p>
 <ul>
-<li>X-Frame-Options 未配置</li>
-<li>Cookie 未设置 HttpOnly 标识</li>
+<li>面向资源类型的</li>
+<li>是一种风格</li>
+<li>（误区）接口传递参数使用斜杆（/）分割而用问号（?）传参</li>
 </ul>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>需要在项目中添加过滤器处理一下：</p>
-<span id="more"></span>
+<p>而其实一个很大的误区不要认为没有查询字符串就是RESTful API，也不要认为用了查询字符串就不是RESTful API，更不要认为用了JSON传输的API就是RESTful API。</p>
+<h2 id="一、REST-介绍"><a href="#一、REST-介绍" class="headerlink" title="一、REST 介绍"></a>一、REST 介绍</h2><p>REST涉及一些概念性的东西可能比较多，在实战RESTful API之前，要对REST相关的知识有个系统的认知。</p>
+<h3 id="REST-的诞生"><a href="#REST-的诞生" class="headerlink" title="REST 的诞生"></a>REST 的诞生</h3><p>REST（英文：Representational State Transfer，简称REST，直译过来表现层状态转换）是一种软件架构风格、设计风格，而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。</p>
+<p>它首次出现在 2000 年 Roy Thomas Fielding 的博士论文中，这篇论文定义并详细介绍了表述性状态转移（Representational State Transfer，REST）的架构风格，并且描述了 如何使用 REST 来指导现代 Web 架构的设计和开发。用他自己的原话说：</p>
+<blockquote>
+<p>写这篇文章的目的是：在符合架构原理前提下，理解和评估基于网络的应用软件的架构设计，得到一个功能强、性能好、适宜通信的架构。</p>
+</blockquote>
+<p>需要注意的是 <strong>REST并没有一个明确的标准，而更像是一种设计的风格</strong> ，满足这种设计风格的程序或接口我们称之为RESTful(从单词字面来看就是一个形容词)。所以RESTful API 就是满足REST架构风格的接口。</p>
+<h3 id="REST-架构特征"><a href="#REST-架构特征" class="headerlink" title="REST 架构特征"></a>REST 架构特征</h3><p>既然知道REST和RESTful的联系和区别，现在就要开始好好了解RESTful的一些约束条件和规则，RESTful是一种风格而不是标准，而这个风格大致有以下几个主要 <strong>特征</strong>：</p>
+<p><strong>以资源为基础</strong> ：资源可以是一个图片、音乐、一个XML格式、HTML格式或者JSON格式等网络上的一个实体，除了一些二进制的资源外普通的文本资源更多以JSON为载体、面向用户的一组数据(通常从数据库中查询而得到)。</p>
+<p><strong>统一接口</strong>: 对资源的操作包括获取、创建、修改和删除，这些操作正好对应HTTP协议提供的GET、POST、PUT和DELETE方法。换言而知，使用RESTful风格的接口但从接口上你可能只能定位其资源，但是无法知晓它具体进行了什么操作，需要具体了解其发生了什么操作动作要从其HTTP请求方法类型上进行判断。具体的HTTP方法和方法含义如下：</p>
+<ul>
+<li>GET（SELECT）：从服务器取出资源（一项或多项）。</li>
+<li>POST（CREATE）：在服务器新建一个资源。</li>
+<li>PUT（UPDATE）：在服务器更新资源（客户端提供完整资源数据）。</li>
+<li>PATCH（UPDATE）：在服务器更新资源（客户端提供需要修改的资源数据）。</li>
+<li>DELETE（DELETE）：从服务器删除资源。</li>
+</ul>
+<p>当然也有很多在具体使用的时候使用PUT表示更新。从请求的流程来看，RESTful API和传统API大致架构如下：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610133407.png" alt="image-20210610133407454" style="zoom:67%;" />
 
-<h3 id="1、编写-filter-过滤器"><a href="#1、编写-filter-过滤器" class="headerlink" title="1、编写 filter 过滤器"></a>1、编写 filter 过滤器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ClickFilter</span> <span class="keyword">implements</span>  <span class="title class_">Filter</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(ServletRequest arg0, ServletResponse arg1,</span></span><br><span class="line"><span class="params">			FilterChain arg2)</span> <span class="keyword">throws</span> IOException, ServletException &#123;</span><br><span class="line">		   <span class="comment">//转为HttpServletResponse来addHeader</span></span><br><span class="line">	       <span class="type">HttpServletRequest</span> <span class="variable">req</span> <span class="operator">=</span> (HttpServletRequest) arg0;</span><br><span class="line">	       <span class="type">HttpServletResponse</span> <span class="variable">resp</span> <span class="operator">=</span> (HttpServletResponse) arg1;  </span><br><span class="line">	       resp.setHeader(<span class="string">&quot;x-frame-options&quot;</span>, <span class="string">&quot;SAMEORIGIN&quot;</span>);  </span><br><span class="line">	       </span><br><span class="line">	       Cookie[] cookies = req.getCookies();</span><br><span class="line">	       <span class="keyword">if</span>(cookies!=<span class="literal">null</span>)&#123;</span><br><span class="line">	           <span class="keyword">for</span>(Cookie cookie : cookies)&#123;</span><br><span class="line">	               <span class="type">StringBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(); </span><br><span class="line">	               <span class="comment">/*将cookie拼凑起来,网上那一步不能登录,是name写死了...*/</span></span><br><span class="line">	               builder.append(cookie.getName() +<span class="string">&quot;=&quot;</span> + cookie.getValue() + <span class="string">&quot;; &quot;</span>); </span><br><span class="line">	               builder.append(<span class="string">&quot;Secure; &quot;</span>); </span><br><span class="line">	               builder.append(<span class="string">&quot;HttpOnly; &quot;</span>); </span><br><span class="line">	               <span class="type">Calendar</span> <span class="variable">cal</span> <span class="operator">=</span> Calendar.getInstance(); </span><br><span class="line">	               cal.add(Calendar.HOUR, <span class="number">1</span>); </span><br><span class="line">	               <span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> cal.getTime(); </span><br><span class="line">	               <span class="type">Locale</span> <span class="variable">locale</span> <span class="operator">=</span> Locale.CHINA; </span><br><span class="line">	               <span class="type">SimpleDateFormat</span> <span class="variable">sdf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;dd-MM-yyyy HH:mm:ss&quot;</span>,locale); </span><br><span class="line">	               builder.append(<span class="string">&quot;Expires=&quot;</span> + sdf.format(date)); </span><br><span class="line">	               resp.addHeader(<span class="string">&quot;Set-Cookie&quot;</span>, builder.toString());</span><br><span class="line">	           &#125;</span><br><span class="line">	      &#125;</span><br><span class="line">	    arg2.doFilter(req, resp);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(FilterConfig arg0)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;过滤器初始化&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;过滤器销毁&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>URI指向资源</strong>：URI = Universal Resource Identifier 统一资源标志符，用来标识抽象或物理资源的一个紧凑字符串。URI包括URL和URN，在这里更多时候可能代指URL(统一资源定位符)。RESTful是面向资源的，每种资源可能由一个或多个URI对应，但一个URI只指向一种资源。</p>
+<p><strong>无状态</strong>：服务器不能保存客户端的信息， 每一次从客户端发送的请求中，要包含所有必须的状态信息，会话信息由客户端保存， 服务器端根据这些状态信息来处理请求。当客户端可以切换到一个新状态的时候发送请求信息， 当一个或者多个请求被发送之后, 客户端就处于一个状态变迁过程中。每一个应用的状态描述可以被客户端用来初始化下一次的状态变迁。</p>
+<h3 id="REST-架构限制条件"><a href="#REST-架构限制条件" class="headerlink" title="REST 架构限制条件"></a>REST 架构限制条件</h3><p>Fielding在论文中提出REST架构的6个<strong>限制条件</strong>，也可称为RESTful 6大原则， 标准的REST约束应满足以下6个原则：</p>
+<p><strong>客户端-服务端（Client-Server）</strong>: 这个更专注客户端和服务端的分离，服务端独立可更好服务于前端、安卓、IOS等客户端设备。</p>
+<p><strong>无状态（Stateless）</strong>：服务端不保存客户端状态，客户端保存状态信息每次请求携带状态信息。</p>
+<p><strong>可缓存性（Cacheability）</strong> ：服务端需回复是否可以缓存以让客户端甄别是否缓存提高效率。</p>
+<p><strong>统一接口（Uniform Interface）</strong>：通过一定原则设计接口降低耦合，简化系统架构，这是RESTful设计的基本出发点。</p>
+<p><strong>分层系统（Layered System）</strong>：客户端无法直接知道连接的到终端还是中间设备，分层允许你灵活的部署服务端项目。</p>
+<p><strong>按需代码（Code-On-Demand，可选）</strong>：按需代码允许我们灵活的发送一些看似特殊的代码给客户端例如JavaScript代码。</p>
+<h2 id="二、RESTful-API-设计规范"><a href="#二、RESTful-API-设计规范" class="headerlink" title="二、RESTful API 设计规范"></a>二、RESTful API 设计规范</h2><p>既然了解了RESTful的一些规则和特性，那么具体该怎么去设计一个RESTful API呢？要从URL路径、HTTP请求动词、状态码和返回结果等方面详细考虑。</p>
+<h3 id="URL-设计规范"><a href="#URL-设计规范" class="headerlink" title="URL 设计规范"></a>URL 设计规范</h3><p>URL为统一资源定位器 ,接口属于服务端资源，首先要通过URL定位到资源才能去访问，而通常一个完整的URL组成由以下几个部分构成：</p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">URI</span> <span class="operator">=</span> scheme <span class="string">&quot;://&quot;</span> host  <span class="string">&quot;:&quot;</span>  port <span class="string">&quot;/&quot;</span> path [ <span class="string">&quot;?&quot;</span> query ][ <span class="string">&quot;#&quot;</span> fragment ]</span><br></pre></td></tr></table></figure>
 
-<h3 id="2、配置-web-xml"><a href="#2、配置-web-xml" class="headerlink" title="2、配置 web.xml"></a>2、配置 web.xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>FrameFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>com.wx.utils.publicMemer.db.config.ClickFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>FrameFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>scheme: 指底层用的协议，如http、https、ftp</li>
+<li>host: 服务器的IP地址或者域名</li>
+<li>port: 端口，http默认为80端口</li>
+<li>path: 访问资源的路径，就是各种web 框架中定义的route路由</li>
+<li>query: 查询字符串，为发送给服务器的参数，在这里更多发送数据分页、排序等参数。</li>
+<li>fragment: 锚点，定位到页面的资源</li>
+</ul>
+<p>我们在设计 API 时 URL 的 path 是需要认真考虑的，而 RESTful 对 path 的设计做了一些规范，通常一个 RESTful API 的 path 组成如下：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="3、重启服务器"><a href="#3、重启服务器" class="headerlink" title="3、重启服务器"></a>3、重启服务器</h3><p>测试通过~</p>
+<ul>
+<li>version：API版本号，有些版本号放置在头信息中也可以，通过控制版本号有利于应用迭代。</li>
+<li>resources：资源，RESTful API推荐用小写英文单词的复数形式。</li>
+<li>resource_id：资源的id，访问或操作该资源。</li>
+</ul>
+<p>当然，有时候可能资源级别较大，其下还可细分很多子资源也可以灵活设计URL的path，例如：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>subresources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>subresource_id<span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，有时可能增删改查无法满足业务要求，可以在URL末尾加上action，例如：</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="title class_">/</span><span class="punctuation">&#123;</span>version<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resources<span class="punctuation">&#125;</span>/<span class="punctuation">&#123;</span>resource_id<span class="punctuation">&#125;</span>/action</span><br></pre></td></tr></table></figure>
+
+<p>其中 action 就是对资源的操作。</p>
+<p>从大体样式了解URL路径组成之后，对于RESTful API的URL具体设计的规范如下：</p>
+<ol>
+<li>不用大写字母，所有单词使用英文且小写。</li>
+<li>连字符用中杠<code>&quot;-&quot;</code>而不用下杠<code>&quot;_&quot;</code></li>
+<li>正确使用 <code>&quot;/&quot;</code>表示层级关系,URL的层级不要过深，并且越靠前的层级应该相对越稳定</li>
+<li>结尾不要包含正斜杠分隔符<code>&quot;/&quot;</code></li>
+<li>URL中不出现动词，用请求方式表示动作</li>
+<li>资源表示用复数不要用单数</li>
+<li>不要使用文件扩展名</li>
+</ol>
+<h3 id="HTTP-动词"><a href="#HTTP-动词" class="headerlink" title="HTTP 动词"></a>HTTP 动词</h3><p>在 <code>RESTful API</code> 中，不同的HTTP请求方法有各自的含义，这里就展示 <code>GET,POST,PUT,DELETE</code> 几种请求API的设计与含义分析。针对不同操作，具体的含义如下：</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">GET /collection：从服务器查询资源的列表（数组）</span><br><span class="line">GET <span class="regexp">/collection/</span>resource：从服务器查询单个资源</span><br><span class="line">POST /collection：在服务器创建新的资源</span><br><span class="line">PUT <span class="regexp">/collection/</span>resource：更新服务器资源</span><br><span class="line"><span class="keyword">DELETE</span> <span class="regexp">/collection/</span>resource：从服务器删除资源</span><br></pre></td></tr></table></figure>
+
+<p>在非RESTful风格的API中，我们通常使用GET请求和POST请求完成增删改查以及其他操作，查询和删除一般使用GET方式请求，更新和插入一般使用POST请求。从请求方式上无法知道API具体是干嘛的，所有在URL上都会有操作的动词来表示API进行的动作，例如：<code>query，add，update，delete</code> 等等。</p>
+<p>而 RESTful 风格的 API 则要求在 URL 上的都以名词的方式出现，从几种请求方式上就可以看出想要进行的操作，这与非 RSETful 风格的 API 形成鲜明的对比。</p>
+<p>在谈及 <code>GET,POST,PUT,DELETE</code> 的时候，就必须提一下接口的 <strong>安全性和幂等性</strong>，其中安全性是指方法不会修改资源状态，即读的为安全的，写的操作为非安全的。而幂等性的意思是操作一次和操作多次的最终效果相同，客户端重复调用也只返回同一个结果。</p>
+<p>上述四个HTTP请求方法的安全性和幂等性如下：</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210610143432.png" alt="image-20210610143431940"></p>
+<h3 id="状态码和返回数据"><a href="#状态码和返回数据" class="headerlink" title="状态码和返回数据"></a>状态码和返回数据</h3><p>服务端处理完成后客户端也可能不知道具体成功了还是失败了，服务器响应时，包含<strong>状态码</strong>和<strong>返回数据</strong>两个部分。</p>
+<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>我们首先要正确使用各类状态码来表示该请求的处理执行结果。状态码主要分为五大类：</p>
+<blockquote>
+<p>1xx：相关信息<br>2xx：操作成功<br>3xx：重定向<br>4xx：客户端错误<br>5xx：服务器错误</p>
+</blockquote>
+<p>每一大类有若干小类，状态码的种类比较多，而主要常用状态码罗列在下面：</p>
+<ul>
+<li>200 <code>OK - [GET]</code>：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）</li>
+<li>201 <code>CREATED - [POST/PUT/PATCH]</code>：用户新建或修改数据成功</li>
+<li>202 <code>Accepted - [*]</code>：表示一个请求已经进入后台排队（异步任务）</li>
+<li>204 <code>NO CONTENT - [DELETE]</code>：用户删除数据成功。</li>
+<li>400 <code>INVALID REQUEST - [POST/PUT/PATCH]</code>：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的</li>
+<li>401 <code>Unauthorized - [*]</code>：表示用户没有权限（令牌、用户名、密码错误）</li>
+<li>403 <code>Forbidden - [*]</code> 表示用户得到授权（与401错误相对），但是访问是被禁止的</li>
+<li>404 <code>NOT FOUND - [*]</code>：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的</li>
+<li>406 <code>Not Acceptable - [GET]</code>：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）</li>
+<li>410 <code>Gone -[GET]</code>：用户请求的资源被永久删除，且不会再得到的</li>
+<li>422 <code>Unprocesable entity - [POST/PUT/PATCH]</code> 当创建一个对象时，发生一个验证错误</li>
+<li>500 <code>INTERNAL SERVER ERROR - [*]</code>：服务器发生错误，用户将无法判断发出的请求是否成功</li>
+</ul>
+<h4 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h4><p>针对不同操作，服务器向用户返回数据，而各个团队或公司封装的返回实体类也不同，但都返回JSON格式数据给客户端。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>RESTful风格的API 固然很好很规范，但大多数互联网公司并没有按照或者完全按照其规则来设计，因为REST是一种风格，而不是一种约束或规则，过于理想的RESTful API 会付出太多的成本。</p>
+<p>比如RESTful API也有一些缺点：</p>
+<ul>
+<li>比如操作方式繁琐，<code>RESTful API</code> 通常根据 <code>GET、POST、PUT、DELETE</code> 来区分操作资源的动作，而 HTTP Method 本身不可直接见，是隐藏的，而如果将动作放到 URL 的 <code>path</code> 上反而清晰可见，更利于团队的理解和交流。</li>
+<li>并且有些浏览器对 <code>GET,POST</code> 之外的请求支持不太友好，还需要特殊额外的处理。</li>
+<li>过分强调资源，而实际业务API可能有各种需求比较复杂，单单使用资源的增删改查可能并不能有效满足使用需求，强行使用<code>RESTful</code> 风格API只会增加开发难度和成本。</li>
+</ul>
+<p>所以，当你或你们的技术团队在设计 API 的时候，如果使用场景和 REST 风格很匹配，那么你们可以采用 RESTful 风格 API。但是如果业务需求和 RESTful 风格 API 不太匹配或者很麻烦，那也可以不用 RESTful 风格 API 或者可以借鉴一下，毕竟无论那种风格的 API 都是为了方便团队开发、协商以及管理，不能墨守成规。</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -2481,6 +2456,31 @@
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="1-编写TestController测试"><a href="#1-编写TestController测试" class="headerlink" title="1. 编写TestController测试"></a>1. 编写TestController测试</h3><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> org.jeecg.modules.exception.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.Api;</span><br><span class="line"><span class="keyword">import</span> io.swagger.annotations.ApiOperation;</span><br><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="keyword">import</span> org.jeecg.common.api.vo.Result;</span><br><span class="line"><span class="keyword">import</span> org.jeecg.common.constant.enums.ResultCodeEnum;</span><br><span class="line"><span class="keyword">import</span> org.jeecg.common.exception.VanxSoftException;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.<span class="keyword">annotation</span>.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.<span class="keyword">annotation</span>.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.<span class="keyword">annotation</span>.RestController;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 全局异常处理</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span>: luo_jj</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2022年03月24日 17:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(<span class="string">&quot;/exception&quot;</span>)</span></span><br><span class="line"><span class="meta">@Api(tags=<span class="string">&quot;全局异常处理&quot;</span>)</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ApiOperation(<span class="string">&quot;测试请求&quot;</span>)</span></span><br><span class="line">    <span class="meta">@RequestMapping(value = <span class="string">&quot;/test&quot;</span>, method = RequestMethod.POST)</span></span><br><span class="line">    <span class="keyword">public</span> Result&lt;JSONObject&gt; testClientError()&#123;</span><br><span class="line">        <span class="keyword">throw</span> new VanxSoftException(ResultCodeEnum.SYSTEM_ERROR);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220328151505.png" alt="image-20220328151505665"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目安全漏洞修复</title>
+    <url>/2021/06/09/13a54546.html</url>
+    <content><![CDATA[<h1 id="项目安全漏洞修复"><a href="#项目安全漏洞修复" class="headerlink" title="项目安全漏洞修复"></a>项目安全漏洞修复</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>低风险漏洞：</p>
+<ul>
+<li>X-Frame-Options 未配置</li>
+<li>Cookie 未设置 HttpOnly 标识</li>
+</ul>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>需要在项目中添加过滤器处理一下：</p>
+<span id="more"></span>
+
+<h3 id="1、编写-filter-过滤器"><a href="#1、编写-filter-过滤器" class="headerlink" title="1、编写 filter 过滤器"></a>1、编写 filter 过滤器</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ClickFilter</span> <span class="keyword">implements</span>  <span class="title class_">Filter</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(ServletRequest arg0, ServletResponse arg1,</span></span><br><span class="line"><span class="params">			FilterChain arg2)</span> <span class="keyword">throws</span> IOException, ServletException &#123;</span><br><span class="line">		   <span class="comment">//转为HttpServletResponse来addHeader</span></span><br><span class="line">	       <span class="type">HttpServletRequest</span> <span class="variable">req</span> <span class="operator">=</span> (HttpServletRequest) arg0;</span><br><span class="line">	       <span class="type">HttpServletResponse</span> <span class="variable">resp</span> <span class="operator">=</span> (HttpServletResponse) arg1;  </span><br><span class="line">	       resp.setHeader(<span class="string">&quot;x-frame-options&quot;</span>, <span class="string">&quot;SAMEORIGIN&quot;</span>);  </span><br><span class="line">	       </span><br><span class="line">	       Cookie[] cookies = req.getCookies();</span><br><span class="line">	       <span class="keyword">if</span>(cookies!=<span class="literal">null</span>)&#123;</span><br><span class="line">	           <span class="keyword">for</span>(Cookie cookie : cookies)&#123;</span><br><span class="line">	               <span class="type">StringBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(); </span><br><span class="line">	               <span class="comment">/*将cookie拼凑起来,网上那一步不能登录,是name写死了...*/</span></span><br><span class="line">	               builder.append(cookie.getName() +<span class="string">&quot;=&quot;</span> + cookie.getValue() + <span class="string">&quot;; &quot;</span>); </span><br><span class="line">	               builder.append(<span class="string">&quot;Secure; &quot;</span>); </span><br><span class="line">	               builder.append(<span class="string">&quot;HttpOnly; &quot;</span>); </span><br><span class="line">	               <span class="type">Calendar</span> <span class="variable">cal</span> <span class="operator">=</span> Calendar.getInstance(); </span><br><span class="line">	               cal.add(Calendar.HOUR, <span class="number">1</span>); </span><br><span class="line">	               <span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> cal.getTime(); </span><br><span class="line">	               <span class="type">Locale</span> <span class="variable">locale</span> <span class="operator">=</span> Locale.CHINA; </span><br><span class="line">	               <span class="type">SimpleDateFormat</span> <span class="variable">sdf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;dd-MM-yyyy HH:mm:ss&quot;</span>,locale); </span><br><span class="line">	               builder.append(<span class="string">&quot;Expires=&quot;</span> + sdf.format(date)); </span><br><span class="line">	               resp.addHeader(<span class="string">&quot;Set-Cookie&quot;</span>, builder.toString());</span><br><span class="line">	           &#125;</span><br><span class="line">	      &#125;</span><br><span class="line">	    arg2.doFilter(req, resp);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(FilterConfig arg0)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;过滤器初始化&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;过滤器销毁&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、配置-web-xml"><a href="#2、配置-web-xml" class="headerlink" title="2、配置 web.xml"></a>2、配置 web.xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>FrameFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>com.wx.utils.publicMemer.db.config.ClickFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>FrameFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、重启服务器"><a href="#3、重启服务器" class="headerlink" title="3、重启服务器"></a>3、重启服务器</h3><p>测试通过~</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -3081,169 +3081,6 @@
       </tags>
   </entry>
   <entry>
-    <title>分布式系统理论</title>
-    <url>/2021/04/13/41166861.html</url>
-    <content><![CDATA[<h1 id="分布式系统理论"><a href="#分布式系统理论" class="headerlink" title="分布式系统理论"></a>分布式系统理论</h1><h2 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="什么是分布式系统？"></a>什么是分布式系统？</h2><p>分布式是若干独立计算机的集合，这些计算机对于用户来说就像单个相关系统。</p>
-<p>分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是<strong>利用更多的机器，处理更多的数据</strong>。</p>
-<p>首先需要明确的是，只有当单个节点的处理能力无法满足日益增长的计算、存储任务的时候，且硬件的提升（加内存、加磁盘、使用更好的CPU）高昂到得不偿失的时候，应用程序也不能进一步优化的时候，我们才需要考虑分布式系统。因为，分布式系统要解决的问题本身就是和单机系统一样的，而由于分布式系统多节点、通过网络通信的拓扑结构，会引入很多单机系统没有的问题，为了解决这些问题又会引入更多的机制、协议，带来更多的问题。</p>
-<h2 id="Dubbo文档"><a href="#Dubbo文档" class="headerlink" title="Dubbo文档"></a>Dubbo文档</h2><p>随着互联网的发展，网站应用的规模不断扩大，常规的垂直应用架构已无法应对，分布式服务架构以及流动计算架构势在必行，急需<strong>一个治理系统</strong>确保架构有条不紊的演进。</p>
-<p>在Dubbo的官网文档有这样一张图</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110820.png" alt="img"></p>
-<h3 id="单一应用架构"><a href="#单一应用架构" class="headerlink" title="单一应用架构"></a><strong>单一应用架构</strong></h3><p>当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架(ORM)是关键。</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110902.png" alt="img">    </p>
-<p>适用于小型网站，小型管理系统，将所有功能都部署到一个功能里，简单易用。</p>
-<p><strong>缺点：</strong></p>
-<p>1、性能扩展比较难</p>
-<p>2、协同开发问题</p>
-<p>3、不利于升级维护</p>
-<h3 id="垂直应用架构"><a href="#垂直应用架构" class="headerlink" title="垂直应用架构"></a>垂直应用架构</h3><p>当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的Web框架(MVC)是关键。</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110941.png" alt="img">    </p>
-<p>通过切分业务来实现各个模块独立部署，降低了维护和部署的难度，团队各司其职更易管理，性能扩展也更方便，更有针对性。</p>
-<p>缺点：公用模块无法重复利用，开发性的浪费</p>
-<h3 id="分布式服务架构"><a href="#分布式服务架构" class="headerlink" title="分布式服务架构"></a>分布式服务架构</h3><p>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的**分布式服务框架(RPC)**是关键。</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111036.png" alt="img">    </p>
-<h3 id="流式计算架构"><a href="#流式计算架构" class="headerlink" title="流式计算架构"></a>流式计算架构</h3><p>当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于<strong>提高机器利用率的资源调度和治理中心</strong>(SOA)[Service Oriented Architecture]是关键。</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111136.png" alt="img">    </p>
-<h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><h3 id="什么是RPC？"><a href="#什么是RPC？" class="headerlink" title="什么是RPC？"></a>什么是RPC？</h3><p>RPC【Remote Procedure Call】是指远程过程调用，是一种进程间通信方式，他是一种技术的思想，而不是规范。它允许程序调用另一个地址空间（通常是共享网络的另一台机器上）的过程或函数，而不用程序员显式编码这个远程调用的细节。即程序员无论是调用本地的还是远程的函数，本质上编写的调用代码基本相同。</p>
-<p>也就是说两台服务器A，B，一个应用部署在A服务器上，想要调用B服务器上应用提供的函数/方法，由于不在一个内存空间，不能直接调用，需要通过网络来表达调用的语义和传达调用的数据。为什么要用RPC呢？就是无法在一个进程内，甚至一个计算机内通过本地调用的方式完成的需求，比如不同的系统间的通讯，甚至不同的组织间的通讯，由于计算能力需要横向扩展，需要在多台机器组成的集群上部署应用。RPC就是要像调用本地的函数一样去调远程函数。</p>
-<p>推荐阅读文章：<a href="https://www.jianshu.com/p/2accc2840a1b">https://www.jianshu.com/p/2accc2840a1b</a></p>
-<h3 id="RPC基本原理"><a href="#RPC基本原理" class="headerlink" title="RPC基本原理"></a>RPC基本原理</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111312.png" alt="img">    </p>
-<h3 id="步骤解析："><a href="#步骤解析：" class="headerlink" title="步骤解析："></a>步骤解析：</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111426.png" alt="img">    </p>
-<p>RPC的两个核心模块：通讯、序列化！</p>
-<h2 id="测试环境搭建"><a href="#测试环境搭建" class="headerlink" title="测试环境搭建"></a>测试环境搭建</h2><h3 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h3><p>Apache Dubbo<code>|ˈdʌbəʊ|</code>是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。</p>
-<p>dubbo官网 <a href="http://dubbo.apache.org/zh-cn/index.html">http://dubbo.apache.org/zh-cn/index.html</a></p>
-<p>1.了解Dubbo的特性</p>
-<p>2.查看官方文档</p>
-<p><strong>dubbo基本概念</strong></p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413112417.png" alt="img" style="zoom:67%;" />    
-
-<p><strong>服务提供者（Provider）：</strong>暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。</p>
-<p><strong>服务消费者（Consumer）：</strong>调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p>
-<p><strong>注册中心（Registry）：</strong>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者</p>
-<p><strong>监控中心（Monitor）：</strong>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心</p>
-<p>调用关系说明</p>
-<blockquote>
-<p>服务容器负责启动，加载，运行服务提供者。</p>
-</blockquote>
-<blockquote>
-<p>服务提供者在启动时，向注册中心注册自己提供的服务。</p>
-</blockquote>
-<blockquote>
-<p>服务消费者在启动时，向注册中心订阅自己所需的服务。</p>
-</blockquote>
-<blockquote>
-<p>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。</p>
-</blockquote>
-<blockquote>
-<p>服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p>
-</blockquote>
-<blockquote>
-<p>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心。</p>
-</blockquote>
-<h3 id="Dubbo环境搭建"><a href="#Dubbo环境搭建" class="headerlink" title="Dubbo环境搭建"></a>Dubbo环境搭建</h3><ul>
-<li><p>安装Zookeeper注册中心</p>
-<ol>
-<li><p>点击下载<a href="https://downloads.apache.org/zookeeper/zookeeper-3.5.9/apache-zookeeper-3.5.9-bin.tar.gz">zookeeper</a>，直接解压</p>
-</li>
-<li><p>运行<code>/bin/zkServer.cmd</code>，初次运行会报错，没有<code>zoo.cfg</code>配置文件</p>
-</li>
-<li><p>修改zoo.cfg配置文件</p>
-<p>将conf文件夹下面的zoo_sample.cfg复制一份改名为zoo.cfg即可。</p>
-</li>
-</ol>
-</li>
-</ul>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413155414.png" alt="image-20210413155414083" style="zoom: 67%;" />
-
-<h3 id="安装Dubbo-admin"><a href="#安装Dubbo-admin" class="headerlink" title="安装Dubbo-admin"></a>安装Dubbo-admin</h3><p>dubbo本身并不是一个服务软件。它其实就是一个jar包，能够帮你的java程序连接到zookeeper，并利用zookeeper消费、提供服务。</p>
-<p>但是为了让用户更好的管理监控众多的dubbo服务，官方提供了一个可视化的监控程序dubbo-admin，不过这个监控即使不装也不影响使用。</p>
-<h4 id="1、下载dubbo-admin"><a href="#1、下载dubbo-admin" class="headerlink" title="1、下载dubbo-admin"></a>1、下载dubbo-admin</h4><p>地址：<a href="https://github.com/apache/dubbo-admin/tree/master">点击下载</a></p>
-<h4 id="2、解压进入目录"><a href="#2、解压进入目录" class="headerlink" title="2、解压进入目录"></a>2、解压进入目录</h4><p>修改dubbo-admin\src\main\resources \application.properties 指定zookeeper地址</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">7001</span></span><br><span class="line"><span class="attr">spring.velocity.cache</span>=<span class="string">false</span></span><br><span class="line"><span class="attr">spring.velocity.charset</span>=<span class="string">UTF-8</span></span><br><span class="line"><span class="attr">spring.velocity.layout-url</span>=<span class="string">/templates/default.vm</span></span><br><span class="line"><span class="attr">spring.messages.fallback-to-system-locale</span>=<span class="string">false</span></span><br><span class="line"><span class="attr">spring.messages.basename</span>=<span class="string">i18n/message</span></span><br><span class="line"><span class="attr">spring.root.password</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">spring.guest.password</span>=<span class="string">guest</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3、在项目目录下打包dubbo-admin"><a href="#3、在项目目录下打包dubbo-admin" class="headerlink" title="3、在项目目录下打包dubbo-admin"></a>3、在项目目录下打包dubbo-admin</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="4、执行-dubbo-admin-target-下的dubbo-admin-0-0-1-SNAPSHOT-jar"><a href="#4、执行-dubbo-admin-target-下的dubbo-admin-0-0-1-SNAPSHOT-jar" class="headerlink" title="4、执行 dubbo-admin\target 下的dubbo-admin-0.0.1-SNAPSHOT.jar"></a>4、执行 dubbo-admin\target 下的dubbo-admin-0.0.1-SNAPSHOT.jar</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar dubbo-admin-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
-
-<p>==【注意：zookeeper的服务一定要打开！】==</p>
-<p>执行成功，访问<a href="localhost:7001">localhost:7001/</a>，需要输入用户名/密码，默认是<code>root/root</code></p>
-<p>登录成功，查看界面</p>
-<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413160348.png" alt="image-20210413160348304"></p>
-<p>安装完成！</p>
-<h3 id="SpringBoot-Dubbo-Zookeeper"><a href="#SpringBoot-Dubbo-Zookeeper" class="headerlink" title="SpringBoot + Dubbo + Zookeeper"></a>SpringBoot + Dubbo + Zookeeper</h3><h4 id="1、框架搭建"><a href="#1、框架搭建" class="headerlink" title="1、框架搭建"></a>1、框架搭建</h4><ol>
-<li><p>启动zookeeper ！</p>
-</li>
-<li><p>IDEA创建一个空项目</p>
-</li>
-<li><p>创建一个模块，实现服务提供者：provider-server ， 选择web依赖即可</p>
-</li>
-<li><p>项目创建完毕，我们写一个服务，比如卖票的服务</p>
-<p>编写接口</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.provider.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编写实现类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.provider.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TicketServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">&quot;这是一张来自服务提供者的票&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>创建一个模块，实现服务消费者：consumer-server，选择web依赖即可</p>
-</li>
-<li><p>项目创建完毕，我们写一个服务，比如用户买票的服务</p>
-<p>编写service</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.consumer.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">   <span class="comment">//我们需要去拿去注册中心的服务</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>需求：用户 想调用服务提供者的买票服务，应该怎么做？</p>
-</li>
-</ol>
-<h4 id="2、服务提供者"><a href="#2、服务提供者" class="headerlink" title="2、服务提供者"></a>2、服务提供者</h4><ol>
-<li><p>将服务提供者注册到注册中心，我们需要整合Dubbo和zookeeper，所以需要导包</p>
-<p>首先，导入springboot与dubbo的整合包</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>zookeeper客户端的包我们去maven的仓库下载</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.sgroschupf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zkclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>【新版的坑】zookeeper及其依赖包，解决日志冲突，还需要剔除日志依赖；</strong></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 引入zookeeper --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-framework<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-recipes<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.zookeeper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zookeeper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.14<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--排除这个slf4j-log4j12--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>在springboot配置文件中配置dubbo相关属性！</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#当前应用名字</span></span><br><span class="line"><span class="attr">dubbo.application.name</span>=<span class="string">provider-server</span></span><br><span class="line"><span class="comment">#注册中心地址</span></span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br><span class="line"><span class="comment">#扫描指定包下的服务</span></span><br><span class="line"><span class="attr">dubbo.scan.base-packages</span>=<span class="string">com.luojunjie.service</span></span><br></pre></td></tr></table></figure></li>
-<li><p>在service的实现类中配置服务注解，发布服务</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.DubboService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-13 15:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span> <span class="comment">//放在spring容器中</span></span><br><span class="line"><span class="meta">@DubboService</span> <span class="comment">//将服务注册到dubbo</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TicketServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;我是一张票！！&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>逻辑理解 ：应用启动起来，dubbo就会扫描指定的包下带有@component注解的服务，将它发布在指定的注册中心中！</strong></p>
-</li>
-</ol>
-<h4 id="3、服务消费者"><a href="#3、服务消费者" class="headerlink" title="3、服务消费者"></a>3、服务消费者</h4><ol>
-<li><p>导入依赖，和服务提供者的依赖一样</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 导入依赖dubbo+zookeeper --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.sgroschupf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zkclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 引入zookeeper --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-framework<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-recipes<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.zookeeper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zookeeper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.14<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--排除这个slf4j-log4j12--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>配置参数</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#当前应用名字</span></span><br><span class="line"><span class="attr">dubbo.application.name</span>=<span class="string">consumer-server</span></span><br><span class="line"><span class="comment">#注册中心地址</span></span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br></pre></td></tr></table></figure></li>
-<li><p><strong>本来正常步骤是需要将服务提供者的接口打包，然后用pom文件导入，我们这里使用简单的方式，直接将服务的接口拿过来，路径必须保证正确，即和服务提供者相同；</strong></p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162217.png" alt="image-20210413162217567" style="zoom:33%;" />    </li>
-<li><p>完善消费者的服务类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.DubboReference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-13 15:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@DubboReference</span>  <span class="comment">//远程引用指定的服务，他会按照全类名进行匹配，看谁给注册中心注册了这个全类名</span></span><br><span class="line">    <span class="keyword">private</span> TicketService ticketService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//想拿到票</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">bugTicket</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;在注册中心中拿到=&gt;&quot;</span>+ticketService.getTicket());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>测试！</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.luojunjie.service.UserService;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConsumerServerApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        userService.bugTicket();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="4、启动测试"><a href="#4、启动测试" class="headerlink" title="4、启动测试"></a>4、启动测试</h4><ol>
-<li><p>开启zookeeper</p>
-</li>
-<li><p>打开dubbo-admin实施监控</p>
-</li>
-<li><p>开启服务者</p>
-</li>
-<li><p>消费者测试结果：</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162711.png" alt="image-20210413162711583" style="zoom:50%;" />    </li>
-<li><p>dubbo-admin 监控中心</p>
-<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162803.png" alt="image-20210413162802948" style="zoom:50%;" /></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多线程与线程同步</title>
     <url>/2021/04/17/dcfce7ce.html</url>
     <content><![CDATA[<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><h3 id="Process与Thread（进程与线程）"><a href="#Process与Thread（进程与线程）" class="headerlink" title="Process与Thread（进程与线程）"></a>Process与Thread（进程与线程）</h3><ul>
@@ -3568,6 +3405,169 @@
       <tags>
         <tag>笔记</tag>
         <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分布式系统理论</title>
+    <url>/2021/04/13/41166861.html</url>
+    <content><![CDATA[<h1 id="分布式系统理论"><a href="#分布式系统理论" class="headerlink" title="分布式系统理论"></a>分布式系统理论</h1><h2 id="什么是分布式系统？"><a href="#什么是分布式系统？" class="headerlink" title="什么是分布式系统？"></a>什么是分布式系统？</h2><p>分布式是若干独立计算机的集合，这些计算机对于用户来说就像单个相关系统。</p>
+<p>分布式系统是由一组通过网络进行通信、为了完成共同的任务而协调工作的计算机节点组成的系统。分布式系统的出现是为了用廉价的、普通的机器完成单个计算机无法完成的计算、存储任务。其目的是<strong>利用更多的机器，处理更多的数据</strong>。</p>
+<p>首先需要明确的是，只有当单个节点的处理能力无法满足日益增长的计算、存储任务的时候，且硬件的提升（加内存、加磁盘、使用更好的CPU）高昂到得不偿失的时候，应用程序也不能进一步优化的时候，我们才需要考虑分布式系统。因为，分布式系统要解决的问题本身就是和单机系统一样的，而由于分布式系统多节点、通过网络通信的拓扑结构，会引入很多单机系统没有的问题，为了解决这些问题又会引入更多的机制、协议，带来更多的问题。</p>
+<h2 id="Dubbo文档"><a href="#Dubbo文档" class="headerlink" title="Dubbo文档"></a>Dubbo文档</h2><p>随着互联网的发展，网站应用的规模不断扩大，常规的垂直应用架构已无法应对，分布式服务架构以及流动计算架构势在必行，急需<strong>一个治理系统</strong>确保架构有条不紊的演进。</p>
+<p>在Dubbo的官网文档有这样一张图</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110820.png" alt="img"></p>
+<h3 id="单一应用架构"><a href="#单一应用架构" class="headerlink" title="单一应用架构"></a><strong>单一应用架构</strong></h3><p>当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架(ORM)是关键。</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110902.png" alt="img">    </p>
+<p>适用于小型网站，小型管理系统，将所有功能都部署到一个功能里，简单易用。</p>
+<p><strong>缺点：</strong></p>
+<p>1、性能扩展比较难</p>
+<p>2、协同开发问题</p>
+<p>3、不利于升级维护</p>
+<h3 id="垂直应用架构"><a href="#垂直应用架构" class="headerlink" title="垂直应用架构"></a>垂直应用架构</h3><p>当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的Web框架(MVC)是关键。</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413110941.png" alt="img">    </p>
+<p>通过切分业务来实现各个模块独立部署，降低了维护和部署的难度，团队各司其职更易管理，性能扩展也更方便，更有针对性。</p>
+<p>缺点：公用模块无法重复利用，开发性的浪费</p>
+<h3 id="分布式服务架构"><a href="#分布式服务架构" class="headerlink" title="分布式服务架构"></a>分布式服务架构</h3><p>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的**分布式服务框架(RPC)**是关键。</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111036.png" alt="img">    </p>
+<h3 id="流式计算架构"><a href="#流式计算架构" class="headerlink" title="流式计算架构"></a>流式计算架构</h3><p>当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于<strong>提高机器利用率的资源调度和治理中心</strong>(SOA)[Service Oriented Architecture]是关键。</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111136.png" alt="img">    </p>
+<h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><h3 id="什么是RPC？"><a href="#什么是RPC？" class="headerlink" title="什么是RPC？"></a>什么是RPC？</h3><p>RPC【Remote Procedure Call】是指远程过程调用，是一种进程间通信方式，他是一种技术的思想，而不是规范。它允许程序调用另一个地址空间（通常是共享网络的另一台机器上）的过程或函数，而不用程序员显式编码这个远程调用的细节。即程序员无论是调用本地的还是远程的函数，本质上编写的调用代码基本相同。</p>
+<p>也就是说两台服务器A，B，一个应用部署在A服务器上，想要调用B服务器上应用提供的函数/方法，由于不在一个内存空间，不能直接调用，需要通过网络来表达调用的语义和传达调用的数据。为什么要用RPC呢？就是无法在一个进程内，甚至一个计算机内通过本地调用的方式完成的需求，比如不同的系统间的通讯，甚至不同的组织间的通讯，由于计算能力需要横向扩展，需要在多台机器组成的集群上部署应用。RPC就是要像调用本地的函数一样去调远程函数。</p>
+<p>推荐阅读文章：<a href="https://www.jianshu.com/p/2accc2840a1b">https://www.jianshu.com/p/2accc2840a1b</a></p>
+<h3 id="RPC基本原理"><a href="#RPC基本原理" class="headerlink" title="RPC基本原理"></a>RPC基本原理</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111312.png" alt="img">    </p>
+<h3 id="步骤解析："><a href="#步骤解析：" class="headerlink" title="步骤解析："></a>步骤解析：</h3><p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413111426.png" alt="img">    </p>
+<p>RPC的两个核心模块：通讯、序列化！</p>
+<h2 id="测试环境搭建"><a href="#测试环境搭建" class="headerlink" title="测试环境搭建"></a>测试环境搭建</h2><h3 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h3><p>Apache Dubbo<code>|ˈdʌbəʊ|</code>是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。</p>
+<p>dubbo官网 <a href="http://dubbo.apache.org/zh-cn/index.html">http://dubbo.apache.org/zh-cn/index.html</a></p>
+<p>1.了解Dubbo的特性</p>
+<p>2.查看官方文档</p>
+<p><strong>dubbo基本概念</strong></p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413112417.png" alt="img" style="zoom:67%;" />    
+
+<p><strong>服务提供者（Provider）：</strong>暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务。</p>
+<p><strong>服务消费者（Consumer）：</strong>调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p>
+<p><strong>注册中心（Registry）：</strong>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者</p>
+<p><strong>监控中心（Monitor）：</strong>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心</p>
+<p>调用关系说明</p>
+<blockquote>
+<p>服务容器负责启动，加载，运行服务提供者。</p>
+</blockquote>
+<blockquote>
+<p>服务提供者在启动时，向注册中心注册自己提供的服务。</p>
+</blockquote>
+<blockquote>
+<p>服务消费者在启动时，向注册中心订阅自己所需的服务。</p>
+</blockquote>
+<blockquote>
+<p>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。</p>
+</blockquote>
+<blockquote>
+<p>服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p>
+</blockquote>
+<blockquote>
+<p>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心。</p>
+</blockquote>
+<h3 id="Dubbo环境搭建"><a href="#Dubbo环境搭建" class="headerlink" title="Dubbo环境搭建"></a>Dubbo环境搭建</h3><ul>
+<li><p>安装Zookeeper注册中心</p>
+<ol>
+<li><p>点击下载<a href="https://downloads.apache.org/zookeeper/zookeeper-3.5.9/apache-zookeeper-3.5.9-bin.tar.gz">zookeeper</a>，直接解压</p>
+</li>
+<li><p>运行<code>/bin/zkServer.cmd</code>，初次运行会报错，没有<code>zoo.cfg</code>配置文件</p>
+</li>
+<li><p>修改zoo.cfg配置文件</p>
+<p>将conf文件夹下面的zoo_sample.cfg复制一份改名为zoo.cfg即可。</p>
+</li>
+</ol>
+</li>
+</ul>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413155414.png" alt="image-20210413155414083" style="zoom: 67%;" />
+
+<h3 id="安装Dubbo-admin"><a href="#安装Dubbo-admin" class="headerlink" title="安装Dubbo-admin"></a>安装Dubbo-admin</h3><p>dubbo本身并不是一个服务软件。它其实就是一个jar包，能够帮你的java程序连接到zookeeper，并利用zookeeper消费、提供服务。</p>
+<p>但是为了让用户更好的管理监控众多的dubbo服务，官方提供了一个可视化的监控程序dubbo-admin，不过这个监控即使不装也不影响使用。</p>
+<h4 id="1、下载dubbo-admin"><a href="#1、下载dubbo-admin" class="headerlink" title="1、下载dubbo-admin"></a>1、下载dubbo-admin</h4><p>地址：<a href="https://github.com/apache/dubbo-admin/tree/master">点击下载</a></p>
+<h4 id="2、解压进入目录"><a href="#2、解压进入目录" class="headerlink" title="2、解压进入目录"></a>2、解压进入目录</h4><p>修改dubbo-admin\src\main\resources \application.properties 指定zookeeper地址</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">7001</span></span><br><span class="line"><span class="attr">spring.velocity.cache</span>=<span class="string">false</span></span><br><span class="line"><span class="attr">spring.velocity.charset</span>=<span class="string">UTF-8</span></span><br><span class="line"><span class="attr">spring.velocity.layout-url</span>=<span class="string">/templates/default.vm</span></span><br><span class="line"><span class="attr">spring.messages.fallback-to-system-locale</span>=<span class="string">false</span></span><br><span class="line"><span class="attr">spring.messages.basename</span>=<span class="string">i18n/message</span></span><br><span class="line"><span class="attr">spring.root.password</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">spring.guest.password</span>=<span class="string">guest</span></span><br><span class="line"> </span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、在项目目录下打包dubbo-admin"><a href="#3、在项目目录下打包dubbo-admin" class="headerlink" title="3、在项目目录下打包dubbo-admin"></a>3、在项目目录下打包dubbo-admin</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4、执行-dubbo-admin-target-下的dubbo-admin-0-0-1-SNAPSHOT-jar"><a href="#4、执行-dubbo-admin-target-下的dubbo-admin-0-0-1-SNAPSHOT-jar" class="headerlink" title="4、执行 dubbo-admin\target 下的dubbo-admin-0.0.1-SNAPSHOT.jar"></a>4、执行 dubbo-admin\target 下的dubbo-admin-0.0.1-SNAPSHOT.jar</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar dubbo-admin-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+
+<p>==【注意：zookeeper的服务一定要打开！】==</p>
+<p>执行成功，访问<a href="localhost:7001">localhost:7001/</a>，需要输入用户名/密码，默认是<code>root/root</code></p>
+<p>登录成功，查看界面</p>
+<p><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413160348.png" alt="image-20210413160348304"></p>
+<p>安装完成！</p>
+<h3 id="SpringBoot-Dubbo-Zookeeper"><a href="#SpringBoot-Dubbo-Zookeeper" class="headerlink" title="SpringBoot + Dubbo + Zookeeper"></a>SpringBoot + Dubbo + Zookeeper</h3><h4 id="1、框架搭建"><a href="#1、框架搭建" class="headerlink" title="1、框架搭建"></a>1、框架搭建</h4><ol>
+<li><p>启动zookeeper ！</p>
+</li>
+<li><p>IDEA创建一个空项目</p>
+</li>
+<li><p>创建一个模块，实现服务提供者：provider-server ， 选择web依赖即可</p>
+</li>
+<li><p>项目创建完毕，我们写一个服务，比如卖票的服务</p>
+<p>编写接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.provider.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line">   <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编写实现类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.provider.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TicketServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">&quot;这是一张来自服务提供者的票&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>创建一个模块，实现服务消费者：consumer-server，选择web依赖即可</p>
+</li>
+<li><p>项目创建完毕，我们写一个服务，比如用户买票的服务</p>
+<p>编写service</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kuang.consumer.service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line">   <span class="comment">//我们需要去拿去注册中心的服务</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需求：用户 想调用服务提供者的买票服务，应该怎么做？</p>
+</li>
+</ol>
+<h4 id="2、服务提供者"><a href="#2、服务提供者" class="headerlink" title="2、服务提供者"></a>2、服务提供者</h4><ol>
+<li><p>将服务提供者注册到注册中心，我们需要整合Dubbo和zookeeper，所以需要导包</p>
+<p>首先，导入springboot与dubbo的整合包</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>zookeeper客户端的包我们去maven的仓库下载</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.sgroschupf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zkclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【新版的坑】zookeeper及其依赖包，解决日志冲突，还需要剔除日志依赖；</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 引入zookeeper --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-framework<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-recipes<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.zookeeper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zookeeper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.14<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--排除这个slf4j-log4j12--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在springboot配置文件中配置dubbo相关属性！</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#当前应用名字</span></span><br><span class="line"><span class="attr">dubbo.application.name</span>=<span class="string">provider-server</span></span><br><span class="line"><span class="comment">#注册中心地址</span></span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br><span class="line"><span class="comment">#扫描指定包下的服务</span></span><br><span class="line"><span class="attr">dubbo.scan.base-packages</span>=<span class="string">com.luojunjie.service</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在service的实现类中配置服务注解，发布服务</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.DubboService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-13 15:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span> <span class="comment">//放在spring容器中</span></span><br><span class="line"><span class="meta">@DubboService</span> <span class="comment">//将服务注册到dubbo</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TicketServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">TicketService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getTicket</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;我是一张票！！&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>逻辑理解 ：应用启动起来，dubbo就会扫描指定的包下带有@component注解的服务，将它发布在指定的注册中心中！</strong></p>
+</li>
+</ol>
+<h4 id="3、服务消费者"><a href="#3、服务消费者" class="headerlink" title="3、服务消费者"></a>3、服务消费者</h4><ol>
+<li><p>导入依赖，和服务提供者的依赖一样</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 导入依赖dubbo+zookeeper --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.dubbo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.github.sgroschupf/zkclient --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.sgroschupf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zkclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 引入zookeeper --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-framework<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.curator<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>curator-recipes<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.12.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.zookeeper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zookeeper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.14<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--排除这个slf4j-log4j12--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>配置参数</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#当前应用名字</span></span><br><span class="line"><span class="attr">dubbo.application.name</span>=<span class="string">consumer-server</span></span><br><span class="line"><span class="comment">#注册中心地址</span></span><br><span class="line"><span class="attr">dubbo.registry.address</span>=<span class="string">zookeeper://127.0.0.1:2181</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>本来正常步骤是需要将服务提供者的接口打包，然后用pom文件导入，我们这里使用简单的方式，直接将服务的接口拿过来，路径必须保证正确，即和服务提供者相同；</strong></p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162217.png" alt="image-20210413162217567" style="zoom:33%;" />    </li>
+<li><p>完善消费者的服务类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.dubbo.config.annotation.DubboReference;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> IRVING</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-13 15:12</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">UserService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@DubboReference</span>  <span class="comment">//远程引用指定的服务，他会按照全类名进行匹配，看谁给注册中心注册了这个全类名</span></span><br><span class="line">    <span class="keyword">private</span> TicketService ticketService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//想拿到票</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">bugTicket</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;在注册中心中拿到=&gt;&quot;</span>+ticketService.getTicket());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>测试！</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.luojunjie;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.luojunjie.service.UserService;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ConsumerServerApplicationTests</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> UserService userService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span> &#123;</span><br><span class="line">        userService.bugTicket();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="4、启动测试"><a href="#4、启动测试" class="headerlink" title="4、启动测试"></a>4、启动测试</h4><ol>
+<li><p>开启zookeeper</p>
+</li>
+<li><p>打开dubbo-admin实施监控</p>
+</li>
+<li><p>开启服务者</p>
+</li>
+<li><p>消费者测试结果：</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162711.png" alt="image-20210413162711583" style="zoom:50%;" />    </li>
+<li><p>dubbo-admin 监控中心</p>
+<img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20210413162803.png" alt="image-20210413162802948" style="zoom:50%;" /></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>分布式</tag>
       </tags>
   </entry>
   <entry>
