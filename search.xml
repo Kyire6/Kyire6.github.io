@@ -9996,6 +9996,46 @@
       </tags>
   </entry>
   <entry>
+    <title>Git分支管理</title>
+    <url>/2021/04/05/13a54546.html</url>
+    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
+<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
+<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git 分布式版本控制系统</title>
     <url>/2021/04/05/13a54546.html</url>
     <content><![CDATA[<h1 id="Git-分布式版本控制系统"><a href="#Git-分布式版本控制系统" class="headerlink" title="Git 分布式版本控制系统"></a>Git 分布式版本控制系统</h1><p>Git 是一个免费的、开源的<strong>分布式版本控制系统</strong>，可以快速高效地处理从小型到大型的各种项目。</p>
@@ -10037,46 +10077,6 @@
         <tag>笔记</tag>
         <tag>Git</tag>
         <tag>分布式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git分支管理</title>
-    <url>/2021/04/05/13a54546.html</url>
-    <content><![CDATA[<h1 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h1><h2 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h2><p>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务单独分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是一个单独的副本。（分支底层其实也是指针的引用）</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220226151839.png" alt="image-20220226151832730">    </p>
-<h2 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h2><p>同时并行推进多个功能开发，提高开发效率。</p>
-<p>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</p>
-<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><table>
-<thead>
-<tr>
-<th>命令名称</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>git branch 分支名</td>
-<td>创建分支</td>
-</tr>
-<tr>
-<td>git branch -v</td>
-<td>查看分支</td>
-</tr>
-<tr>
-<td>git checkout 分支名</td>
-<td>切换分支</td>
-</tr>
-<tr>
-<td>git merge 分支名</td>
-<td>把指定的分支合并到当前分支上</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>

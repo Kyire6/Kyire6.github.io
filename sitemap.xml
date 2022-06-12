@@ -488,13 +488,6 @@
   </url>
   
   <url>
-    <loc>https://kyire666.gitee.io/tags/Nginx/</loc>
-    <lastmod>2022-06-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://kyire666.gitee.io/tags/Linux/</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -503,6 +496,13 @@
   
   <url>
     <loc>https://kyire666.gitee.io/tags/MongDB/</loc>
+    <lastmod>2022-06-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyire666.gitee.io/tags/Nginx/</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -581,14 +581,14 @@
   </url>
   
   <url>
-    <loc>https://kyire666.gitee.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://kyire666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://kyire666.gitee.io/categories/%E5%AE%9E%E8%AE%AD%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://kyire666.gitee.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2022-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
