@@ -1,8 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用GitHub Actions 自动发布Hexo博客</title>
+    <url>/2022/06/16/47488464.html</url>
+    <content><![CDATA[<h1 id="使用GitHub-Actions-自动发布Hexo博客"><a href="#使用GitHub-Actions-自动发布Hexo博客" class="headerlink" title="使用GitHub Actions 自动发布Hexo博客"></a>使用GitHub Actions 自动发布Hexo博客</h1><h2 id="GitHub-Actions简介"><a href="#GitHub-Actions简介" class="headerlink" title="GitHub Actions简介"></a>GitHub Actions简介</h2><p><code>GitHub Actions</code> 是一个持续集成和持续交付 (<code>CI/CD</code>) 平台，可用于自动执行构建、测试和部署管道。 您可以创建工作流程来构建和测试存储库的每个拉取请求，或将合并的拉取请求部署到生产环境。</p>
+<p><code>GitHub Actions</code> 不仅仅是 <code>DevOps</code>，还允许您在存储库中发生其他事件时运行工作流程。 例如，您可以运行工作流程，以便在有人在您的存储库中创建新问题时自动添加相应的标签。</p>
+<p><code>GitHub Actions</code> 有一些自己的术语。</p>
+<p>（1）<strong>workflow</strong> （工作流程）：持续集成一次运行的过程，就是一个 workflow。</p>
+<p>（2）<strong>job</strong> （任务）：一个 workflow 由一个或多个 jobs 构成，含义是一次持续集成的运行，可以完成多个任务。</p>
+<p>（3）<strong>step</strong>（步骤）：每个 job 由多个 step 构成，一步步完成。</p>
+<p>（4）<strong>action</strong> （动作）：每个 step 可以依次执行一个或多个命令（action）。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>我的个人站点 <a href="https://blog.kyire.site/">Kyire の Blog - 记录美好生活</a> 是通过 <a href="https://hexo.io/zh-cn/">Hexo</a> 框架搭建的。</p>
+<blockquote>
+<p>搭建方法可参考：<a href="https://blog.kyire.site/2021/02/06/8fe2b6a8.html">Hexo+Gitee搭建个人博客 | Kyire の Blog</a></p>
+</blockquote>
+<p>准备三个仓库：</p>
+<ul>
+<li>私有<code>Hexo</code>源码仓库（<code>Blog</code>）：博客文章以及<code>Hexo</code>源代码</li>
+<li><code>GitHub</code>公共静态页面仓库（<code>Kyire6.github.io</code>）：<code>Hexo</code>源码编译后生成的静态页面</li>
+<li><code>Gitee</code>公共静态页面仓库（<code>Kyire6</code>）：内容跟 <code>Kyire6.github.io</code> 一样，只是使用的服务不同</li>
+</ul>
+<p>自动部署的流程如下：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615223549.png" alt="image-20220615223542331"></p>
+<h2 id="GitHub密钥配置"><a href="#GitHub密钥配置" class="headerlink" title="GitHub密钥配置"></a>GitHub密钥配置</h2><p>生成 <code>ssh密钥对</code>，用于部署静态文件，以及更新 <code>Gitee Pages</code> 服务：</p>
+<ol>
+<li><strong>生成密钥</strong></li>
+</ol>
+<p>执行如下命令生成 <code>ssh密钥对</code>，替换邮件地址为你的<strong>GitHub邮箱</strong>地址：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -f hexo-deploy-key -t rsa -C <span class="string">&quot;username@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>命令执行后会生成两个文件：<code>hexo-deploy-key</code>（私钥） 和 <code>hexo-deploy-key.pub</code>（公钥）</p>
+<ol start="2">
+<li><strong>将公钥添加到Github Pages仓库中</strong></li>
+</ol>
+<p><code>Kyire6.github.io仓库 -&gt; Settings -&gt; Deploy keys -&gt; Add deploy key</code></p>
+<ul>
+<li><code>Title</code> 设置为 <code>HEXO_DEPLOY_PUB</code></li>
+<li><code>Key</code> 填写 <code>hexo-deploy-key.pub</code> 文件内容</li>
+<li>勾选 <code>Allow write access</code> 选项</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615231127.png" alt="image-20220615231127446"></p>
+<ol start="3">
+<li><strong>将私钥添加到博客源码仓库中</strong></li>
+</ol>
+<p><code>Blog仓库 -&gt; Settings -&gt; Secrets -&gt; Actions -&gt; New repository secret</code></p>
+<ul>
+<li><code>Name</code> 填写 <code>HEXO_DEPLOY_KEY</code></li>
+<li><code>Value</code> 填写 <code>github-deploy-key</code> 文件内容</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615231916.png" alt="image-20220615231916597"></p>
+<ol start="4">
+<li><strong>将Gitee账号密码添加到博客源码仓库中</strong></li>
+</ol>
+<p><code>Blog仓库 -&gt; Settings -&gt; Secrets -&gt; Actions -&gt; New repository secret</code></p>
+<ul>
+<li><code>Name</code> 填写 <code>GITEE_PASSWORD</code></li>
+<li><code>Value</code> 填写 <code>Gitee账号的密码</code></li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615233124.png" alt="image-20220615233124815"></p>
+<h2 id="Gitee密钥配置"><a href="#Gitee密钥配置" class="headerlink" title="Gitee密钥配置"></a>Gitee密钥配置</h2><blockquote>
+<p>直接使用之前生成的密钥</p>
+</blockquote>
+<ol>
+<li><strong>将公钥添加到Gitee Pages仓库中</strong></li>
+</ol>
+<p><code>Kyire6仓库 -&gt; 管理 -&gt; 部署公钥管理 -&gt; 添加公钥</code></p>
+<p>和 <code>GitHub</code> 一样需要对仓库有写权限，点击<code>【添加个人公钥】</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615232742.png" alt="image-20220615232742168"></p>
+<ul>
+<li><code>标题</code> 设置为 <code>HEXO_DEPLOY_PUB</code></li>
+<li><code>公钥</code> 填写 <code>hexo-deploy-key.pub</code> 文件内容</li>
+</ul>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615232822.png" alt="image-20220615232822304"></p>
+<h2 id="配置GitHub-Actions"><a href="#配置GitHub-Actions" class="headerlink" title="配置GitHub Actions"></a>配置GitHub Actions</h2><p>在博客源码仓库（Blog）中，编写 <code>workflow</code> 文件</p>
+<p>在仓库的根目录下创建 <code>.github/workflow/deploy.yml</code> 文件，yaml文件名可以自定义。</p>
+<p>下面是结合 <a href="https://github.com/marketplace/actions/hexo-action#%F0%9F%8D%8Cexample-workflow---hexo-deploy">Hexo Action</a>和<a href="https://github.com/marketplace/actions/gitee-pages-action">Gitee Pages Action </a>的 <code>workflow</code> 文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Hexo</span> <span class="string">deploy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> </span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">paths-ignore:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;source/_drafts/**&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&#x27;.github/**&#x27;</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">A</span> <span class="string">job</span> <span class="string">to</span> <span class="string">deploy</span> <span class="string">blog.</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">submodules:</span> <span class="literal">true</span></span><br><span class="line">        </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">node</span> <span class="string">modules</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/cache@v1</span></span><br><span class="line">      <span class="attr">id:</span> <span class="string">cache</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          $&#123;&#123; runner.os &#125;&#125;-node-</span></span><br><span class="line"><span class="string"></span>    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">      <span class="attr">if:</span> <span class="string">steps.cache.outputs.cache-hit</span> <span class="type">!=</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">ci</span></span><br><span class="line">        </span><br><span class="line">    <span class="comment"># Deploy hexo blog website.</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">id:</span> <span class="string">deploy</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">sma11black/hexo-action@v1.0.4</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="comment"># 用于访问 GitHub 静态页面仓库的部署密钥（私钥）。</span></span><br><span class="line">        <span class="attr">deploy_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HEXO_DEPLOY_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="comment"># 用于部署的 github 帐户的用户名。</span></span><br><span class="line">        <span class="attr">user_name:</span> <span class="string">Kyire6</span></span><br><span class="line">        <span class="comment"># 用于部署的 github 帐户的用户电子邮件。</span></span><br><span class="line">        <span class="attr">user_email:</span> <span class="string">kyire666@outlook.com</span></span><br><span class="line">        <span class="attr">commit_msg:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Get</span> <span class="string">the</span> <span class="string">output</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        echo &quot;$&#123;&#123; steps.deploy.outputs.notify &#125;&#125;&quot;</span></span><br><span class="line"><span class="string"></span>  <span class="attr">sync:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">to</span> <span class="string">Gitee</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">wearerequired/git-mirror-action@master</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="comment"># 用于访问 GitHub 静态页面仓库的部署密钥（私钥）。</span></span><br><span class="line">          <span class="attr">SSH_PRIVATE_KEY:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HEXO_DEPLOY_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 源仓库</span></span><br><span class="line">          <span class="attr">source-repo:</span> <span class="string">git@github.com:Kyire6/Kyire6.github.io.git</span></span><br><span class="line">          <span class="comment"># 目标仓库</span></span><br><span class="line">          <span class="attr">destination-repo:</span> <span class="string">git@gitee.com:Kyire6/Kyire6.git</span></span><br><span class="line">  <span class="attr">reload-pages:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">sync</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">Gitee</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">yanglbme/gitee-pages-action@main</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># Gitee登录用户名</span></span><br><span class="line">          <span class="attr">gitee-username:</span> <span class="string">Kyire6</span></span><br><span class="line">          <span class="comment"># Gitee账号密码</span></span><br><span class="line">          <span class="attr">gitee-password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITEE_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="comment"># Gitee仓库名称，注意大小写</span></span><br><span class="line">          <span class="attr">gitee-repo:</span> <span class="string">Kyire6/Kyire6</span></span><br><span class="line">          <span class="comment"># 仓库分支名，根据实际情况填写</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>部分字段解释：</strong></p>
+<ol>
+<li><p><code>name</code>：workflow 名称</p>
+</li>
+<li><p><code>on</code>：触发 workflow 的事件</p>
+<ul>
+<li><code>push</code>：push事件</li>
+<li><code>paths-ignore</code>：忽略指定的目录，也就是在忽略路径外的其它目录文件改动时才触发</li>
+<li>还可以设置多种触发条件，比如支持cron语法实现定时触发，参考<a href="https://docs.github.com/cn/actions/reference/events-that-trigger-workflows">这里</a></li>
+</ul>
+</li>
+<li><p><code>jobs</code>：执行任务</p>
+<ul>
+<li><code>build</code>：博客编译和发布，发布到Github Pages</li>
+<li><code>sync</code>：将更新后的hiyongz.github.io仓库同步到Gitee</li>
+<li><code>reload-pages</code>：自动更新 Pages，因为Gitee Pages不像GitHub Pages 那样提交代码就自动更新。</li>
+<li><code>runs-on</code>：运行环境，支持windows，Ubuntu和macOS</li>
+<li><code>steps</code>：指定每个 Job 的运行步骤</li>
+<li><code>sma11black/hexo-action@v1.0.4</code>：博客构建发布，引用了Hexo Action：</li>
+<li><code>wearerequired/git-mirror-action@master</code>：仓库同步，引用了git-mirror-action</li>
+<li><code>yanglbme/gitee-pages-action@main</code>：自动更新Gitee Pages，引用了Gitee Pages Action</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>参考资料：<a href="https://docs.github.com/cn/actions/using-workflows/workflow-syntax-for-github-actions">GitHub Actions 的工作流程语法 - GitHub Docs</a></p>
+</blockquote>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>更新文章之后，提交博客源码到 <code>Blog</code> 仓库，满足 <code>GitHub Actions</code> 条件，触发 <code>deploy.yml</code> 中的编写的流水线：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220615235619.png" alt="image-20220615235619570"></p>
+<p>流水线运行成功，查看 <code>Kyire6.github.io</code> 和 Gitee 的 <code>Kyire6</code> 仓库可以发现都有更新（静态页面公共仓库），并且 <code>Gitee Pages</code> 服务也自动触发更新了，这样就通过 <code>GitHub Actions</code> 实现 <code>Hexo</code> 博客的自动发布。</p>
+<blockquote>
+<p><strong>以后只需要将文章写好之后，push 到博客源码仓库后，触发流水线自动编译并部署，实现CI/CD操作，提升效率，避免重复的人工操作！</strong></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Hexo</tag>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+Gitee搭建个人博客</title>
-    <url>/2021/02/06/8fe2b6a8.html</url>
+    <url>/2020/02/06/8fe2b6a8.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寒假封城，只能呆在家里鼓捣电脑，有一天看到了 b 站大佬<a href="https://space.bilibili.com/384068749">CodeSheep</a>的<a href="https://www.bilibili.com/video/av44544186?t=1173">手把手教你从 0 开始搭建自己的个人博客 |无坑版视频教程| hexo</a>,看了之后着手搭建了属于自己的博客。<br>视频里博客是搭建在 Github 上的，但其终究是国外的网站，访问速度得不到保障。推荐使用 Gitee，Gitee 类似于国内的 Github，访问速度没问题。</p>
 <span id="more"></span>
 
@@ -2947,7 +3068,7 @@
 <p>注：我这里图片是保存在本地的，所以图片地址哪里是本地目录，也可以用图片的在线链接地址</p>
 </blockquote>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>此篇博客总结了我写Hexo博客常用的Markdown语法，如有不妥之处请查阅MD官方文档。</p>
-<p>因为显示效果都是用Markdown语法呈现的，而我采用的next主题又是通过文章的标题来显示文章目录，所以左侧的文章目录可能有点混乱···</p>
+<p>因为显示效果都是用Markdown语法呈现的，而我采用的主题又是通过文章的标题来显示文章目录，所以左侧的文章目录可能有点混乱···</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -3866,6 +3987,7 @@
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220111155220.png" alt="image-20220111155220504"></p>
 ]]></content>
       <categories>
+        <category>Git</category>
         <category>Linux</category>
       </categories>
       <tags>
@@ -4033,7 +4155,7 @@
 
 <h3 id="3、重启-Tomcat-服务器，访问测试"><a href="#3、重启-Tomcat-服务器，访问测试" class="headerlink" title="3、重启 Tomcat 服务器，访问测试"></a>3、重启 Tomcat 服务器，访问测试</h3>]]></content>
       <categories>
-        <category>服务器</category>
+        <category>中间件</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -6065,7 +6187,7 @@
 <p>所以，当你或你们的技术团队在设计 API 的时候，如果使用场景和 REST 风格很匹配，那么你们可以采用 RESTful 风格 API。但是如果业务需求和 RESTful 风格 API 不太匹配或者很麻烦，那也可以不用 RESTful 风格 API 或者可以借鉴一下，毕竟无论那种风格的 API 都是为了方便团队开发、协商以及管理，不能墨守成规。</p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -6090,7 +6212,7 @@
 <h3 id="3、重启服务器"><a href="#3、重启服务器" class="headerlink" title="3、重启服务器"></a>3、重启服务器</h3><p>测试通过~</p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -6234,7 +6356,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -6391,7 +6513,7 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -10031,7 +10153,7 @@
 <h2 id="Git-详解"><a href="#Git-详解" class="headerlink" title="Git 详解"></a>Git 详解</h2><h3 id="Git-工作机制"><a href="#Git-工作机制" class="headerlink" title="Git 工作机制"></a>Git 工作机制</h3><p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220130234302.png" alt="image-20220130234302882"></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Git</category>
       </categories>
       <tags>
         <tag>笔记</tag>
@@ -10197,7 +10319,7 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>前后端分离并非仅仅是一种开发模式，而是一种架构模式（前后端分离架构）。千万不要以为只有在写代码的时候把前端和后端分开就是前后端分离了，这样的理解太片面了。前后端分离是需要区分前后端项目的，即前端项目和后端项目是两个项目，放在两个不同的服务器，需要独立部署，两个不同的工程，两个不同的代码库，两组不同的开发人员。前后端开发工程师需要约定交互的接口，实现并行开发。而在开发结束之后，前端项目和后端项目都需要进行独立部署，前端通过AJAX来调用HTTP请求，调用后端的RESTFUL API。前端只需要关注页面的样式与动态数据的解析和渲染，不用关心数据是怎么产生的；后端则专注于具体的业务逻辑，返回前端展现所需要的业务数据即可。</p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>随笔</category>
       </categories>
       <tags>
         <tag>笔记</tag>

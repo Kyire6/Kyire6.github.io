@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.kyire.site/baiduShare-master/baiduShare-master/readme.html</loc>
+    <loc>https://blog.kyire.site/2022/06/16/47488464.html</loc>
     
-    <lastmod>2022-06-15</lastmod>
+    <lastmod>2022-06-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,25 @@
   <url>
     <loc>https://blog.kyire.site/2022/04/07/289e2bff.html</loc>
     
-    <lastmod>2022-06-12</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/2020/02/06/8fe2b6a8.html</loc>
+    
+    <lastmod>2022-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/baiduShare-master/baiduShare-master/readme.html</loc>
+    
+    <lastmod>2022-06-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -344,15 +362,6 @@
   </url>
   
   <url>
-    <loc>https://blog.kyire.site/2021/02/06/8fe2b6a8.html</loc>
-    
-    <lastmod>2021-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.kyire.site/2020/06/18/bd0448f7.html</loc>
     
     <lastmod>2020-06-18</lastmod>
@@ -429,6 +438,20 @@
   
   <url>
     <loc>https://blog.kyire.site/tags/%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/tags/Hexo/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/tags/GitHub/</loc>
     <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -556,7 +579,21 @@
   </url>
   
   <url>
+    <loc>https://blog.kyire.site/categories/Git/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.kyire.site/categories/Hexo/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/categories/Git/Linux/</loc>
     <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -571,6 +608,13 @@
   
   <url>
     <loc>https://blog.kyire.site/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
