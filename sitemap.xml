@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://blog.kyire.site/2020/02/06/8fe2b6a8.html</loc>
-    
-    <lastmod>2022-06-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.kyire.site/baiduShare-master/baiduShare-master/readme.html</loc>
     
     <lastmod>2022-06-15</lastmod>
@@ -356,6 +347,15 @@
     <loc>https://blog.kyire.site/2021/03/06/cc9e7a55.html</loc>
     
     <lastmod>2021-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.kyire.site/2021/02/06/8fe2b6a8.html</loc>
+    
+    <lastmod>2021-02-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
