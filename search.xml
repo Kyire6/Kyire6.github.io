@@ -3083,7 +3083,7 @@
   </entry>
   <entry>
     <title>Floccus bookmark sync 自动同步书签</title>
-    <url>/2022/06/19/e33c148b.html</url>
+    <url>/2022/06/19/6deb50f5.html</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本人平常工作生活中主要用到两款浏览器：Chrome、Edge。</p>
 <p>Chrome 主要工作中开发调试页面情况下使用较多，Edge 装了比较多的插件，主要是生活中作为搜索工具、娱乐工具使用。</p>
 <p>同时用两个浏览器，最让我头疼的就是浏览器书签同步的问题，最近发现 <a href="https://floccus.org/">Floccus bookmarks sync</a> 这款浏览器插件，搭配坚果云可以实现跨浏览器之间书签同步！</p>
