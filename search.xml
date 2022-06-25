@@ -701,111 +701,177 @@
 </li>
 </ol>
 <h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220103142038.png" alt="image-20220103142038290"></p>
-<h2 id="Docker-微服务实战"><a href="#Docker-微服务实战" class="headerlink" title="Docker 微服务实战"></a>Docker 微服务实战</h2><blockquote>
-<p>未完待续…</p>
-</blockquote>
-<h2 id="Docker-网络"><a href="#Docker-网络" class="headerlink" title="Docker 网络"></a>Docker 网络</h2><h3 id="理解docker0网卡"><a href="#理解docker0网卡" class="headerlink" title="理解docker0网卡"></a>理解<code>docker0</code>网卡</h3><p>使用 <code>ip addr</code> 查看本机 ip</p>
+<h2 id="Docker-网络"><a href="#Docker-网络" class="headerlink" title="Docker 网络"></a>Docker 网络</h2><h3 id="docker0-网卡"><a href="#docker0-网卡" class="headerlink" title="docker0 网卡"></a><code>docker0</code> 网卡</h3><p>docker 服务启动后，会产生一个名为 <code>docker0</code> 的虚拟网桥，使用 <code>ip addr</code> 查看本机 ip</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220104001129.png" alt="image-20220103235821684"></p>
-<blockquote>
-<p>发现三个网卡</p>
-</blockquote>
-<p><strong>问题：docker 是如何处理容器网络访问的？</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动一个tomcat容器</span></span><br><span class="line">[root@ouwen ~]<span class="comment"># docker run -d -P --name tomcat01 tomcat</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看容器的内部网卡信息</span></span><br><span class="line">[root@ouwen ~]<span class="comment"># docker exec -it tomcat01 ip addr</span></span><br><span class="line">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span><br><span class="line">    <span class="built_in">link</span>/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span><br><span class="line">    inet 127.0.0.1/8 scope host lo</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line">6: eth0@if7: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default</span><br><span class="line">    <span class="built_in">link</span>/ether 02:42:ac:11:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0</span><br><span class="line">    inet 172.17.0.2/16 brd 172.17.255.255 scope global eth0</span><br><span class="line">       valid_lft forever preferred_lft forever</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若没有 ip addr 命令可以执行 apt install 安装 iproute2</span></span><br><span class="line">apt update &amp;&amp; apt install -y iproute2</span><br><span class="line"></span><br><span class="line"><span class="comment"># linux主机可以ping通容器内部！</span></span><br><span class="line">[root@ouwen ~]<span class="comment"># ping 172.17.0.2</span></span><br><span class="line">PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.</span><br><span class="line">64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.037 ms</span><br><span class="line">64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.040 ms</span><br></pre></td></tr></table></figure>
+<h3 id="docker-网络常用命令"><a href="#docker-网络常用命令" class="headerlink" title="docker 网络常用命令"></a>docker 网络常用命令</h3><h4 id="All-命令"><a href="#All-命令" class="headerlink" title="All 命令"></a>All 命令</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>发现：</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220625214901.png" alt="image-20220625214854077"></p>
+<h4 id="查看网络"><a href="#查看网络" class="headerlink" title="查看网络"></a>查看网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220625215035.png" alt="image-20220625215035376"></p>
+<h4 id="查看网络源数据"><a href="#查看网络源数据" class="headerlink" title="查看网络源数据"></a>查看网络源数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network inspect xxx</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626002156.png" alt="image-20220626002156711"></p>
+<h4 id="创建网络"><a href="#创建网络" class="headerlink" title="创建网络"></a>创建网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network create xxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除网络"><a href="#删除网络" class="headerlink" title="删除网络"></a>删除网络</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network <span class="built_in">rm</span> xxx</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626002407.png" alt="image-20220626002407749"></p>
+<blockquote>
+<p><strong>docker 网络能干嘛？</strong></p>
 <ul>
-<li>我们每启动一个 docker 容器，docker 就会给容器分配一个 ip，我们只要安装了 docker，就会有一个网卡 docker0 桥接模式，使用的技术是 <code>veth-pari</code> 技术！</li>
+<li>容器间的互联和通信以及端口映射</li>
+<li>容器 IP 变动时可以通过服务名直接进行网络通信，进而不受到影响</li>
 </ul>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220327220915.png" alt="image-20220327220908091"></p>
-<p>再启动一个容器，查看 <code>ip addr</code>，发现又多了一对网卡！</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220327221202.png" alt="image-20220327221202686"></p>
-<blockquote>
-<p>我们发现这个容器生成的网卡都是成对出现的！</p>
-<p>veth-pari 就是一对虚拟设备接口，他们都是成对出现的，一端连着协议，一端彼此相连</p>
-<p><a href="https://www.cnblogs.com/bakari/p/10613710.html">Linux 虚拟网络设备 veth-pair 详解</a></p>
 </blockquote>
+<h3 id="网络模式"><a href="#网络模式" class="headerlink" title="网络模式"></a>网络模式</h3><p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626002547.png" alt="image-20220626002547570"></p>
 <ul>
-<li>docker 容器与容器之间是可以 ping 通的（同一网段下）</li>
+<li>bridge 模式：使用 –network bridge 指定，默认使用docker0</li>
+<li>host 模式：使用 –network host 指定</li>
+<li>none 模式：使用 –network none 指定</li>
+<li>container 模式：使用 –network container:NAME 或者容器 ID 指定</li>
 </ul>
-<p><mark>所有的容器在不指定网络的情况下，都是 docker0 路由的，docker 会给我们的容器分配一个可用的 IP</mark></p>
+<p><strong>容器实例内默认网络 IP 生产规则</strong></p>
+<ol>
+<li>先启动两个 Ubuntu 容器实例</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626002940.png" alt="image-20220626002940194"></p>
+<ol start="2">
+<li><code>docker inspect 容器 ID or 容器名字</code></li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626003252.png" alt="image-20220626003252589"></p>
+<ol start="3">
+<li>关闭 u2 实例，新建 u3，查看 IP 变化</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626003453.png" alt="image-20220626003453087"></p>
 <blockquote>
-<p>总结：docker 网络采用的是 Linux 桥接模式，通过 veth 成对建立连接</p>
+<p>结论：</p>
+<p><strong>docker 容器内部的 IP 是有可能会发生变化的</strong></p>
 </blockquote>
-<h3 id="–link"><a href="#–link" class="headerlink" title="–link"></a>–link</h3><p>在项目中，当数据库与应用不是在一台服务器上时，配置<code>database url=ip:xxx</code>，若数据库 ip 更换了，需要手动更改配置，非常的不友好，那么如何解决这个问题？</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 尝试使用容器名来ping，发现无法ping通</span></span><br><span class="line">[root@ouwen ~]# docker exec -it tomcat02<span class="built_in"> ping </span>tomcat01</span><br><span class="line">ping: tomcat01: Name <span class="keyword">or</span><span class="built_in"> service </span><span class="keyword">not</span> known</span><br><span class="line"></span><br><span class="line"><span class="comment">## 若没有ping命令，执行以下命令安装：</span></span><br><span class="line">apt-<span class="built_in">get</span> update &amp;&amp; apt install iputils-ping</span><br><span class="line"></span><br><span class="line"><span class="comment">## 启动tomcat03，通过--link连接tomcat02</span></span><br><span class="line">[root@ouwen ~]# docker <span class="built_in">run</span> -d -P --name tomcat03 --link tomcat02 tomcat</span><br><span class="line"></span><br><span class="line"><span class="comment">## 使用tomcat03通过ping容器名，成功ping通</span></span><br><span class="line">[root@ouwen ~]# docker exec -it tomcat03<span class="built_in"> ping </span>tomcat02<span class="built_in"></span></span><br><span class="line"><span class="built_in">PING </span>tomcat02 (172.17.0.3) 56(84) bytes of data.</span><br><span class="line">64 bytes <span class="keyword">from</span> tomcat02 (172.17.0.3): <span class="attribute">icmp_seq</span>=1 <span class="attribute">ttl</span>=64 <span class="attribute">time</span>=0.066 ms</span><br><span class="line">64 bytes <span class="keyword">from</span> tomcat02 (172.17.0.3): <span class="attribute">icmp_seq</span>=2 <span class="attribute">ttl</span>=64 <span class="attribute">time</span>=0.040 ms</span><br><span class="line">64 bytes <span class="keyword">from</span> tomcat02 (172.17.0.3): <span class="attribute">icmp_seq</span>=3 <span class="attribute">ttl</span>=64 <span class="attribute">time</span>=0.041 ms</span><br><span class="line"></span><br><span class="line"><span class="comment">## 通过docker inspect命令查看tomcat03容器详情</span></span><br><span class="line">[root@ouwen ~]# docker inspect tomcat03</span><br><span class="line"><span class="comment">## 发现Links配置如下图</span></span><br></pre></td></tr></table></figure>
+<h4 id="bridge"><a href="#bridge" class="headerlink" title="bridge"></a>bridge</h4><p>Docker 服务默认会创建一个 docker0 网桥（其上有一个 docker0 内部接口），该桥接网络的名称为docker0，它在内核层连通了其他的物理或虚拟网卡，这就将所有容器和本地主机都放到同一个物理网络。Docker 默认指定了 docker0 接口 的 IP 地址和子网掩码，让主机和容器之间可以通过网桥相互通信。</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"># 查看 bridge 网络的详细信息，并通过 <span class="keyword">grep</span> 获取名称项</span><br><span class="line">docker network <span class="keyword">inspect</span> bridge | <span class="keyword">grep</span> name</span><br></pre></td></tr></table></figure>
 
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220402223608.png" alt="image-20220402223601432" style="zoom: 33%;" />
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626003931.png" alt="image-20220626003931893"></p>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">ifconfig <span class="string">| grep docker</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>原理分析</strong></p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 进入tomcat03容器，查看容器内的hosts文件</span></span><br><span class="line">[root<span class="variable">@ouwen</span> ~]<span class="comment"># docker exec -it tomcat03 /bin/bash</span></span><br><span class="line">root<span class="variable">@db6ba115385c</span><span class="symbol">:/usr/local/tomcat</span><span class="comment"># cat /etc/hosts</span></span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>	localhost</span><br><span class="line">::<span class="number">1</span>	localhost ip6-localhost ip6-loopback</span><br><span class="line">fe00::<span class="number">0</span>	ip6-localnet</span><br><span class="line">ff00::<span class="number">0</span>	ip6-mcastprefix</span><br><span class="line">ff02::<span class="number">1</span>	ip6-allnodes</span><br><span class="line">ff02::<span class="number">2</span>	ip6-allrouters</span><br><span class="line"><span class="number">172.17</span>.<span class="number">0.3</span>	tomcat02 <span class="number">29285</span>f35bb36</span><br><span class="line"><span class="number">172.17</span>.<span class="number">0.4</span>	db6ba115385c</span><br></pre></td></tr></table></figure>
-
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626004014.png" alt="image-20220626004014292"></p>
 <blockquote>
-<p>–link 配置其实就是在容器内部配置了 hosts 文件，将容器名称绑定到指定 IP</p>
-<p>这种方式已经是过时！不建议使用！</p>
+<p><strong>说明：</strong></p>
+<ol>
+<li><p>Docker使用Linux桥接，在宿主机虚拟一个Docker容器网桥(docker0)，Docker启动一个容器时会根据Docker网桥的网段分配给容器一个IP地址，称为Container-IP，同时Docker网桥是每个容器的默认网关。因为在同一宿主机内的容器都接入同一个网桥，这样容器之间就能够通过容器的Container-IP直接通信</p>
+</li>
+<li><p>docker run 的时候，没有指定network的话默认使用的网桥模式就是bridge，使用的就是docker0。在宿主机ifconfig,就可以看到docker0和自己create的network(后面讲)eth0，eth1，eth2……代表网卡一，网卡二，网卡三……，lo代表127.0.0.1，即localhost，inet addr用来表示网卡的IP地址</p>
+</li>
+<li><p>网桥docker0创建一对对等虚拟设备接口一个叫veth，另一个叫eth0，成对匹配</p>
+<ol>
+<li>整个宿主机的网桥模式都是docker0，类似一个交换机有一堆接口，每个接口叫veth，在本地主机和容器内分别创建一个虚拟接口，并让他们彼此联通（这样一对接口叫veth pair）</li>
+<li>每个容器实例内部也有一块网卡，每个接口叫eth0</li>
+<li>docker0上面的每个veth匹配某个容器实例内部的eth0，两两配对，一一匹配</li>
+</ol>
+</li>
+</ol>
+<p><strong>通过上述，将宿主机上的所有容器都连接到这个内部网络上，两个容器在同一个网络下,会从这个网关下各自拿到分配的ip，此时两个容器的网络是互通的。</strong></p>
 </blockquote>
-<h3 id="自定义网络"><a href="#自定义网络" class="headerlink" title="自定义网络"></a>自定义网络</h3><p><strong>帮助命令</strong></p>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">docker network <span class="comment">--help</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626004158.png" alt="image-20220626004158705"></p>
+<p><strong>两两匹配验证</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8081:8080   --name tomcat81 billygoo/tomcat8-jdk8</span><br><span class="line"></span><br><span class="line">docker run -d -p 8082:8080   --name tomcat82 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
 
-<p><strong>查看所有的 docker 网络</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">[root<span class="variable">@ouwen</span> <span class="operator">~</span>]# docker network ls</span><br><span class="line">NETWORK ID     NAME      DRIVER    <span class="keyword">SCOPE</span></span><br><span class="line">f94736cb6a60   bridge    bridge    <span class="keyword">local</span></span><br><span class="line"><span class="number">86</span>b125d30748   host      host      <span class="keyword">local</span></span><br><span class="line">a34af85c010b   <span class="keyword">none</span>      <span class="keyword">null</span>      <span class="keyword">local</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>常见的网络模式</strong></p>
-<table>
-<thead>
-<tr>
-<th>Docker 网络模式</th>
-<th>配置</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>host 模式</td>
-<td>–net=host</td>
-<td>容器和宿主机共享 Network namespace。</td>
-</tr>
-<tr>
-<td>container 模式</td>
-<td>–net=container:NAME_or_ID</td>
-<td>容器和另外一个容器共享 Network namespace。 kubernetes 中的 pod 就是多个容器共享一个 Network namespace。</td>
-</tr>
-<tr>
-<td>none 模式</td>
-<td>–net=none</td>
-<td>容器有独立的 Network namespace，但并没有对其进行任何网络设置，如分配 veth pair 和网桥连接，配置 IP 等。</td>
-</tr>
-<tr>
-<td>bridge 模式</td>
-<td>–net=bridge</td>
-<td>（默认为该模式）</td>
-</tr>
-</tbody></table>
-<p><strong>创建一个自定义网络</strong></p>
-<figure class="highlight golo"><table><tr><td class="code"><pre><span class="line"><span class="comment">## 创建一个自定义网络mynet</span></span><br><span class="line"><span class="comment"># --driver bridge 桥接模式</span></span><br><span class="line"><span class="comment"># --subnet 192.168.0.0/16 子网掩码</span></span><br><span class="line"><span class="comment"># --gateway 192.168.0.1 网关地址</span></span><br><span class="line">[root<span class="meta">@ouwen</span> ~]<span class="comment"># docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 mynet</span></span><br><span class="line"><span class="number">7</span>d74345ad8e8b909f012acb656cb3ee3e16425f5c952b18467efcea5b939d4ee</span><br><span class="line">[root<span class="meta">@ouwen</span> ~]<span class="comment"># docker network ls</span></span><br><span class="line">NETWORK ID     NAME      DRIVER    SCOPE</span><br><span class="line">f94736cb6a60   bridge    bridge    <span class="keyword">local</span></span><br><span class="line"><span class="number">86</span>b125d30748   host      host      <span class="keyword">local</span></span><br><span class="line"><span class="number">7</span>d74345ad8e8   mynet     bridge    <span class="keyword">local</span></span><br><span class="line">a34af85c010b   none      <span class="literal">null</span>      <span class="keyword">local</span></span><br></pre></td></tr></table></figure>
-
-<p>查看网络详情，创建完毕</p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220402225446.png" alt="image-20220402225446743" style="zoom:33%;" />
-
-<p>通过自定义网络启动容器</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">## 启动两个tomcat容器</span><br><span class="line"><span class="selector-attr">[root@ouwen ~]</span># docker run -d -<span class="selector-tag">P</span> <span class="attr">--name</span> tomcat-net-<span class="number">01</span> <span class="attr">--net</span> mynet tomcat</span><br><span class="line"><span class="selector-attr">[root@ouwen ~]</span># docker run -d -<span class="selector-tag">P</span> <span class="attr">--name</span> tomcat-net-<span class="number">02</span> <span class="attr">--net</span> mynet tomcat</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220402225814.png" alt="image-20220402225814526"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626004537.png" alt="image-20220626004536998"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626004743.png" alt="image-20220626004743381"></p>
+<h4 id="host"><a href="#host" class="headerlink" title="host"></a>host</h4><p>直接使用宿主机的 IP 地址与外界进行通信，不再需要额外进行 NAT 转换。</p>
 <blockquote>
-<p>自定义网络可以实现–link 的功能，可以 ping 容器名！</p>
-<p>好处：搭建多个集群时，可以创建多个网络，互相隔离开！</p>
+<p><strong>说明：</strong></p>
+<p>容器将不会获得一个独立的 Network Namespace， 而是和宿主机共用一个 Network Namespace。容器将不会虚拟出自己的网卡而是使用宿主机的IP和端口。</p>
 </blockquote>
-<h3 id="网络连通"><a href="#网络连通" class="headerlink" title="网络连通"></a>网络连通</h3><p><strong>帮助命令：</strong></p>
-<figure class="highlight jboss-cli"><table><tr><td class="code"><pre><span class="line">docker network <span class="keyword">connect</span> <span class="params">--help</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626004852.png" alt="image-20220626004852511"></p>
+<p><strong>验证</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8083:8080 --network host --name tomcat83 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
 
-<p>将默认 docker0 网络下的容器添加到自定义网络 mynet 中，实现网络连通</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">[root@ouwen ~]<span class="comment"># docker network connect mynet tomcat01</span></span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626005212.png" alt="image-20220626005212574"></p>
+<p><strong>问题：</strong></p>
+<p>docker 容器启动时出现了警告</p>
+<p><strong>原因：</strong></p>
+<p>docker启动时指定 –network=host 或 -net=host，如果还指定了 -p 映射端口，那这个时候就会有此警告，并且通过-p设置的参数将不会起到任何作用，端口号会以主机端口号为主，重复时则递增。</p>
+<p><strong>解决:</strong></p>
+<p>解决的办法就是使用docker的其他网络模式，例如 –network=bridge，这样就可以解决问题，或者直接无视…</p>
+<p><strong>正确做法：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --network host --name tomcat83 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
 
-<p>查看自定义网络详情：</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">[root@ouwen ~]<span class="comment"># docker network inspect mynet</span></span><br></pre></td></tr></table></figure>
-
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220402231507.png" alt="image-20220402231507159"></p>
+<p>这样就不会出现之前的警告了，查看容器实例内部：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626005512.png" alt="image-20220626005512017"></p>
 <blockquote>
-<p>发现将 docker0 中的 tomcat01 添加到 mynet 网络中来，并分配了一个 ip</p>
+<p>没有设置-p的端口映射了，如何访问启动的tomcat83？</p>
+<p>http://宿主机IP:8080/</p>
+<p><strong>在CentOS里面用默认的火狐浏览器访问容器内的tomcat83看到访问成功，因为此时容器的IP借用主机的，所以容器共享宿主机网络IP，这样的好处是外部主机与容器可以直接通信。</strong></p>
 </blockquote>
+<h4 id="none"><a href="#none" class="headerlink" title="none"></a>none</h4><p>在 none 模式下，并不为 Docker 容器进行任何网络配置。 也就是说，这个 Docker 容器没有网卡、IP、路由等信息，只有一个 lo，需要我们自己为Docker容器添加网卡、配置IP等。禁用网络功能，只有 lo 标识(就是 127.0.0.1 表示本地回环)</p>
+<p><strong>验证</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8084:8080 --network none --name tomcat84 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
+
+<p>进入容器内部查看</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626005846.png" alt="image-20220626005846474"></p>
+<p>在容器外部查看</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626005936.png" alt="image-20220626005935898"></p>
+<h4 id="container"><a href="#container" class="headerlink" title="container"></a>container</h4><p>新建的容器和已经存在的一个容器共享一个网络 IP 配置而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010017.png" alt="image-20220626010017092"></p>
+<p><strong>验证</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8085:8080 --name tomcat85 billygoo/tomcat8-jdk8</span><br><span class="line"></span><br><span class="line">docker run -d -p 8086:8080 --network container:tomcat85 --name tomcat86 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010148.png" alt="image-20220626010148299"></p>
+<p>相当于tomcat86和tomcat85公用同一个ip同一个端口，导致端口冲突！</p>
+<p><strong>换一个镜像进行验证</strong></p>
+<blockquote>
+<p>Alpine操作系统是一个面向安全的轻型 Linux发行版</p>
+<p>Alpine Linux 是一款独立的、非商业的通用 Linux 发行版，专为追求安全性、简单性和资源效率的用户而设计。 可能很多人没听说过这个 Linux 发行版本，但是经常用 Docker 的朋友可能都用过，因为他小，简单，安全而著称，所以作为基础镜像是非常好的一个选择，可谓是麻雀虽小但五脏俱全，镜像非常小巧，不到 6M的大小，所以特别适合容器打包。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it --name alpine1  alpine /bin/sh</span><br><span class="line"></span><br><span class="line">docker run -it --network container:alpine1 --name alpine2  alpine /bin/sh</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010511.png" alt="image-20220626010511330"></p>
+<p>假如此时关闭 alpine1，再看看 alpin2</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010625.png" alt="image-20220626010625716"></p>
+<p>发现 <code>107: eth0@if108</code> 已经消失</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010751.png" alt="image-20220626010751877"></p>
+<h3 id="自定义网络"><a href="#自定义网络" class="headerlink" title="自定义网络"></a>自定义网络</h3><h4 id="过时的-link"><a href="#过时的-link" class="headerlink" title="过时的 link"></a>过时的 link</h4><p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626010828.png" alt="image-20220626010828576"></p>
+<h4 id="使用自定义网络的好处"><a href="#使用自定义网络的好处" class="headerlink" title="使用自定义网络的好处"></a>使用自定义网络的好处</h4><p><strong>before</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8081:8080   --name tomcat81 billygoo/tomcat8-jdk8</span><br><span class="line">docker run -d -p 8082:8080   --name tomcat82 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
+
+<p>启动成功使用 docker exec 进入到容器内部</p>
+<p><strong>按照 IP 地址 ping 是 OK 的</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626011951.png" alt="image-20220626011951406"></p>
+<p>但是无法按照服务名 ping</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626012135.png" alt="image-20220626012135798"></p>
+<p><strong>after</strong></p>
+<p>自定义桥接网络，自定义网络默认使用的就是桥接网络 – bridge</p>
+<ol>
+<li>新建自定义网络</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626012308.png" alt="image-20220626012308361"></p>
+<ol start="2">
+<li>新建容器并加入上一步新建的自定义网络</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8081:8080 --network my_network  --name tomcat81 billygoo/tomcat8-jdk8</span><br><span class="line"></span><br><span class="line">docker run -d -p 8082:8080 --network my_network  --name tomcat82 billygoo/tomcat8-jdk8</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>互相 ping 测试</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626012536.png" alt="image-20220626012536459"></p>
+<blockquote>
+<p><strong>结论</strong></p>
+<p><em><strong>自定义网络本身就维护好了主机名和ip的对应关系（ip和域名都能通）</strong></em></p>
+</blockquote>
+<h2 id="Docker-平台架构图解"><a href="#Docker-平台架构图解" class="headerlink" title="Docker 平台架构图解"></a>Docker 平台架构图解</h2><h3 id="整体说明"><a href="#整体说明" class="headerlink" title="整体说明"></a>整体说明</h3><p>从其架构和运行流程来看，Docker 是一个 C/S 模式的架构，后端是一个松耦合架构，众多模块各司其职。 </p>
+<p>Docker 运行的基本流程为：</p>
+<ol>
+<li>用户是使用 Docker Client 与 Docker Daemon 建立通信，并发送请求给后者。</li>
+<li>Docker Daemon 作为 Docker 架构中的主体部分，首先提供 Docker Server 的功能使其可以接受 Docker Client 的请求。</li>
+<li>Docker Engine 执行 Docker 内部的一系列工作，每一项工作都是以一个 Job 的形式的存在。</li>
+<li>Job 的运行过程中，当需要容器镜像时，则从 Docker Registry 中下载镜像，并通过镜像管理驱动 Graph driver将下载镜像以Graph的形式存储。</li>
+<li>当需要为 Docker 创建网络环境时，通过网络管理驱动 Network driver 创建并配置 Docker 容器网络环境。</li>
+<li>当需要限制 Docker 容器运行资源或执行用户指令等操作时，则通过 Execdriver 来完成。</li>
+<li>Libcontainer是一项独立的容器管理包，Network driver以及Exec driver都是通过Libcontainer来实现具体对容器进行的操作。</li>
+</ol>
+<h3 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h3><p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220626012732.png" alt="image-20220626012732507"></p>
 <h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h2><blockquote>
 <p>官方文档：<a href="https://docs.docker.com/compose/">https://docs.docker.com/compose/</a></p>
 </blockquote>
@@ -2495,6 +2561,16 @@
 <h2 id="Centos6-配置-yum"><a href="#Centos6-配置-yum" class="headerlink" title="Centos6 配置 yum"></a>Centos6 配置 yum</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># centos6配置yum</span></span><br><span class="line">sed -i “s|enabled=<span class="number">1</span>|enabled=<span class="number">0</span>|g” <span class="regexp">/etc/yum</span><span class="regexp">/pluginconf.d/</span>fastestmirror.conf</span><br><span class="line">mv <span class="regexp">/etc/yum</span>.repos.d<span class="regexp">/CentOS-Base.repo /</span>etc<span class="regexp">/yum.repos.d/</span>CentOS-Base.repo.backup</span><br><span class="line">curl -o <span class="regexp">/etc/yum</span>.repos.d<span class="regexp">/CentOS-Base.repo https:/</span><span class="regexp">/www.xmpan.com/</span>Centos-<span class="number">6</span>-Vault-Aliyun.repo</span><br><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
 
 <h2 id="Minio-文件服务安装与配置"><a href="#Minio-文件服务安装与配置" class="headerlink" title="Minio 文件服务安装与配置"></a>Minio 文件服务安装与配置</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 二进制安装</span></span><br><span class="line">wget https:<span class="regexp">//</span>dl.min.io<span class="regexp">/server/mi</span>nio<span class="regexp">/release/</span>linux-amd64/minio</span><br><span class="line">chmod +x minio</span><br><span class="line">MINIO_ROOT_USER=admin MINIO_ROOT_PASSWORD=password .<span class="regexp">/minio server /m</span>nt/data --console-address <span class="string">&quot;:9001&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 后台启动</span></span><br><span class="line">MINIO_ROOT_USER=admin MINIO_ROOT_PASSWORD=<span class="string">&#x27;wx123!@#&#x27;</span> nohup <span class="regexp">/u01/mi</span>nio-server<span class="regexp">/minio server /u</span>01<span class="regexp">/minio-server/</span>data --console-address <span class="string">&quot;:9001&quot;</span> &gt; <span class="regexp">/u01/mi</span>nio-server/minio.log <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker安装</span></span><br><span class="line">mkdir -p ~<span class="regexp">/minio/</span>data</span><br><span class="line"></span><br><span class="line">docker run \</span><br><span class="line">  -p <span class="number">9000</span>:<span class="number">9000</span> \</span><br><span class="line">  -p <span class="number">9001</span>:<span class="number">9001</span> \</span><br><span class="line">  --name minio \</span><br><span class="line">  -v ~<span class="regexp">/minio/</span>data:/data \</span><br><span class="line">  -e <span class="string">&quot;MINIO_ROOT_USER=AKIAIOSFODNN7EXAMPLE&quot;</span> \</span><br><span class="line">  -e <span class="string">&quot;MINIO_ROOT_PASSWORD=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY&quot;</span> \</span><br><span class="line">  quay.io<span class="regexp">/minio/mi</span>nio server /data --console-address <span class="string">&quot;:9001&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="GitStats-代码统计工具安装与配置"><a href="#GitStats-代码统计工具安装与配置" class="headerlink" title="GitStats 代码统计工具安装与配置"></a>GitStats 代码统计工具安装与配置</h2><h3 id="安装-Ruby-环境"><a href="#安装-Ruby-环境" class="headerlink" title="安装 Ruby 环境"></a>安装 Ruby 环境</h3><p>GitStats 需要 ruby-2.5 以上环境</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下载：</span></span><br><span class="line">wget https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz</span><br><span class="line"><span class="comment"># 解压：</span></span><br><span class="line">tar -zxvf ruby-2.5.0.tar.gz</span><br><span class="line"><span class="comment"># 进入目录：</span></span><br><span class="line"><span class="built_in">cd</span> ruby-2.5.0</span><br><span class="line"><span class="comment"># 创建安装目录：</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /usr/local/ruby</span><br><span class="line"><span class="comment"># 安装必备依赖</span></span><br><span class="line">yum -y install gcc openssl-devel make</span><br><span class="line"><span class="comment"># 配置并制定安装位置：</span></span><br><span class="line">./configure --prefix=/usr/local/ruby</span><br><span class="line"><span class="comment"># 编译安装</span></span><br><span class="line">make  &amp;&amp; make install </span><br><span class="line"></span><br><span class="line">安装完成输入  ruby -v 提示/usr/bin/ruby: No such file or directory</span><br><span class="line"></span><br><span class="line">解决问题之前，先确认一个情况，输入命令 /usr/local/ruby/bin/ruby --version</span><br><span class="line"></span><br><span class="line">如果有版本信息，那说明ruby被装到了该目录下，而非系统认为的 /usr/bin/ruby</span><br><span class="line"></span><br><span class="line">解决方法是在系统默认运行ruby的位置[/usr/bin/ruby]创建一个symlink（相当于win下的快捷方式），指向ruby的实际位置[/usr/local/ruby/bin/ruby]</span><br><span class="line"></span><br><span class="line">建立软链接  </span><br><span class="line">命令是  <span class="built_in">ln</span> -s /usr/local/ruby/bin/ruby /usr/bin/ruby</span><br><span class="line">再输入   ruby -v           OK完成</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">附赠：要是安装gem也出现这种情况[-bash: /usr/bin/gem: No such file or directory]也是同理</span><br><span class="line"></span><br><span class="line"><span class="built_in">ln</span> -s /usr/local/ruby/bin/gem /usr/bin/gem</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看当前仓库地址</span></span><br><span class="line">gem sources -l</span><br><span class="line"><span class="comment">#配置阿里云仓库源</span></span><br><span class="line">gem sources -a http://mirrors.aliyun.com/rubygems/ --remove https://rubygems.org/</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-GitStats"><a href="#安装-GitStats" class="headerlink" title="安装 GitStats"></a>安装 GitStats</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 git_stats</span></span><br><span class="line">gem install git_stats</span><br><span class="line"><span class="comment"># 安装locate</span></span><br><span class="line">yum install mlocate -y</span><br><span class="line">updatedb </span><br><span class="line"><span class="comment"># find 命令查找 git_stats 目录</span></span><br><span class="line">find / -name <span class="string">&#x27;git_stats&#x27;</span></span><br><span class="line"><span class="comment"># 进入到配置目录</span></span><br><span class="line">cd <span class="regexp">/usr/</span>local<span class="regexp">/ruby/</span>lib<span class="regexp">/ruby/g</span>ems<span class="regexp">/2.5.0/g</span>ems<span class="regexp">/git_stats-1.0.17/</span>config<span class="regexp">/locales/</span></span><br><span class="line">cp zh_tw_default.yml zh_default.yml</span><br><span class="line"><span class="comment">#修改以下2个yml,将最上边的zh_tw调整为zh_cn，其余不变</span></span><br><span class="line">vim zh_default.yml     </span><br><span class="line">vim zh.yml </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若报以下错误</span></span><br><span class="line">ERROR:  Error installing git_stats:</span><br><span class="line">	The last version of nokogiri (~&gt; <span class="number">1.6</span>) to support your Ruby &amp; RubyGems was <span class="number">1.12</span>.<span class="number">5</span>. Try installing it with `gem install nokogiri -v <span class="number">1.12</span>.<span class="number">5</span>` and then running the current command again</span><br><span class="line">	</span><br><span class="line"><span class="comment"># 运行</span></span><br><span class="line">gem install nokogiri -v <span class="number">1.12</span>.<span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置环境变量，放到末尾</span></span><br><span class="line">vim <span class="regexp">/etc/</span>profile</span><br><span class="line">PATH=<span class="regexp">/usr/</span>local<span class="regexp">/ruby/</span>bin:<span class="variable">$PATH</span></span><br><span class="line">export PATH</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使之生效</span></span><br><span class="line">source <span class="regexp">/etc/</span>profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-GitStats-生成报告"><a href="#使用-GitStats-生成报告" class="headerlink" title="使用 GitStats 生成报告"></a>使用 GitStats 生成报告</h3><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个项目文件夹</span></span><br><span class="line">mkdir -p <span class="regexp">/u01/gi</span>t-project</span><br><span class="line"><span class="comment"># 创建一个报告生成文件夹</span></span><br><span class="line">mkdir -p <span class="regexp">/var/</span>www/git-report</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 git 将项目 clone 到项目文件夹中</span></span><br><span class="line">git clone xxx.git</span><br><span class="line"><span class="comment"># 切换到项目根目录，使用 git_stats 生成报告</span></span><br><span class="line">git_stats generate -o <span class="regexp">/var/</span>www<span class="regexp">/git-report/</span>xxx --language zh_cn</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-nginx-访问"><a href="#配置-nginx-访问" class="headerlink" title="配置 nginx 访问"></a>配置 nginx 访问</h3><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">8098</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  <span class="number">192.168.88.235</span>;</span><br><span class="line">	</span><br><span class="line">	    <span class="section">location</span> /vansysboot &#123;</span><br><span class="line">            <span class="attribute">alias</span>   /var/www/git-report/vansysboot;</span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Linux</category>
@@ -3124,6 +3200,80 @@
       <tags>
         <tag>笔记</tag>
         <tag>技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker 安装 Nexus3 并搭建 Docker 私有镜像仓库</title>
+    <url>/2022/06/17/79ad3306.html</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Nexus 是 Sonatype 公司发布的一款仓库（Repository）管理软件，常用来搭建 Maven 私服，所以也有人将 Nexus 称为“Maven仓库管理器”。</p>
+<p>Nexus Repository 提供多种包格式的仓库：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617133124.png" alt="image-20220617133124634">    </p>
+<blockquote>
+<p>官方文档：<a href="https://help.sonatype.com/repomanager3">https://help.sonatype.com/repomanager3</a></p>
+</blockquote>
+<h2 id="安装部署"><a href="#安装部署" class="headerlink" title="安装部署"></a>安装部署</h2><p>这里采用 Docker 进行安装</p>
+<h3 id="安装nexus3"><a href="#安装nexus3" class="headerlink" title="安装nexus3"></a>安装nexus3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -itd \</span><br><span class="line">--privileged=<span class="literal">true</span> --name=nexus3 \</span><br><span class="line">-p 8081:8081 \</span><br><span class="line">-p 8082:8082 \</span><br><span class="line">-p 8083:8083 \</span><br><span class="line">-p 8084:8084 \</span><br><span class="line">-v /u01/cicd/nexus3/data:/nexus-data \</span><br><span class="line">sonatype/nexus3:3.30.0</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<p><code>8081</code>：可以通过http访问nexus应用</p>
+<p><code>8082</code>：docker(hosted)私有仓库，可以pull和push</p>
+<p><code>8083</code>：docker(proxy)代理远程仓库，只能pull</p>
+<p><code>8084</code>：docker(group)私有仓库和代理的组，只能pull</p>
+<p><code>-v</code>：建立容器与宿主机的连接，将容器中的数据持久化到宿主机上</p>
+<p><code>/nexus-data</code>：容器内 nexus 存放数据的目录</p>
+<p><code>/u01/cicd/nexus3/data</code>：宿主机映射容器内数据目录</p>
+<h3 id="访问网页端"><a href="#访问网页端" class="headerlink" title="访问网页端"></a>访问网页端</h3><p>容器启动成功后访问：<a href="http://192.168.88.236:8081/">http://192.168.88.236:8081/</a></p>
+<p>默认用户/密码：admin/admin123</p>
+<h2 id="创建Docker镜像仓库"><a href="#创建Docker镜像仓库" class="headerlink" title="创建Docker镜像仓库"></a>创建Docker镜像仓库</h2><p><code>Repository -&gt; Repositories -&gt; Create repository</code></p>
+<p><strong>repository的类型</strong></p>
+<ol>
+<li><code>hosted</code>，本地仓库，通常我们会部署自己的构件到这一类型的仓库。比如公司的第二方库。</li>
+<li><code>proxy</code>，代理仓库，它们被用来代理远程的公共仓库，如maven中央仓库。</li>
+<li><code>group</code>，仓库组，用来合并多个hosted/proxy仓库，当你的项目希望在多个repository使用资源时就不需要多次引用了，只需要引用一个group即可。</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617134246.png" alt="image-20220617134246522">    </p>
+<h3 id="创建docker-hosted-类型的仓库"><a href="#创建docker-hosted-类型的仓库" class="headerlink" title="创建docker(hosted)类型的仓库"></a>创建docker(hosted)类型的仓库</h3><p>hosted类型的仓库主要用于将自己的镜像上传至私库。</p>
+<p>在创建镜像仓库的页面中，设置镜像仓库的相关信息（名称、HTTP端口、是否允许匿名拉取镜像等）。</p>
+<p><strong>注意：这里设置的HTTP端口（8082）是后续拉取/推送镜像的端口</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617135103.png" alt="image-20220617135103754"></p>
+<h3 id="创建docker-proxy-类型的仓库"><a href="#创建docker-proxy-类型的仓库" class="headerlink" title="创建docker(proxy)类型的仓库"></a>创建docker(proxy)类型的仓库</h3><p>proxy类型的仓库主要是用于代理中央镜像仓库，从外网将镜像拉取至本地仓库中。</p>
+<p>这里用的是阿里云的镜像地址，国内访问比较快。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617141027.png" alt="image-20220617141027757"></p>
+<h3 id="创建docker-group-类型的仓库"><a href="#创建docker-group-类型的仓库" class="headerlink" title="创建docker(group)类型的仓库"></a>创建docker(group)类型的仓库</h3><p>用于拉取镜像到本地使用，集成代理仓库和本地仓库的镜像。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617141322.png" alt="image-20220617141322000"></p>
+<h3 id="配置Docker-Realm"><a href="#配置Docker-Realm" class="headerlink" title="配置Docker Realm"></a>配置Docker Realm</h3><p>将 Docker Bearer Token Realm 配置到右边，保存</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220617141707.png" alt="image-20220617141707436"></p>
+<h3 id="修改docker配置"><a href="#修改docker配置" class="headerlink" title="修改docker配置"></a>修改docker配置</h3><p>在 <code>/etc/docker/daemon.json</code> 文件中添加下面的内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ vim /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;insecure-registries&quot;</span>: [<span class="string">&quot;192.168.88.236:8082&quot;</span>,<span class="string">&quot;192.168.88.236:8084&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>8082</code>：<code>docker-hosted</code> 仓库端口</li>
+<li><code>8084</code>：<code>docker-group</code> 仓库端口</li>
+</ul>
+<p>重启 <code>docker</code> 服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ service docker restart</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看是否生效</span></span><br><span class="line">$ docker info</span><br><span class="line">Insecure Registries:</span><br><span class="line"> 192.168.88.236:8082</span><br><span class="line"> 192.168.88.236:8084</span><br><span class="line"> 127.0.0.0/8</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传-拉取镜像"><a href="#上传-拉取镜像" class="headerlink" title="上传/拉取镜像"></a>上传/拉取镜像</h3><h4 id="登录私服"><a href="#登录私服" class="headerlink" title="登录私服"></a>登录私服</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker login -u admin -p wx123\!@<span class="comment"># 192.168.88.236:8082</span></span><br><span class="line">WARNING! Using --password via the CLI is insecure. Use --password-stdin.</span><br><span class="line">WARNING! Your password will be stored unencrypted <span class="keyword">in</span> /root/.docker/config.json.</span><br><span class="line">Configure a credential helper to remove this warning. See</span><br><span class="line">https://docs.docker.com/engine/reference/commandline/login/<span class="comment">#credentials-store</span></span><br><span class="line"></span><br><span class="line">Login Succeeded <span class="comment"># 登录成功</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="上传镜像"><a href="#上传镜像" class="headerlink" title="上传镜像"></a>上传镜像</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 拉取 hello-wrold 镜像</span></span><br><span class="line">$ docker pull hello-world</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line">2db29710123e: Pull complete </span><br><span class="line">Digest: sha256:13e367d31ae85359f42d637adf6da428f76d75dc9afeb3c21faea0d976f5c651</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> hello-world:latest</span><br><span class="line">docker.io/library/hello-world:latest</span><br><span class="line"><span class="comment"># 创建 tag（仓库地址/镜像名称:TAG）</span></span><br><span class="line">$ docker tag hello-world 192.168.88.236:8082/myhello-world:1.0</span><br><span class="line"><span class="comment"># push 镜像</span></span><br><span class="line">$ docker push 192.168.88.236:8082/myhello-world:1.0</span><br><span class="line">The push refers to repository [192.168.88.236:8082/myhello-world]</span><br><span class="line">e07ee1baac5f: Pushed </span><br><span class="line">1.0: digest: sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2f13d8c4 size: 525</span><br></pre></td></tr></table></figure>
+
+<p><strong>上传私库成功！</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220624120037.png" alt="image-20220624120029872"></p>
+<h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ docker pull 192.168.88.236:8082/myhello-world:1.0</span><br><span class="line">1.0: Pulling from myhello-world</span><br><span class="line">Digest: sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2f13d8c4</span><br><span class="line">Status: Image is up to <span class="built_in">date</span> <span class="keyword">for</span> 192.168.88.236:8082/myhello-world:1.0</span><br><span class="line">192.168.88.236:8082/myhello-world:1.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><p>默认是使用 <code>admin</code> 用户登录的，权限太高，可以创建一个 <code>docker</code> 账号，并创建对应的角色，分配 <code>nx-repository-view-docker-*-*</code> 权限</p>
+<p><strong>创建角色</strong></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220624131513.png" alt="image-20220624131513867"></p>
+<p><strong>创建用户</strong></p>
+<p>创建用户，并加入对应的角色组</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220624131705.png" alt="image-20220624131705122"></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>容器</tag>
       </tags>
   </entry>
   <entry>
