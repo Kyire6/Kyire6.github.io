@@ -888,95 +888,84 @@
 <h3 id="安装-Docker-Compose"><a href="#安装-Docker-Compose" class="headerlink" title="安装 Docker Compose"></a>安装 Docker Compose</h3><ol>
 <li>下载</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 官网地址</span></span><br><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 国内镜像</span></span><br><span class="line">sudo curl -L <span class="string">&quot;https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment"># 官网地址</span></span><br><span class="line">sudo curl -L <span class="string">&quot;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 国内镜像</span></span><br><span class="line">sudo curl -L <span class="string">&quot;https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-<span class="subst">$(uname -s)</span>-<span class="subst">$(uname -m)</span>&quot;</span> -o /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
 
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220404124103.png" alt="image-20220404124103270"></p>
 <ol start="2">
-<li>给<code>docker-compose</code>文件授可执行权限</li>
+<li>给 <code>docker-compose</code> 文件授可执行权限</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>测试安装是否成功</li>
 </ol>
-<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">docker-compose <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose --version</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>卸载 <code>docker-compose</code></li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">rm <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>docker-compose</span><br></pre></td></tr></table></figure>
 
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220404124418.png" alt="image-20220404124418121"></p>
-<h3 id="Docker-Compose-入门"><a href="#Docker-Compose-入门" class="headerlink" title="Docker Compose 入门"></a>Docker Compose 入门</h3><p>官方文档：<a href="https://docs.docker.com/compose/gettingstarted/">https://docs.docker.com/compose/gettingstarted/</a></p>
-<p>参考官方文档，运行一个简单的 <code>Python Web</code> 应用程序。该应用程序使用 <code>Flask</code> 框架，并在 <code>Redis</code> 中维护一个命中计数器</p>
-<p><strong>步骤：</strong></p>
-<p><strong>准备工作</strong></p>
-<ol>
-<li>创建一个项目文件夹</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> composetest</span><br><span class="line"><span class="built_in">cd</span> composetest</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>创建一个在项目目录中调用的文件，并将其粘贴到：<code>app.py</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim app.py</span><br></pre></td></tr></table></figure>
-
-<p><code>app.py</code> 文件内容：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">cache = redis.Redis(host=<span class="string">&#x27;redis&#x27;</span>, port=<span class="number">6379</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hit_count</span>():</span><br><span class="line">    retries = <span class="number">5</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">return</span> cache.incr(<span class="string">&#x27;hits&#x27;</span>)</span><br><span class="line">        <span class="keyword">except</span> redis.exceptions.ConnectionError <span class="keyword">as</span> exc:</span><br><span class="line">            <span class="keyword">if</span> retries == <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">raise</span> exc</span><br><span class="line">            retries -= <span class="number">1</span></span><br><span class="line">            time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hello</span>():</span><br><span class="line">    count = get_hit_count()</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;Hello World! I have been seen &#123;&#125; times.\n&#x27;</span>.<span class="built_in">format</span>(count)</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>创建在项目目录中调用的另一个文件，并将其粘贴到：<code>requirements.txt</code></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim requirements.txt</span><br></pre></td></tr></table></figure>
-
-<p><code>requirements.txt</code> 文件内容：</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">flask</span></span><br><span class="line"><span class="attribute">redis</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>创建 Dockerfile</strong></p>
-<p>在项目目录中创建一个 <code>Dockerfile</code> 文件，并粘贴以下内容</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.7</span>-alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /code</span></span><br><span class="line"><span class="keyword">ENV</span> FLASK_APP=app.py</span><br><span class="line"><span class="keyword">ENV</span> FLASK_RUN_HOST=<span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> apk add --no-cache gcc musl-dev linux-headers</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> requirements.txt requirements.txt</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install -r requirements.txt</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">5000</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;flask&quot;</span>, <span class="string">&quot;run&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
-<p>说明：</p>
+<h3 id="Compose-核心概念"><a href="#Compose-核心概念" class="headerlink" title="Compose 核心概念"></a>Compose 核心概念</h3><p><strong>一文件</strong></p>
+<p><code>docker-compose.yml</code></p>
+<p><strong>两要素</strong></p>
 <ul>
-<li><p>从 <code>Python 3.7</code> 映像开始构建映像。</p>
-</li>
-<li><p>将工作目录设置为 <code>/code</code></p>
-</li>
-<li><p>设置命令使用的环境变量<code>flask</code></p>
-</li>
-<li><p>安装 <code>gcc</code> 和其他依赖项</p>
-</li>
-<li><p>复制并安装 Python 依赖项 <code>requirements.txt</code></p>
-</li>
-<li><p>向映像添加元数据以描述容器正在侦听端口 5000</p>
-</li>
-<li><p>将项目中的当前目录复制到映像中的 <code>workdir</code></p>
-</li>
-<li><p>将容器的缺省命令设置为 <code>flask run</code></p>
-</li>
+<li>服务（service)</li>
 </ul>
-<p><strong>编辑一个</strong> <code>docker-compose.yml</code> <strong>文件，编写服务</strong></p>
-<p>创建在项目目录中调用的文件并粘贴以下内容：<code>docker-compose.yml</code></p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.9&quot;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8000:5000&quot;</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&quot;redis:alpine&quot;</span></span><br></pre></td></tr></table></figure>
+<p>一个个应用容器实例，比如订单微服务、库存微服务、mysql容器、nginx容器或者redis容器</p>
+<ul>
+<li>工程（project）</li>
+</ul>
+<p>由一组关联的应用容器组成的一个完整业务单元，在 docker-compose.yml 文件中定义</p>
+<h3 id="Compose-使用的三个步骤"><a href="#Compose-使用的三个步骤" class="headerlink" title="Compose 使用的三个步骤"></a>Compose 使用的三个步骤</h3><ol>
+<li>编写Dockerfile定义各个微服务应用并构建出对应的镜像文件</li>
+<li>使用 docker-compose.yml 定义一个完整业务单元，安排好整体应用中的各个容器服务</li>
+<li>最后，执行docker-compose up命令 来启动并运行整个应用程序，完成一键部署上线</li>
+</ol>
+<h3 id="Compose-常用命令"><a href="#Compose-常用命令" class="headerlink" title="Compose 常用命令"></a>Compose 常用命令</h3><p><strong>查看帮助信息</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose -h|<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 
-<p>这个 <code>docker-compose.yml</code> 定义了两个服务：<code>web</code> 和 <code>redis</code></p>
-<p><strong>使用 Compose 构建并运行项目</strong></p>
-<p>在项目目录中，通过运行 <code>docker-compose up</code> 命令启动项目</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">docker-compose up</span></span><br></pre></td></tr></table></figure>
+<p><strong>命令选项</strong></p>
+<ul>
+<li>-f, –file FILE 指定使用的 Compose 模板文件，默认为 docker-compose.yml，可以多次指定；</li>
+<li>-p, –project-name NAME 指定项目名称，默认将使用所在目录名称作为项目名；</li>
+<li>–x-networking 使用 Docker 的可拔插网络后端特性；</li>
+<li>–x-network-driver DRIVER 指定网络后端的驱动，默认为 bridge；</li>
+<li>–verbose 输出更多调试信息；</li>
+<li>-v, –version 打印版本并退出；</li>
+<li>-H, –host HOST，远程操作docker，被操作的docker需要开放2375端口</li>
+</ul>
+<p><strong>常用命令</strong></p>
+<ul>
+<li><strong>up</strong>：启动所有docker-compose服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose up</span><br><span class="line"><span class="comment"># 启动所有docker-compose服务并后台运行</span></span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220404184409.png" alt="image-20220404184408949"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220404195214.png" alt="image-20220404195214755"></p>
-<p><strong>启动成功，访问测试：</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220404195828.png" alt="image-20220404195828215"></p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li><strong>ps</strong>：列出所有运行容器</li>
+<ul>
+<li><strong>down</strong>：停止并删除容器、网络、卷</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>exec</strong>：进入容器实例内部</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose <span class="built_in">exec</span> docker-compose.yml文件中写的服务<span class="built_in">id</span> /bin/bash</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>ps</strong>：展示当前 docker-compose 编排过的运行的所有容器</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose ps</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>logs</strong>：查看服务日志输出</li>
+<li><strong>top</strong>：展示当前docker-compose编排过的容器进程</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose logs</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose top</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>port</strong>：打印绑定的公共端口，下面命令可以输出 eureka 服务 8761 端口所绑定的公共端口</li>
+<li><strong>logs</strong>：查看容器输出日志</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose port eureka 8761</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose logs yml里面的服务<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>build</strong>：构建或者重新构建服务</li>
@@ -984,40 +973,29 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose build</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>start</strong>：启动指定服务已存在的容器</li>
+<li><strong>start</strong>：启动服务</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose start eureka</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose start yml里面的服务<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>stop</strong>：停止已运行的服务的容器</li>
+<li><strong>stop</strong>：停止服务</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose stop eureka</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose stop yml里面的服务<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>rm</strong>：删除指定服务的容器</li>
+<li><strong>restart</strong>：重启服务</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose <span class="built_in">rm</span> eureka</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose restart yml里面的服务<span class="built_in">id</span></span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>up</strong>：构建、启动容器</li>
+<li><strong>config</strong>：检查配置</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose config</span><br><span class="line"></span><br><span class="line"><span class="comment"># 有问题才输出</span></span><br><span class="line">docker-compose config -q</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li><strong>kill</strong>：通过发送 SIGKILL 信号来停止指定服务的容器</li>
+<li><strong>scale</strong>：设置指定服务运行容器的个数，以 <code>service=num</code> 形式指定</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose <span class="built_in">kill</span> eureka</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>pull</strong>：下载服务镜像</li>
-<li><strong>scale</strong>：设置指定服务运气容器的个数，以 service=num 形式指定</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose scale user=3 movie=3</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>run</strong>：在一个服务上执行一个命令</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose run web bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose scale yml里面的服务<span class="built_in">id</span>=实例个数</span><br></pre></td></tr></table></figure>
 
 <h3 id="docker-compose-yml-文件规则"><a href="#docker-compose-yml-文件规则" class="headerlink" title="docker-compose.yml 文件规则"></a>docker-compose.yml 文件规则</h3><p>官网地址：<a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">https://docs.docker.com/compose/compose-file/compose-file-v3/</a></p>
 <ul>
@@ -1082,11 +1060,16 @@
 </ul>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/lib</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/var</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><strong>logs</strong>：日志输出信息</li>
-</ul>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">--no-color</span>          <span class="string">单色输出，不显示其他颜.</span></span><br><span class="line"><span class="string">-f,</span> <span class="string">--follow</span>        <span class="string">跟踪日志输出，就是可以实时查看日志</span></span><br><span class="line"><span class="string">-t,</span> <span class="string">--timestamps</span>    <span class="string">显示时间戳</span></span><br><span class="line"><span class="string">--tail</span>              <span class="string">从日志的结尾显示，--tail=200</span></span><br></pre></td></tr></table></figure>
+<h2 id="Docker-轻量级可视化工具-Portainer"><a href="#Docker-轻量级可视化工具-Portainer" class="headerlink" title="Docker 轻量级可视化工具 Portainer"></a>Docker 轻量级可视化工具 Portainer</h2><p>Portainer 是一款轻量级的应用，它提供了图形化界面，用于方便地管理Docker环境，包括单机环境和集群环境。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>docker 命令安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 官方版本</span></span><br><span class="line">docker run -d -p 8000:8000 -p 9010:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer</span><br><span class="line"></span><br><span class="line"><span class="comment"># 中文版本</span></span><br><span class="line">docker run -d --restart=always --name=<span class="string">&quot;portainer&quot;</span> -p 9010:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce</span><br></pre></td></tr></table></figure>
 
+<p>第一次登录需要创建 admin 用户，访问地址：<code>xxx.xxx.xxx.xxx:9010</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203605.png" alt="image-20211218203604987"></p>
+<p>选择 local 选项卡后本地 docker 详细信息展示</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203652.png" alt="image-20211218203652466"></p>
+<p>管理本地环境</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203840.png" alt="image-20211218203840461"></p>
 <h2 id="Docker-Swarm"><a href="#Docker-Swarm" class="headerlink" title="Docker Swarm"></a>Docker Swarm</h2><blockquote>
 <p>官方文档：<a href="https://docs.docker.com/engine/swarm/">https://docs.docker.com/engine/swarm/</a></p>
 </blockquote>
@@ -1120,7 +1103,7 @@
 <li>work node：即图中的 avaliable node，主要负责运行相应的服务来执行任务（task）</li>
 </ul>
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220405204738.png" alt="image-20220405204714347"></p>
-<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="创建-Swarm"><a href="#创建-Swarm" class="headerlink" title="创建 Swarm"></a>创建 Swarm</h4><ul>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="创建-Swarm"><a href="#创建-Swarm" class="headerlink" title="创建 Swarm"></a>创建 Swarm</h4><ul>
 <li><h5 id="创建第一个-Node"><a href="#创建第一个-Node" class="headerlink" title="创建第一个 Node"></a>创建第一个 Node</h5></li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker swarm init --advertise-addr <span class="variable">$IP</span></span><br></pre></td></tr></table></figure>
@@ -1142,7 +1125,7 @@
 <p>在 Manager 节点，执行以下命令可查看到如何放入一个 Node：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ join-token manager</span><br><span class="line">To add a manager to this swarm, run the following <span class="built_in">command</span>:</span><br><span class="line"></span><br><span class="line">    docker swarm <span class="built_in">join</span> --token SWMTKN-1-2ngicgfdko2f95o108z5f32lcop5eertv2ykvhv6fhrpia9zri-bikzx84znfiatib0279jusn5i 192.168.88.86:2377</span><br><span class="line"></span><br><span class="line">$ docker swarm join-token worker</span><br><span class="line">To add a worker to this swarm, run the following <span class="built_in">command</span>:</span><br><span class="line"></span><br><span class="line">    docker swarm <span class="built_in">join</span> --token SWMTKN-1-2ngicgfdko2f95o108z5f32lcop5eertv2ykvhv6fhrpia9zri-4a7t10ktyl1u055gqyoxjh6uj 192.168.88.86:2377</span><br></pre></td></tr></table></figure>
 
-<p>在一个未加入任何<code>Swarm</code>的机器上，执行以上显示的命令 <code>docker swarm join --token...</code>，即可称为这个 <code>Swarm</code> 的 <code>Manager</code>或<code>Worker</code>节点</p>
+<p>在一个未加入任何 <code>Swarm</code> 的机器上，执行以上显示的命令 <code>docker swarm join --token...</code>，即可称为这个 <code>Swarm</code> 的  <code>Manager</code> 或 <code>Worker</code> 节点</p>
 <h4 id="部署服务"><a href="#部署服务" class="headerlink" title="部署服务"></a>部署服务</h4><ul>
 <li><h5 id="创建服务"><a href="#创建服务" class="headerlink" title="创建服务"></a>创建服务</h5></li>
 </ul>
@@ -2769,21 +2752,6 @@
 
 <p>如何使用 Kibana 连接 ES？</p>
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218201949.png" alt="image-20211218201949070"></p>
-<h2 id="Docker-可视化"><a href="#Docker-可视化" class="headerlink" title="Docker 可视化"></a>Docker 可视化</h2><ul>
-<li><p>portainer</p>
-</li>
-<li><p>Rancher</p>
-</li>
-</ul>
-<h3 id="什么是-portainer？"><a href="#什么是-portainer？" class="headerlink" title="什么是 portainer？"></a>什么是 portainer？</h3><p>Docker 图形化界面管理工具！提供一个后台面板供我们操作！</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8088:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer</span><br></pre></td></tr></table></figure>
-
-<p>访问测试：<a href="http://ip:8088/">http://ip:8088/</a></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203605.png" alt="image-20211218203604987"></p>
-<p>设置登录密码，创建用户</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203652.png" alt="image-20211218203652466"></p>
-<p>管理本地环境</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211218203840.png" alt="image-20211218203840461"></p>
 <h2 id="Docker-镜像详解"><a href="#Docker-镜像详解" class="headerlink" title="Docker 镜像详解"></a>Docker 镜像详解</h2><h3 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h3><p>镜像是一种轻量级、可执行的独立软件包，它包含运行某个软件所需的所有内容，我们把应用程序和配置依赖打包好形成一个可交付的运行环境(包括代码、运行时需要的库、环境变量和配置文件等)，这个打包好的运行环境就是image镜像文件。</p>
 <p>只有通过这个镜像文件才能生成Docker容器实例(类似Java中new出来一个对象)。</p>
 <p>如何得到镜像：</p>
