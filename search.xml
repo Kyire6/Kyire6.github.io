@@ -2304,8 +2304,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -2883,6 +2883,30 @@
       <tags>
         <tag>技巧</tag>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问</title>
+    <url>/2022/08/11/e8458f8e.html</url>
+    <content><![CDATA[<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>使用 docker 集群部署微服务时，注册到 nacos 上的 ip 会使用 docker 容器的虚拟内网 ip 作为注册地址，这会导致集群部署服务时，nacos 无法解析对应服务的 ip。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>参考：<a href="https://github.com/alibaba/nacos/issues/310">注册服务获取 IP 的问题 · Issue #310 · alibaba/nacos (github.com)</a></p>
+</blockquote>
+<h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><p>docker compose 配置文件中设置网络模式为 host</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">network_mode:</span> <span class="string">host</span></span><br></pre></td></tr></table></figure>
+
+<p>host 网络模式是直接使用宿主机的 IP 地址与外界进行通信</p>
+<h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><p>nacos 配置指定注册 ip/host</p>
+<p>application.yml 配置文件中添加如下配置即可：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="comment"># 配置host，避免docker部署nacos注册服务ip为内网地址</span></span><br><span class="line">        <span class="attr">ip:</span> <span class="string">xxx</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>随笔</category>
+        <category>开发技巧</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>开发工具</tag>
       </tags>
   </entry>
   <entry>
@@ -3685,8 +3709,8 @@
         <category>工具</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -4374,8 +4398,8 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
         <tag>微服务</tag>
       </tags>
   </entry>
@@ -4588,8 +4612,8 @@
         <category>服务器</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
@@ -4644,8 +4668,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5432,8 +5456,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5524,8 +5548,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -5972,8 +5996,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -6707,8 +6731,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -7386,8 +7410,8 @@
         <category>Spring</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
         <tag>分布式</tag>
       </tags>
   </entry>
@@ -7624,8 +7648,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -7792,8 +7816,8 @@
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -9836,8 +9860,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10028,8 +10052,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -10622,8 +10646,8 @@
         <category>中间件</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
         <tag>RabbitMQ</tag>
       </tags>
   </entry>
@@ -11689,8 +11713,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -11854,8 +11878,8 @@
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>技巧</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
