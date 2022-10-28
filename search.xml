@@ -13,18 +13,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker 容器-高级篇</title>
-    <url>/2022/04/07/289e2bff.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>容器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用编程环境与开发工具安装手册</title>
     <url>/2022/04/02/2f74bb89.html</url>
     <content><![CDATA[]]></content>
@@ -49,15 +37,39 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown 基本语法</title>
-    <url>/2020/02/19/5d36ff15.html</url>
+    <title>Docker 容器-高级篇</title>
+    <url>/2022/04/07/289e2bff.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>技巧</tag>
-        <tag>Markdown</tag>
+        <tag>Docker</tag>
+        <tag>容器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于 GitLab 的代码审查</title>
+    <url>/2022/10/28/328074fd.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>开发规范</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 分支管理规范</title>
+    <url>/2022/10/26/3c24a376.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>开发规范</tag>
       </tags>
   </entry>
   <entry>
@@ -91,7 +103,6 @@
     <url>/2022/08/05/c7bea606.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Linux</category>
         <category>Git</category>
       </categories>
       <tags>
@@ -104,7 +115,6 @@
     <url>/2022/08/02/8dc61f7f.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Linux</category>
         <category>Git</category>
       </categories>
       <tags>
@@ -154,7 +164,6 @@
     <url>/2022/06/16/47488464.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Linux</category>
         <category>Git</category>
       </categories>
       <tags>
@@ -245,7 +254,6 @@
     <url>/2022/01/11/3653ea16.html</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>Linux</category>
         <category>Git</category>
       </categories>
       <tags>
@@ -544,6 +552,18 @@
       <tags>
         <tag>Linux</tag>
         <tag>MongoDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown 基本语法</title>
+    <url>/2020/02/19/5d36ff15.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>技巧</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
