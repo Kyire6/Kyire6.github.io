@@ -184,7 +184,7 @@
 
 <p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221103105807.png" alt="image-20221102164606224"></p>
 <p>导出的 dump.hprof 是 Java 的内存快照文件（Heap Profile）,咱们可以借助一些工具分析内存快照，比如：<code>JProfiler</code>、JDK 自带的 <code>jhat</code> 和 <code>jvisualVM</code>。我这里选择使用 <code>JProfiler</code>。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="../../../Users/Downloads/Video/posts/temp/image-20221102165919594.png" alt="image-20221102165919594"></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221103133248.png" alt="image-20221102165919594"></p>
 <p>由此结果可以看到，<code>Date</code> 对象一直无法回收，个数达到了 <code>2亿</code> 多，代码里可能出现了死循环，不停地创建 <code>Date</code> 对象，只增不减，导致内存泄漏！</p>
 <h3 id="诊断-CPU-问题"><a href="#诊断-CPU-问题" class="headerlink" title="诊断 CPU 问题"></a>诊断 CPU 问题</h3><p>通过分析内存快照，猜测可能是死循环导致的内存泄漏，死循环导致 CPU 居高不下，通过 Arthas 分析占用 CPU 高的线程，定位到具体代码片段，结合上面内存分析结果针对性地解决问题。</p>
 <p>通过 arthas 的 <code>thread</code> 命令，查看当前系统的线程（默认查看第一页，按 CPU 增量时间降序排序）</p>
