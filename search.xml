@@ -49,6 +49,30 @@
       </tags>
   </entry>
   <entry>
+    <title>实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因</title>
+    <url>/2022/11/02/5c089f9f.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 常见面试题</title>
+    <url>/2022/10/31/e5210e5c.html</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>面试指北</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于 GitLab 的代码审查</title>
     <url>/2022/10/28/328074fd.html</url>
     <content><![CDATA[]]></content>
@@ -182,8 +206,8 @@
       </categories>
       <tags>
         <tag>笔记</tag>
-        <tag>Redis</tag>
         <tag>面试</tag>
+        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
