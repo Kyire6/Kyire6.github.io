@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>持续集成工具之 Jenkins | JJLUO の Blog</title><meta name="keywords" content="笔记,持续集成"><meta name="author" content="JJLUO"><meta name="copyright" content="JJLUO"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="持续集成及 Jenkins 介绍软件开发生命周期软件开发生命周期又叫做SDLC（Software Development Life Cycle），它是集合了计划、开发、测试 和部署过程的集合。如下图所示 ：    需求分析  这是生命周期的第一阶段，根据项目需求，团队执行一个可行性计划的分析。项目需求可能是公司内部 或者客户提出的。这阶段主要是对信息的收集，也有可能是对现有项目的改善和重新做一个新">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>持续集成工具之 Jenkins | JJLUO の Blog</title><meta name="keywords" content="笔记,持续集成"><meta name="author" content="JJLUO"><meta name="copyright" content="JJLUO"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="持续集成工具之 Jenkins"><meta name="application-name" content="持续集成工具之 Jenkins"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="bookmark" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="192x192" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="512x512" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1136x640.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_640x1136.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2688x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1792x828.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1125x2436.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_828x1792.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2436x1125.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1242x2208.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2208x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1334x750.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_750x1334.png"><link rel="apple-touch-startup-image" media="screen and (device-width:1024px) and (device-height:1366px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2732x2048.png"><meta name="description" content="持续集成及 Jenkins 介绍软件开发生命周期软件开发生命周期又叫做SDLC（Software Development Life Cycle），它是集合了计划、开发、测试 和部署过程的集合。如下图所示 ：    需求分析  这是生命周期的第一阶段，根据项目需求，团队执行一个可行性计划的分析。项目需求可能是公司内部 或者客户提出的。这阶段主要是对信息的收集，也有可能是对现有项目的改善和重新做一个新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="持续集成工具之 Jenkins">
 <meta property="og:url" content="https://blog.kyire.site/2022/04/03/1509bf9.html">
@@ -12,13 +12,14 @@
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="持续集成">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220403231558.png"><link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=2362766003&s=1"><link rel="canonical" href="https://blog.kyire.site/2022/04/03/1509bf9"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220403231558.png"><link rel="shortcut icon" href="https://q1.qlogo.cn/g?b=qq&nk=2362766003&s=1"><link rel="canonical" href="https://blog.kyire.site/2022/04/03/1509bf9"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
+  navMusic: true,
   algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
+  localSearch: {"path":"/search.json","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
   noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"这篇文章已经发表了","messageNext":"天了，其中某些内容可能已经过时。"},
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -38,16 +39,16 @@
   },
   copyright: undefined,
   lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#3b70fc","bgDark":"#1f1f1f","position":"top-center"},
   source: {
     justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+      js: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
     }
   },
   isPhotoFigcaption: false,
   islazyload: true,
-  isAnchor: true
+  isAnchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '持续集成工具之 Jenkins',
   isPost: true,
@@ -111,22 +112,41 @@
       document.head.appendChild(script)
     })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
       win.activateDarkMode = function () {
         document.documentElement.setAttribute('data-theme', 'dark')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
         }
       }
       win.activateLightMode = function () {
         document.documentElement.setAttribute('data-theme', 'light')
         if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
         }
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
           else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -143,8 +163,8 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/self/diy.css"><meta name="baidu-site-verification" content="code-bBfxYUqtxJ" /><style type="text/css">.card-announcement .social-button{margin:.6rem 0 0 0;text-align:center}.card-announcement .social-button a{display:block;background-color:var(--btn-bg);color:var(--btn-color);text-align:center;line-height:2.4;margin:4px 0}.card-announcement .social-button a:hover{background-color:var(--btn-hover-color)}</style><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2362766003&amp;s=5" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JJLUO の Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-compass"></i><span> 目录</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">持续集成工具之 Jenkins</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-03T23:13:53.000Z" title="发表于 2022-04-03 23:13:53">2022-04-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-03T23:13:53.000Z" title="更新于 2022-04-03 23:13:53">2022-04-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/CI-CD/">CI/CD</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>23分钟</span></span></div></div></div><article class="post-content" id="article-container"><h2 id="持续集成及-Jenkins-介绍"><a href="#持续集成及-Jenkins-介绍" class="headerlink" title="持续集成及 Jenkins 介绍"></a>持续集成及 Jenkins 介绍</h2><h3 id="软件开发生命周期"><a href="#软件开发生命周期" class="headerlink" title="软件开发生命周期"></a>软件开发生命周期</h3><p>软件开发生命周期又叫做<strong>SDLC</strong>（Software Development Life Cycle），它是集合了计划、开发、测试 和部署过程的集合。如下图所示 ：</p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309153101.png" alt="image-20220309153101326" style="zoom:67%;" />
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><div class="back-home-button" tabindex="-1"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网站</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.kyire.site/" title="个人博客" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=2362766003&amp;s=5"/><span class="back-menu-item-text">个人博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">常用应用</div><div class="back-menu-list"><a class="back-menu-item" href="https://airportal.cn/" title="AirPortal" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://assets.retiehe.com/ap-icon-192-2.png"/><span class="back-menu-item-text">AirPortal</span></a></div></div></div></div><a id="site-name" href="/"><div class="title">JJLUO の Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></center></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><div class="nav-button" id="darkmode_navswitch"><a class="darkmode_switchbutton" type="button" href="javascript:void(0);" title="浅色和深色模式转换" onclick="rm.switchDarkMode()"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke" style="font-size: 1.3rem"></i></a></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">持续集成工具之 Jenkins</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-03T23:13:53.000Z" title="发表于 2022-04-03 23:13:53">2022-04-03</time><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-03T23:13:53.000Z" title="更新于 2022-04-03 23:13:53">2022-04-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/DevOps/">DevOps</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.8k</span><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>23分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="持续集成工具之 Jenkins"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h2 id="持续集成及-Jenkins-介绍"><a href="#持续集成及-Jenkins-介绍" class="headerlink" title="持续集成及 Jenkins 介绍"></a>持续集成及 Jenkins 介绍</h2><h3 id="软件开发生命周期"><a href="#软件开发生命周期" class="headerlink" title="软件开发生命周期"></a>软件开发生命周期</h3><p>软件开发生命周期又叫做<strong>SDLC</strong>（Software Development Life Cycle），它是集合了计划、开发、测试 和部署过程的集合。如下图所示 ：</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309153101.png" alt="image-20220309153101326" style="zoom:67%;" />
 
 <ul>
 <li>需求分析</li>
@@ -168,7 +188,7 @@
 <p>最后进阶段就是对产品不断的进化改进和维护阶段，根据用户的使用情况，可能需要对某功能进行修 改，bug 修复，功能增加等。</p>
 <h3 id="软件开发瀑布模型"><a href="#软件开发瀑布模型" class="headerlink" title="软件开发瀑布模型"></a>软件开发瀑布模型</h3><p>瀑布模型是最著名和最常使用的软件开发模型。瀑布模型就是一系列的软件开发过程。它是由制造业繁 衍出来的。一个高度化的结构流程在一个方向上流动，有点像生产线一样。在瀑布模型创建之初，没有 其它开发的模型，有很多东西全靠开发人员去猜测，去开发。这样的模型仅适用于那些简单的软件开发，但是已经不适合现在的开发了。</p>
 <p>下图对软件开发模型的一个阐述。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309154059.png" alt="image-20220309154059145"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309154059.png" alt="image-20220309154059145"></p>
 <table>
 <thead>
 <tr>
@@ -199,7 +219,7 @@
 </ul>
 <p>软件的每个版本，都会新增一个用户可以感知的完整功能。也就是说，按照新增功能来划分迭代。</p>
 <h4 id="敏捷开发如何迭代？"><a href="#敏捷开发如何迭代？" class="headerlink" title="敏捷开发如何迭代？"></a>敏捷开发如何迭代？</h4><p>虽然敏捷开发将软件开发分成多个迭代，但是也要求，每次迭代都是一个完整的软件开发周期，必须按照软件工程的方法论，进行正规的流程管理。</p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309154857.png" alt="image-20220309154857660" style="zoom:67%;" />
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309154857.png" alt="image-20220309154857660" style="zoom:67%;" />
 
 <h4 id="敏捷开发有什么好处？"><a href="#敏捷开发有什么好处？" class="headerlink" title="敏捷开发有什么好处？"></a>敏捷开发有什么好处？</h4><ul>
 <li><strong>早期交付</strong></li>
@@ -213,7 +233,7 @@
 <p><strong>持续集成的目的，就是让产品可以快速迭代，同时还能保持高质量。</strong>它的核心措施是，代码集成到主干之前，必须通过自动化测试。只要有一个测试用例失败，就不能集成。</p>
 <p>通过持续集成，团队可以快速的从一个功能到另一个功能，简而言之，敏捷软件开发很大一部分都要归功于持续集成。</p>
 <p><strong>持续集成的流程</strong></p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309155459.png" alt="image-20220309155459830" style="zoom: 80%;" />
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309155459.png" alt="image-20220309155459830" style="zoom: 80%;" />
 
 <p>根据持续集成的设计，代码从提交到生产，整个过程有以下几步。</p>
 <ul>
@@ -246,7 +266,7 @@
 <li>一个代码存储库，即需要版本控制软件来保障代码的可维护性，同时作为构建过程的素材库，一般使用 SVN 或 Git。</li>
 <li>一个持续集成服务器， Jenkins 就是一个配置简单和使用方便的持续集成服务器。</li>
 </ul>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309165502.png" alt="image-20220309165502124"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309165502.png" alt="image-20220309165502124"></p>
 <h3 id="持续集成的好处"><a href="#持续集成的好处" class="headerlink" title="持续集成的好处"></a>持续集成的好处</h3><ol>
 <li>降低风险，由于持续集成不断去构建，编译和测试，可以很早期发现问题，所以修复的代价就少；</li>
 <li>对系统健康持续检查，减少发布风险带来的问题；</li>
@@ -255,7 +275,7 @@
 <li>持续交付可供使用的版本；</li>
 <li>增强团队信心；</li>
 </ol>
-<h3 id="Jenkins-介绍"><a href="#Jenkins-介绍" class="headerlink" title="Jenkins 介绍"></a>Jenkins 介绍</h3><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309165729.png" alt="image-20220309165729929" style="zoom:67%;" />
+<h3 id="Jenkins-介绍"><a href="#Jenkins-介绍" class="headerlink" title="Jenkins 介绍"></a>Jenkins 介绍</h3><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309165729.png" alt="image-20220309165729929" style="zoom:67%;" />
 
 <p>Jenkins 是一款流行的开源持续集成（Continuous Integration）工具，广泛用于项目开发，具有自动 化构建、测试和部署等功能。官网：<a target="_blank" rel="noopener" href="https://www.jenkins.io/">Jenkins</a>。</p>
 <p><strong>Jenkins 的特征：</strong></p>
@@ -286,51 +306,51 @@
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、将最新的稳定Jenkins WAR包 下载到您计算机上的相应目录。</span><br><span class="line"></span><br><span class="line"><span class="number">2</span>、在下载的目录内打开一个终端/命令提示符窗口到。</span><br><span class="line"></span><br><span class="line"><span class="number">3</span>、运行命令java -jar jenkins.war</span><br><span class="line"></span><br><span class="line"><span class="number">4</span>、浏览http:<span class="comment">//localhost:8080并等到*Unlock Jenkins*页面出现。</span></span><br><span class="line"></span><br><span class="line"><span class="number">5</span>、继续使用Post-installation setup wizard后面步骤设置向导。</span><br></pre></td></tr></table></figure>
 
 <p><strong>解锁 Jenkins</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174609.png" alt="image-20220309174609417"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174609.png" alt="image-20220309174609417"></p>
 <p>获取并输入 admin 账户密码（我这里是 docker 安装的，目录是映射到指定位置的，密码实际存放路径以提示为主）</p>
 <p><code>cat /var/jenkins_home/secrets/initialAdminPassword</code></p>
 <p><strong>跳过插件安装</strong></p>
 <p>因为 Jenkins 插件需要连接默认官网下载，速度非常慢，而且容易安装失败，所以我们暂时先跳过插件安装。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174531.png" alt="image-20220309174531892"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174831.png" alt="image-20220309174831016"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174531.png" alt="image-20220309174531892"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174831.png" alt="image-20220309174831016"></p>
 <p><strong>添加一个管理员账户，并进入 Jenkins 后台</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174954.png" alt="image-20220309174953956"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309174954.png" alt="image-20220309174953956"></p>
 <p><strong>保存并完成</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175748.png" alt="image-20220309175748708"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175748.png" alt="image-20220309175748708"></p>
 <p><strong>开始使用 Jenkins</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175816.png" alt="image-20220309175816074"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175908.png" alt="image-20220309175908276"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175816.png" alt="image-20220309175816074"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309175908.png" alt="image-20220309175908276"></p>
 <h3 id="Jenkins-插件管理"><a href="#Jenkins-插件管理" class="headerlink" title="Jenkins 插件管理"></a>Jenkins 插件管理</h3><p>Jenkins 本身不提供很多功能，我们可以通过使用插件来满足我们的使用。例如从 Gitlab 拉取代码，使用 Maven 构建项目等功能需要依靠插件完成。接下来演示如何下载插件。</p>
 <p><strong>修改 Jenkins 插件下载地址</strong></p>
 <p>Jenkins 国外官方插件地址下载速度非常慢，所以可以修改为国内插件地址：</p>
 <p><code>Jenkins -&gt; Manage Jenkins -&gt; Manage Plugins，点击Available</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309180153.png" alt="image-20220309180153473"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309180153.png" alt="image-20220309180153473"></p>
 <p>这样做是为了把 Jenkins 官方的插件列表下载到本地，接着修改地址文件，替换为国内插件地址：</p>
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入配置目录 （目录视情况而定，安装的jenkins_home下）</span></span><br><span class="line"><span class="keyword">cd</span> <span class="string">/var/jenkins_home/updates</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行命令</span></span><br><span class="line">sed -i &#x27;s/http:\/\<span class="string">/updates.jenkins</span>ci.org\<span class="string">/download/https</span>:\/\<span class="string">/mirrors.tuna.tsinghua.edu.cn</span>\<span class="string">/jenkins/g</span>&#x27; default.json &amp;&amp; sed -i &#x27;s/http:\/\<span class="string">/www.google.com/https</span>:\/\<span class="string">/www.baidu.com/g</span>&#x27; default.json</span><br></pre></td></tr></table></figure>
 
 <p>最后，Manage Plugins 点击 Advanced，把 Update Site 改为国内插件下载地址</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309180807.png" alt="image-20220309180807037"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309180807.png" alt="image-20220309180807037"></p>
 <p>Sumbit 后，在浏览器输入： <a target="_blank" rel="noopener" href="http://120.78.204.65:8180/restart">http://120.78.204.65:8180/restart</a> ，重启 Jenkins。</p>
 <p><strong>下载中文汉化插件</strong></p>
 <p><code>Jenkins -&gt; Manage Jenkins -&gt; Manage Plugins，点击Available，搜索&quot;Chinese&quot;</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181055.png" alt="image-20220309181055822"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181055.png" alt="image-20220309181055822"></p>
 <p>完成后如下图所示：</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181122.png" alt="image-20220309181122066"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181122.png" alt="image-20220309181122066"></p>
 <p>重启 Jenkins 之后，就看到 Jenkins 汉化了！（PS：某些菜单可能会汉化失败）</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181408.png" alt="image-20220309181408200"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181408.png" alt="image-20220309181408200"></p>
 <h3 id="Jenkins-用户权限管理"><a href="#Jenkins-用户权限管理" class="headerlink" title="Jenkins 用户权限管理"></a>Jenkins 用户权限管理</h3><p>我们可以利用<code>Role-based Authorization Strategy</code>插件来管理 Jenkins 用户权限</p>
 <p><strong>安装 Role-based Authorization Strategy 插件</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181600.png" alt="image-20220309181600238"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181600.png" alt="image-20220309181600238"></p>
 <p><strong>开启权限全局安全配置</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181914.png" alt="image-20220309181914873"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181914.png" alt="image-20220309181914873"></p>
 <p>授权策略切换为”Role-Based Strategy”，保存</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181940.png" alt="image-20220309181940124"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309181940.png" alt="image-20220309181940124"></p>
 <p><strong>创建角色</strong></p>
 <p>在系统管理页面进入 Manage and Assign Roles</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182209.png" alt="image-20220309182209559"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182209.png" alt="image-20220309182209559"></p>
 <p>点击”Manage Roles”</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182301.png" alt="image-20220309182301430"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182435.png" alt="image-20220309182435102"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182301.png" alt="image-20220309182301430"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182435.png" alt="image-20220309182435102"></p>
 <p><code>Global roles（全局角色）</code>：管理员等高级用户可以创建基于全局的角色</p>
 <p><code>Item roles（项目角色）</code>： 针对某个或者某些项目的角色</p>
 <p><code>Node roles（节点角色）</code>：节点相关的权限</p>
@@ -340,14 +360,14 @@
 <li>role1：该角色为项目角色。使用正则表达式绑定”vx-chx.*“，意思是只能操作 vx-chx 开头的项目。</li>
 <li>role2：该角色为项目角色。使用正则表达式绑定”vx-phm.*“，意思是只能操作 vx-phm 开头的项目。</li>
 </ul>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182812.png" alt="image-20220309182812353"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182812.png" alt="image-20220309182812353"></p>
 <p>保存</p>
 <p><strong>创建用户</strong></p>
 <p>在系统管理页面进入 Manage Users</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182917.png" alt="image-20220309182917026"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183107.png" alt="image-20220309183107565"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309182917.png" alt="image-20220309182917026"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183107.png" alt="image-20220309183107565"></p>
 <p>分别创建两个用户：vxchx 和 vxphm</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183223.png" alt="image-20220309183223041"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183223.png" alt="image-20220309183223041"></p>
 <p><strong>给用户分配角色</strong></p>
 <p>系统管理页面进入 Manage and Assign Roles，点击 Assign Roles</p>
 <p>绑定规则如下：</p>
@@ -355,7 +375,7 @@
 <li><p>vxchx 用户分别绑定 baseRole 和 role1 角色</p>
 </li>
 <li><p>vxphm 用户分别绑定 baseRole 和 role2 角色</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183455.png" alt="image-20220309183455591"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309183455.png" alt="image-20220309183455591"></p>
 </li>
 </ul>
 <p>保存</p>
@@ -369,9 +389,9 @@
 <p>注：新版本已经默认安装了此插件，这里无需另外再安装了</p>
 </blockquote>
 <p>系统管理中选择 <code>Manage Credentials</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309184117.png" alt="image-20220309184117479"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309184117.png" alt="image-20220309184117479"></p>
 <p>可以添加的凭证有 5 种：</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309184218.png" alt="image-20220309184218399"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220309184218.png" alt="image-20220309184218399"></p>
 <ul>
 <li>Username with password：用户名和密码</li>
 <li>SSH Username with private key： 使用 SSH 用户和密钥</li>
@@ -385,48 +405,48 @@
 <p><strong>安装 Git 插件和 Git 工具</strong></p>
 <p>为了让 Jenkins 支持从 Gitlab 拉取源码，需要安装 Git 插件以及在服务器上安装 Git 工具。</p>
 <p>Git 插件安装：</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310094719.png" alt="image-20220310094712046"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310094719.png" alt="image-20220310094712046"></p>
 <p>服务器上安装 Git 工具（以 CentOS7 为例）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">yum install git -y</span><br><span class="line"><span class="comment"># 安装后查看版本</span></span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
 <p><strong>用户密码类型</strong></p>
 <p>1）创建凭据</p>
 <p><code>Jenkins -&gt; 凭证 -&gt; 系统 -&gt; 全局凭据 -&gt; 添加凭据</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310095750.png" alt="image-20220310095750604"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310095750.png" alt="image-20220310095750604"></p>
 <p>选择”Username with password”，输入 Gitlab 的用户名和密码，点击”确定”。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310100359.png" alt="image-20220310100359012"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310100359.png" alt="image-20220310100359012"></p>
 <p><strong>SSH 密钥类型</strong></p>
 <p>SSH 免密登录示意图</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310100539.png" alt="image-20220310100539140"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310100539.png" alt="image-20220310100539140"></p>
 <p>1）使用 root 用户生成公钥和私钥</p>
 <p><code>ssh-keygen -t rsa</code></p>
 <p>在/root/.ssh/目录保存了公钥和使用</p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310101013.png" alt="image-20220310101013313" style="zoom:67%;" />
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310101013.png" alt="image-20220310101013313" style="zoom:67%;" />
 
 <p>id_rsa：私钥文件</p>
 <p>id_rsa.pub：公钥文件</p>
 <p>2）把生成的公钥放在 Gitlab 中</p>
 <p><code>登录gitlab -&gt; 点击头像 -&gt; Settings -&gt; SSH Keys</code></p>
 <p>复制刚才 id_rsa.pub 文件的内容到这里，点击”Add Key”</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310101538.png" alt="image-20220310101538008"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310101538.png" alt="image-20220310101538008"></p>
 <p>3）在 Jenkins 中添加凭证，配置私钥</p>
 <p>在 Jenkins 添加一个新的凭证，类型为”SSH Username with private key”，把刚才生成私有文件内容复制过来</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102203.png" alt="image-20220310102203814"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102427.png" alt="image-20220310102427213"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102203.png" alt="image-20220310102203814"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102427.png" alt="image-20220310102427213"></p>
 <h3 id="Jenkins-关联-JDK-和-Maven"><a href="#Jenkins-关联-JDK-和-Maven" class="headerlink" title="Jenkins 关联 JDK 和 Maven"></a>Jenkins 关联 JDK 和 Maven</h3><p><strong>关联 JDK</strong></p>
 <p><code>Jenkins -&gt; 系统管理 -&gt; 全局工具配置 -&gt; JDK -&gt; 新增JDK，配置如下：</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102744.png" alt="image-20220310102744563"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102744.png" alt="image-20220310102744563"></p>
 <p><strong>关联 Maven</strong></p>
 <p><code>Jenkins -&gt; 系统管理 -&gt; 全局工具配置 -&gt; Maven -&gt; 新增Maven，配置如下：</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102836.png" alt="image-20220310102835922"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310102836.png" alt="image-20220310102835922"></p>
 <h3 id="添加-Jenkins-全局变量"><a href="#添加-Jenkins-全局变量" class="headerlink" title="添加 Jenkins 全局变量"></a><strong>添加 Jenkins 全局变量</strong></h3><p><code>Jenkins -&gt; 系统管理 -&gt; 全局属性 -&gt; 添加三个环境变量，配置如下：</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310103242.png" alt="image-20220310103241974"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310103242.png" alt="image-20220310103241974"></p>
 <h3 id="Jenkins-关闭跨站请求伪造保护"><a href="#Jenkins-关闭跨站请求伪造保护" class="headerlink" title="Jenkins 关闭跨站请求伪造保护"></a>Jenkins 关闭跨站请求伪造保护</h3><ul>
 <li>Docker 容器运行</li>
 </ul>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1、进入运行的容器</span></span><br><span class="line">docker exec -u root -<span class="keyword">it</span> 你的Jenkins容器名称或者容器<span class="built_in">id</span> bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、输入命令，编辑jenkins启动配置文件</span></span><br><span class="line">vi /usr/<span class="keyword">local</span>/bin/jenkins.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、在图中标记处，加入以下配置</span></span><br><span class="line">-Dhudson.security.csrf.GlobalCrumbIssuerConfiguration.DISABLE_CSRF_PROTECTION=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、重启容器</span></span><br><span class="line">docker restart jenkins</span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220312001027.png" alt="image-20220312001020531"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220312001027.png" alt="image-20220312001020531"></p>
 <h2 id="Jenkins-构建-Maven-项目"><a href="#Jenkins-构建-Maven-项目" class="headerlink" title="Jenkins 构建 Maven 项目"></a>Jenkins 构建 Maven 项目</h2><blockquote>
 <p>构建方式均采用 Jar 包方式，War 方式参考<a target="_blank" rel="noopener" href="http://doc.jeecg.com/2043887">WAR 部署方案 · JeecgBoot 开发文档</a></p>
 </blockquote>
@@ -441,25 +461,25 @@
 <p><code>拉取代码 -&gt; 编译 -&gt; 打包 -&gt; 部署</code></p>
 <p><strong>拉取代码</strong></p>
 <p>1）创建项目</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112707.png" alt="image-20220310112707895"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112707.png" alt="image-20220310112707895"></p>
 <p>2）源码管理，从 Gitlab 拉取代码</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112815.png" alt="image-20220310112815147"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112815.png" alt="image-20220310112815147"></p>
 <p><strong>编译打包</strong></p>
 <p><code>构建 -&gt; 添加构建步骤 -&gt; 执行shell</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;开始编译和打包&quot;</span></span><br><span class="line">mvn clean package</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;编译和打包结束&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112952.png" alt="image-20220310112952936"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310112952.png" alt="image-20220310112952936"></p>
 <p><strong>部署</strong></p>
 <p>把项目部署到远程的服务器上，并启动</p>
 <p>1）安装<code>Publish Over SSH</code>插件</p>
 <p>Jenkins 本身无法实现远程部署到服务器上的功能，需要安装<code>Publish Over SSH</code>插件实现</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310113332.png" alt="image-20220310113332137"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310113332.png" alt="image-20220310113332137"></p>
 <p>2）配置<code>Publish over SSH</code>，添加 SSH 服务器</p>
 <p><code>打开系统管理 -&gt; 系统配置 -&gt; 拉到底部，选择Publish over SSH区域选择新增</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310114012.png" alt="image-20220310114012322"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310114012.png" alt="image-20220310114012322"></p>
 <p><code>点击高级 -&gt; 填写服务器密码</code>（也可选择 ssh 验证，在 Jenkins 中配置本机私钥，将公钥发送到目标机器，即可完成无密码登录）</p>
 <p><code>发送命令：ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.xxx.xxx</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310114702.png" alt="image-20220310114702171"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310114702.png" alt="image-20220310114702171"></p>
 <ul>
 <li>Passphrase： 密码（目标机器的密码）</li>
 <li>Path to key：key 文件（私钥）的路径</li>
@@ -469,20 +489,20 @@
 <li>Remote Directory： 远程目录(要发布的目录,比如/usr/local/tomcat/webapps/)</li>
 </ul>
 <p>3）添加构建步骤</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115055.png" alt="image-20220310115055853"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115245.png" alt="image-20220310115245384"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115055.png" alt="image-20220310115055853"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115245.png" alt="image-20220310115245384"></p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 脚本参考</span></span><br><span class="line"><span class="attribute">source</span> /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="attribute">cd</span> /apps</span><br><span class="line"><span class="attribute">ps</span> -ef|grep jeecg-boot-module-system-<span class="number">3</span>.<span class="number">1</span>.<span class="number">0</span>.jar|grep -v grep|awk &#x27;&#123;print $<span class="number">2</span>&#125;&#x27;|xargs kill -s <span class="number">9</span></span><br><span class="line"><span class="attribute">BUILD_ID</span>=dontKillMe</span><br><span class="line"><span class="attribute">nohup</span> java -jar jeecg-boot-module-system-<span class="number">3</span>.<span class="number">1</span>.<span class="number">0</span>.jar &gt; jeecg-boot-module-system-<span class="number">3</span>.<span class="number">1</span>.<span class="number">0</span>.log <span class="number">2</span>&gt;&amp;<span class="number">1</span> &amp;</span><br></pre></td></tr></table></figure>
 
 <p>4）点击”立即构建”，开始构建过程</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115628.png" alt="image-20220310115628609"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310115628.png" alt="image-20220310115628609"></p>
 <p>5）构建成功，并自动化部署，访问测试！</p>
 <h3 id="Maven-项目构建"><a href="#Maven-项目构建" class="headerlink" title="Maven 项目构建"></a>Maven 项目构建</h3><p>1）安装 Maven Integration Plugin（高版本的 Jenkins 已预装了此插件）</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135008.png" alt="image-20220310135008339"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135008.png" alt="image-20220310135008339"></p>
 <p>2）创建 Maven 项目</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135103.png" alt="image-20220310135103444"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135103.png" alt="image-20220310135103444"></p>
 <p>3）配置项目</p>
 <p>拉取代码和远程部署的过程和自由风格项目一样，只是”构建”部分不同</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135300.png" alt="image-20220310135300799"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310135300.png" alt="image-20220310135300799"></p>
 <h3 id="Pipeline-流水线项目构建"><a href="#Pipeline-流水线项目构建" class="headerlink" title="Pipeline 流水线项目构建(*)"></a>Pipeline 流水线项目构建(*)</h3><h4 id="Pipeline-简介"><a href="#Pipeline-简介" class="headerlink" title="Pipeline 简介"></a>Pipeline 简介</h4><p><strong>1）概念</strong></p>
 <p>Pipeline，简单来说，就是一套运行在 Jenkins 上的工作流框架，将原来独立运行于单个或者多个节点的任务连接起来，实现单个任务难以完成的复杂流程编排和可视化的工作。</p>
 <p><strong>2）使用 Pipeline 有以下好处（来自翻译自官方文档）：</strong></p>
@@ -495,9 +515,9 @@
 </ul>
 <h4 id="Pipeline-语法快速入门"><a href="#Pipeline-语法快速入门" class="headerlink" title="Pipeline 语法快速入门"></a>Pipeline 语法快速入门</h4><p><strong>1）Declarative 声明式-Pipeline</strong></p>
 <p>创建一个流水线项目</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310154144.png" alt="image-20220310154144897"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310154144.png" alt="image-20220310154144897"></p>
 <p><code>流水线 -&gt; 选择HelloWorld模板</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310154618.png" alt="image-20220310154618000"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310154618.png" alt="image-20220310154618000"></p>
 <p>生成的内容如下：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">    agent any</span><br><span class="line"></span><br><span class="line">    stages &#123;</span><br><span class="line">        stage(<span class="string">&#x27;Hello&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                echo <span class="string">&#x27;Hello World&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -513,13 +533,13 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">    agent any</span><br><span class="line">    stages &#123;</span><br><span class="line">        stage(<span class="string">&#x27;拉取代码&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">            	echo <span class="string">&#x27;拉取代码&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        stage(<span class="string">&#x27;编译构建&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">            	echo <span class="string">&#x27;编译构建&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        stage(<span class="string">&#x27;项目部署&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">            	echo <span class="string">&#x27;项目部署&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>点击构建，进入<code>Blue Ocean</code>可以看到整个构建过程</p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310155756.png" alt="image-20220310155756052" style="zoom: 150%;" />
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310155756.png" alt="image-20220310155756052" style="zoom: 150%;" />
 
 <p><strong>2）Scripted Pipeline 脚本式-Pipeline</strong></p>
 <p>创建项目</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310155938.png" alt="image-20220310155938728"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310155938.png" alt="image-20220310155938728"></p>
 <p>选择 <code>Scripted Pipeline&quot;</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310160044.png" alt="image-20220310160044398"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310160044.png" alt="image-20220310160044398"></p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">node &#123;</span><br><span class="line">    <span class="keyword">def</span> mvnHome</span><br><span class="line">    stage(<span class="string">&#x27;Preparation&#x27;</span>) &#123; <span class="comment">// for display purposes</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">&#x27;Build&#x27;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    stage(<span class="string">&#x27;Results&#x27;</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -534,12 +554,12 @@
 <p><strong>Pipeline Script from SCM</strong></p>
 <p>刚才我们都是直接在 Jenkins 的 UI 界面编写 Pipeline 代码，这样不方便脚本维护，建议把 Pipeline 脚本放在项目中（一起进行版本控制）</p>
 <p><strong>1）在项目根目录建立 Jenkinsfile 文件，把内容复制到该文件中</strong></p>
-<img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310163924.png" alt="image-20220310163924603" style="zoom:67%;" />
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310163924.png" alt="image-20220310163924603" style="zoom:67%;" />
 
 <p>把 Jenkinsfile 上传到 Gitlab</p>
 <p><strong>2）在项目中引用该文件</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164207.png" alt="image-20220310164207097"></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164225.png" alt="image-20220310164225747"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164207.png" alt="image-20220310164207097"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164225.png" alt="image-20220310164225747"></p>
 <h3 id="Jenkinsfile"><a href="#Jenkinsfile" class="headerlink" title="Jenkinsfile"></a>Jenkinsfile</h3><h4 id="Jenkinsfile-环境变量"><a href="#Jenkinsfile-环境变量" class="headerlink" title="Jenkinsfile 环境变量"></a>Jenkinsfile 环境变量</h4><table>
 <thead>
 <tr>
@@ -713,43 +733,55 @@
 <li>GitHub 钩子触发的 GIT SCM 轮询（GitHub hook trigger for GITScm polling）</li>
 </ul>
 <p><strong>触发远程构建</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164928.png" alt="image-20220310164928630"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310164928.png" alt="image-20220310164928630"></p>
 <p>触发构建 url：<a target="_blank" rel="noopener" href="http://192.168.88.86:8180/job/vx-phm/build?token=abcabc">http://192.168.88.86:8180/job/vx-phm/build?token=abcabc</a></p>
 <p><strong>其他工程构建后触发</strong></p>
 <p>1）创建 pre_job 流水线工程</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310170455.png" alt="image-20220310170454942"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310170455.png" alt="image-20220310170454942"></p>
 <p>2）配置需要触发的工程</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310170935.png" alt="image-20220310170935519"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310170935.png" alt="image-20220310170935519"></p>
 <p><strong>定时构建</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310171234.png" alt="image-20220310171234011"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310171234.png" alt="image-20220310171234011"></p>
 <p>定时字符串从左往右分别为： 分 时 日 月 周</p>
 <p>一些定时表达式的例子：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">每30分钟构建一次：H代表形参 H/30 <span class="emphasis">* *</span> <span class="emphasis">* *</span> 10:02 10:32</span><br><span class="line"></span><br><span class="line">每2个小时构建一次: H H/2 <span class="emphasis">* *</span> <span class="emphasis">*</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">每天的8点，12点，22点，一天构建3次： (多个时间点中间用逗号隔开) 0 8,12,22 *</span> <span class="emphasis">* *</span></span><br><span class="line"></span><br><span class="line">每天中午12点定时构建一次 H 12 <span class="emphasis">* *</span> <span class="emphasis">*</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">每天下午18点定时构建一次 H 18 *</span> <span class="emphasis">* *</span></span><br><span class="line"></span><br><span class="line">在每个小时的前半个小时内的每10分钟 H(0-29)/10 <span class="emphasis">* *</span> <span class="emphasis">* *</span></span><br><span class="line"></span><br><span class="line">每两小时一次，每个工作日上午9点到下午5点(也许是上午10:38，下午12:38，下午2:38，下午</span><br><span class="line">4:38) H H(9-16)/2 <span class="emphasis">* *</span> 1-5</span><br></pre></td></tr></table></figure>
 
 <p><strong>轮询 SCM</strong></p>
 <p>轮询 SCM，是指定时扫描本地代码仓库的代码是否有变更，如果代码有变更就触发项目构建。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310171348.png" alt="image-20220310171348558"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310171348.png" alt="image-20220310171348558"></p>
 <p>注意：此构建触发器，Jenkins 会定时扫描本地整个项目的代码，增大系统的开销，不建议使用。</p>
 <h3 id="Git-Hook-自动触发构建"><a href="#Git-Hook-自动触发构建" class="headerlink" title="Git Hook 自动触发构建(*)"></a>Git Hook 自动触发构建(*)</h3><p>刚才我们看到在 Jenkins 的内置构建触发器中，轮询 SCM 可以实现 Gitlab 代码更新，项目自动构建，但是该方案的性能不佳。那有没有更好的方案呢？有的。就是利用 Gitlab 的 webhook 实现代码 push 到仓库，立即触发项目自动构建。</p>
 <p><strong>安装 Gitlab Hook 插件</strong></p>
 <p>需要安装两个插件：</p>
 <p>Gitlab Hook 和 Gitlab</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172047.png" alt="image-20220310172047813"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172047.png" alt="image-20220310172047813"></p>
 <p><strong>Jenkins 设置自动构建</strong></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172445.png" alt="image-20220310172445870"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172445.png" alt="image-20220310172445870"></p>
 <p>等会需要把生成的 webhook URL 配置到 Gitlab 中。</p>
 <p><strong>Gitlab 配置 webhook</strong></p>
 <p>1）开启 webhook 功能</p>
 <p><code>使用root账户登录到后台，点击Admin Area -&gt; Settings -&gt; Network</code></p>
 <p><code>勾选&quot;Allow requests to the local network from web hooks and services&quot;</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172805.png" alt="image-20220310172805087"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310172805.png" alt="image-20220310172805087"></p>
 <p>2）在项目中添加 webhook</p>
 <p><code>点击项目 -&gt; Settings -&gt; Webhooks</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310173325.png" alt="image-20220310173325550"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310173325.png" alt="image-20220310173325550"></p>
 <p>注意：以下设置必须完成，否则会报错！</p>
 <p><code>系统管理 -&gt; 系统配置</code></p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310173704.png" alt="image-20220310173704682"></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.kyire.site">JJLUO</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.kyire.site/2022/04/03/1509bf9.html">https://blog.kyire.site/2022/04/03/1509bf9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.kyire.site" target="_blank">JJLUO の Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/">持续集成</a></div><div class="post_share"><div class="social-share" data-image="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220403231558.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/02/2f74bb89.html"><img class="prev-cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618115733.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">常用编程环境与开发工具安装手册</div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/816ad4bd.html"><img class="next-cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618213813.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">错误码及全局异常处理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/02/06/8fe2b6a8.html" title="Hexo+Gitee 搭建个人博客"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211212181408.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-06</div><div class="title">Hexo+Gitee 搭建个人博客</div></div></a></div><div><a href="/2022/04/02/2f74bb89.html" title="常用编程环境与开发工具安装手册"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618115733.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-02</div><div class="title">常用编程环境与开发工具安装手册</div></div></a></div><div><a href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221102100137.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-11-02</div><div class="title">实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因</div></div></a></div><div><a href="/2022/06/19/6deb50f5.html" title="Floccus bookmark sync 自动同步书签"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220619223559.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-19</div><div class="title">Floccus bookmark sync 自动同步书签</div></div></a></div><div><a href="/2022/06/16/47488464.html" title="使用 GitHub Actions 自动发布Hexo博客"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211212181603.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-16</div><div class="title">使用 GitHub Actions 自动发布Hexo博客</div></div></a></div><div><a href="/2022/06/06/11eee9b8.html" title="Redis 集群部署案例设计"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618211309.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-06</div><div class="title">Redis 集群部署案例设计</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=2362766003&amp;s=5" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JJLUO</div><div class="author-info__description">一枚程序猿，记录平时工作学习中的点点滴滴</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Kyire6"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Kyire6" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2362766003@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言交流（<a href="/messageboard/" style="color:#49b1f5">留言板</a>），若你访问本站加载速度较慢，你还可以访问国内镜像，以提高访问速度！<div class="social-button"> <a class="button--animated" href="https://blog.kyire.site" target="_blank">国外镜像 👉</a> <a class="button--animated" href="https://Kyire6.gitee.io" target="_blank">国内镜像 👉</a> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%8A-Jenkins-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">持续集成及 Jenkins 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.</span> <span class="toc-text">软件开发生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">软件开发瀑布模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91"><span class="toc-number">1.3.</span> <span class="toc-text">软件的敏捷开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%EF%BC%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">什么是敏捷开发？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E8%BF%AD%E4%BB%A3%EF%BC%9F"><span class="toc-number">1.3.2.</span> <span class="toc-text">敏捷开发如何迭代？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-number">1.3.3.</span> <span class="toc-text">敏捷开发有什么好处？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">什么是持续集成？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%9A%84%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="toc-number">1.5.</span> <span class="toc-text">持续集成的组成要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.6.</span> <span class="toc-text">持续集成的好处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.7.</span> <span class="toc-text">Jenkins 介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">Jenkins 安装与配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Jenkins"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Jenkins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">Jenkins 插件管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">2.3.</span> <span class="toc-text">Jenkins 用户权限管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86"><span class="toc-number">2.4.</span> <span class="toc-text">Jenkins 凭证管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%85%B3%E8%81%94-JDK-%E5%92%8C-Maven"><span class="toc-number">2.5.</span> <span class="toc-text">Jenkins 关联 JDK 和 Maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-Jenkins-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">2.6.</span> <span class="toc-text">添加 Jenkins 全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%85%B3%E9%97%AD%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%E4%BF%9D%E6%8A%A4"><span class="toc-number">2.7.</span> <span class="toc-text">Jenkins 关闭跨站请求伪造保护</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins-%E6%9E%84%E5%BB%BA-Maven-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">Jenkins 构建 Maven 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">Jenkins 项目构建类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E9%A3%8E%E6%A0%BC%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.2.</span> <span class="toc-text">自由风格项目构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.3.</span> <span class="toc-text">Maven 项目构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pipeline-%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.4.</span> <span class="toc-text">Pipeline 流水线项目构建(*)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Pipeline-%E7%AE%80%E4%BB%8B"><span class="toc-number">3.4.1.</span> <span class="toc-text">Pipeline 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pipeline-%E8%AF%AD%E6%B3%95%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">3.4.2.</span> <span class="toc-text">Pipeline 语法快速入门</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile"><span class="toc-number">3.5.</span> <span class="toc-text">Jenkinsfile</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jenkinsfile-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.5.1.</span> <span class="toc-text">Jenkinsfile 环境变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9E%84%E5%BB%BA%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">3.6.</span> <span class="toc-text">常用的构建触发器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git-Hook-%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E6%9E%84%E5%BB%BA"><span class="toc-number">3.7.</span> <span class="toc-text">Git Hook 自动触发构建(*)</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221102100137.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"/></a><div class="content"><a class="title" href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因">实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因</a><time datetime="2022-11-02T09:43:25.000Z" title="发表于 2022-11-02 09:43:25">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/e5210e5c.html" title="Java 常见面试题"><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221031101834.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java 常见面试题"/></a><div class="content"><a class="title" href="/2022/10/31/e5210e5c.html" title="Java 常见面试题">Java 常见面试题</a><time datetime="2022-10-31T09:48:22.000Z" title="发表于 2022-10-31 09:48:22">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/28/328074fd.html" title="基于 GitLab 的代码审查"><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221028112439.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于 GitLab 的代码审查"/></a><div class="content"><a class="title" href="/2022/10/28/328074fd.html" title="基于 GitLab 的代码审查">基于 GitLab 的代码审查</a><time datetime="2022-10-28T11:24:53.000Z" title="发表于 2022-10-28 11:24:53">2022-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/26/3c24a376.html" title="Git 分支管理规范"><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221028110542.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git 分支管理规范"/></a><div class="content"><a class="title" href="/2022/10/26/3c24a376.html" title="Git 分支管理规范">Git 分支管理规范</a><time datetime="2022-10-26T11:06:05.000Z" title="发表于 2022-10-26 11:06:05">2022-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/11/e8458f8e.html" title="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问"><img src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220811095054.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问"/></a><div class="content"><a class="title" href="/2022/08/11/e8458f8e.html" title="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问">Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问</a><time datetime="2022-08-11T09:44:29.000Z" title="发表于 2022-08-11 09:44:29">2022-08-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By JJLUO</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="github-badge-container" style="margin-top:5px"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" title="博客框架为Hexo_v5.4.2"/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" title="主题版本Butterfly_v4.2.2"/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"/></a><a class="github-badge" target="_blank" href="https://gitee.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Hosted-Gitee-%23c5352a?style=flat&amp;logo=Gitee" title="本站采用双线部署，国内线路托管于Gitee"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Source-GitHub-blue?style=flat&amp;logo=GitHub" title="本站项目由GitHub托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220310173704.png" alt="image-20220310173704682"></p>
+</article><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/weixin.jpg" target="_blank"><img class="post-qr-code-img" src="/img/weixin.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.kyire.site/2022/04/03/1509bf9.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=undefined&amp;url=https://blog.kyire.site/2022/04/03/1509bf9.html&amp;pic=undefined" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E7%AC%94%E8%AE%B0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>笔记<span class="tagsPageCount">33</span></a><a class="post-meta__box__tags" href="/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>持续集成<span class="tagsPageCount">1</span></a></div></div></div></div></div><div class="post-copyright"><i class="anzhiyufont anzhiyu-icon-copyright"></i><div class="post-copyright__author"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.kyire.site/2022/04/03/1509bf9.html">原创</a><a class="post-copyright-title"><span>持续集成工具之 Jenkins</span></a></div><div class="post-copyright-info-box"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"></span><a class="link" href="https://blog.kyire.site">JJLUO</a></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a class="link" href="https://blog.kyire.site/2022/04/03/1509bf9.html">https://blog.kyire.site/2022/04/03/1509bf9.html</a></span><span class="copy-button" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-copy"></i></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.kyire.site" target="_blank">JJLUO の Blog</a>！</span></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/02/2f74bb89.html"><img class="prev-cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618115733.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">常用编程环境与开发工具安装手册</div></div></a></div><div class="next-post pull-right"><a href="/2022/04/07/816ad4bd.html"><img class="next-cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618213813.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">错误码及全局异常处理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/02/06/8fe2b6a8.html" title="Hexo+Gitee 搭建个人博客"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211212181408.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-02-06</div><div class="title">Hexo+Gitee 搭建个人博客</div></div></a></div><div><a href="/2022/04/02/2f74bb89.html" title="常用编程环境与开发工具安装手册"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618115733.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-04-02</div><div class="title">常用编程环境与开发工具安装手册</div></div></a></div><div><a href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221102100137.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-11-02</div><div class="title">实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因</div></div></a></div><div><a href="/2022/06/19/6deb50f5.html" title="Floccus bookmark sync 自动同步书签"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220619223559.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-06-19</div><div class="title">Floccus bookmark sync 自动同步书签</div></div></a></div><div><a href="/2022/06/16/47488464.html" title="使用 GitHub Actions 自动发布 Hexo 博客"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20211212181603.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-06-16</div><div class="title">使用 GitHub Actions 自动发布 Hexo 博客</div></div></a></div><div><a href="/2022/06/06/11eee9b8.html" title="Redis 集群部署案例设计"><img class="cover" src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220618211309.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-06-06</div><div class="title">Redis 集群部署案例设计</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div><div class="comment-barrage"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author-info-top"> <div class="card-info-avatar"></div></div><div class="author-info__sayhi" id="author-info__sayhi"></div><h1 class="author-info__name">JJLUO</h1><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">前后端开发、DevOps</b>相关的问题和看法，还有<b style="color:#fff">工作技巧与面试经验</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="banner-button-group"><a class="banner-button" onclick="pjax.loadUrl(&quot;/about/&quot;)"><span class="banner-button-text">了解更多</span><i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size: 1.5rem"></i></a></div><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/Kyire6" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=2362766003@qq.com" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/335026524" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="social-icon faa-parent animated-hover" href="tencent://Message/?Uin=2362766003&amp;amp;websiteName=local.edu.com:8888=&amp;amp;Menu=yes" target="_blank" title="QQ"><i class="anzhiyufont anzhiyu-icon-qq"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%8F%8A-Jenkins-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">持续集成及 Jenkins 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">1.1.</span> <span class="toc-text">软件开发生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">软件开发瀑布模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91"><span class="toc-number">1.3.</span> <span class="toc-text">软件的敏捷开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%EF%BC%9F"><span class="toc-number">1.3.1.</span> <span class="toc-text">什么是敏捷开发？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E8%BF%AD%E4%BB%A3%EF%BC%9F"><span class="toc-number">1.3.2.</span> <span class="toc-text">敏捷开发如何迭代？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84%EF%BC%9F"><span class="toc-number">1.3.3.</span> <span class="toc-text">敏捷开发有什么好处？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">什么是持续集成？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%9A%84%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="toc-number">1.5.</span> <span class="toc-text">持续集成的组成要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">1.6.</span> <span class="toc-text">持续集成的好处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.7.</span> <span class="toc-text">Jenkins 介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">Jenkins 安装与配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Jenkins"><span class="toc-number">2.1.</span> <span class="toc-text">安装 Jenkins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">2.2.</span> <span class="toc-text">Jenkins 插件管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">2.3.</span> <span class="toc-text">Jenkins 用户权限管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86"><span class="toc-number">2.4.</span> <span class="toc-text">Jenkins 凭证管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%85%B3%E8%81%94-JDK-%E5%92%8C-Maven"><span class="toc-number">2.5.</span> <span class="toc-text">Jenkins 关联 JDK 和 Maven</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-Jenkins-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">2.6.</span> <span class="toc-text">添加 Jenkins 全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E5%85%B3%E9%97%AD%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0%E4%BF%9D%E6%8A%A4"><span class="toc-number">2.7.</span> <span class="toc-text">Jenkins 关闭跨站请求伪造保护</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jenkins-%E6%9E%84%E5%BB%BA-Maven-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">Jenkins 构建 Maven 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkins-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text">Jenkins 项目构建类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E9%A3%8E%E6%A0%BC%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.2.</span> <span class="toc-text">自由风格项目构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.3.</span> <span class="toc-text">Maven 项目构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pipeline-%E6%B5%81%E6%B0%B4%E7%BA%BF%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA"><span class="toc-number">3.4.</span> <span class="toc-text">Pipeline 流水线项目构建(*)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Pipeline-%E7%AE%80%E4%BB%8B"><span class="toc-number">3.4.1.</span> <span class="toc-text">Pipeline 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pipeline-%E8%AF%AD%E6%B3%95%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">3.4.2.</span> <span class="toc-text">Pipeline 语法快速入门</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jenkinsfile"><span class="toc-number">3.5.</span> <span class="toc-text">Jenkinsfile</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Jenkinsfile-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.5.1.</span> <span class="toc-text">Jenkinsfile 环境变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9E%84%E5%BB%BA%E8%A7%A6%E5%8F%91%E5%99%A8"><span class="toc-number">3.6.</span> <span class="toc-text">常用的构建触发器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git-Hook-%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E6%9E%84%E5%BB%BA"><span class="toc-number">3.7.</span> <span class="toc-text">Git Hook 自动触发构建(*)</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221102100137.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因"/></a><div class="content"><a class="title" href="/2022/11/02/5c089f9f.html" title="实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因">实战 - 分析 Java 项目线上内存泄漏、频繁GC、CPU飙升的原因</a><time datetime="2022-11-02T09:43:25.000Z" title="发表于 2022-11-02 09:43:25">2022-11-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/e5210e5c.html" title="Java 常见面试题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221031101834.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java 常见面试题"/></a><div class="content"><a class="title" href="/2022/10/31/e5210e5c.html" title="Java 常见面试题">Java 常见面试题</a><time datetime="2022-10-31T09:48:22.000Z" title="发表于 2022-10-31 09:48:22">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/28/328074fd.html" title="基于 GitLab 的代码审查"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221028112439.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于 GitLab 的代码审查"/></a><div class="content"><a class="title" href="/2022/10/28/328074fd.html" title="基于 GitLab 的代码审查">基于 GitLab 的代码审查</a><time datetime="2022-10-28T11:24:53.000Z" title="发表于 2022-10-28 11:24:53">2022-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/26/3c24a376.html" title="Git 分支管理规范"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20221028110542.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git 分支管理规范"/></a><div class="content"><a class="title" href="/2022/10/26/3c24a376.html" title="Git 分支管理规范">Git 分支管理规范</a><time datetime="2022-10-26T11:06:05.000Z" title="发表于 2022-10-26 11:06:05">2022-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/08/11/e8458f8e.html" title="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://my-typora-oss.oss-cn-shanghai.aliyuncs.com/image-master/20220811095054.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问"/></a><div class="content"><a class="title" href="/2022/08/11/e8458f8e.html" title="Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问">Docker 部署的微服务注册到 Nacos 的 IP 为私网无法访问</a><time datetime="2022-08-11T09:44:29.000Z" title="发表于 2022-08-11 09:44:29">2022-08-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By JJLUO</div><div id="workboard"><img class="workSituationImg boardsign" src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.2" title="博客框架为Hexo_v5.4.2"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt="博客框架为Hexo_v5.4.2"/></a><a class="github-badge" target="_blank" href="https://anzhiy.cn/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pan.anzhiy.cn/d/anzhiyu/svg/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title="本站使用JsDelivr为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt="本站使用JsDelivr为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" data-title="本站采用双线部署，默认线路托管于Vercel" title="本站采用双线部署，默认线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&amp;logo=Vercel" alt="本站采用双线部署，默认线路托管于Vercel"/></a><a class="github-badge" target="_blank" href="https://gitee.com/" style="margin-inline:5px" data-title="本站采用双线部署，国内线路托管于Gitee" title="本站采用双线部署，国内线路托管于Gitee"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Gitee-%23c5352a?style=flat&amp;logo=Gitee" alt="本站采用双线部署，国内线路托管于Gitee"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由GitHub托管" title="本站项目由GitHub托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-GitHub-blue?style=flat&amp;logo=GitHub" alt="本站项目由GitHub托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" src="https://q1.qlogo.cn/g?b=qq&amp;nk=2362766003&amp;s=5"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>const loadingPercentage = document.getElementById("loading-percentage");
+let loadingPercentageTimer = setInterval(function() {
+  var progressBar = document.querySelector(".pace-progress");
+  if (!progressBar) return
+  var currentValue = progressBar.getAttribute("data-progress-text");
+  if (currentValue !== loadingPercentage.textContent) {
+    loadingPercentage.textContent = currentValue;
+    if (currentValue === "100%") {
+      clearInterval(loadingPercentageTimer);
+    }
+  }
+}, 100);
+const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -757,17 +789,176 @@
   initLoading: () => {
     document.body.style.overflow = '';
     document.getElementById('loading-box').classList.remove("loaded")
-
   }
 }
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/progress_bar/progress_bar.css"/><script async="async" src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://q1.qlogo.cn/g?b=qq&amp;nk=2362766003&amp;s=5" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">48</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">25</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch_commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="center-console" type="button" title="中控台"><i class="anzhiyufont anzhiyu-icon-fish"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><div id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()">播放音乐</div><div id="console-music-bg"></div><meting-js id="8886177511" server="tencent" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="console"><div class="close-btn" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-xmark" style="font-size: 35px;"></i></div><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/weixin.jpg" target="_blank"><img class="post-qr-code-img" alt="wechat" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/weixin.jpg"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" alt="alipay" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="anzhiyu.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> <span>最新评论</span></span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="anzhiyu.hideConsole()"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Docker/" style="font-size: 1.32em; color: rgb(151, 166, 67)">Docker<sup>5</sup></a><a href="/tags/ES/" style="font-size: 1.15em; color: rgb(134, 58, 179)">ES<sup>1</sup></a><a href="/tags/Git/" style="font-size: 1.36em; color: rgb(138, 17, 152)">Git<sup>6</sup></a><a href="/tags/GitHub/" style="font-size: 1.15em; color: rgb(75, 135, 145)">GitHub<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(85, 64, 97)">Hexo<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.24em; color: rgb(11, 41, 34)">Java<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.15em; color: rgb(81, 160, 183)">Linux<sup>1</sup></a><a href="/tags/Markdown/" style="font-size: 1.15em; color: rgb(27, 53, 195)">Markdown<sup>1</sup></a><a href="/tags/MongoDB/" style="font-size: 1.15em; color: rgb(59, 142, 92)">MongoDB<sup>1</sup></a><a href="/tags/Nginx/" style="font-size: 1.15em; color: rgb(49, 191, 13)">Nginx<sup>1</sup></a><a href="/tags/RabbitMQ/" style="font-size: 1.15em; color: rgb(195, 65, 48)">RabbitMQ<sup>1</sup></a><a href="/tags/Redis/" style="font-size: 1.28em; color: rgb(166, 163, 71)">Redis<sup>4</sup></a><a href="/tags/Tomcat/" style="font-size: 1.15em; color: rgb(32, 80, 88)">Tomcat<sup>1</sup></a><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.32em; color: rgb(111, 49, 25)">分布式<sup>5</sup></a><a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 1.15em; color: rgb(67, 87, 78)">多线程<sup>1</sup></a><a href="/tags/%E5%AE%9E%E6%88%98/" style="font-size: 1.15em; color: rgb(153, 49, 136)">实战<sup>1</sup></a><a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 1.32em; color: rgb(125, 72, 180)">容器<sup>5</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.24em; color: rgb(85, 148, 80)">开发工具<sup>3</sup></a><a href="/tags/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" style="font-size: 1.28em; color: rgb(179, 73, 175)">开发规范<sup>4</sup></a><a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 1.15em; color: rgb(48, 170, 121)">微服务<sup>1</sup></a><a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 1.41em; color: rgb(0, 140, 23)">技巧<sup>21</sup></a><a href="/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" style="font-size: 1.15em; color: rgb(34, 131, 155)">持续集成<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.15em; color: rgb(96, 68, 132)">教程<sup>1</sup></a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.45em; color: rgb(180, 141, 82)">笔记<sup>33</sup></a><a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 1.19em; color: rgb(86, 71, 178)">面试<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history" onclick="anzhiyu.hideConsole()"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="rm.switchDarkMode()" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8886177511&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script><div><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/utils.js"></script><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/main.js"></script><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/tw_cn.js"></script><script src="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.umd.js"></script><script src="https://npm.elemecdn.com/instant.page@5.1.1/instantpage.js" type="module"></script><script src="https://npm.elemecdn.com/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js"></script><script src="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  console.log(1)
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("03/02/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 JJLUO 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("03/02/2020 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+      img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+      img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
       envId: 'https://twikoo.kyire.site/',
       region: '',
       onCommentLoaded: function () {
-        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
     }, null))
   }
@@ -797,52 +988,826 @@ window.addEventListener('load',preloader.endLoading())</script><div class="js-pj
       setTimeout(runFn,0)
       return
     } 
-    getScript('https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js').then(runFn)
+    getScript('https://npm.elemecdn.com/twikoo@1.6.11/dist/twikoo.all.min.js').then(runFn)
   }
-
   if ('Twikoo' === 'Twikoo' || !true) {
-    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    if (true) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
     else loadTwikoo()
   } else {
     window.loadOtherComment = () => {
       loadTwikoo()
     }
   }
-})()</script><script>function loadDisqus () {
-  var disqus_config = function () {
-    this.page.url = 'https://blog.kyire.site/2022/04/03/1509bf9.html'
-    this.page.identifier = '2022/04/03/1509bf9.html'
-    this.page.title = '持续集成工具之 Jenkins'
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.kyire.site/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://npm.elemecdn.com/twikoo@1.6.11/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick}</span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "kyire666@outlook.com";</script><script data-pjax="true">if (document.querySelector(".comment-barrage")){
+  var commentBarrageConfig = {
+    maxBarrage: 1,
+    barrageTime: 4000,
+    twikooUrl: "https://twikoo.kyire.site/",
+    accessToken: "",
+    pageUrl: window.location.pathname,
+    barrageTimer: [],
+    barrageList: [],
+    barrageIndex: 0,
+    dom: document.querySelector(".comment-barrage"),
   };
+  var commentInterval = null;
+  var hoverOnCommentBarrage = false;
+  
+  document.querySelector(".comment-barrage").addEventListener("mouseenter", function() {
+    hoverOnCommentBarrage = true;
+    console.log("热评悬浮");
+  });
+  document.querySelector(".comment-barrage").addEventListener("mouseleave", function() {
+    hoverOnCommentBarrage = false;
+    console.log("停止悬浮");
+  });
 
-  window.disqusReset = () => {
-    DISQUS.reset({
-      reload: true,
-      config: disqus_config
-    })
+  function initCommentBarrage() {
+    if (!commentBarrageConfig.dom) return;
+
+    var data = JSON.stringify({
+      event: "COMMENT_GET",
+      "commentBarrageConfig.accessToken": commentBarrageConfig.accessToken,
+      url: commentBarrageConfig.pageUrl,
+    });
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4 && this.responseText) {
+        commentBarrageConfig.barrageList = commentLinkFilter(JSON.parse(this.responseText).data);
+        commentBarrageConfig.dom.innerHTML = "";
+      }
+    });
+    xhr.open("POST", commentBarrageConfig.twikooUrl);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(data);
+
+    clearInterval(commentInterval);
+    commentInterval = null;
+
+    commentInterval = setInterval(() => {
+      if (commentBarrageConfig.barrageList.length && !hoverOnCommentBarrage) {
+        popCommentBarrage(commentBarrageConfig.barrageList[commentBarrageConfig.barrageIndex]);
+        commentBarrageConfig.barrageIndex += 1;
+        commentBarrageConfig.barrageIndex %= commentBarrageConfig.barrageList.length;
+      }
+      if (
+        commentBarrageConfig.barrageTimer.length >
+          (commentBarrageConfig.barrageList.length > commentBarrageConfig.maxBarrage
+            ? commentBarrageConfig.maxBarrage
+            : commentBarrageConfig.barrageList.length) &&
+        !hoverOnCommentBarrage
+      ) {
+        removeCommentBarrage(commentBarrageConfig.barrageTimer.shift());
+      }
+    }, commentBarrageConfig.barrageTime);
   }
 
-  if (window.DISQUS) disqusReset()
-  else {
-    (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+  function commentLinkFilter(data) {
+    data.sort((a, b) => {
+      return a.created - b.created;
+    });
+    let newData = [];
+    data.forEach(item => {
+      newData.push(...getCommentReplies(item));
+    });
+    return newData;
+  }
+
+  function getCommentReplies(item) {
+    if (item.replies) {
+      let replies = [item];
+      item.replies.forEach(item => {
+        replies.push(...getCommentReplies(item));
+      });
+      return replies;
+    } else {
+      return [];
+    }
+  }
+
+  function popCommentBarrage(data) {
+    let barrage = document.createElement("div");
+    barrage.className = "comment-barrage-item";
+    barrage.innerHTML = `
+        <div class="barrageHead">
+          <a class="barrageTitle ${
+            data.mailMd5 === "d338f432ad0bf2f61e5fe4ad1642725d" ? "barrageBloggerTitle" : ""
+          }" href="javascript:anzhiyu.scrollTo('#post-comment')"">
+            ${data.mailMd5 === "d338f432ad0bf2f61e5fe4ad1642725d" ? "博主" : "热评"}
+          </a>
+          <div class="barrageNick">${data.nick}</div>
+          <img class="nolazyload barrageAvatar" src="https://cravatar.cn/avatar/${data.mailMd5}"/>
+          <a class="comment-barrage-close" href="javascript:anzhiyu.switchCommentBarrage()"><i class="anzhiyufont anzhiyu-icon-xmark"></i></a>
+        </div>
+        <a class="barrageContent" href="#${data.id}">
+          <object>${data.comment}</object>
+        </a>
+      `;
+    commentBarrageConfig.barrageTimer.push(barrage);
+    commentBarrageConfig.dom.append(barrage);
+  }
+
+  function removeCommentBarrage(barrage) {
+    barrage.className = "comment-barrage-item out";
+
+    setTimeout(() => {
+      if (commentBarrageConfig.dom && commentBarrageConfig.dom.contains(barrage)) {
+        commentBarrageConfig.dom.removeChild(barrage);
+      }
+      }, 1000);
+    }
+
+    // 自动隐藏
+    document.addEventListener("scroll", anzhiyu.throttle(function () {
+      var a = (window.scrollY, document.querySelector(".comment-barrage-item")),
+      t = document.getElementById("post-comment");
+      t && a && 768 < document.body.clientWidth && (a.style.bottom = !anzhiyu.isInViewPortOfOne(t) ? "0" : "-200px");
+    }, 200), { passive: true });
+
+    initCommentBarrage();
+
+    if (localStorage.getItem("commentBarrageSwitch") !== "false") {
+      document.querySelector(".comment-barrage").style.display = "block";
+      document.querySelector(".menu-commentBarrage-text").textContent = "关闭热评";
+    } else {
+      document.querySelector(".comment-barrage").style.display = "none";
+      document.querySelector(".menu-commentBarrage-text").textContent = "显示热评";
+    }
+
+    document.addEventListener("pjax:send", function () {
+      clearInterval(commentInterval);
+    });
+
+  }</script><script data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/catalog-bar/catalog-bar.js"></script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/categoryBar/categoryBar.js"></script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script>// 初始化函数
+let rm = {};
+
+//禁止图片拖拽
+let imgElements = document.getElementsByTagName("img");
+for (let i = 0; i < imgElements.length; i++) {
+  imgElements[i].addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+}
+
+// 显示菜单
+rm.showRightMenu = function (isTrue, x = 0, y = 0) {
+  console.info(x, y)
+  let rightMenu = document.getElementById("rightMenu");
+  rightMenu.style.top = x + "px";
+  rightMenu.style.left = y + "px";
+  if (isTrue) {
+    rightMenu.style.display = "block";
+    stopMaskScroll();
+  } else {
+    rightMenu.style.display = "none";
+  }
+};
+
+// 隐藏菜单
+rm.hideRightMenu = function () {
+  rm.showRightMenu(false);
+  let rightMenuMask = document.querySelector("#rightmenu-mask");
+  rightMenuMask.style.display = "none";
+};
+
+// 尺寸
+let rmWidth = document.getElementById("rightMenu").offsetWidth;
+let rmHeight = document.getElementById("rightMenu").offsetHeight;
+
+// 重新定义尺寸
+rm.reloadrmSize = function () {
+  rightMenu.style.visibility = "hidden";
+  rightMenu.style.display = "block";
+  // 获取宽度和高度
+  rmWidth = document.getElementById("rightMenu").offsetWidth;
+  rmHeight = document.getElementById("rightMenu").offsetHeight;
+  rightMenu.style.visibility = "visible";
+};
+
+// 获取点击的href
+let domhref = "";
+let domImgSrc = "";
+let globalEvent = null;
+
+// 监听右键初始化
+window.oncontextmenu = function (event) {
+  if (document.body.clientWidth > 768) {
+    let pageX = event.clientX + 10; //加10是为了防止显示时鼠标遮在菜单上
+    let pageY = event.clientY;
+
+    //其他额外菜单
+    const $rightMenuOther = document.querySelector(".rightMenuOther");
+    const $rightMenuPlugin = document.querySelector(".rightMenuPlugin");
+    const $rightMenuCopyText = document.querySelector("#menu-copytext");
+    const $rightMenuPasteText = document.querySelector("#menu-pastetext");
+    const $rightMenuCommentText = document.querySelector("#menu-commenttext");
+    const $rightMenuNewWindow = document.querySelector("#menu-newwindow");
+    const $rightMenuNewWindowImg = document.querySelector("#menu-newwindowimg");
+    const $rightMenuCopyLink = document.querySelector("#menu-copylink");
+    const $rightMenuCopyImg = document.querySelector("#menu-copyimg");
+    const $rightMenuDownloadImg = document.querySelector("#menu-downloadimg");
+    const $rightMenuSearch = document.querySelector("#menu-search");
+    const $rightMenuSearchBaidu = document.querySelector("#menu-searchBaidu");
+    const $rightMenuMusicToggle = document.querySelector("#menu-music-toggle");
+    const $rightMenuMusicBack = document.querySelector("#menu-music-back");
+    const $rightMenuMusicForward = document.querySelector("#menu-music-forward");
+    const $rightMenuMusicPlaylist = document.querySelector("#menu-music-playlist");
+    const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
+
+    let href = event.target.href;
+    let imgsrc = event.target.currentSrc;
+
+    // 判断模式 扩展模式为有事件
+    let pluginMode = false;
+    $rightMenuOther.style.display = "block";
+    globalEvent = event;
+
+    // 检查是否需要复制 是否有选中文本
+    if (selectTextNow && window.getSelection()) {
+      pluginMode = true;
+      $rightMenuCopyText.style.display = "block";
+      $rightMenuCommentText.style.display = "block";
+      $rightMenuSearch.style.display = "block";
+      $rightMenuSearchBaidu.style.display = "block";
+    } else {
+      $rightMenuCopyText.style.display = "none";
+      $rightMenuCommentText.style.display = "none";
+      $rightMenuSearchBaidu.style.display = "none";
+      $rightMenuSearch.style.display = "none";
+    }
+
+    //检查是否右键点击了链接a标签
+    if (href) {
+      pluginMode = true;
+      $rightMenuNewWindow.style.display = "block";
+      $rightMenuCopyLink.style.display = "block";
+      domhref = href;
+    } else {
+      $rightMenuNewWindow.style.display = "none";
+      $rightMenuCopyLink.style.display = "none";
+    }
+
+    //检查是否需要复制图片
+    if (imgsrc) {
+      pluginMode = true;
+      $rightMenuCopyImg.style.display = "block";
+      $rightMenuDownloadImg.style.display = "block";
+      $rightMenuNewWindowImg.style.display = "block";
+      document.getElementById("rightMenu").style.width="12rem"
+      domImgSrc = imgsrc;
+    } else {
+      $rightMenuCopyImg.style.display = "none";
+      $rightMenuDownloadImg.style.display = "none";
+      $rightMenuNewWindowImg.style.display = "none";
+    }
+
+    // 判断是否为输入框
+    if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+      pluginMode = true;
+      $rightMenuPasteText.style.display = "block";
+    } else {
+      $rightMenuPasteText.style.display = "none";
+    }
+    const navMusicEl = document.querySelector("#nav-music");
+    //判断是否是音乐
+    if (navMusicEl && navMusicEl.contains(event.target)) {
+      pluginMode = true;
+      $rightMenuMusicToggle.style.display = "block";
+      $rightMenuMusicBack.style.display = "block";
+      $rightMenuMusicForward.style.display = "block";
+      $rightMenuMusicPlaylist.style.display = "block";
+      $rightMenuMusicCopyMusicName.style.display = "block";
+    } else {
+      $rightMenuMusicToggle.style.display = "none";
+      $rightMenuMusicBack.style.display = "none";
+      $rightMenuMusicForward.style.display = "none";
+      $rightMenuMusicPlaylist.style.display = "none";
+      $rightMenuMusicCopyMusicName.style.display = "none";
+    }
+
+    // 如果不是扩展模式则隐藏扩展模块
+    if (pluginMode) {
+      $rightMenuOther.style.display = "none";
+      $rightMenuPlugin.style.display = "block";
+    } else {
+      $rightMenuPlugin.style.display = "none";
+    }
+
+    rm.reloadrmSize();
+
+    // 鼠标默认显示在鼠标右下方，当鼠标靠右或靠下时，将菜单显示在鼠标左方\上方
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+
+    rm.showRightMenu(true, pageY, pageX);
+    document.getElementById("rightmenu-mask").style.display = "flex";
+    return false;
+  }
+};
+
+// 下载图片状态
+rm.downloadimging = false;
+
+// 复制图片到剪贴板
+rm.writeClipImg = function (imgsrc) {
+  console.log("按下复制");
+  rm.hideRightMenu();
+  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      rm.downloadimging = false;
+    }, "10000");
+  }
+};
+
+function imageToBlob(imageURL) {
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
+    img.onload = function () {
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
+    };
+  });
+}
+
+async function copyImage(imageURL) {
+  const blob = await imageToBlob(imageURL);
+  const item = new ClipboardItem({ "image/png": blob });
+  navigator.clipboard.write([item]);
+}
+
+rm.switchDarkMode = function () {
+  // Switch Between Light And Dark Mode
+  const nowMode = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  if (nowMode === "light") {
+    activateDarkMode();
+    saveToLocal.set("theme", "dark", 2);
+    GLOBAL_CONFIG.Snackbar !== undefined && anzhiyu.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night);
+    document.querySelector(".menu-darkmode-text").textContent = "浅色模式";
+  } else {
+    activateLightMode();
+    saveToLocal.set("theme", "light", 2);
+    GLOBAL_CONFIG.Snackbar !== undefined && anzhiyu.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day);
+    document.querySelector(".menu-darkmode-text").textContent = "深色模式";
+  }
+  // handle some cases
+  typeof runMermaid === "function" && window.runMermaid();
+  rm.hideRightMenu();
+  anzhiyu.darkModeStatus();
+};
+
+rm.copyUrl = function (id) {
+  const input = document.createElement("input"); // Create a new <input> element
+  input.id = "copyVal"; // Set the id of the new element to "copyVal"
+  document.body.appendChild(input); // Append the new element to the end of the <body> element
+  
+  const text = id;
+  input.value = text;
+  input.select();
+  input.setSelectionRange(0, input.value.length);
+  document.execCommand("copy");
+  
+  input.remove(); // Remove the <input> element from the DOM
+};
+
+function stopMaskScroll() {
+  if (document.getElementById("rightmenu-mask")) {
+    let xscroll = document.getElementById("rightmenu-mask");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      false
+    );
+  }
+  if (document.getElementById("rightMenu")) {
+    let xscroll = document.getElementById("rightMenu");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      false
+    );
   }
 }
 
-if ('Twikoo' === 'Disqus' || !true) {
-  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
-  else loadDisqus()
-} else {
-  function loadOtherComment () {
-    loadDisqus()
+rm.rightmenuCopyText = function (txt) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt);
   }
+  rm.hideRightMenu();
+};
+
+rm.copyPageUrl = function () {
+  var url = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制本页链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+rm.sharePage = function () {
+  var content = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制本页链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+// 复制当前选中文本
+var selectTextNow = "";
+document.onmouseup = document.ondblclick = selceText;
+
+function selceText() {
+  var txt;
+  if (document.selection) {
+    txt = document.selection.createRange().text;
+  } else {
+    txt = window.getSelection().toString();
+  }
+  selectTextNow = txt !== "" ? txt : "";
 }
-</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script></div></body></html>
+
+// 读取剪切板
+rm.readClipboard = function () {
+  if (navigator.clipboard) {
+    navigator.clipboard.readText().then(clipText => rm.insertAtCaret(globalEvent.target, clipText));
+  }
+};
+
+// 粘贴文本到焦点
+rm.insertAtCaret = function (elemt, value) {
+  const startPos = elemt.selectionStart,
+    endPos = elemt.selectionEnd;
+  if (document.selection) {
+    elemt.focus();
+    var sel = document.selection.createRange();
+    sel.text = value;
+    elemt.focus();
+  } else {
+    if (startPos || startPos == "0") {
+      var scrollTop = elemt.scrollTop;
+      elemt.value = elemt.value.substring(0, startPos) + value + elemt.value.substring(endPos, elemt.value.length);
+      elemt.focus();
+      elemt.selectionStart = startPos + value.length;
+      elemt.selectionEnd = startPos + value.length;
+      elemt.scrollTop = scrollTop;
+    } else {
+      elemt.value += value;
+      elemt.focus();
+    }
+  }
+};
+
+//粘贴文本
+rm.pasteText = function () {
+  const result = rm.readClipboard() || "";
+  rm.hideRightMenu();
+};
+
+//引用到评论
+rm.rightMenuCommentText = function (txt) {
+  rm.hideRightMenu();
+  const postCommentDom = document.getElementById("post-comment");
+  var domTop = postCommentDom.offsetTop;
+  window.scrollTo(0, domTop - 80);
+  if (txt == "undefined" || txt == "null") txt = "好棒！";
+  function setText() {
+    setTimeout(() => {
+      var input = document.getElementsByClassName("el-textarea__inner")[0];
+      if (!input) setText();
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("input", true, true);
+      let inputValue = replaceAll(txt, "\n", "\n> ");
+      input.value = "> " + inputValue + "\n\n";
+      input.dispatchEvent(evt);
+      input.focus();
+      input.setSelectionRange(-1, -1);
+      if (document.getElementById("comment-tips")) {
+        document.getElementById("comment-tips").classList.add("show");
+      }
+    }, 100);
+  }
+  setText();
+};
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+// 百度搜索
+rm.searchBaidu = function () {
+  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  setTimeout(function () {
+    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+  }, "2000");
+  rm.hideRightMenu();
+};
+
+//分享链接
+rm.copyLink = function () {
+  rm.rightmenuCopyText(domhref);
+  anzhiyu.snackbarShow("已复制链接地址");
+};
+
+function addRightMenuClickEvent() {
+  // 添加点击事件
+  document.getElementById("menu-backward").addEventListener("click", function () {
+  window.history.back();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-forward").addEventListener("click", function () {
+    window.history.forward();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-refresh").addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  document.getElementById("menu-top").addEventListener("click", function () {
+    anzhiyu.scrollToDest(0, 500);
+    rm.hideRightMenu();
+  });
+
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", rm.hideRightMenu);
+  });
+
+  document.getElementById("menu-darkmode").addEventListener("click", rm.switchDarkMode);
+
+  document.getElementById("menu-home") && document.getElementById("menu-home").addEventListener("click", function () {
+    window.location.href = window.location.origin;
+  });
+
+  document.getElementById("menu-randomPost").addEventListener("click", function () {
+    toRandomPost();
+  });
+
+  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+
+  document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
+
+  document.getElementById("rightmenu-mask").addEventListener("contextmenu", function (event) {
+    rm.hideRightMenu();
+    event.preventDefault(); // Prevent the default context menu from appearing
+  });
+
+  document.getElementById("menu-copy").addEventListener("click", rm.copyPageUrl);
+
+  document.getElementById("menu-pastetext").addEventListener("click", rm.pasteText);
+
+  document.getElementById("menu-copytext").addEventListener("click", function () {
+    rm.rightmenuCopyText(selectTextNow);
+    anzhiyu.snackbarShow("复制成功，复制和转载请标注本文地址");
+  });
+
+  document.getElementById("menu-commenttext").addEventListener("click", function () {
+    rm.rightMenuCommentText(selectTextNow);
+  });
+
+  document.getElementById("menu-newwindow").addEventListener("click", function () {
+    window.open(domhref);
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
+
+  document.getElementById("menu-downloadimg").addEventListener("click", function () {
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
+  });
+
+  document.getElementById("menu-newwindowimg").addEventListener("click", function () {
+    window.open(domImgSrc);
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copyimg").addEventListener("click", function () {
+    rm.writeClipImg(domImgSrc);
+  });
+
+  document.getElementById("menu-searchBaidu").addEventListener("click", rm.searchBaidu);
+
+  //音乐
+  document.getElementById("menu-music-toggle").addEventListener("click", anzhiyu.musicToggle);
+
+  document.getElementById("menu-music-back").addEventListener("click", anzhiyu.musicSkipBack);
+
+  document.getElementById("menu-music-forward").addEventListener("click", anzhiyu.musicSkipForward);
+
+  document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
+    rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+  });
+
+}
+
+addRightMenuClickEvent();</script><script data-pjax>var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+var pageHeaderEl = document.getElementById("page-header");
+var navMusicEl = document.getElementById("nav-music");
+var consoleEl = document.getElementById("console");
+// 已随机的歌曲
+var selectRandomSong = [];
+// 音乐默认声音大小
+var musicVolume = 0.8;
+// 是否切换了周杰伦音乐列表
+var changeMusicListFlag = false;
+// 当前默认播放列表
+var defaultPlayMusicList = [];
+
+document.getElementById("page-name").innerText = document.title.split(" | 安知鱼")[0];
+anzhiyu.initIndexEssay();
+anzhiyu.changeTimeInEssay();
+anzhiyu.removeBodyPaceClass();
+anzhiyu.qrcodeCreate();
+anzhiyu.changeTimeInAlbumDetail();
+anzhiyu.reflashEssayWaterFall();
+anzhiyu.sayhi();
+anzhiyu.stopImgRightDrag();
+anzhiyu.addNavBackgroundInit();
+anzhiyu.setValueToBodyType();
+
+anzhiyu.getCustomPlayList();
+anzhiyu.addEventListenerConsoleMusicList(false);</script><script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script>LA.init({id: "K3K3B8564NRtb8Bt", ck: "K3K3B8564NRtb8Bt"});
+new LingQue.Monitor().init({id: "K3K3B8564NRtb8Bt", sendSuspicious:true});</script><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.6/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://npm.elemecdn.com/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://npm.elemecdn.com/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+  window.anzhiyuScrollFnToDo && window.removeEventListener('scroll', anzhiyuScrollFnToDo)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
