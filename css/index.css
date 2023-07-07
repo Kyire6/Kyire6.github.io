@@ -2859,10 +2859,10 @@ figure.highlight pre .javascript .function {
 }
 .article-sort-item-img {
   overflow: hidden;
-  width: 151px;
+  width: 164px;
   height: 80px;
   border-radius: 12px;
-  min-width: 151px;
+  min-width: 164px;
   min-height: 80px;
   background: var(--anzhiyu-secondbg);
   -webkit-mask-image: -webkit-radial-gradient(center, #fff, #000);
